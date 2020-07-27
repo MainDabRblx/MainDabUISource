@@ -1,0 +1,82 @@
+-- This is just all the 'if' statements so you dont need to copy a long script
+_G.Kill_Enemy_Players = false
+_G.Kill_Friendly_Players = false
+_G.Destroy_Enemy_Ships = false
+_G.Destroy_Friendly_Ships = false
+_G.Destroy_Enemy_Cruiser = true
+_G.Destroy_Friendly_Crusier = false
+_G.Kill_Specific_Player = '' -- CAN BE PARAPHRASED
+
+function Init()
+	local Players = game:GetService('Players')
+	local Player = Players.LocalPlayer
+	local PlayerF = Player.Team
+	local Dam = 10000
+	
+	if _G.Kill_Enemy_Players == true then
+		for i,v in pairs(Players:GetChildren()) do
+			local Event = game:GetService("ReplicatedStorage").PDmgEvent
+			if v.Team ~= Player.Team then
+				Event:FireServer(workspace:FindFirstChild(Player.Name):FindFirstChildOfClass('Tool'), Dam, workspace:FindFirstChild(v.Name).Humanoid)
+			end
+		end
+	end
+	if _G.Kill_Friendly_Players == true then
+		for i,v in pairs(Players:GetChildren()) do
+			local Event = game:GetService("ReplicatedStorage").PDmgEvent
+			if v.Team == Player.Team and v ~= Player then
+				Event:FireServer(workspace:FindFirstChild(Player.Name):FindFirstChildOfClass('Tool'), Dam, workspace:FindFirstChild(v.Name).Humanoid)
+			end
+		end
+	end
+	if _G.Destroy_Enemy_Ships == true then
+		for i,v in pairs(Players:GetChildren()) do
+			local Event = game:GetService("ReplicatedStorage").ShipDmgEvent
+			if v.Team ~= Player.Team then
+				Event:FireServer(v, Dam)
+			end
+		end
+	end
+	if _G.Destroy_Friendly_Ships == true then
+		for i,v in pairs(Players:GetChildren()) do
+			local Event = game:GetService("ReplicatedStorage").ShipDmgEvent
+			if v.Team == Player.Team and v ~= Player then
+				Event:FireServer(v, Dam)
+			end
+		end
+	end
+	if _G.Destroy_Enemy_Cruiser == true then
+		local TargShip
+		if Player.Team.Name == 'CIS' then
+			TargShip = 'Republic'
+		else
+			TargShip = 'CIS'
+		end
+		for i,v in pairs(game:GetService("Workspace")["CriticalPoints_"..TargShip]:GetChildren()) do
+			local Event = game:GetService("ReplicatedStorage").DamageCP
+			Event:FireServer(v, Dam)
+		end
+	end
+	if _G.Destroy_Friendly_Cruiser == true then
+		for i,v in pairs(game:GetService("Workspace")["CriticalPoints_"..Player.Team.Name]:GetChildren()) do
+			local Event = game:GetService("ReplicatedStorage").DamageCP
+			Event:FireServer(v, Dam)
+		end
+	end
+	if _G.Kill_Specific_Player ~= 'NAME' then
+		local TargPlayer
+		for i,v in pairs(Players:GetChildren()) do
+			if string.match(string.lower(v.Name), string.lower(_G.Kill_Specific_Player)) then
+				print('Player Found | '..v.Name)
+				TargPlayer = v
+				break
+			end
+		end
+		local Event = game:GetService("ReplicatedStorage").PDmgEvent
+		Event:FireServer(workspace:FindFirstChild(Player.Name):FindFirstChildOfClass('Tool'), Dam, workspace:FindFirstChild(TargPlayer.Name).Humanoid)
+		local Event = game:GetService("ReplicatedStorage").ShipDmgEvent
+		Event:FireServer(TargPlayer, Dam)
+	end
+end
+
+Init()

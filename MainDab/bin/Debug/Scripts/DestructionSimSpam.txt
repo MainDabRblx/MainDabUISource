@@ -1,0 +1,11 @@
+-- Spams explosions when you eqip the rocket very ebic indeed
+-- https://t5.rbxcdn.com/f65b4b9e9f15a321607a992a0c505397
+local chr = game.Players.LocalPlayer.Character
+local mouse = game.Players.LocalPlayer:GetMouse()
+while wait() do
+if mouse.Target then
+if chr:FindFirstChild("Launcher") then
+game.ReplicatedStorage.Remotes.explodeRocket:FireServer(156796175.2919, chr.Launcher.Stats, mouse.Hit.Position, chr.Launcher.Assets.Rocket.Boom)
+end
+end
+end

@@ -1,0 +1,7 @@
+-- Removes kill part from Workspace.
+-- https://t0.rbxcdn.com/462af30fc5aafcbfa5e77a28022c38a9
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do 
+if v.Name == "kills" then 
+v:Destroy()
+end
+end

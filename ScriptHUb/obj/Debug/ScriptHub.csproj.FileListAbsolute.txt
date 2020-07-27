@@ -1,0 +1,10 @@
+C:\Users\leona\Desktop\MainDabSrc\ScriptHUb\bin\Debug\ScriptHub.exe.config
+C:\Users\leona\Desktop\MainDabSrc\ScriptHUb\bin\Debug\ScriptHub.exe
+C:\Users\leona\Desktop\MainDabSrc\ScriptHUb\bin\Debug\ScriptHub.pdb
+C:\Users\leona\Desktop\MainDabSrc\ScriptHUb\obj\Debug\ScriptHub.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\MainDabSrc\ScriptHUb\obj\Debug\ScriptHUb.Form1.resources
+C:\Users\leona\Desktop\MainDabSrc\ScriptHUb\obj\Debug\ScriptHub.Properties.Resources.resources
+C:\Users\leona\Desktop\MainDabSrc\ScriptHUb\obj\Debug\ScriptHub.csproj.GenerateResource.cache
+C:\Users\leona\Desktop\MainDabSrc\ScriptHUb\obj\Debug\ScriptHub.csproj.CoreCompileInputs.cache
+C:\Users\leona\Desktop\MainDabSrc\ScriptHUb\obj\Debug\ScriptHub.exe
+C:\Users\leona\Desktop\MainDabSrc\ScriptHUb\obj\Debug\ScriptHub.pdb

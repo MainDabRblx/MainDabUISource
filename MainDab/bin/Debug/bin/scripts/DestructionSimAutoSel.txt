@@ -1,0 +1,9 @@
+-- Press "P" to sell
+-- https://t5.rbxcdn.com/f65b4b9e9f15a321607a992a0c505397
+function onKeyPress(inputObject, gameProcessedEvent)
+   if inputObject.KeyCode == Enum.KeyCode.P then
+
+  game:GetService'ReplicatedStorage'.Remotes.sellBricks:FireServer()
+end
+end
+game:GetService("UserInputService").InputBegan:connect(onKeyPress)

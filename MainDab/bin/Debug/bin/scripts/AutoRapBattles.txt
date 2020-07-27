@@ -1,0 +1,157 @@
+-- A GUI for Auto Rap Battles.
+-- https://t1.rbxcdn.com/2ec2d6c4056c7d2fbc36cac2cc03ae4f
+--if you eve----- created by snakez#7611
+------- vouch appreciated if you going to give one!
+
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Auto Rap Battles GUI has successfully opened." ,"All")
+
+-- Objects
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Stage = Instance.new("TextButton")
+local VoteUI = Instance.new("TextButton")
+local spamhats = Instance.new("TextButton")
+local IY = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+
+-- Properties
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.Active = true
+Frame.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame.Position = UDim2.new(0, 613, 0, 132)
+Frame.Selectable = true
+Frame.Size = UDim2.new(0, 349, 0, 251)
+Frame.Visible = true
+Frame.Draggable = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Size = UDim2.new(0, 349, 0, 59)
+TextLabel.Text = "AUTO RAP BATTLES"
+TextLabel.TextColor3 = Color3.new(0.231373, 1, 0)
+TextLabel.TextSize = 14
+
+Stage.Name = "Stage"
+Stage.Parent = Frame
+Stage.BackgroundColor3 = Color3.new(0, 0, 0)
+Stage.BorderColor3 = Color3.new(0.266667, 1, 0)
+Stage.Position = UDim2.new(0, 0, 0, 68)
+Stage.Size = UDim2.new(0, 174, 0, 50)
+Stage.Text = "Stage"
+Stage.TextColor3 = Color3.new(0, 1, 0)
+Stage.TextSize = 14
+Stage.MouseButton1Click:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-88.145134, 60.9199867, -213.246567)
+end)
+
+VoteUI.Name = "VoteUI"
+VoteUI.Parent = Frame
+VoteUI.BackgroundColor3 = Color3.new(0, 0, 0)
+VoteUI.BorderColor3 = Color3.new(0.266667, 1, 0)
+VoteUI.Position = UDim2.new(0, 175, 0, 76)
+VoteUI.Size = UDim2.new(0, 174, 0, 50)
+VoteUI.Text = "Vote UI"
+VoteUI.TextColor3 = Color3.new(0, 1, 0)
+VoteUI.TextSize = 14
+VoteUI.MouseButton1Click:connect(function()
+loadstring(game:HttpGet(("https://pastebin.com/raw/a7jy3wwA"),true))()
+end)
+
+spamhats.Name = "spamhats"
+spamhats.Parent = Frame
+spamhats.BackgroundColor3 = Color3.new(0, 0, 0)
+spamhats.BorderColor3 = Color3.new(0.266667, 1, 0)
+spamhats.Position = UDim2.new(0, 0, 0, 134)
+spamhats.Size = UDim2.new(0, 174, 0, 50)
+spamhats.Text = "Spam Hats"
+spamhats.TextColor3 = Color3.new(0, 1, 0)
+spamhats.TextSize = 14
+spamhats.MouseButton1Click:connect(function()
+for i=1,500 do
+print (i)
+game.Workspace.Hats:FireServer("Dominus Empyreus'", 0)
+wait(0.5)
+for index, child in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if child.ClassName == "Hat" or child.ClassName == "Accessory" then
+if child.Handle:FindFirstChild("Mesh") then
+child.Handle.Mesh.Parent = nil
+child.Parent = game.Workspace
+wait(0.25)
+game.Workspace.Hats:FireServer("Backwards Baseball Cap", 0)
+wait(0.5)
+for index, child in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if child.ClassName == "Hat" or child.ClassName == "Accessory" then
+if child.Handle:FindFirstChild("Mesh") then
+child.Handle.Mesh.Parent = nil
+child.Parent = game.Workspace
+wait(0.25)
+game.Workspace.Hats:FireServer("Acheo's Pot", 0)
+wait(0.5)
+for index, child in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if child.ClassName == "Hat" or child.ClassName == "Accessory" then
+if child.Handle:FindFirstChild("Mesh") then
+child.Handle.Mesh.Parent = nil
+child.Parent = game.Workspace
+wait(0.25)
+game.Workspace.Hats:FireServer("Golden Headphones", 0)
+wait(0.5)
+for index, child in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if child.ClassName == "Hat" or child.ClassName == "Accessory" then
+if child.Handle:FindFirstChild("Mesh") then
+child.Handle.Mesh.Parent = nil
+child.Parent = game.Workspace
+wait(0.25)
+game.Workspace.Hats:FireServer("Black Fedora", 0)
+wait(0.5)
+for index, child in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if child.ClassName == "Hat" or child.ClassName == "Accessory" then
+if child.Handle:FindFirstChild("Mesh") then
+child.Handle.Mesh.Parent = nil
+child.Parent = game.Workspace
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end
+end)
+
+IY.Name = "IY"
+IY.Parent = Frame
+IY.BackgroundColor3 = Color3.new(0, 0, 0)
+IY.BorderColor3 = Color3.new(0.266667, 1, 0)
+IY.Position = UDim2.new(0, 175, 0, 152)
+IY.Size = UDim2.new(0, 174, 0, 50)
+IY.Text = "Infinite Yield"
+IY.TextColor3 = Color3.new(0, 1, 0)
+IY.TextSize = 14
+IY.MouseButton1Click:connect(function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/MjBzRjmT'),true))()
+end)
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.Position = UDim2.new(0, 0, 0, 224)
+TextLabel_2.Size = UDim2.new(0, 349, 0, 27)
+TextLabel_2.Text = "created by snakez#7611"
+TextLabel_2.TextColor3 = Color3.new(0.231373, 1, 0)
+TextLabel_2.TextSize = 14
+
+-- Scripts

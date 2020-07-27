@@ -1,0 +1,7 @@
+-- yes, sex animations!!!!!!! omg Main_EX sex!!11
+-- https://t6.rbxcdn.com/b747425befc8d784709037e1fe61397f
+Active = true --Change to False To Stop Animating
+while Active == true do
+game.ReplicatedStorage.Remote.Events.AnimateBind:Fire("MuffinAnimation")
+wait(0.2)
+end

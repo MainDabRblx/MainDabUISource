@@ -1,0 +1,1 @@
+Go to the scripts folder and place scripts you want here in this folder. In the future, I might make a online Script Hub (who knows?)
