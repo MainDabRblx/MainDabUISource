@@ -34,3 +34,7 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.Loading.resou
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MetroFramework.Design.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.MainDab.resources
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\CheatSquadAPI.dll
+C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.IconUI.resources
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\VisualStudioTabControl.dll

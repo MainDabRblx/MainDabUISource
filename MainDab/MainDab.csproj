@@ -39,6 +39,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="CheatSquadAPI">
+      <HintPath>..\..\CheatSquadAPI.dll</HintPath>
+    </Reference>
     <Reference Include="DiscordRPC">
       <HintPath>..\..\..\Downloads\MainDab\MainDab\DiscordRPC.dll</HintPath>
     </Reference>
@@ -72,8 +75,9 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="VisualStudioTabControl">
-      <HintPath>..\..\..\Downloads\VisualStudioTabControl.dll</HintPath>
+    <Reference Include="VisualStudioTabControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MainDab\VisualStudioTabControl.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -89,6 +93,12 @@
     </Compile>
     <Compile Include="Hub1.Designer.cs">
       <DependentUpon>Hub1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IconUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IconUI.Designer.cs">
+      <DependentUpon>IconUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Injector.cs" />
     <Compile Include="Loading.cs">
@@ -128,8 +138,17 @@
     <Compile Include="TaintCheck.Designer.cs">
       <DependentUpon>TaintCheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial.Designer.cs">
+      <DependentUpon>Tutorial.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="IconUI.resx">
+      <DependentUpon>IconUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +179,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\box.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8-80536_circular-play-button-svg-png-icon-free-download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4373.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled drawing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sexsdxsdfasdfasf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Discord-Logo-White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\occlcl.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -965,7 +965,7 @@ namespace ProjectMainDab
 
 			byte[] bytes = webClient2.DownloadData("https://pastebin.com/raw/QpwkAJS4");
 			string we = Encoding.UTF8.GetString(bytes);
-			string a2 = "Project MainDab V.5.2";
+			string a2 = "Project MainDab V.5.3";
 			if (we == a2)
             {
 				panel7.BackColor = Color.Green;
@@ -1032,6 +1032,21 @@ namespace ProjectMainDab
 		}
 
         private void metroTabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void scriptHubToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

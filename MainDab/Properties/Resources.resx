@@ -118,6 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="listbox1" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAD0AAABECAYAAAAyTz3gAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
+        JQAAFiUBSVIk8AAAAXRJREFUeF7t2MFqg0AQxvG+k/f4CpYi2VtKQUqkwZBSbCRBEHzuadfG0sNgZ3U3
+        3Wa+w/8QBjf+DquLd0mSkLaA1hLQWgJaS0BrCWgtAa0loL2X5lQeO+r73rnutCOTMmt6KBx6AXgsFDwY
+        Oq/ar5s/lpTdZ8JKaq4AD4Y2+wv6vWDnfAXVA7al5u1MXSB4tOhqvSLzEgYeMdr+DgOPFn3YjPv8gZ5e
+        L2sN8JIMe628SNFT1VSw18oD2inpe9gJPdG6onZY86/QLgePW0FLDh6P48PnVtCS/TpvT08ENDN3CGhp
+        QDNzG9DM3DmgmblDQEsDmpnbgGbmzgHNzB0Kj3b6GjrR5hA/OkkNVWd7kz7rqNnmtOL+z6FwaNsnfHda
+        9sH/Z+3eLAbbwqKledyvkoCWBjQzdw5oZu45oKV9oyM8eEiahQ518KifMy/v4d+ah7Z5PXhcD2ybj/7H
+        Aa0loLUEtJaA1hLQWgJaS0BrCWgtKUQn9AHdJTqkQu8FBAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="listbox" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAD0AAABECAYAAAAyTz3gAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
@@ -130,17 +142,30 @@
         Aa0loLUEtJaA1hLQWgJaS0BrCWgtKUQn9AHdJTqkQu8FBAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="listbox1" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAD0AAABECAYAAAAyTz3gAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
-        JQAAFiUBSVIk8AAAAXRJREFUeF7t2MFqg0AQxvG+k/f4CpYi2VtKQUqkwZBSbCRBEHzuadfG0sNgZ3U3
-        3Wa+w/8QBjf+DquLd0mSkLaA1hLQWgJaS0BrCWgtAa0loL2X5lQeO+r73rnutCOTMmt6KBx6AXgsFDwY
-        Oq/ar5s/lpTdZ8JKaq4AD4Y2+wv6vWDnfAXVA7al5u1MXSB4tOhqvSLzEgYeMdr+DgOPFn3YjPv8gZ5e
-        L2sN8JIMe628SNFT1VSw18oD2inpe9gJPdG6onZY86/QLgePW0FLDh6P48PnVtCS/TpvT08ENDN3CGhp
-        QDNzG9DM3DmgmblDQEsDmpnbgGbmzgHNzB0Kj3b6GjrR5hA/OkkNVWd7kz7rqNnmtOL+z6FwaNsnfHda
-        9sH/Z+3eLAbbwqKledyvkoCWBjQzdw5oZu45oKV9oyM8eEiahQ518KifMy/v4d+ah7Z5PXhcD2ybj/7H
-        Aa0loLUEtJaA1hLQWgJaS0BrCWgtKUQn9AHdJTqkQu8FBAAAAABJRU5ErkJggg==
-</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="8-80536_circular-play-button-svg-png-icon-free-download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8-80536_circular-play-button-svg-png-icon-free-download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="disc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\disc.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Untitled drawing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled drawing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Discord-Logo-White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Discord-Logo-White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="box" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\box.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4373" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4373.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Maindab" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -6392,6 +6417,9 @@
         tddee+21174x+3/+7/8XVbabR0Y9yT0AAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="listbox2" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAD0AAABECAYAAAAyTz3gAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
@@ -6404,11 +6432,10 @@
         Aa0loLUEtJaA1hLQWgJaS0BrCWgtKUQn9AHdJTqkQu8FBAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="disc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\disc.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sexsdxsdfasdfasf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sexsdxsdfasdfasf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="box" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\box.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="occlcl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\occlcl.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

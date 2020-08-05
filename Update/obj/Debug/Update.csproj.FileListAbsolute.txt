@@ -1,0 +1,7 @@
+C:\Users\leona\Desktop\MainDabSrc\Update\bin\Debug\Update.exe.config
+C:\Users\leona\Desktop\MainDabSrc\Update\bin\Debug\Update.exe
+C:\Users\leona\Desktop\MainDabSrc\Update\bin\Debug\Update.pdb
+C:\Users\leona\Desktop\MainDabSrc\Update\obj\Debug\Update.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\MainDabSrc\Update\obj\Debug\Update.csproj.CoreCompileInputs.cache
+C:\Users\leona\Desktop\MainDabSrc\Update\obj\Debug\Update.exe
+C:\Users\leona\Desktop\MainDabSrc\Update\obj\Debug\Update.pdb
