@@ -1,0 +1,3 @@
+-- Murder Myster 2 GUI
+-- https://i.imgur.com/HpaEl7g.png
+loadstring(game:HttpGet('https://raw.githubusercontent.com/qSSuper/my-mm2/master/my%20mm2%20fixed.txt'))()

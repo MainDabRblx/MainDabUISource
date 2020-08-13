@@ -1,0 +1,3 @@
+-- Doomspire Brickbattle GUI. I do not own it!
+-- https://i.imgur.com/eeWWmpV.png?1
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MattLawz/1nferiousCheats/master/DoomspireScript.lua", true))()

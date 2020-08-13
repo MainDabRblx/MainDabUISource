@@ -1,0 +1,31 @@
+-- ESP With more needs. Supports Phantom Forces.
+-- https://i.imgur.com/dAKmwoH.png
+local ESPLIB = loadstring(game:HttpGet("https://pastebin.com/raw/y3QQtMdh"))() 
+-- ESP LIB
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.Transparency = 0 
+-- make it visible
+-- https://i.imgur.com/dAKmwoH.png
+local f = ESPLIB:AddItem(game.Players.LocalPlayer.Character.HumanoidRootPart, Color3.fromRGB(255, 0, 0), false) 
+-- AddItem, item to add, color (optional defaults to white) (third arg is to change items name usefull in games like phantomforces when all the names are the same)
+
+ESPLIB:StartESP() 
+-- starts the esp, you can add / remove items to esp in real time
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.Transparency = 1 
+-- make it invis to plr again (HAS TO BE AFTER START)
+
+wait(3)
+
+f["Color3"] = Color3.fromRGB(0, 0, 255)
+-- changes the color
+
+wait(3)
+
+ESPLIB:RemoveItem(game.Players.LocalPlayer.Character.HumanoidRootPart) 
+-- remove item to esp, parse the item path, if it gets removed just use a table and store them and index from there
+
+wait(3)
+
+ESPLIB:AddItem(game.Players.LocalPlayer.Character, Color3.fromRGB(0, 255, 0), false) 
+-- adds the entire player char model, adds each child to the ESP for you

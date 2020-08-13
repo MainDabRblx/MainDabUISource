@@ -1,5 +1,5 @@
--- Infinite Jump
--- https://pbs.twimg.com/profile_images/1131599526001692672/D40KVhLQ_400x400.png
+-- Spam that spacebar boi
+-- https://github.com/MainDabRblx/ProjectDab/blob/master/roblox.png?raw=true
 local Player = game:GetService'Players'.LocalPlayer;
 local UIS = game:GetService'UserInputService';
 

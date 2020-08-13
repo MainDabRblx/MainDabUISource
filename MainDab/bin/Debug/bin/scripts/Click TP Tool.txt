@@ -1,5 +1,5 @@
 -- Gives you a tool that lets you teleport on click
--- https://pbs.twimg.com/profile_images/1131599526001692672/D40KVhLQ_400x400.png
+-- https://github.com/MainDabRblx/ProjectDab/blob/master/roblox.png?raw=true
 mouse = game.Players.LocalPlayer:GetMouse()
 tool = Instance.new("Tool")
 tool.RequiresHandle = false

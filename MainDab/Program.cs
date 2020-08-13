@@ -19,10 +19,11 @@ namespace ProjectMainDab
             WebClient webClient = new WebClient();
 
 
+
             WebClient webClient2 = new WebClient();
             byte[] bytes = webClient2.DownloadData("https://pastebin.com/raw/QpwkAJS4");
             string we = Encoding.UTF8.GetString(bytes);
-            string a2 = "Project MainDab V.5.7";
+            string a2 = "Project MainDab V.6.1";
             if (we == a2)
             {
                 Application.EnableVisualStyles();
@@ -37,7 +38,6 @@ namespace ProjectMainDab
                 MessageBox.Show("Updater finished downloading, Click OK to continue.");
                 Process.Start("update.exe");
                 Environment.Exit(0);
-
             }
 
 

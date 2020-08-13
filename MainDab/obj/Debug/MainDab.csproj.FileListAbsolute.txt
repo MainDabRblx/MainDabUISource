@@ -33,8 +33,10 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.Loading.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MetroFramework.Design.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.csprojAssemblyReference.cache
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.MainDab.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\CheatSquadAPI.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.IconUI.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\VisualStudioTabControl.dll
+C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.SynapseSex.resources
+C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.Tutorial.resources
+C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.csprojAssemblyReference.cache

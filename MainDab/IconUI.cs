@@ -19,6 +19,7 @@ using System.Threading;
 using DiscordRPC;
 using DiscordRPC.Logging;
 using DiscordRPC.Message;
+using System.Linq.Expressions;
 
 // annotated some parts for myself usually as notes, use them as you like
 
@@ -97,7 +98,7 @@ namespace ProjectMainDab
 			// this.panel6.Visible = false;
 			this.client.SetPresence(new RichPresence
 			{
-				Details = "Using MainDab Roblox Exploit V5",
+				Details = "Using MainDab Roblox Exploit V6",
 				State = "Join here : discord.gg/78WJqX8",
 				Assets = new Assets
 				{
@@ -238,8 +239,17 @@ namespace ProjectMainDab
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Coming soon");
-        }
+			WebBrowser webBrowser = new WebBrowser();
+			WebClient webClient = new WebClient();
+			TabPage tabPage = new TabPage("Help");
+
+			tabPage.AutoScroll = true;
+			tabPage.Controls.Add(webBrowser);
+			webBrowser.Dock = DockStyle.Fill;
+			this.visualStudioTabControl1.TabPages.Add(tabPage);
+			this.visualStudioTabControl1.SelectedTab = tabPage;
+			webBrowser.Navigate("https://grizzly-capricious-notebook.glitch.me/");
+		}
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -479,9 +489,11 @@ namespace ProjectMainDab
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-			string text = File.ReadAllText("bin\\scripts\\" + this.listBox1.SelectedItem.ToString());
-			bool flag = this.listBox1.SelectedItem != null;
-			bool flag2 = flag;
+
+
+				string text = File.ReadAllText("bin\\scripts\\" + this.listBox1.SelectedItem.ToString());
+				bool flag = this.listBox1.SelectedItem != null;
+				bool flag2 = flag;
 			if (flag2)
 			{
 				string text2 = text;
@@ -501,15 +513,24 @@ namespace ProjectMainDab
 				string text6 = text5;
 				string text7 = text6.Remove(0, 2);
 				string requestUriString = text7;
-				WebRequest webRequest = WebRequest.Create(requestUriString);
-				using (WebResponse response = webRequest.GetResponse())
+				try
 				{
-					using (Stream responseStream = response.GetResponseStream())
+					WebRequest webRequest = WebRequest.Create(requestUriString);
+					using (WebResponse response = webRequest.GetResponse())
 					{
-						this.pictureBox10.Image = Image.FromStream(responseStream);
+						using (Stream responseStream = response.GetResponseStream())
+						{
+							this.pictureBox10.Image = Image.FromStream(responseStream);
+						}
 					}
 				}
+				catch
+                {
+					MessageBox.Show("Failed getting preview of script.");
+                }
 			}
+            
+			
 		}
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -632,10 +653,7 @@ namespace ProjectMainDab
 			{
 				SendLimitedLuaScript(script);
 			}
-			else
-			{
-				MessageBox.Show("Please inject");
-			}
+			
 		}
     }
 }

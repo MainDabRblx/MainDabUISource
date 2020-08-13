@@ -1,3 +1,0 @@
--- Gives you 12,500 Ro Citizens cash. YES, PEOPLE STILL PLAY THIS.
--- https://t6.rbxcdn.com/e5a64bed8b028e2ef2459a3d572661cc
-game.Players.LocalPlayer.ChangeMoney:Fire(12500)

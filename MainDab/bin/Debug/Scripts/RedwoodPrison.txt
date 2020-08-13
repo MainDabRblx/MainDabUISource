@@ -1,3 +1,0 @@
--- Redwood Prison GUI by Jalos34.
--- https://t5.rbxcdn.com/2fc2cc0b71b8fba237cb13d5e05ddc83
-loadstring(game:HttpGet(('https://pastebin.com/raw/0u6aVS2K'),true))()

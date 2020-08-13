@@ -1,3 +1,40 @@
--- Redwood Prison GUI by Jalos34.
+-- Redwood Prison GUI by Jalos34, make sure to join their Discord here for key : https://discord.gg/GbDWFRf
 -- https://t5.rbxcdn.com/2fc2cc0b71b8fba237cb13d5e05ddc83
-loadstring(game:HttpGet(('https://pastebin.com/raw/0u6aVS2K'),true))()
+_G.WALKSPEED = 100                               --Toggle speed option under functions settings.
+_G.JUMPPOWER = 100                               --Toggle speed option under functions settings.
+_G.GUIDRAGSPEED = 1.0                            --How fast the GUI drags.
+_G.MAINBACKGROUND = Color3.new(0.666667, 0, 0)   --Main background color of the GUI.
+_G.HUBBUTTON = Color3.new(1, 1, 1)               --Main background color of buttons for home etc.
+_G.TEXTANDBORDER = Color3.new(1,1,1)             --Main background color of the text and lines.
+_G.BUTTONBACKGROUND = Color3.new(0.666667, 0, 0) --Main background color of the buttons.
+_G.HILIGHTLINES = Color3.new(1, 1, 1)            --Main background color of the border.
+_G.GUICLICKID = "903267862"                      --Audio ID of the click set to 0 for no audio.
+_G.GUNSTOGGLEKEY = Enum.KeyCode.LeftAlt          --The toggle button for the GUI gun menu.
+_G.MAINTOGGLEKEY = Enum.KeyCode.L                --The toggle button for the GUI main.
+_G.TELETOGGLEKEY = Enum.KeyCode.LeftAlt          --The toggle button for the GUI tp menu.
+_G.EXTRTOGGLEKEY = Enum.KeyCode.LeftAlt          --The toggle button for the GUI extra menu.
+_G.guns = {                                      --Tools / items given on give kit on utility page.
+"M60",                                           --Tools / items given on give kit on utility page.
+"ACR",                                           --Tools / items given on give kit on utility page.
+"Fake ID Card",                                  --Tools / items given on give kit on utility page.
+"Shank",}                                        --Tools / items given on give kit on utility page.
+_G.SKIN1SHIRTID = "1931228554"                   --edit shirt / pants ID on wear item.
+_G.SKIN1PANTSID = "1931229502"                   --edit shirt / pants ID on wear item.
+_G.SKIN2SHIRTID = "3130724146"                   --edit shirt / pants ID on wear item.
+_G.SKIN2PANTSID = "3739695749"                   --edit shirt / pants ID on wear item.
+_G.SKIN3SHIRTID = "1149750541"                   --edit shirt / pants ID on wear item.
+_G.SKIN3PANTSID = "1146539791"                   --edit shirt / pants ID on wear item.
+_G.toolsonspawn = {"Shank",}                     --Tools / items given every time you re-spawn.                                                                               
+_G.INFAMMO = true                                --GUN MOD SETTING
+_G.INSTARELOAD = true                            --GUN MOD SETTING
+_G.FASTFIRE = true                               --GUN MOD SETTING
+_G.ALWAYSAUTO = false                            --GUN MOD SETTING
+_G.INSTAKILL = false                             --GUN MOD SETTING
+_G.GUN1 = "ACR"                                  --EDIT GUNS YOU WANT ON GUI
+_G.GUN2 = "Taser"                                --EDIT GUNS YOU WANT ON GUI
+_G.GUN3 = "M60"                                  --EDIT GUNS YOU WANT ON GUI
+_G.GUN4 = "M98B"                                 --EDIT GUNS YOU WANT ON GUI
+_G.GUN5 = "L86A2"                                --EDIT GUNS YOU WANT ON GUI
+_G.GUN6 = "Dragunov"                             --EDIT GUNS YOU WANT ON GUI
+_G.GUN7 = "Minigun"     
+loadstring(game:GetObjects('rbxassetid://5491680631')[1].Source)() --Ugh the GUI dummy.
