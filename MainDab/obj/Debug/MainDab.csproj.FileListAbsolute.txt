@@ -16,12 +16,7 @@ C:\Users\leona\Desktop\MainDab\MainDab\obj\Debug\ProjectMainDab.Properties.Resou
 C:\Users\leona\Desktop\MainDab\MainDab\obj\Debug\MainDab.csproj.GenerateResource.cache
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MainDab.exe
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MainDab.pdb
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\DiscordRPC.dll
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\EasyExploits.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MetroFramework.dll
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MetroSuite 2.0.dll
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.dll
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\SirHurtAPI.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\Newtonsoft.Json.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.MainEx.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.Properties.Resources.resources

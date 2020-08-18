@@ -101,7 +101,7 @@
             this.visualStudioTabControl1.HorizontalLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(192)))), ((int)(((byte)(124)))));
             this.visualStudioTabControl1.ItemSize = new System.Drawing.Size(240, 20);
             this.visualStudioTabControl1.Location = new System.Drawing.Point(1, 50);
-            this.visualStudioTabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.visualStudioTabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.visualStudioTabControl1.Name = "visualStudioTabControl1";
             this.visualStudioTabControl1.SelectedIndex = 0;
             this.visualStudioTabControl1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -811,7 +811,7 @@
             this.Controls.Add(this.visualStudioTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "IconUI";
             this.Text = "IconUI";
             this.panel1.ResumeLayout(false);
