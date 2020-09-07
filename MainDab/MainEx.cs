@@ -15,7 +15,7 @@ using BunifuAnimatorNS;
 using DiscordRPC;
 using DiscordRPC.Logging;
 using DiscordRPC.Message;
-using EasyExploits;
+
 
 using Microsoft.Win32;
 using ProjectMainDab.Properties;
@@ -298,7 +298,7 @@ namespace ProjectMainDab
 					object[] args = array;
 					object obj = document.InvokeScript(scriptName, args);
 					string script = obj.ToString();
-					this.m.ExecuteScript(script);
+
 				}
 				else
 				{
@@ -365,9 +365,9 @@ namespace ProjectMainDab
 		// Token: 0x0600001F RID: 31 RVA: 0x00002BAC File Offset: 0x00000DAC
 		private void backgroundWorker3_DoWork(object sender, DoWorkEventArgs e)
 		{
-			string script = "if workspace:FindFirstChild(\"MainDab Anti Exploit\") then\r\n    game.StarterGui:SetCore('SendNotification', { Title = 'MainDab'; Text = 'MainDab Serverside found in this game! Press the serverside button in MainDab in order to run the serverside!'; Duration = 25; Button1 = 'Lets rekt some kids'; })\r\nend";
+			// string script = "if workspace:FindFirstChild(\"MainDab Anti Exploit\") then\r\n    game.StarterGui:SetCore('SendNotification', { Title = 'MainDab'; Text = 'MainDab Serverside found in this game! Press the serverside button in MainDab in order to run the serverside!'; Duration = 25; Button1 = 'Lets rekt some kids'; })\r\nend";
 			this.panel5.Hide();
-			this.m.LaunchExploit();
+
 			this.label9.Text = "MainDab (Injecting...)";
 			metroProgressBar1.Show();
 			metroProgressBar1.Value = 0;
@@ -385,7 +385,7 @@ namespace ProjectMainDab
 			Thread.Sleep(5000);
 			metroProgressBar1.Value = 0;
 			metroProgressBar1.Hide();
-			this.m.ExecuteScript(script);
+
 		}
 
 		// Token: 0x06000020 RID: 32 RVA: 0x00002C1D File Offset: 0x00000E1D
@@ -522,7 +522,7 @@ namespace ProjectMainDab
 			bool flag = this.label3.Text.Contains("easy");
 			if (flag)
 			{
-				this.m.ExecuteScript(script);
+				
 			}
 			else
 			{
@@ -750,7 +750,7 @@ namespace ProjectMainDab
 			bool flag = this.label3.Text.Contains("easy");
 			if (flag)
 			{
-				this.m.ExecuteScript(script);
+				
 				MessageBox.Show("Serverside ran! If the GUI dosen't show up, make sure that you are in a serversided game! Check our discord in #serversided-games for a list of serversided games! Also note that this functions is still in beta...", "Notice");
 			}
 			else
@@ -775,7 +775,7 @@ namespace ProjectMainDab
 		private string defPath = Application.StartupPath + "//Monaco//";
 
 		// Token: 0x0400000A RID: 10
-		private Module m = new Module();
+
 
 		// Token: 0x0400000B RID: 11
 		public DiscordRpcClient client;
@@ -863,7 +863,7 @@ namespace ProjectMainDab
 					object[] args = array;
 					object obj = document.InvokeScript(scriptName, args);
 					string script = obj.ToString();
-					this.m.ExecuteScript(script);
+					
 				}
 				else
 				{

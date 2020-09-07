@@ -29,9 +29,13 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.Loading.resou
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MetroFramework.Design.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.MainDab.resources
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\CheatSquadAPI.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.IconUI.resources
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\VisualStudioTabControl.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.SynapseSex.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.Tutorial.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\DiscordRPC.dll
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MetroSuite 2.0.dll
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.dll
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\SirHurtAPI.dll
+C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.Tools.resources
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\VisualStudioTabControl.dll

@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Windows.Forms;
-using EasyExploits;
+
 
 namespace ProjectMainDab
 {
@@ -37,16 +37,7 @@ namespace ProjectMainDab
 		}
 
 		// Token: 0x06000083 RID: 131 RVA: 0x000028EF File Offset: 0x00000AEF
-		private void pictureBox14_Click(object sender, EventArgs e)
-		{
-		}
 
-		// Token: 0x06000084 RID: 132 RVA: 0x0000B1EC File Offset: 0x000093EC
-		private void metroButton13_Click(object sender, EventArgs e)
-		{
-			string script = "loadstring(game:HttpGet(('https://pastebin.com/raw/qUPwqTyr'),true))()";
-			this.m.ExecuteScript(script);
-		}
 
 		// Token: 0x06000085 RID: 133 RVA: 0x0000B210 File Offset: 0x00009410
 		private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -88,7 +79,7 @@ namespace ProjectMainDab
 		// Token: 0x06000086 RID: 134 RVA: 0x0000B334 File Offset: 0x00009534
 		private void button1_Click(object sender, EventArgs e)
 		{
-			this.m.ExecuteScript(this.richTextBox2.Text);
+			
 		}
 
 		// Token: 0x06000087 RID: 135 RVA: 0x000028EF File Offset: 0x00000AEF
@@ -102,7 +93,6 @@ namespace ProjectMainDab
 			NamedPipes.LuaPipe(this.richTextBox2.Text);
 		}
 
-		// Token: 0x04000099 RID: 153
-		private Module m = new Module();
+
 	}
 }

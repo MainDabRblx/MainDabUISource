@@ -28,60 +28,47 @@ namespace Update
 			{
 				File.Delete(path2);
 			}
-			if (File.Exists("TotallyNotEasyExploits.dll"))
+			
+			if (File.Exists("Plugins.exe"))
 			{
-				File.Delete("TotallyNotEasyExploits.dll");
-				Console.WriteLine("Replacing EasyExploits API with new one...");
+				File.Delete("Plugins.exe");
 			}
-			if (File.Exists("TotallyNotEasyExploitsDLL.dll"))
+			if (File.Exists("EasyExploitsDLL.dll"))
 			{
-				File.Delete("TotallyNotEasyExploitsDLL.dll");
-				Console.WriteLine("Deleting old API");
+				File.Delete("EasyExploitsDLL.dll");
 			}
 			if (File.Exists("EasyExploits.dll"))
 			{
-				File.Delete("TotallyNotEasyExploits.dll");
+				File.Delete("EasyExploits.dll");
 			}
-			else
+			if (File.Exists("SirHurtAPI.dll"))
 			{
-				Console.WriteLine("Downloading new EasyExploits API...");
-				WebClient webClient2 = new WebClient();
-				webClient2.DownloadFile("https://github.com/leonardssy/ProjectDab/blob/master/EasyExploits.dll?raw=true", "EasyExploits.dll");
+				File.Delete("SirHurtAPI.dll");
 			}
-			if (!File.Exists("MoonSharp.Interpreter.dll"))
+			if (File.Exists("WeAreDevs_API.cpp.dll"))
 			{
-				Console.WriteLine("Downloading MoonSharp.Interpreter...");
-				WebClient webClient3 = new WebClient();
-				webClient3.DownloadFile("https://github.com/leonardssy/ProjectDab/blob/master/MoonSharp.Interpreter.dll?raw=true", "MoonSharp.Interpreter.dll");
+				File.Delete("WeAreDevs_API.cpp.dll");
 			}
-			if (File.Exists("Plugins.exe"))
+			
+			if (File.Exists("MainDab.dll"))
 			{
+				File.Delete("MainDab.dll");
 			}
-			if (File.Exists("Plugins.exe"))
-			{
-			}
-			if (File.Exists("Applications\\vpn.exe"))
-			{
-				Console.WriteLine("Deleting VPN...");
-				File.Delete("Applications\\vpn.exe");
-			}
-			else
-			{
-				
-			}
+			
 			if (!File.Exists("MetroFramework.dll"))
 			{
 				Console.WriteLine("Downloading MetroFramework...");
 				webClient.DownloadFile("https://github.com/leonardssy/ProjectDab/blob/master/MetroFramework.dll?raw=true", "MetroFramework.dll");
 			}
-			if (!File.Exists("WeAreDevs_API.cpp.dll"))
+		
+			if (!File.Exists("ShadowCheats.dll"))
 			{
-				Console.WriteLine("Downloading WeAreDevs_API.cpp.dll");
-				webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/WeAreDevs_API.cpp.dll?raw=true", "WeAreDevs_API.cpp.dll");
+				Console.WriteLine("Downloading ShadowCheats.dll");
+				webClient.DownloadFile(" https://github.com/Shadow-Developer/ShadowApplicationProgrammingInterface/blob/master/ShadowCheats.dll?raw=true", "ShadowCheats.dll");
 			}
 			if (!File.Exists("CheatSquadAPI.dll"))
 			{
-				Console.WriteLine("Downloading CheatSquadAPI.dll");
+				Console.WriteLine("Downloading SAPI.dll");
 				webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/CheatSquadAPI.dll?raw=true", "CheatSquadAPI.dll");
 			}
 			if (!File.Exists("VisualStudioTabControl.dll"))
