@@ -89,5 +89,21 @@ namespace ProjectMainDab
         {
             base.Hide();
         }
+
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+            if (File.Exists("AltAccountGenerator.exe"))
+            {
+                Process.Start("Applications\\AltAccountGenerator.exe");
+            }
+            else
+            {
+                MessageBox.Show("Downloading AltAccountGenerator. Click OK to continue.");
+                WebClient sex = new WebClient();
+                sex.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/AltAccountGenerator.exe?raw=true", "Applications\\AltAccountGenerator.exe");
+                Process.Start("Applications\\AltAccountGenerator.exe");
+                MessageBox.Show("AltAccountGenerator downloaded and started!");
+            }
+        }
     }
 }

@@ -32,7 +32,6 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.MainDab.resou
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.IconUI.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.SynapseSex.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.Tutorial.resources
-C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.csprojAssemblyReference.cache
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\DiscordRPC.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MetroSuite 2.0.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.dll
