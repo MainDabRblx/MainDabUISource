@@ -305,7 +305,7 @@ namespace ProjectMainDab
 					string script = obj.ToString();
 					this.shitsquad.Execute(script);
 				}
-				if (label6.Text == "WRD")
+				if (label6.Text == "MainDab")
 				{
 					HtmlDocument document = this.MonacoEditor().Document;
 					string scriptName = "GetText";
@@ -313,7 +313,7 @@ namespace ProjectMainDab
 					object[] args = array;
 					object obj = document.InvokeScript(scriptName, args);
 					string script = obj.ToString();
-					SendLimitedLuaScript(script);
+					NamedPipes.LuaPipe(script);
 				}
 			}
 		}
@@ -512,7 +512,18 @@ namespace ProjectMainDab
 				this.Hide();
 
 			}
-			label1.Text = "MainDab | Script hub update done!";
+			label1.Text = "MainDab | Updating MainDab.dll";
+			if (File.Exists("MainDab.dll"))
+            {
+				File.Delete("MainDab.dll");
+            }
+			string url1 = "https://github.com/leonardssy/ProjectDab/blob/master/MainDab.dll?raw=true";
+			string filename1 = "MainDab.dll";
+			using (WebClient wc = new WebClient())
+			{
+				wc.DownloadFile(url1, filename1);
+			}
+			label1.Text = "MainDab | Updates done!";
 			Thread.Sleep(1000);
 			label1.Text = "MainDab";
 
@@ -672,9 +683,10 @@ namespace ProjectMainDab
             {
 				shitsquad.Execute(richTextBox2.Text);
             }
-			else if (label6.Text == "WRD")
+			else if (label6.Text == "MainDab")
             {
-				SendLimitedLuaScript(richTextBox2.Text);
+				NamedPipes.LuaPipe(richTextBox2.Text);
+
             }
 			else
             {
@@ -694,9 +706,9 @@ namespace ProjectMainDab
 			{
 				shitsquad.Execute(script);
 			}
-			else if (label6.Text == "WRD")
+			else if (label6.Text == "MainDab")
 			{
-				SendLimitedLuaScript(script);
+				NamedPipes.LuaPipe(script);
 			}
 			
 		}
@@ -714,10 +726,10 @@ namespace ProjectMainDab
 
         private void label7_Click(object sender, EventArgs e)
         {
-			MessageBox.Show("MainDab, made by Main_EX#3898");
+			MessageBox.Show("-- MainDab --\nMade by Main_EX#3898\nDLL by Foresaken#0254\n\ndiscord.io/maindab", "Credits");
         }
 
-        private void pictureBox13_Click(object sender, EventArgs e)
+		private void pictureBox13_Click(object sender, EventArgs e)
         {
 			this.backgroundWorker5.RunWorkerAsync();
 		}
@@ -764,6 +776,53 @@ namespace ProjectMainDab
 			label1.Text = "MainDab | Script hub update done!";
 			Thread.Sleep(1000);
 			label1.Text = "MainDab";
+		}
+
+        private void bunifuFlatButton9_Click_1(object sender, EventArgs e)
+        {
+			label6.Text = "MainDab";
+			backgroundWorker6.RunWorkerAsync();
+			panel3.Hide();
+
+
+		}
+
+        private void backgroundWorker6_DoWork(object sender, DoWorkEventArgs e)
+        {
+			Functions.Inject();
+			label1.Text = "MainDab | Injecting MainDab DLL";
+			Thread.Sleep(4000);
+			label1.Text = "MainDab";
+			Thread.Sleep(2000);
+			WebClient webClient2 = new WebClient();
+			byte[] bytes = webClient2.DownloadData("https://pastebin.com/raw/CqYKJzcv");
+			string we = Encoding.UTF8.GetString(bytes);
+			NamedPipes.LuaPipe(we);
+		}
+
+        private void pictureBox12_Click_1(object sender, EventArgs e)
+        {
+			string script = "loadstring(game:HttpGet(\"https://www.codepile.net/raw/9Eye4JEb.lua\", true))()";
+
+			if (label6.Text == "Easy")
+			{
+				freesex.ExecuteFromInterpreter(script);
+				Process.Start("https://discord.gg/Z7HpAZv");
+			}
+			else if (label6.Text == "Squad")
+			{
+				shitsquad.Execute(script);
+				Process.Start("https://discord.gg/Z7HpAZv");
+			}
+			else if (label6.Text == "MainDab")
+			{
+				NamedPipes.LuaPipe(script);
+				Process.Start("https://discord.gg/Z7HpAZv");
+			}
+			else
+            {
+				MessageBox.Show("Please inject first!");
+            }
 		}
     }
 }

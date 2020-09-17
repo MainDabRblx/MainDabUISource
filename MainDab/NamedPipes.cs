@@ -84,6 +84,6 @@ namespace ProjectMainDab
 		}
 
 		// Token: 0x04000174 RID: 372
-		public static string luapipename = "MainDab";
+		public static string luapipename = "MainDabPiping";
 	}
 }

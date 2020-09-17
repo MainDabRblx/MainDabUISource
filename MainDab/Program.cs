@@ -113,7 +113,7 @@ namespace ProjectMainDab
             WebClient webClient2 = new WebClient();
             byte[] bytes = webClient2.DownloadData("https://pastebin.com/raw/QpwkAJS4");
             string we = Encoding.UTF8.GetString(bytes);
-            string a2 = "Project MainDab V.6.6";
+            string a2 = "Project MainDab V.6.8";
             try
             {
                 if (we == a2)
