@@ -113,7 +113,7 @@ namespace ProjectMainDab
             WebClient webClient2 = new WebClient();
             byte[] bytes = webClient2.DownloadData("https://pastebin.com/raw/QpwkAJS4");
             string we = Encoding.UTF8.GetString(bytes);
-            string a2 = "Project MainDab V.6.8";
+            string a2 = "MainDab V.7.0";
             try
             {
                 if (we == a2)
@@ -160,8 +160,9 @@ namespace ProjectMainDab
                 }
 
                 Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
+
                 Application.Run(new IconUI());
+                Application.SetCompatibleTextRenderingDefault(false);
                 MessageBox.Show("There seems to be an error starting getting an update, please contact me at Main_EX#3898 on discord (or tell me in MainDab discord server.\n\nThe UI anyways opened up, feel free to use MainDab.", "Another error");
             }
 

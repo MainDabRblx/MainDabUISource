@@ -20,6 +20,7 @@ using DiscordRPC;
 using DiscordRPC.Logging;
 using DiscordRPC.Message;
 using System.Linq.Expressions;
+using System.Data.SqlClient;
 
 // annotated some parts for myself usually as notes, use them as you like
 
@@ -27,8 +28,20 @@ namespace ProjectMainDab
 {
     public partial class IconUI : Form
     {
+		
 		// Code to run on Startup
 		string injectscript = "loadstring(game:HttpGet(\"https://pastebin.com/raw/CqYKJzcv\", true))()";
+
+
+		// Lang varibles
+		string downloadingscripthub = "MainDab | Updating Script Hub";
+		string updatedll = "MainDab | Updating MainDab.dll";
+		string pleaseopenroblox = "Please open Roblox before injecting!";
+		string updatedone = "MainDab | Update done!";
+		string injecting = "MainDab | Injecting";
+		string faliure = "Failed to get script hub preview.";
+		
+		
         public IconUI()
         {
             InitializeComponent();
@@ -78,7 +91,7 @@ namespace ProjectMainDab
 			// listbox
 			Functions.PopulateListBox(this.listBox2, "./scripts", "*.txt");
 			Functions.PopulateListBox(this.listBox2, "./scripts", "*.lua");
-			this.backgroundWorker1.RunWorkerAsync();
+
 
 			WebClient webClient = new WebClient();
 			this.client = new DiscordRpcClient("714648958265327737")
@@ -95,12 +108,12 @@ namespace ProjectMainDab
 			{
 			};
 			this.client.Initialize();
-
+			panel4.Hide();
 			// this.panel6.Visible = false;
 			this.client.SetPresence(new RichPresence
 			{
-				Details = "Using MainDab Roblox Exploit V6",
-				State = "Join here : discord.gg/78WJqX8",
+				Details = "Using MainDab V7",
+				State = "Join here : discord.io/maindab",
 				Assets = new Assets
 				{
 					LargeImageKey = "render",
@@ -123,15 +136,143 @@ namespace ProjectMainDab
 			}
 
 			// Open the stream and read it back.    
-			using (StreamReader sr = File.OpenText(fileName))
+			
+			if (File.Exists("Lang.txt"))
 			{
-				string s = "";
-				while ((s = sr.ReadLine()) != null)
+				
+
+				string line1 = File.ReadLines("Lang.txt").First();
+				if (line1 == "English")
 				{
-					Console.WriteLine(s);
+
+				}
+				else if (line1 == "Italian")
+				{
+					downloadingscripthub = "MainDab | Aggiornando Script Hub";
+					updatedll = "MainDab | Aggiornando MainDab.dll";
+					pleaseopenroblox = "Perfavore apri Roblox prima di injectare!";
+					updatedone = "MainDab | Aggiornamento finito!";
+					injecting = "MainDab | Injectando!";
+					faliure = "Impossibile ottenere l'anteprima della Script Hub.";
+					// Labels
+					label5.Text = "Aggiornando MainDab.dll";
+					label2.Text = "Aggiornando Script Hub";
+				}
+				else if (line1 == "Indonesia")
+				{
+					downloadingscripthub = "MainDab | Lagi diupdate exploitnya silahkan menunggu";
+					updatedll = "MainDab | Sedang mengupdate MainDab.dll";
+					pleaseopenroblox = "Harap buka roblox terlebih dahulu sebelum menkan tombol inject";
+					updatedone = "MainDab | Update selesai bos!";
+					injecting = "MainDab | Meninjeksi";
+					faliure = "Gagal untuk mendapatkan preview script hub.";
+					// Labels
+					label5.Text = "Sedang mengupdate MainDab.dll";
+					label2.Text = "Sedang mengupdate Script Hub";
+				}
+				else if (line1 == "Russian")
+				{
+					downloadingscripthub = "MainDab | Обновление Центра Скриптов";
+					updatedll = "MainDab | Обновление MainDab.dll";
+					pleaseopenroblox = "Пожалуйста, откройте Роблокс перед инъекцией!";
+					updatedone = "MainDab | Успешно обновлено!";
+					injecting = "MainDab | Происходит инъекция...";
+					faliure = "Не получилось прогрузить предварительный просмотр скрипта!";
+					// Labels
+					label5.Text = "Обновление MainDab.dll";
+					label2.Text = "Центр Скриптов";
+				}
+				else if (line1 == "German")
+				{
+					downloadingscripthub = "MainDab | Update von Skript Menu";
+					updatedll = "MainDab | Update von MainDab.dll";
+					pleaseopenroblox = "Bitte öffne Roblox vor dem einspritzen!";
+					updatedone = "MainDab | Update fertiggestellt!";
+					injecting = "MainDab | Einspritzen";
+					faliure = "Darstellen des Skript Menü fehlgeschlagenen";
+					// Labels
+					label5.Text = "Update MainDab.dll";
+					label2.Text = "Update Skript Menü ";
+					// Ignore these notes as they are for myself lol:
+				}
+
+				else if (line1 == "Chinese")
+				{
+					label5.Text = "选择 DLL";
+					label2.Text = "脚本中心";
+					downloadingscripthub = "MainDab | 更新中脚本中心";
+					updatedll = "MainDab | 更新中 MainDab.dll";
+					pleaseopenroblox = "请打开 Roblox 注射前!";
+					updatedone = "MainDab | 更新完成!";
+					injecting = "MainDab | 射前";
+					faliure = "没得到脚本中心";
+
+				}
+
+				else if (line1 == "Portuguese")
+				{
+					downloadingscripthub = "MainDab | Atualizando o hub de scripts";
+					updatedll = "MainDab | atualizando MainDab.dll";
+					pleaseopenroblox = "Por favor, abra o roblox antes de injetar";
+					updatedone = "MainDab | Atualização completa";
+					injecting = "MainDab | Injetando";
+					faliure = "Erro ao obter o hub de scripts.";
+					label5.Text = "Atualizando maindab.dll";
+					label2.Text = "atualizando hub de scripts";
+
+				}
+
+				else if (line1 == "Spanish")
+				{
+					downloadingscripthub = "MainDab | Actualizando Script Hub";
+					updatedll = "MainDab | Actualizando MainDab.dll";
+					pleaseopenroblox = "¡Abra Roblox antes de inyectar!";
+					updatedone = "MainDab | ¡Actualización realizada!";
+					injecting = "MainDab | Inyectar";
+					faliure = "No se pudo obtener la vista previa del centro de scripts.";
+					// Labels
+					label5.Text = "Actualizando MainDab.dll";
+					label2.Text = "Actualizando Script Hub";
+
+				}
+
+				else if (line1 == "Hindi")
+				{
+					downloadingscripthub = "MainDab | स्क्रिप्ट हब अद्यतन कर रहा है ";
+					updatedll = "MainDab | MainDab.dll अद्यतन कर रहा है";
+					pleaseopenroblox = "कृपया इंजेक्शन लगाने से पहले Roblox खोलें! ";
+					updatedone = "MainDab | अद्यतन किया! ";
+					injecting = "MainDab | इसे इंजेक्ट कर रहा है ";
+					faliure = " स्क्रिप्ट हब पूर्वावलोकन प्राप्त करने में विफल। ";
+					// Labels
+					label5.Text = "MainDab.dll अद्यतन कर रहा है ";
+					label2.Text = "स्क्रिप्ट हब अद्यतन कर रहा है ";
+
+				}
+				else
+				{
+					using (FileStream fs = File.Create("Lang.txt"))
+					{
+						// Add some text to file    
+						Byte[] title = new UTF8Encoding(true).GetBytes("English\n");
+						fs.Write(title, 0, title.Length);
+						byte[] author = new UTF8Encoding(true).GetBytes("DO NOT TOUCH THIS FILE.");
+						fs.Write(author, 0, author.Length);
+					}
 				}
 			}
-
+			else
+            {
+				using (FileStream fs = File.Create("Lang.txt"))
+				{
+					// Add some text to file    
+					Byte[] title = new UTF8Encoding(true).GetBytes("English\n");
+					fs.Write(title, 0, title.Length);
+					byte[] author = new UTF8Encoding(true).GetBytes("DO NOT TOUCH THIS FILE.");
+					fs.Write(author, 0, author.Length);
+				}
+			}
+			this.backgroundWorker1.RunWorkerAsync();
 		}
 
 
@@ -390,7 +531,7 @@ namespace ProjectMainDab
 			bool flag = processesByName.Length == 0;
 			if (flag)
 			{
-				MessageBox.Show("Please open Roblox before injecting!");
+				MessageBox.Show(pleaseopenroblox);
 			}
 			else
 			{
@@ -445,7 +586,7 @@ namespace ProjectMainDab
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-			Process.Start("https://discord.gg/qtvuyuG");
+			Process.Start("https://discord.io/maindab");
         }
 
         private void visualStudioTabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -476,7 +617,7 @@ namespace ProjectMainDab
 				sexpart = sexpart + 10;
 				System.Threading.Thread.Sleep(1);
 			}
-			label1.Text = "MainDab | Updating script hub...";
+			label1.Text = downloadingscripthub;
 			bool flag = File.Exists("bin.zip");
 			if (flag)
 			{
@@ -512,7 +653,7 @@ namespace ProjectMainDab
 				this.Hide();
 
 			}
-			label1.Text = "MainDab | Updating MainDab.dll";
+			label1.Text = updatedll;
 			if (File.Exists("MainDab.dll"))
             {
 				File.Delete("MainDab.dll");
@@ -523,7 +664,7 @@ namespace ProjectMainDab
 			{
 				wc.DownloadFile(url1, filename1);
 			}
-			label1.Text = "MainDab | Updates done!";
+			label1.Text = updatedone;
 			Thread.Sleep(1000);
 			label1.Text = "MainDab";
 
@@ -575,7 +716,7 @@ namespace ProjectMainDab
 				}
 				catch
                 {
-					MessageBox.Show("Failed getting preview of script.");
+					MessageBox.Show(faliure);
                 }
 			}
             
@@ -642,7 +783,7 @@ namespace ProjectMainDab
 			panel3.Hide();
 			label6.Text = "Easy";
 			freesex.LoadIntoRoblox();
-			label1.Text = "MainDab | Injecting...";
+			label1.Text = injecting;
 			Thread.Sleep(5000);
 			label1.Text = "MainDab";
 			Thread.Sleep(3000);
@@ -654,7 +795,7 @@ namespace ProjectMainDab
 			panel3.Hide();
 			label6.Text = "Squad";
 			shitsquad.Attach();
-			label1.Text = "MainDab | Injecting...";
+			label1.Text = injecting;
 			Thread.Sleep(6000);
 			label1.Text = "MainDab";
 			Thread.Sleep(3000);
@@ -823,6 +964,235 @@ namespace ProjectMainDab
             {
 				MessageBox.Show("Please inject first!");
             }
+		}
+
+        private void bunifuFlatButton11_Click(object sender, EventArgs e)
+        {
+			panel4.Hide();
+        }
+
+        private void bunifuFlatButton12_Click(object sender, EventArgs e)
+        {
+			if (File.Exists("Lang.txt"))
+            {
+				File.Delete("Lang.txt");
+            }
+			string fileName = "Lang.txt";
+			using (FileStream fs = File.Create(fileName))
+			{
+				// Add some text to file    
+				Byte[] title = new UTF8Encoding(true).GetBytes("English\n");
+				fs.Write(title, 0, title.Length);
+				byte[] author = new UTF8Encoding(true).GetBytes("DO NOT TOUCH THIS FILE.");
+				fs.Write(author, 0, author.Length);
+			}
+			base.Hide();
+			Thread.Sleep(1000);
+			IconUI Form = new IconUI();
+			Form.Show();
+		}
+
+        private void bunifuFlatButton13_Click(object sender, EventArgs e)
+        {
+			if (File.Exists("Lang.txt"))
+			{
+				File.Delete("Lang.txt");
+			}
+			string fileName = "Lang.txt";
+			using (FileStream fs = File.Create(fileName))
+			{
+				// Add some text to file    
+				Byte[] title = new UTF8Encoding(true).GetBytes("Chinese\n");
+				fs.Write(title, 0, title.Length);
+				byte[] author = new UTF8Encoding(true).GetBytes("DO NOT TOUCH THIS FILE.");
+				fs.Write(author, 0, author.Length);
+			}
+			base.Hide();
+			Thread.Sleep(1000);
+			IconUI Form = new IconUI();
+			Form.Show();
+		}
+
+        private void bunifuFlatButton10_Click(object sender, EventArgs e)
+        {
+			panel4.Show();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+			panel4.Show();
+        }
+
+        private void bunifuFlatButton10_Click_1(object sender, EventArgs e)
+        {
+			if (File.Exists("Lang.txt"))
+			{
+				File.Delete("Lang.txt");
+			}
+			string fileName = "Lang.txt";
+			using (FileStream fs = File.Create(fileName))
+			{
+				// Add some text to file    
+				Byte[] title = new UTF8Encoding(true).GetBytes("Italian\n");
+				fs.Write(title, 0, title.Length);
+				byte[] author = new UTF8Encoding(true).GetBytes("DO NOT TOUCH THIS FILE.");
+				fs.Write(author, 0, author.Length);
+			}
+			base.Hide();
+			Thread.Sleep(1000);
+			IconUI Form = new IconUI();
+			Form.Show();
+		}
+
+        private void bunifuFlatButton14_Click(object sender, EventArgs e)
+        {
+			if (File.Exists("Lang.txt"))
+			{
+				File.Delete("Lang.txt");
+			}
+			if (File.Exists("Lang.txt"))
+			{
+				File.Delete("Lang.txt");
+			}
+			string fileName = "Lang.txt";
+			using (FileStream fs = File.Create(fileName))
+			{
+				// Add some text to file    
+				Byte[] title = new UTF8Encoding(true).GetBytes("Indonesia\n");
+				fs.Write(title, 0, title.Length);
+				byte[] author = new UTF8Encoding(true).GetBytes("DO NOT TOUCH THIS FILE.");
+				fs.Write(author, 0, author.Length);
+			}
+			base.Hide();
+			Thread.Sleep(1000);
+			IconUI Form = new IconUI();
+			Form.Show();
+		}
+
+        private void bunifuFlatButton15_Click(object sender, EventArgs e)
+        {
+			if (File.Exists("Lang.txt"))
+			{
+				File.Delete("Lang.txt");
+			}
+			string fileName = "Lang.txt";
+			using (FileStream fs = File.Create(fileName))
+			{
+				// Add some text to file    
+				Byte[] title = new UTF8Encoding(true).GetBytes("Russian\n");
+				fs.Write(title, 0, title.Length);
+				byte[] author = new UTF8Encoding(true).GetBytes("DO NOT TOUCH THIS FILE.");
+				fs.Write(author, 0, author.Length);
+			}
+			base.Hide();
+			Thread.Sleep(1000);
+			IconUI Form = new IconUI();
+			Form.Show();
+		}
+
+        private void bunifuFlatButton16_Click(object sender, EventArgs e)
+        {
+			if (File.Exists("Lang.txt"))
+			{
+				File.Delete("Lang.txt");
+			}
+			string fileName = "Lang.txt";
+			using (FileStream fs = File.Create(fileName))
+			{
+				// Add some text to file    
+				Byte[] title = new UTF8Encoding(true).GetBytes("German\n");
+				fs.Write(title, 0, title.Length);
+				byte[] author = new UTF8Encoding(true).GetBytes("DO NOT TOUCH THIS FILE.");
+				fs.Write(author, 0, author.Length);
+			}
+			base.Hide();
+			Thread.Sleep(1000);
+			IconUI Form = new IconUI();
+			Form.Show();
+		}
+
+        private void bunifuFlatButton17_Click(object sender, EventArgs e)
+        {
+			if (File.Exists("Lang.txt"))
+			{
+				File.Delete("Lang.txt");
+			}
+			string fileName = "Lang.txt";
+			using (FileStream fs = File.Create(fileName))
+			{
+				// Add some text to file    
+				Byte[] title = new UTF8Encoding(true).GetBytes("Portuguese\n");
+				fs.Write(title, 0, title.Length);
+				byte[] author = new UTF8Encoding(true).GetBytes("DO NOT TOUCH THIS FILE.");
+				fs.Write(author, 0, author.Length);
+			}
+			base.Hide();
+			Thread.Sleep(1000);
+			IconUI Form = new IconUI();
+			Form.Show();
+		}
+
+        private void bunifuFlatButton17_Click_1(object sender, EventArgs e)
+        {
+			if (File.Exists("Lang.txt"))
+			{
+				File.Delete("Lang.txt");
+			}
+			string fileName = "Lang.txt";
+			using (FileStream fs = File.Create(fileName))
+			{
+				// Add some text to file    
+				Byte[] title = new UTF8Encoding(true).GetBytes("Portuguese\n");
+				fs.Write(title, 0, title.Length);
+				byte[] author = new UTF8Encoding(true).GetBytes("DO NOT TOUCH THIS FILE.");
+				fs.Write(author, 0, author.Length);
+			}
+			base.Hide();
+			Thread.Sleep(1000);
+			IconUI Form = new IconUI();
+			Form.Show();
+		}
+
+        private void bunifuFlatButton18_Click(object sender, EventArgs e)
+        {
+			if (File.Exists("Lang.txt"))
+			{
+				File.Delete("Lang.txt");
+			}
+			string fileName = "Lang.txt";
+			using (FileStream fs = File.Create(fileName))
+			{
+				// Add some text to file    
+				Byte[] title = new UTF8Encoding(true).GetBytes("Spanish\n");
+				fs.Write(title, 0, title.Length);
+				byte[] author = new UTF8Encoding(true).GetBytes("DO NOT TOUCH THIS FILE.");
+				fs.Write(author, 0, author.Length);
+			}
+			base.Hide();
+			Thread.Sleep(1000);
+			IconUI Form = new IconUI();
+			Form.Show();
+		}
+
+        private void bunifuFlatButton19_Click(object sender, EventArgs e)
+        {
+			if (File.Exists("Lang.txt"))
+			{
+				File.Delete("Lang.txt");
+			}
+			string fileName = "Lang.txt";
+			using (FileStream fs = File.Create(fileName))
+			{
+				// Add some text to file    
+				Byte[] title = new UTF8Encoding(true).GetBytes("Hindi\n");
+				fs.Write(title, 0, title.Length);
+				byte[] author = new UTF8Encoding(true).GetBytes("DO NOT TOUCH THIS FILE.");
+				fs.Write(author, 0, author.Length);
+			}
+			base.Hide();
+			Thread.Sleep(1000);
+			IconUI Form = new IconUI();
+			Form.Show();
 		}
     }
 }

@@ -17,7 +17,6 @@ C:\Users\leona\Desktop\MainDab\MainDab\obj\Debug\MainDab.csproj.GenerateResource
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MainDab.exe
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MainDab.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MetroFramework.dll
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\Newtonsoft.Json.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.MainEx.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.Properties.Resources.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.csproj.GenerateResource.cache
@@ -34,4 +33,5 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.SynapseSex.re
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.Tutorial.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.Tools.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\VisualStudioTabControl.dll
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\Newtonsoft.Json.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.csprojAssemblyReference.cache

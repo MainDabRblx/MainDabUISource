@@ -60,6 +60,9 @@
     <Reference Include="MoonSharp.Interpreter">
       <HintPath>..\..\..\Downloads\MainDab\MainDab\MoonSharp.Interpreter.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\MainDab\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="ShadowCheats">
       <HintPath>..\..\..\Downloads\ShadowCheats.dll</HintPath>
     </Reference>
