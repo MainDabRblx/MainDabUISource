@@ -1,0 +1,19 @@
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\bin\Debug\Main's Experimental Chat System.exe.config
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\bin\Debug\Main's Experimental Chat System.exe
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\bin\Debug\Main's Experimental Chat System.pdb
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\bin\Debug\Anarchy.dll
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\bin\Debug\Leaf.xNet.dll
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\bin\Debug\Newtonsoft.Json.dll
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\bin\Debug\Newtonsoft.Json.Schema.dll
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\bin\Debug\websocket-sharp.dll
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\bin\Debug\Newtonsoft.Json.xml
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\bin\Debug\Newtonsoft.Json.Schema.xml
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\obj\Debug\Main's Experimental Chat System.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\obj\Debug\Main_s_Experimental_Chat_System.Form1.resources
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\obj\Debug\Main_s_Experimental_Chat_System.Properties.Resources.resources
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\obj\Debug\Main's Experimental Chat System.csproj.GenerateResource.cache
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\obj\Debug\Main's Experimental Chat System.csproj.CoreCompileInputs.cache
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\obj\Debug\Main's Experimental Chat System.csproj.CopyComplete
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\obj\Debug\Main's Experimental Chat System.exe
+C:\Users\leona\Desktop\MainDabSrc\Main's Experimental Chat System\obj\Debug\Main's Experimental Chat System.pdb

@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Antivirus Disabler", "Antiv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltAccountGent", "AltAccountGent\AltAccountGent.csproj", "{8A130939-F759-4BAF-B0F0-80E24B25D619}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main's Experimental Chat System", "Main's Experimental Chat System\Main's Experimental Chat System.csproj", "{EECE7727-E4CF-4F31-B66D-B77D8C5247F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{8A130939-F759-4BAF-B0F0-80E24B25D619}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A130939-F759-4BAF-B0F0-80E24B25D619}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A130939-F759-4BAF-B0F0-80E24B25D619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EECE7727-E4CF-4F31-B66D-B77D8C5247F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EECE7727-E4CF-4F31-B66D-B77D8C5247F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EECE7727-E4CF-4F31-B66D-B77D8C5247F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EECE7727-E4CF-4F31-B66D-B77D8C5247F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

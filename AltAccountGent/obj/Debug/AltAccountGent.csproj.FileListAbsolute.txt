@@ -8,3 +8,8 @@ C:\Users\leona\Desktop\MainDabSrc\AltAccountGent\obj\Debug\AltAccountGent.csproj
 C:\Users\leona\Desktop\MainDabSrc\AltAccountGent\obj\Debug\AltAccountGent.csproj.CoreCompileInputs.cache
 C:\Users\leona\Desktop\MainDabSrc\AltAccountGent\obj\Debug\AltAccountGent.exe
 C:\Users\leona\Desktop\MainDabSrc\AltAccountGent\obj\Debug\AltAccountGent.pdb
+C:\Users\leona\Desktop\MainDabSrc\AltAccountGent\bin\Debug\Anarchy.dll
+C:\Users\leona\Desktop\MainDabSrc\AltAccountGent\bin\Debug\Leaf.xNet.dll
+C:\Users\leona\Desktop\MainDabSrc\AltAccountGent\bin\Debug\Newtonsoft.Json.dll
+C:\Users\leona\Desktop\MainDabSrc\AltAccountGent\bin\Debug\websocket-sharp.dll
+C:\Users\leona\Desktop\MainDabSrc\AltAccountGent\obj\Debug\AltAccountGent.csproj.CopyComplete
