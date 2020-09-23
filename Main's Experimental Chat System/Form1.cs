@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-// Main_EX#3898 @ discord.io/maindab or yohatipynoo@gmail.com
+// Main_EX#3898 @ discord.io/maindab
 namespace Main_s_Experimental_Chat_System
 {
     // PLEASE MAKE SURE TO USE A USER TOKEN. THIS DOES NOT SUPPORT BOTS.
@@ -48,7 +48,7 @@ namespace Main_s_Experimental_Chat_System
             }
             yesnt = richTextBox1.Text; // saving previous data
             string sdafnasjkdfasdf = File.ReadAllText("username.txt"); // creates a varible for annoncing someone has joined
-            DiscordClient client = new DiscordClient("Njk1MTY2MTYwNzE4NzkwNzI1.X2hwgA.Z3-PMfHKY5X1PikycFZZq29K4GM"); // paste ur token here. must be a user token.
+            DiscordClient client = new DiscordClient("tokenhere"); // paste ur token here. must be a user token.
             DiscordMessage message = client.SendMessage(757426913643069490, sdafnasjkdfasdf + " is now on!", false); // tells eveyrone someone is on
             // change 757426913643069490 with ur channel id
             try
@@ -119,13 +119,13 @@ namespace Main_s_Experimental_Chat_System
         {
             DiscordSocketClient client = new DiscordSocketClient();
             client.OnMessageReceived += client_OnMessageReceived; // check for messages
-            client.Login("Njk1MTY2MTYwNzE4NzkwNzI1.X2hwgA.Z3-PMfHKY5X1PikycFZZq29K4GM"); // put ur user token here
+            client.Login("tokenhere"); // put ur user token here
         }
 
         private void label2_Click(object sender, EventArgs e) // when x pressed
         {
             string sdafnasjkdfasdf = File.ReadAllText("username.txt"); // reads for username
-            DiscordClient client = new DiscordClient("Njk1MTY2MTYwNzE4NzkwNzI1.X2hwgA.Z3-PMfHKY5X1PikycFZZq29K4GM"); // put ur user token here
+            DiscordClient client = new DiscordClient("tokenhere"); // put ur user token here
             DiscordMessage message = client.SendMessage(757426913643069490, sdafnasjkdfasdf + " has left.", false); // tellls people someone left
             // change 757426913643069490 with ur channel id
             Environment.Exit(0); // obvious
@@ -192,7 +192,7 @@ namespace Main_s_Experimental_Chat_System
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
         {
             string no = File.ReadAllText("username.txt"); // read username
-            DiscordClient client = new DiscordClient("Njk1MTY2MTYwNzE4NzkwNzI1.X2hwgA.Z3-PMfHKY5X1PikycFZZq29K4GM"); // paste ur user token here
+            DiscordClient client = new DiscordClient("tokenhere"); // paste ur user token here
             if (textBox1.Text == "") // just so user dosen't send blank...
             {
                 MessageBox.Show("Please enter a message!", "MainDab Chat System BETA"); // tells them
