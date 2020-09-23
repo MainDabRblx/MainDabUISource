@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltAccountGent", "AltAccoun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main's Experimental Chat System", "Main's Experimental Chat System\Main's Experimental Chat System.csproj", "{EECE7727-E4CF-4F31-B66D-B77D8C5247F0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Seperate Projects", "Seperate Projects", "{F65B9F36-B491-4DAD-B157-667E4751C4EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6E1FC207-195D-4791-8833-F4C5518C0A3F} = {F65B9F36-B491-4DAD-B157-667E4751C4EB}
+		{8A130939-F759-4BAF-B0F0-80E24B25D619} = {F65B9F36-B491-4DAD-B157-667E4751C4EB}
+		{EECE7727-E4CF-4F31-B66D-B77D8C5247F0} = {F65B9F36-B491-4DAD-B157-667E4751C4EB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2B802D6E-262B-4899-ADDA-4B43B134FDFA}

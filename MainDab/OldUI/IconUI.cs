@@ -962,7 +962,7 @@ namespace ProjectMainDab
 			}
 			else
             {
-				MessageBox.Show("Please inject first!");
+				
             }
 		}
 

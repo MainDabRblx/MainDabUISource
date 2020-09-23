@@ -123,6 +123,16 @@ namespace ProjectMainDab.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ExecIcon {
+            get {
+                object obj = ResourceManager.GetObject("ExecIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap listbox {
             get {
                 object obj = ResourceManager.GetObject("listbox", resourceCulture);
