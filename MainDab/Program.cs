@@ -10,20 +10,15 @@ namespace ProjectMainDab
     // Token: 0x02000014 RID: 20
     internal static class Program
     {
-
-
         // Token: 0x0600015F RID: 351 RVA: 0x000188A4 File Offset: 0x00016AA4
         [STAThread]
-
         private static void Main()
         {
             WebClient webClient = new WebClient();
 
-
-            // If directory does not exist, don't even try   
+            // If directory does not exist, don't even try
             if (Directory.Exists("Applications"))
             {
-
             }
             else
             {
@@ -31,7 +26,6 @@ namespace ProjectMainDab
             }
             if (Directory.Exists("autoexec"))
             {
-
             }
             else
             {
@@ -54,7 +48,6 @@ namespace ProjectMainDab
 
             if (Directory.Exists("Scripts"))
             {
-
             }
             else
             {
@@ -62,14 +55,14 @@ namespace ProjectMainDab
                 string fileName = "Scripts\\!Readmeh.txt";
                 using (FileStream fs = File.Create(fileName))
                 {
-                    // Add some text to file    
+                    // Add some text to file
                     Byte[] title = new UTF8Encoding(true).GetBytes("-- Paste your text files in the Scripts folder! The text files should include the script.\n");
                     fs.Write(title, 0, title.Length);
                     byte[] author = new UTF8Encoding(true).GetBytes("-- Just saying...");
                     fs.Write(author, 0, author.Length);
                 }
 
-                // Open the stream and read it back.    
+                // Open the stream and read it back.
                 using (StreamReader sr = File.OpenText(fileName))
                 {
                     string s = "";
@@ -78,12 +71,9 @@ namespace ProjectMainDab
                         Console.WriteLine(s);
                     }
                 }
-
-
             }
             if (File.Exists("Scripts\\!Readmeh.txt"))
             {
-
             }
             else
             {
@@ -91,14 +81,14 @@ namespace ProjectMainDab
                 string fileName = "Scripts\\!Readmeh.txt";
                 using (FileStream fs = File.Create(fileName))
                 {
-                    // Add some text to file    
+                    // Add some text to file
                     Byte[] title = new UTF8Encoding(true).GetBytes("-- Paste your text files in the Scripts folder! The text files should include the script.\n");
                     fs.Write(title, 0, title.Length);
                     byte[] author = new UTF8Encoding(true).GetBytes("-- Just saying...");
                     fs.Write(author, 0, author.Length);
                 }
 
-                // Open the stream and read it back.    
+                // Open the stream and read it back.
                 using (StreamReader sr = File.OpenText(fileName))
                 {
                     string s = "";
@@ -108,12 +98,11 @@ namespace ProjectMainDab
                     }
                 }
             }
-
 
             WebClient webClient2 = new WebClient();
             byte[] bytes = webClient2.DownloadData("https://pastebin.com/raw/QpwkAJS4");
             string we = Encoding.UTF8.GetString(bytes);
-            string a2 = "MainDab V.7.1";
+            string a2 = "MainDab V.7.4";
             try
             {
                 if (we == a2)
@@ -131,7 +120,7 @@ namespace ProjectMainDab
                     string fileName = "Startup.txt";
                     using (FileStream fs = File.Create(fileName))
                     {
-                        // Add some text to file    
+                        // Add some text to file
                         Byte[] title = new UTF8Encoding(true).GetBytes("[* Starting MainDab]\n[* Checking ifisuptodate]\n[! ifisuptodate return false, download update]\n");
                         fs.Write(title, 0, title.Length);
                         byte[] author = new UTF8Encoding(true).GetBytes("Startup failed, update found");
@@ -152,7 +141,7 @@ namespace ProjectMainDab
                 string fileName = "Startup.txt";
                 using (FileStream fs = File.Create(fileName))
                 {
-                    // Add some text to file    
+                    // Add some text to file
                     Byte[] title = new UTF8Encoding(true).GetBytes("[* Starting MainDab]\n[* Checking ifisuptodate]\n[! ifisuptodate error no connection, open ui and prompt]\n[* Connecting to Github]\n[* Updating script hub]\n[* Script hub done, close stream]\n[* Check for missing folder]\n[* All done]\n");
                     fs.Write(title, 0, title.Length);
                     byte[] author = new UTF8Encoding(true).GetBytes("Startup complete");
@@ -165,9 +154,6 @@ namespace ProjectMainDab
                 Application.SetCompatibleTextRenderingDefault(false);
                 MessageBox.Show("There seems to be an error starting getting an update, please contact me at Main_EX#3898 on discord (or tell me in MainDab discord server.\n\nThe UI anyways opened up, feel free to use MainDab.", "Another error");
             }
-
-
         }
     }
 }
-

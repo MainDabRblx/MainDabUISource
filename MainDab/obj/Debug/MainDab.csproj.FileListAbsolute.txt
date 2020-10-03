@@ -34,5 +34,7 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.Tutorial.reso
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.Tools.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\VisualStudioTabControl.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\Newtonsoft.Json.dll
-C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.csprojAssemblyReference.cache
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\ProjectMainDab.MainUI.resources
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\OxygenU_API.dll
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\FastColoredTextBox.dll
+C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.csprojAssemblyReference.cache

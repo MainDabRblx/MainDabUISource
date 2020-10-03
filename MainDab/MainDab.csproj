@@ -45,6 +45,9 @@
     <Reference Include="DiscordRPC">
       <HintPath>..\..\..\Downloads\MainDab\MainDab\DiscordRPC.dll</HintPath>
     </Reference>
+    <Reference Include="FastColoredTextBox">
+      <HintPath>..\..\ElysionX\ElysionX\FastColoredTextBox.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -62,6 +65,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\MainDab\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OxygenU_API">
+      <HintPath>..\..\..\Downloads\Cub\CubCheeto\OxygenU_API.dll</HintPath>
     </Reference>
     <Reference Include="ShadowCheats">
       <HintPath>..\..\..\Downloads\ShadowCheats.dll</HintPath>
