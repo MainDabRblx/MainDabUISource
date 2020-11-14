@@ -1,9 +1,0 @@
-[* Starting MainDab]
-[* Checking ifisuptodate]
-[! ifisuptodate error no connection, open ui and prompt]
-[* Connecting to Github]
-[* Updating script hub]
-[* Script hub done, close stream]
-[* Check for missing folder]
-[* All done]
-Startup complete

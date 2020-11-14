@@ -1,9 +1,0 @@
-[* Starting MainDab]
-[* Checking ifisuptodate]
-[* ifisuptodate return true, open ui]
-[* Connecting to Github]
-[* Updating script hub]
-[* Script hub done, close stream]
-[* Check for missing folder]
-[* All done]
-Startup complete

@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<SyntaxDefinition name="Lua" extensions=".lua" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+	<Color name="Comment" foreground="#69676c" />
+	<Color name="String" foreground="#fce566" />
+	<Color name="Foreground" foreground="#8b888f" />
+	<Color name="Punctuation" foreground="#fc618d" />
+	<Color name="MethodCall" foreground="#7bd88f" fontWeight="bold"/>
+	<Color name="Literals" foreground="#948ae3"/>
+	<Color name="Keywords" fontWeight="bold" foreground="#fc618d" />
+	<Color name="Escapes" foreground="#948ae3" />
+
+	<RuleSet>
+		<!-- Mark previous rule-->
+		<Rule color="MethodCall">
+			\b
+			[\d\w_]+	# an identifier
+			(?=\s*\() # followed by (
+		</Rule>
+		<Rule color="MethodCall">
+			\b
+			[\d\w_]+	# an identifier
+			(?=\s*\{) # followed by {
+		</Rule>
+
+		<Rule color="Punctuation">
+			[\)\(*\&amp;\^\%\$\#@!\\\]\[;':",./&lt;&gt;?\{\}\|\-\=\+]+
+		</Rule>
+
+		<Span color="Comment" multiline="true">
+			<Begin>--\[[=]*\[</Begin>
+			<End>\][=]*\]</End>
+		</Span>
+
+		<Span color="Comment">
+			<Begin>--</Begin>
+		</Span>
+
+		<Span color="String">
+			<Begin color="Foreground">"</Begin>
+			<End color="Foreground">"</End>
+			<RuleSet>
+				<Rule color="Escapes">\\\d{1,3}|\\.</Rule>
+			</RuleSet>
+		</Span>
+
+		<Span color="String">
+			<Begin color="Foreground">'</Begin>
+			<End color="Foreground">'</End>
+			<RuleSet>
+				<Rule color="Escapes">\\\d\d?\d?|\\.</Rule>
+			</RuleSet>
+		</Span>
+
+		<Span color="String" multiline="true">
+			<Begin color="Foreground">\[[=]*\[</Begin>
+			<End color="Foreground">\][=]*]</End>
+		</Span>
+
+		<Keywords color="Literals">
+			<Word>true</Word>
+			<Word>false</Word>
+		</Keywords>
+
+		<Keywords color="Keywords">
+			<Word>and</Word>
+			<Word>break</Word>
+			<Word>do</Word>
+			<Word>else</Word>
+			<Word>elseif</Word>
+			<Word>end</Word>
+			<Word>false</Word>
+			<Word>for</Word>
+			<Word>function</Word>
+			<Word>if</Word>
+			<Word>in</Word>
+			<Word>local</Word>
+			<Word>not</Word>
+			<Word>or</Word>
+			<Word>repeat</Word>
+			<Word>return</Word>
+			<Word>then</Word>
+			<Word>true</Word>
+			<Word>until</Word>
+			<Word>while</Word>
+		</Keywords>
+
+		<Keywords color="Literals">
+			<Word>nil</Word>
+		</Keywords>
+
+		<!-- Digits -->
+		<Rule color="Literals">
+			\b0[xX][0-9a-fA-F]+	# hex number
+			|
+			(	\b\d+(\.[0-9]+)?	 #number with optional floating point
+			|	\.[0-9]+			 #or just starting with floating point
+			)
+			([eE][+-]?[0-9]+)? # optional exponent
+		</Rule>
+	</RuleSet>
+</SyntaxDefinition>
