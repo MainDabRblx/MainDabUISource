@@ -73,29 +73,6 @@ namespace MainDab
 
             });
 
-            int num = 0;
-            foreach (string path in Directory.EnumerateFiles(Environment.GetEnvironmentVariable("LocalAppData") + "\\Roblox\\Logs\\archive", "*.ini"))
-            {
-                string text = File.ReadAllText(path);
-                bool flag = text.Contains("IsTainted=true");
-                if (flag)
-                {
-                    num++;
-                    bool flag2 = text.Contains("TaintingModuleDirectory=") && text.Contains("TaintingModule=");
-                    if (flag2)
-                    {
-                        string text2 = text.Substring(text.IndexOf("TaintingModule=") + "TaintingModule=".Length);
-                        text2 = text2.Substring(0, text2.IndexOf("\n"));
-                        string text3 = text.Substring(text.IndexOf("TaintingModuleDirectory=") + "TaintingModuleDirectory=".Length);
-                        text3 = text3.Substring(0, text3.IndexOf("\n")) + "\\" + text2;
-                       
-                    }
-                }
-            }
-           if (num > 0)
-            {
-                MessageBox.Show("You have been tainted by Roblox! This means that your roblox crash logs were uploaded to Roblox, and you are most likely up for a ban. Click on extensions and download the taint log checker to see more details.", "WARNING");
-            }
 
 
             // Update system now on main ui.
@@ -107,7 +84,7 @@ namespace MainDab
             WebClient webClient2 = new WebClient();
             byte[] bytes = webClient2.DownloadData("https://pastebin.com/raw/QpwkAJS4");
             string we = Encoding.UTF8.GetString(bytes);
-            string currentver = "MainDab V.9.1";
+            string currentver = "MainDab V.9.2";
             byte[] succ = webClient2.DownloadData("https://pastebin.com/raw/TeKDGrbg");
             string discord = Encoding.UTF8.GetString(succ);
             Process.Start(discord);
@@ -302,6 +279,31 @@ namespace MainDab
             XmlTextReader xmlTextReader = new XmlTextReader(input);
             textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
             // Change directory to avoid useless directories :/
+
+            int num = 0;
+            foreach (string path in Directory.EnumerateFiles(Environment.GetEnvironmentVariable("LocalAppData") + "\\Roblox\\Logs\\archive", "*.ini"))
+            {
+                string text = File.ReadAllText(path);
+                bool flag = text.Contains("IsTainted=true");
+                if (flag)
+                {
+                    num++;
+                    bool flag2 = text.Contains("TaintingModuleDirectory=") && text.Contains("TaintingModule=");
+                    if (flag2)
+                    {
+                        string text2 = text.Substring(text.IndexOf("TaintingModule=") + "TaintingModule=".Length);
+                        text2 = text2.Substring(0, text2.IndexOf("\n"));
+                        string text3 = text.Substring(text.IndexOf("TaintingModuleDirectory=") + "TaintingModuleDirectory=".Length);
+                        text3 = text3.Substring(0, text3.IndexOf("\n")) + "\\" + text2;
+
+                    }
+                }
+            }
+            if (num > 0)
+            {
+                MessageBox.Show("You have been tainted by Roblox! This means that your roblox crash logs were uploaded to Roblox, and you are most likely up for a ban. Click on extensions and download the taint log checker to see more details.", "WARNING");
+            }
+
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)

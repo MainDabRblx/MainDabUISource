@@ -374,7 +374,7 @@
                 </Button.RenderTransform>
             </Button>
             <Label Content="V9" HorizontalAlignment="Left" Margin="63,-7,0,0" VerticalAlignment="Top" Grid.RowSpan="3" FontSize="9" Foreground="#FF34C07C"/>
-            <Label x:Name="Status" Content="Updating MainDab.dll.." HorizontalAlignment="Left" Margin="1,136.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Grid.ColumnSpan="2" Width="155" FontSize="10"/>
+            <Label x:Name="Status" Content="" HorizontalAlignment="Left" Margin="1,136.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Grid.ColumnSpan="2" Width="155" FontSize="10"/>
             <Label x:Name="label6" Content="Selected API : Loading..........." HorizontalAlignment="Left" Margin="329.667,138.333,-12,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Width="155" FontSize="10" Grid.Column="1" Grid.ColumnSpan="3" Loaded="label6_Loaded"/>
             <Image HorizontalAlignment="Left" Height="34" Margin="0,19,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="39" RenderTransformOrigin="0.13,0.354" Source="play-button.png" Stretch="Fill" MouseDown="Image_MouseDown_1"/>
             <Image HorizontalAlignment="Left" Height="27" Margin="10,56,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.13,0.354" Source="delete.png" Stretch="Fill" MouseDown="Image_MouseDown"/>
