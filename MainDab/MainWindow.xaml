@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:MainDab"
         xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit" x:Class="MainDab.MainWindow"
         mc:Ignorable="d"
-        Title="MainDab" Topmost="False" Height="335.602" Width="903.706" AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize" Background="Transparent" Icon="Maindab.png">
+        Title="MainDab" Topmost="False" Height="399.41" Width="903.706" AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize" Background="Transparent" Icon="MainDabLogo.png">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -322,7 +322,7 @@
                 HorizontalScrollBarVisibility="Auto" 
                 VerticalScrollBarVisibility="Auto"
                 LineNumbersForeground="White"
-                ShowLineNumbers="True" Foreground="White" OpacityMask="Black" Height="198" Background="#FF151515" HorizontalAlignment="Center" Width="444" VerticalAlignment="Center" Margin="40,36,40,86" Grid.RowSpan="4" Loaded="textEditor_Loaded" Grid.ColumnSpan="2" Text="-- MainDab v8 Loaded! Join MainDab at discord.gg/e5kbU75"/>
+                ShowLineNumbers="True" Foreground="White" OpacityMask="Black" Height="198" Background="#FF151515" HorizontalAlignment="Center" Width="444" VerticalAlignment="Center" Margin="40,36,40,86" Grid.RowSpan="4" Loaded="textEditor_Loaded" Grid.ColumnSpan="2" Text="-- MainDab V9 Loaded! Join MainDab at discord.io/maindab"/>
             <Menu HorizontalAlignment="Left" Height="21" Margin="40,15,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="528" Background="#FF232323" Foreground="{x:Null}" Grid.ColumnSpan="4">
                 <MenuItem Header="File" Height="21" Width="33" Foreground="White" BorderThickness="0" Click="MenuItem_Click_11">
                     <MenuItem Header="Kill Roblox" HorizontalAlignment="Left" Height="21" Width="140" Click="MenuItem_Click" Background="#FF2D2D2D" BorderThickness="0"/>
@@ -347,21 +347,17 @@
                     <MenuItem Header="Sirhurt Scripthub&#xA;" Height="19" Background="#FF2D2D2D" BorderThickness="0" Margin="0,2,-34,0" RenderTransformOrigin="0.502,1" HorizontalAlignment="Left" Width="174" Click="MenuItem_Click_19" TextOptions.TextHintingMode="Fixed"/>
                 </MenuItem>
                 <MenuItem Header="Select DLL" Height="21" Width="72" Foreground="White" BorderThickness="0" Click="MenuItem_Click_4">
-                    <MenuItem Header="Cheatsquad" HorizontalAlignment="Left" Height="21" Width="173" Click="dddd" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-33,0"/>
-                    <MenuItem Header="MainDab API" HorizontalAlignment="Left" Height="22" Width="169" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-29,0" Click="MenuItem_Click_7"/>
-                    <MenuItem Header="Sirhurt API" HorizontalAlignment="Left" Height="22" Width="140" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_8"/>
-                    <MenuItem Header="Custom DLL" HorizontalAlignment="Left" Height="20" Width="156" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-16,0" Click="MenuItem_Click_9"/>
+                    <MenuItem Header="Cheatsquad" HorizontalAlignment="Left" Height="21" Width="148" Click="dddd" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-8,0"/>
+                    <MenuItem Header="Lush API (MainDab)" HorizontalAlignment="Left" Height="20" Width="187" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_8" Margin="0,0,-47,0"/>
+                    <MenuItem Header="Sirhurt API" HorizontalAlignment="Left" Height="21" Width="156" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-16,0" Click="MenuItem_Click_22"/>
+                    <MenuItem Header="Custom DLL" HorizontalAlignment="Left" Height="21" Width="166" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_21" Margin="-1,0,-25,0"/>
                 </MenuItem>
                 <MenuItem Header="Help" Height="21" Width="46" Foreground="White" BorderThickness="0" Click="MenuItem_Click_5">
                     <MenuItem Header="Join our Discord" HorizontalAlignment="Left" Height="21" Width="171" Click="NEIn" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-31,0"/>
                     <MenuItem Header="Documentation" HorizontalAlignment="Left" Height="22" Width="170" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-30,0" Click="MenuItem_Click_17"/>
-                    <MenuItem Header="About" HorizontalAlignment="Left" Height="22" Width="145" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-5,0"/>
+                    <MenuItem Header="Credits&#xD;&#xA;" HorizontalAlignment="Left" Height="22" Width="145" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-5,0" MouseDown="MenuItem_MouseDown" Click="MenuItem_Click_23"/>
                 </MenuItem>
-                <MenuItem Header="Extensions" Height="21" Width="67" Foreground="White" BorderThickness="0" Click="MenuItem_Click_5">
-                    <MenuItem Header="Coming Soon&#xA;" HorizontalAlignment="Left" Height="21" Width="155" Click="MenuItem_Click" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-15,0"/>
-                    <MenuItem Header="Coming Soon" HorizontalAlignment="Left" Height="18" Width="157" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_6" Margin="0,0,-17,0"/>
-                    <MenuItem Header="Coming Soon" HorizontalAlignment="Left" Height="22" Width="159" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-19,0"/>
-                </MenuItem>
+                <MenuItem Header="Extensions" Height="21" Width="67" Foreground="White" BorderThickness="0" Click="MenuItem_Click_5" Background="#FF232323"/>
             </Menu>
             <Frame Content="&#xA;" HorizontalAlignment="Left" Height="219" Margin="0,15,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="40" Background="#FF232323"/>
             <Button x:Name="Nigger" BorderThickness="0" Background="#FFD9D7D7" Margin="6,-6,16,86.667" Style="{DynamicResource ButtonStyle2}" Grid.Row="2" Click="Button_Click_1" RenderTransformOrigin="-1.795,0.564" Grid.Column="2" IsMouseDirectlyOverChanged="Nigger_IsMouseDirectlyOverChanged" Height="14" VerticalAlignment="Bottom">
@@ -377,7 +373,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Label Content="V8" HorizontalAlignment="Left" Margin="63,-7,0,0" VerticalAlignment="Top" Grid.RowSpan="3" FontSize="9" Foreground="#FF34C07C"/>
+            <Label Content="V9" HorizontalAlignment="Left" Margin="63,-7,0,0" VerticalAlignment="Top" Grid.RowSpan="3" FontSize="9" Foreground="#FF34C07C"/>
             <Label x:Name="Status" Content="Updating MainDab.dll.." HorizontalAlignment="Left" Margin="1,136.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Grid.ColumnSpan="2" Width="155" FontSize="10"/>
             <Label x:Name="label6" Content="Selected API : Loading..........." HorizontalAlignment="Left" Margin="329.667,138.333,-12,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Width="155" FontSize="10" Grid.Column="1" Grid.ColumnSpan="3" Loaded="label6_Loaded"/>
             <Image HorizontalAlignment="Left" Height="34" Margin="0,19,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="39" RenderTransformOrigin="0.13,0.354" Source="play-button.png" Stretch="Fill" MouseDown="Image_MouseDown_1"/>

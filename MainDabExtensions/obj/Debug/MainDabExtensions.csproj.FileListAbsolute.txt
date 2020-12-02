@@ -1,0 +1,10 @@
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\bin\Debug\MainDabExtensions.exe.config
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\bin\Debug\MainDabExtensions.exe
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\bin\Debug\MainDabExtensions.pdb
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\obj\Debug\MainDabExtensions.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\obj\Debug\MainDabExtensions.Form1.resources
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\obj\Debug\MainDabExtensions.Properties.Resources.resources
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\obj\Debug\MainDabExtensions.csproj.GenerateResource.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\obj\Debug\MainDabExtensions.csproj.CoreCompileInputs.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\obj\Debug\MainDabExtensions.exe
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\obj\Debug\MainDabExtensions.pdb

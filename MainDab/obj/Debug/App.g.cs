@@ -75,6 +75,8 @@ namespace MainDab {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main() {
+            SplashScreen splashScreen = new SplashScreen("untitled%20drawing%20(9).png");
+            splashScreen.Show(true);
             MainDab.App app = new MainDab.App();
             app.InitializeComponent();
             app.Run();

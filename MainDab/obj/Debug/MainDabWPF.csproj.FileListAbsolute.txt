@@ -67,4 +67,3 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csproj.CoreCompil
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csproj.CopyComplete
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.exe
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.pdb
-C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.Form1.resources

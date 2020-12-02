@@ -49,19 +49,54 @@ namespace MainDab
             };
             client.OnReady += delegate { };
             client.OnPresenceUpdate += delegate { };
+            
             client.Initialize();
             // this.panel6.Visible = false;
             client.SetPresence(new RichPresence
             {
-                Details = "Using MainDab V8",
-                State = "Join here : discord.io/maindab",
+                Details = "Using MainDab V9",
+                State = "MainDab Roblox Exploit | discord.io/maindab",
+
+                Timestamps = new Timestamps
+                {
+                    Start = DateTime.UtcNow,
+                  
+                },
+
                 Assets = new Assets
                 {
-                    LargeImageKey = "render",
-                    LargeImageText = "render",
-                    SmallImageKey = "render"
+                    LargeImageKey = "image_large",
+                    LargeImageText = "MainDab Roblox Exploit",
+                    
+                    SmallImageKey = "image_small"
                 }
+
             });
+
+            int num = 0;
+            foreach (string path in Directory.EnumerateFiles(Environment.GetEnvironmentVariable("LocalAppData") + "\\Roblox\\Logs\\archive", "*.ini"))
+            {
+                string text = File.ReadAllText(path);
+                bool flag = text.Contains("IsTainted=true");
+                if (flag)
+                {
+                    num++;
+                    bool flag2 = text.Contains("TaintingModuleDirectory=") && text.Contains("TaintingModule=");
+                    if (flag2)
+                    {
+                        string text2 = text.Substring(text.IndexOf("TaintingModule=") + "TaintingModule=".Length);
+                        text2 = text2.Substring(0, text2.IndexOf("\n"));
+                        string text3 = text.Substring(text.IndexOf("TaintingModuleDirectory=") + "TaintingModuleDirectory=".Length);
+                        text3 = text3.Substring(0, text3.IndexOf("\n")) + "\\" + text2;
+                       
+                    }
+                }
+            }
+           if (num > 0)
+            {
+                MessageBox.Show("You have been tainted by Roblox! This means that your roblox crash logs were uploaded to Roblox, and you are most likely up for a ban. Click on extensions and download the taint log checker to see more details.", "WARNING");
+            }
+
 
             // Update system now on main ui.
             if (File.Exists("update.exe"))
@@ -72,7 +107,7 @@ namespace MainDab
             WebClient webClient2 = new WebClient();
             byte[] bytes = webClient2.DownloadData("https://pastebin.com/raw/QpwkAJS4");
             string we = Encoding.UTF8.GetString(bytes);
-            string currentver = "MainDab V.8.6";
+            string currentver = "MainDab V.9.1";
             byte[] succ = webClient2.DownloadData("https://pastebin.com/raw/TeKDGrbg");
             string discord = Encoding.UTF8.GetString(succ);
             Process.Start(discord);
@@ -309,6 +344,7 @@ namespace MainDab
             
             PopulateListBox(this.fuckbm2, "Scripts", "*.txt");
             PopulateListBox(this.fuckbm2, "Scripts", "*.lua");
+            /*
             new Thread(() =>
             {
                 this.Dispatcher.Invoke(() =>
@@ -326,7 +362,7 @@ namespace MainDab
                 {
                     Status.Content = " ";
                 });
-            }).Start();
+            }).Start();*/
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
@@ -429,11 +465,12 @@ namespace MainDab
 
         private void MenuItem_Click_8(object sender, RoutedEventArgs e)
         {
-            currentdll = "Selected API : Sirhurt API";
-            label6.Content = "Selected API : Sirhurt API";
+            currentdll = "Selected API : Lush API";
+            label6.Content = "Selected API : Lush API";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
-            key.SetValue("DLL", "Selected API : Sirhurt API");
+            key.SetValue("DLL", "Selected API : Lush API");
             key.Close();
+
         }
 
         private void MenuItem_Click_9(object sender, RoutedEventArgs e)
@@ -523,7 +560,7 @@ namespace MainDab
 
 
             }
-            if (currentdll == "Selected API : MainDabAPI")
+            if (currentdll == "Selected API : Lush API")
             {
                 Functions.Inject();
                 new Thread(() =>
@@ -532,13 +569,13 @@ namespace MainDab
 
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "Injecting MainDab API...";
+                        Status.Content = "Injecting Lush API...";
 
                     });
                     Thread.Sleep(6000);
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "MainDab API Injected!";
+                        Status.Content = "Lush API Injected!";
                     });
                     Thread.Sleep(1000);
                     this.Dispatcher.Invoke(() =>
@@ -672,7 +709,7 @@ namespace MainDab
 
 
             }
-            if (currentdll == "Selected API : MainDabAPI")
+            if (currentdll == "Selected API : Lush API")
             {
                 Functions.Inject();
                 new Thread(() =>
@@ -681,13 +718,13 @@ namespace MainDab
 
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "Injecting MainDab API...";
+                        Status.Content = "Injecting Lush API...";
 
                     });
                     Thread.Sleep(6000);
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "MainDab API Injected!";
+                        Status.Content = "Lush API Injected!";
                     });
                     Thread.Sleep(1000);
                     this.Dispatcher.Invoke(() =>
@@ -725,7 +762,7 @@ namespace MainDab
             }
             else
             {
-                MessageBox.Show("Downloading VPN. Click OK to continue.");
+                MessageBox.Show("Downloading FPS Unlocker. Click OK to continue.");
                 var sex = new WebClient();
                 sex.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/fpsunlocker.exe?raw=true",
                     "Applications\\fpsunlocker.exe");
@@ -1032,7 +1069,7 @@ namespace MainDab
             {
                 shitsquad.Execute(scriptseggx);
             }
-            if (currentdll == "Selected API : MainDabAPI")
+            if (currentdll == "Selected API : Lush API")
             {
                 NamedPipes.LuaPipe(scriptseggx);
             }
@@ -1135,15 +1172,39 @@ namespace MainDab
 
         private void MenuItem_Click_20(object sender, RoutedEventArgs e)
         {
-            Form1 form = new Form1();
-            WindowInteropHelper wih = new WindowInteropHelper(this);
-            wih.Owner = form.Handle;
-            form.ShowDialog();
+           
         }
 
         private void custom_Loaded(object sender, RoutedEventArgs e)
         {
             custom.Visibility = Visibility.Hidden;
+        }
+
+        private void MenuItem_Click_21(object sender, RoutedEventArgs e)
+        {
+            custom.Visibility = Visibility.Visible;
+        }
+
+        private void MenuItem_Click_22(object sender, RoutedEventArgs e)
+        {
+            currentdll = "Selected API : Sirhurt API";
+            label6.Content = "Selected API : Sirhurt API";
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
+            key.SetValue("DLL", "Selected API : Sirhurt API");
+            key.Close();
+        }
+
+        private void MenuItem_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void MenuItem_Click_23(object sender, RoutedEventArgs e)
+        {
+            WebClient webClient2 = new WebClient();
+            byte[] bytes = webClient2.DownloadData("https://pastebin.com/raw/TU1EWx3w");
+            string we = Encoding.UTF8.GetString(bytes);
+            MessageBox.Show(we, "MainDab Credits");
         }
     }
 }
