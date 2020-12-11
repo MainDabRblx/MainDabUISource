@@ -6,6 +6,7 @@ using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace MainDabUpdater
 {
@@ -13,22 +14,18 @@ namespace MainDabUpdater
     {
         static void Main(string[] args)
         {
+
             WebClient webClient = new WebClient();
-            Console.WriteLine("Starting update...");
+            Console.WriteLine("UPDATER : Starting update...");
             Console.Title = "MainDab | Updating MainDab...";
             Thread.Sleep(1000);
-            Console.WriteLine("Deleting MainDab...");
+            Console.WriteLine("UPDATER : Deleting MainDab...");
             string path = "MainDab.exe";
             if (File.Exists(path))
             {
                 File.Delete(path);
             }
-            string path2 = "MainDabBeta.exe";
-            if (File.Exists(path2))
-            {
-                File.Delete(path2);
-            }
-            Console.WriteLine("Downloading new CheatSquadAPI...");
+            Console.WriteLine("UPDATER : Downloading new CheatSquadAPI...");
             if (File.Exists("CheatSquadAPI.dll"))
             {
                 File.Delete("CheatSquadAPI.dll");
@@ -38,49 +35,6 @@ namespace MainDabUpdater
             if (!File.Exists("CheatSquadAPI.dll"))
             {
                 webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/CheatSquadAPI.dll?raw=true", "CheatSquadAPI.dll");
-            }
-
-
-            if (File.Exists("OxygenU_API.dll"))
-            {
-                File.Delete("OxygenU_API.dll");
-            }
-            if (File.Exists("WeAreDevs_API.cpp.dll"))
-            {
-                File.Delete("WeAreDevs_API.cpp.dll");
-            }
-            if (File.Exists("OxygenBytecode.dll"))
-            {
-                File.Delete("OxygenBytecode.dll");
-            }
-            if (File.Exists("MoonSharp.Interpreter.dll"))
-            {
-                File.Delete("MoonSharp.Interpreter.dll");
-            }
-            if (File.Exists("Plugins.exe"))
-            {
-                File.Delete("Plugins.exe");
-            }
-            if (File.Exists("EasyExploitsDLL.dll"))
-            {
-                File.Delete("EasyExploitsDLL.dll");
-            }
-            if (File.Exists("EasyExploits.dll"))
-            {
-                File.Delete("EasyExploits.dll");
-            }
-            if (!File.Exists("SirHurtAPI.dll"))
-            {
-                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/SirHurtAPI.dll?raw=true", "SirHurtAPI.dll");
-            }
-            if (File.Exists("WeAreDevs_API.cpp.dll"))
-            {
-                File.Delete("WeAreDevs_API.cpp.dll");
-            }
-
-            if (File.Exists("MainDab.dll"))
-            {
-                File.Delete("MainDab.dll");
             }
 
             if (!File.Exists("MetroFramework.dll"))
@@ -104,19 +58,18 @@ namespace MainDabUpdater
                 Console.WriteLine("Downloading VisualStudioTabControl");
                 webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/VisualStudioTabControl.dll?raw=true", "VisualStudioTabControl.dll");
             }
-            if (!File.Exists("FastColoredTextBox.dll"))
+            if (File.Exists("FastColoredTextBox.dll"))
             {
-                Console.WriteLine("FastColoredTextBox.dll");
-                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/FastColoredTextBox.dll?raw=true", "FastColoredTextBox.dll");
+                File.Delete("FastColoredTextBox.dll");
             }
 
 
 
             ServicePointManager.ServerCertificateValidationCallback = ((object a, X509Certificate b, X509Chain c, SslPolicyErrors d) => true);
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            Console.WriteLine("Downloading new MainDab EXE...");
+            Console.WriteLine("UPDATER : Downloading new version of MainDab...");
             webClient.DownloadFile("https://github.com/leonardssy/ProjectDab/blob/master/MainDab.exe?raw=true", "MainDab.exe");
-            Console.WriteLine("MainDab downloaded.");
+            Console.WriteLine("UPDATER : New MainDab downloaded.");
             Console.Title = "MainDab | Starting MainDab in 5 seconds";
             WebClient webClient4 = new WebClient();
             byte[] bytes = webClient4.DownloadData("https://pastebin.com/raw/6pVUMAGi");

@@ -347,8 +347,8 @@
                     <MenuItem Header="Sirhurt Scripthub&#xA;" Height="19" Background="#FF2D2D2D" BorderThickness="0" Margin="0,2,-34,0" RenderTransformOrigin="0.502,1" HorizontalAlignment="Left" Width="174" Click="MenuItem_Click_19" TextOptions.TextHintingMode="Fixed"/>
                 </MenuItem>
                 <MenuItem Header="Select DLL" Height="21" Width="72" Foreground="White" BorderThickness="0" Click="MenuItem_Click_4">
-                    <MenuItem Header="Cheatsquad" HorizontalAlignment="Left" Height="21" Width="148" Click="dddd" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-8,0"/>
-                    <MenuItem Header="Lush API (MainDab)" HorizontalAlignment="Left" Height="20" Width="187" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_8" Margin="0,0,-47,0"/>
+                    <MenuItem Header="Cheatsquad" HorizontalAlignment="Left" Height="29" Width="148" Click="dddd" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-8,0"/>
+                    <MenuItem Header="MainDab API&#xD;&#xA;" HorizontalAlignment="Left" Height="21" Width="187" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_8" Margin="0,0,-47,0"/>
                     <MenuItem Header="Sirhurt API" HorizontalAlignment="Left" Height="21" Width="156" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-16,0" Click="MenuItem_Click_22"/>
                     <MenuItem Header="Custom DLL" HorizontalAlignment="Left" Height="21" Width="166" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_21" Margin="-1,0,-25,0"/>
                 </MenuItem>

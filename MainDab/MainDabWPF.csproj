@@ -58,8 +58,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CheatSquadAPI">
-      <HintPath>..\..\MainDab\CheatSquadAPI.dll</HintPath>
+    <Reference Include="CheatSquadAPI, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Downloads\CheatSquad_Executor_v2.3\CheatSquad Executor v2.3\CheatSquadAPI.dll</HintPath>
     </Reference>
     <Reference Include="DiscordRPC">
       <HintPath>..\..\MainDab\DiscordRPC.dll</HintPath>

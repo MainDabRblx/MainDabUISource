@@ -84,7 +84,7 @@ namespace MainDab
             WebClient webClient2 = new WebClient();
             byte[] bytes = webClient2.DownloadData("https://pastebin.com/raw/QpwkAJS4");
             string we = Encoding.UTF8.GetString(bytes);
-            string currentver = "MainDab V.9.2";
+            string currentver = "MainDab V.9.4";
             byte[] succ = webClient2.DownloadData("https://pastebin.com/raw/TeKDGrbg");
             string discord = Encoding.UTF8.GetString(succ);
             Process.Start(discord);
@@ -429,6 +429,7 @@ namespace MainDab
             }
             if (currentdll == "Selected API : CheatSquad")
             {
+               
                 shitsquad.Execute(textEditor.Text);
             }
             if (currentdll == "Selected API : MainDabAPI")
@@ -467,10 +468,10 @@ namespace MainDab
 
         private void MenuItem_Click_8(object sender, RoutedEventArgs e)
         {
-            currentdll = "Selected API : Lush API";
-            label6.Content = "Selected API : Lush API";
+            currentdll = "Selected API : MainDab API";
+            label6.Content = "Selected API : MainDab API";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
-            key.SetValue("DLL", "Selected API : Lush API");
+            key.SetValue("DLL", "Selected API : MainDab API");
             key.Close();
 
         }
@@ -562,7 +563,7 @@ namespace MainDab
 
 
             }
-            if (currentdll == "Selected API : Lush API")
+            if (currentdll == "Selected API : MainDab API")
             {
                 Functions.Inject();
                 new Thread(() =>
@@ -571,13 +572,13 @@ namespace MainDab
 
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "Injecting Lush API...";
+                        Status.Content = "Injecting MainDab API...";
 
                     });
                     Thread.Sleep(6000);
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "Lush API Injected!";
+                        Status.Content = "MainDab API Injected!";
                     });
                     Thread.Sleep(1000);
                     this.Dispatcher.Invoke(() =>
@@ -711,22 +712,29 @@ namespace MainDab
 
 
             }
-            if (currentdll == "Selected API : Lush API")
+            if (currentdll == "Selected API : MainDab API")
             {
-                Functions.Inject();
+                // Functions.Inject();
+                string kai9j = "MainDab.dll";
+                FileInfo asdfasf = new FileInfo(kai9j);
+                string omg = asdfasf.FullName;
+             
+                string strCmdText = "PuppyMilkV3BanBypass.exe " + omg;
+                System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+
                 new Thread(() =>
                 {
                     Thread.CurrentThread.IsBackground = true;
 
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "Injecting Lush API...";
+                        Status.Content = "Injecting MainDab API via PuppyMilkInjector...";
 
                     });
                     Thread.Sleep(6000);
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "Lush API Injected!";
+                        Status.Content = "MainDab API Injected!";
                     });
                     Thread.Sleep(1000);
                     this.Dispatcher.Invoke(() =>
