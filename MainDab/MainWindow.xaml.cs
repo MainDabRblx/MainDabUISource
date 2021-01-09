@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using System.Text;
 using System.Windows;
+using System.Web;
 using CheatSquadAPI;
 using SirHurtAPI;
 using System.Windows.Controls;
@@ -25,6 +26,7 @@ using System.IO.Compression;
 using System.Reflection;
 using DiscordRPC.Logging;
 using System.Windows.Interop;
+using EasyExploits;
 
 namespace MainDab
 {
@@ -32,168 +34,15 @@ namespace MainDab
     public partial class MainWindow : Window
     {
         WebClient HITLER = new WebClient(); // HEIL HITLER!
-        private readonly DiscordRpcClient client;
+        private DiscordRpcClient client;
         private readonly CheatSquadAPI.Module shitsquad = new CheatSquadAPI.Module(); // CheatSquad API
+        private readonly EasyExploits.Module ezclap = new EasyExploits.Module();
         string currentdll = "Selected API : CheatSquad";
         private readonly BackgroundWorker worker = new BackgroundWorker();
-
+         
         public MainWindow()
-        {
-            var webClient = new WebClient();
-            client = new DiscordRpcClient("714648958265327737")
-            {
-                Logger = new ConsoleLogger
-                {
-                    Level = LogLevel.Warning
-                }
-            };
-            client.OnReady += delegate { };
-            client.OnPresenceUpdate += delegate { };
+        { 
             
-            client.Initialize();
-            // this.panel6.Visible = false;
-            client.SetPresence(new RichPresence
-            {
-                Details = "Using MainDab V9",
-                State = "MainDab Roblox Exploit | discord.io/maindab",
-
-                Timestamps = new Timestamps
-                {
-                    Start = DateTime.UtcNow,
-                  
-                },
-
-                Assets = new Assets
-                {
-                    LargeImageKey = "image_large",
-                    LargeImageText = "MainDab Roblox Exploit",
-                    
-                    SmallImageKey = "image_small"
-                }
-
-            });
-
-
-
-            // Update system now on main ui.
-            if (File.Exists("update.exe"))
-            {
-                File.Delete("update.exe");
-            }
-
-            WebClient webClient2 = new WebClient();
-            byte[] bytes = webClient2.DownloadData("https://pastebin.com/raw/QpwkAJS4");
-            string we = Encoding.UTF8.GetString(bytes);
-            string currentver = "MainDab V.9.4";
-            byte[] succ = webClient2.DownloadData("https://pastebin.com/raw/TeKDGrbg");
-            string discord = Encoding.UTF8.GetString(succ);
-            Process.Start(discord);
-            if (we == currentver)
-            {
-
-                if (!Directory.Exists("autoexec"))
-                {
-                    Console.WriteLine("Creating autoexec folder...");
-                    Directory.CreateDirectory("autoexec");
-                }
-                if (!Directory.Exists("workspace"))
-                {
-                    Console.WriteLine("Creating workspace folder...");
-                    Directory.CreateDirectory("workspace");
-                }
-
-
-
-                // If directory does not exist, don't even try
-                if (Directory.Exists("Applications"))
-                {
-                }
-                else
-                {
-                    Directory.CreateDirectory("Applications");
-                }
-                if (Directory.Exists("autoexec"))
-                {
-                }
-                else
-                {
-                    Directory.CreateDirectory("autoexec");
-                }
-                if (Directory.Exists("Plugins"))
-                {
-                    System.IO.DirectoryInfo di = new DirectoryInfo("Plugins");
-
-                    foreach (FileInfo file in di.GetFiles())
-                    {
-                        file.Delete();
-                    }
-                    foreach (DirectoryInfo dir in di.GetDirectories())
-                    {
-                        dir.Delete(true);
-                    }
-                    Directory.Delete("Plugins");
-                }
-
-                if (Directory.Exists("Scripts"))
-                {
-                }
-                else
-                {
-                    Directory.CreateDirectory("Scripts");
-                    string fileName = "Scripts\\!Readmeh.txt";
-                    using (FileStream fs = File.Create(fileName))
-                    {
-                        // Add some text to file
-                        Byte[] title = new UTF8Encoding(true).GetBytes("-- Paste your text files in the Scripts folder! The text files should include the script.\n");
-                        fs.Write(title, 0, title.Length);
-                        byte[] author = new UTF8Encoding(true).GetBytes("-- Just saying...");
-                        fs.Write(author, 0, author.Length);
-                    }
-
-                    // Open the stream and read it back.
-                    using (StreamReader sr = File.OpenText(fileName))
-                    {
-                        string s = "";
-                        while ((s = sr.ReadLine()) != null)
-                        {
-                            Console.WriteLine(s);
-                        }
-                    }
-                }
-                if (File.Exists("Scripts\\!Readmeh.txt"))
-                {
-                }
-                else
-                {
-                    Directory.CreateDirectory("Scripts");
-                    string fileName = "Scripts\\!Readmeh.txt";
-                    using (FileStream fs = File.Create(fileName))
-                    {
-                        // Add some text to file
-                        Byte[] title = new UTF8Encoding(true).GetBytes("-- Paste your text files in the Scripts folder! The text files should include the script.\n");
-                        fs.Write(title, 0, title.Length);
-                        byte[] author = new UTF8Encoding(true).GetBytes("-- Just saying...");
-                        fs.Write(author, 0, author.Length);
-                    }
-
-                    // Open the stream and read it back.
-                    using (StreamReader sr = File.OpenText(fileName))
-                    {
-                        string s = "";
-                        while ((s = sr.ReadLine()) != null)
-                        {
-                            Console.WriteLine(s);
-                        }
-                    }
-                }
-            }
-            else
-            {
-                webClient.DownloadFile("https://github.com/leonardssy/ProjectDab/blob/master/MainDab%20Updater.exe?raw=true", "update.exe");
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                Process.Start("update.exe");
-                Environment.Exit(0);
-            }
                 if (File.Exists("lua.xshd"))
                 {
                     File.Delete("lua.xshd");
@@ -275,6 +124,94 @@ namespace MainDab
 
         private void textEditor_Loaded(object sender, RoutedEventArgs e)
         {
+
+            WebClient webClient = new WebClient();
+            byte[] succ1 = webClient.DownloadData("https://pastebin.com/raw/QpwkAJS4");
+            string we = Encoding.UTF8.GetString(succ1);
+            string currentver = "MainDab V.10.3";
+            byte[] succ = webClient.DownloadData("https://pastebin.com/raw/TeKDGrbg");
+            string discord = Encoding.UTF8.GetString(succ);
+            Process.Start(discord);
+            if (we == currentver)
+            {
+
+                if (!Directory.Exists("autoexec"))
+                {
+                    Console.WriteLine("Creating autoexec folder...");
+                    Directory.CreateDirectory("autoexec");
+                }
+                if (!Directory.Exists("workspace"))
+                {
+                    Console.WriteLine("Creating workspace folder...");
+                    Directory.CreateDirectory("workspace");
+                }
+                if (!Directory.Exists("Applications"))
+                {
+                    Directory.CreateDirectory("Applications");
+                }
+                if (!Directory.Exists("autoexec"))
+                {
+                    Directory.CreateDirectory("autoexec");
+                }
+                if (!Directory.Exists("Scripts"))
+                {
+                    Directory.CreateDirectory("Scripts");
+                }
+                client = new DiscordRpcClient("714648958265327737")
+                {
+                    Logger = new ConsoleLogger
+                    {
+                        Level = LogLevel.Warning
+                    }
+                };
+                client.OnReady += delegate { };
+                client.OnPresenceUpdate += delegate { };
+
+                client.Initialize();
+                // this.panel6.Visible = false;
+                client.SetPresence(new RichPresence
+                {
+                    Details = "Using MainDab V10",
+                    State = "MainDab Roblox SEXploit | discord.io/maindab",
+
+                    Timestamps = new Timestamps
+                    {
+                        Start = DateTime.UtcNow,
+
+                    },
+
+                    Assets = new Assets
+                    {
+                        LargeImageKey = "image_large",
+                        LargeImageText = "MainDab Roblox Exploit",
+
+                        SmallImageKey = "image_small"
+                    }
+
+                });
+
+
+            }
+            else
+            {
+                webClient.DownloadFile("https://github.com/leonardssy/ProjectDab/blob/master/MainDab%20Updater.exe?raw=true", "update.exe");
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                Process.Start("update.exe");
+                Environment.Exit(0);
+            }
+            if (File.Exists("lua.xshd"))
+            {
+                File.Delete("lua.xshd");
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
+                File.WriteAllText("lua.xshd", penis); // just in case need new update
+            }
+
+            if (!File.Exists("lua.xshd")) // onv
+            {
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
+                File.WriteAllText("lua.xshd", penis);
+            }
+
             Stream input = File.OpenRead("lua.xshd");
             XmlTextReader xmlTextReader = new XmlTextReader(input);
             textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
@@ -316,11 +253,11 @@ namespace MainDab
             {
                 shitsquad.Execute(textEditor.Text);
             }
-            if (currentdll == "Selected API : MainDabAPI")
+            if (currentdll == "Selected API : EasyExploits API")
             {
                 try
                 {
-                    NamedPipes.LuaPipe(textEditor.Text);
+                    ezclap.ExecuteScript(textEditor.Text);
                 }
                 catch (Exception sexual)
                 {
@@ -389,7 +326,22 @@ namespace MainDab
 
         private void MenuItem_Click_5(object sender, RoutedEventArgs e)
         {
+            if (File.Exists("Applications\\MainDabExtensions.exe"))
+            {
+                Process.Start("Applications\\MainDabExtensions.exe");
+            }
+            else
+            {
+                MessageBox.Show("Downloading Extensions. Click OK to continue.");
+                var sex = new WebClient();
+                sex.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/MainDabExtensions.exe?raw=true",
+                    "Applications\\MainDabExtensions.exe");
+                Process.Start("Applications\\MainDabExtensions.exe");
 
+
+                MessageBox.Show("Extensions downloaded and started!");
+
+            }
         }
 
         private void MenuItem_Click_6(object sender, RoutedEventArgs e)
@@ -432,11 +384,11 @@ namespace MainDab
                
                 shitsquad.Execute(textEditor.Text);
             }
-            if (currentdll == "Selected API : MainDabAPI")
+            if (currentdll == "Selected API : EasyExploits API")
             {
                 try
                 {
-                    NamedPipes.LuaPipe(textEditor.Text);
+                    ezclap.ExecuteScript(textEditor.Text);
                 }
                 catch (Exception sexual)
                 {
@@ -468,10 +420,10 @@ namespace MainDab
 
         private void MenuItem_Click_8(object sender, RoutedEventArgs e)
         {
-            currentdll = "Selected API : MainDab API";
-            label6.Content = "Selected API : MainDab API";
+            currentdll = "Selected API : EasyExploits API";
+            label6.Content = "Selected API : EasyExploits API";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
-            key.SetValue("DLL", "Selected API : MainDab API");
+            key.SetValue("DLL", "Selected API : EasyExploits API");
             key.Close();
 
         }
@@ -563,22 +515,22 @@ namespace MainDab
 
 
             }
-            if (currentdll == "Selected API : MainDab API")
+            if (currentdll == "Selected API : EasyExploits API")
             {
-                Functions.Inject();
+                ezclap.LaunchExploit();
                 new Thread(() =>
                 {
                     Thread.CurrentThread.IsBackground = true;
 
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "Injecting MainDab API...";
+                        Status.Content = "Injecting EasyExploits API...";
 
                     });
                     Thread.Sleep(6000);
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "MainDab API Injected!";
+                        Status.Content = "EasyExploits API Injected!";
                     });
                     Thread.Sleep(1000);
                     this.Dispatcher.Invoke(() =>
@@ -712,29 +664,24 @@ namespace MainDab
 
 
             }
-            if (currentdll == "Selected API : MainDab API")
+            if (currentdll == "Selected API : EasyExploits API")
             {
                 // Functions.Inject();
-                string kai9j = "MainDab.dll";
-                FileInfo asdfasf = new FileInfo(kai9j);
-                string omg = asdfasf.FullName;
-             
-                string strCmdText = "PuppyMilkV3BanBypass.exe " + omg;
-                System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+
 
                 new Thread(() =>
                 {
                     Thread.CurrentThread.IsBackground = true;
-
+                    ezclap.LaunchExploit();
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "Injecting MainDab API via PuppyMilkInjector...";
+                        Status.Content = "Injecting EasyExploits API";
 
                     });
                     Thread.Sleep(6000);
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "MainDab API Injected!";
+                        Status.Content = "EasyExploits API Injected!";
                     });
                     Thread.Sleep(1000);
                     this.Dispatcher.Invoke(() =>
@@ -766,7 +713,7 @@ namespace MainDab
 
         private void NI(object sender, RoutedEventArgs e)
         {
-            if (File.Exists("fpsunlocker.exe"))
+            if (File.Exists("Applications\\fpsunlocker.exe"))
             {
                 Process.Start("Applications\\fpsunlocker.exe");
             }
@@ -783,13 +730,13 @@ namespace MainDab
 
         private void MenuItem_Click_14(object sender, RoutedEventArgs e)
         {
-            if (File.Exists("multirblx.exe"))
+            if (File.Exists("Applications\\multirblx.exe"))
             {
                 Process.Start("Applications\\multirblx.exe");
             }
             else
             {
-                MessageBox.Show("Downloading VPN. Click OK to continue.");
+                MessageBox.Show("Downloading Multiple Roblox. Click OK to continue.");
                 var sex = new WebClient();
                 sex.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/multirblx.exe?raw=true",
                     "Applications\\multirblx.exe");
@@ -1182,7 +1129,20 @@ namespace MainDab
 
         private void MenuItem_Click_20(object sender, RoutedEventArgs e)
         {
-           
+
+            if (File.Exists("Applications\\MainDabExtensions.exe"))
+            {
+                Process.Start("Applications\\MainDabExtensions.exe");
+            }
+            else
+            {
+                MessageBox.Show("Downloading Extensions in order to open the taint logs. Click OK to continue.");
+                var sex = new WebClient();
+                sex.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/MainDabExtensions.exe?raw=true",
+                    "Applications\\MainDabExtensions.exe");
+                Process.Start("Applications\\MainDabExtensions.exe");
+                MessageBox.Show("Extensions downloaded and started!");
+            }
         }
 
         private void custom_Loaded(object sender, RoutedEventArgs e)
@@ -1215,6 +1175,43 @@ namespace MainDab
             byte[] bytes = webClient2.DownloadData("https://pastebin.com/raw/TU1EWx3w");
             string we = Encoding.UTF8.GetString(bytes);
             MessageBox.Show(we, "MainDab Credits");
+        }
+
+        private void Image_ContextMenuOpening(object sender, ContextMenuEventArgs e)
+        {
+
+        }
+
+        private void Image_MouseDown_4(object sender, MouseButtonEventArgs e)
+        {
+            ScriptHub.Visibility = Visibility.Visible;
+        }
+
+        private void SEX(object sender, RoutedEventArgs e)
+        {/*
+            MessageBox.Show("showing sex");
+            Process.Start("https://pornhub.com");
+            Process.Start("https://pornhub.com");
+            Process.Start("https://pornhub.com");
+            Process.Start("https://pornhub.com");
+            Process.Start("https://pornhub.com");
+            Process.Start("https://pornhub.com");
+
+            Process.Start("https://sex.com");
+            Process.Start("https://sex.com");
+            Process.Start("https://www.roblox.com/games/969669348/Black-Magic-II-RANKED"); // niggers only
+
+            Process.Start("https://joinis.is");
+            */ // winter prank xdddd
+        }
+
+        private void Sexn(object sender, RoutedEventArgs e)
+        {
+            WebClient webClient = new WebClient();
+            Console.WriteLine("Downloading MainDab Beta");
+            webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/MainDabBeta.exe?raw=true", "MainDabBeta.exe");
+            Process.Start("MainDabBeta.exe");
+            Environment.Exit(0);
         }
     }
 }

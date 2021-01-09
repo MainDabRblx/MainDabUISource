@@ -1,0 +1,90 @@
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\bin\Debug\Tazesploit.exe.config
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\bin\Debug\Tazesploit.exe
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\bin\Debug\Tazesploit.pdb
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\obj\Debug\MainWindow.g.cs
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\obj\Debug\UserControl1.g.cs
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\obj\Debug\App.g.cs
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\obj\Debug\Tazesploit_MarkupCompile.cache
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\obj\Debug\Tazesploit_MarkupCompile.lref
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\obj\Debug\App.baml
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\obj\Debug\MainWindow.baml
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\obj\Debug\UserControl1.baml
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\obj\Debug\Tazesploit.g.resources
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\obj\Debug\Tazesploit.Properties.Resources.resources
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\obj\Debug\Moon U.csproj.GenerateResource.cache
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\obj\Debug\Moon U.csproj.CoreCompileInputs.cache
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\obj\Debug\Moon U.csproj.CopyComplete
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\obj\Debug\Tazesploit.exe
+C:\Users\grzegorz\Desktop\Tazesploit\Tazesploit\obj\Debug\Tazesploit.pdb
+E:\Download\Moon_U\Tazesploit\bin\Debug\Tazesploit.exe.config
+E:\Download\Moon_U\Tazesploit\bin\Debug\Tazesploit.exe
+E:\Download\Moon_U\Tazesploit\bin\Debug\Tazesploit.pdb
+E:\Download\Moon_U\Tazesploit\obj\Debug\MainWindow.g.cs
+E:\Download\Moon_U\Tazesploit\obj\Debug\UserControl1.g.cs
+E:\Download\Moon_U\Tazesploit\obj\Debug\App.g.cs
+E:\Download\Moon_U\Tazesploit\obj\Debug\Tazesploit_MarkupCompile.cache
+E:\Download\Moon_U\Tazesploit\obj\Debug\Tazesploit_MarkupCompile.lref
+E:\Download\Moon_U\Tazesploit\obj\Debug\App.baml
+E:\Download\Moon_U\Tazesploit\obj\Debug\MainWindow.baml
+E:\Download\Moon_U\Tazesploit\obj\Debug\UserControl1.baml
+E:\Download\Moon_U\Tazesploit\obj\Debug\Tazesploit.g.resources
+E:\Download\Moon_U\Tazesploit\obj\Debug\Tazesploit.Properties.Resources.resources
+E:\Download\Moon_U\Tazesploit\obj\Debug\Moon U.csproj.GenerateResource.cache
+E:\Download\Moon_U\Tazesploit\obj\Debug\Moon U.csproj.CoreCompileInputs.cache
+E:\Download\Moon_U\Tazesploit\obj\Debug\Moon U.csproj.CopyComplete
+E:\Download\Moon_U\Tazesploit\obj\Debug\Tazesploit.exe
+E:\Download\Moon_U\Tazesploit\obj\Debug\Tazesploit.pdb
+E:\Download\Moon_U\Tazesploit\bin\Debug\ICSharpCode.AvalonEdit.dll
+E:\Download\Moon_U\Tazesploit\bin\Debug\ICSharpCode.AvalonEdit.xml
+E:\Download\Moon_U\Tazesploit\obj\Debug\Tazesploit.DownloadUI.resources
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\bin\Debug\ICSharpCode.AvalonEdit.dll
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\bin\Debug\ICSharpCode.AvalonEdit.xml
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\Moon U.csprojAssemblyReference.cache
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\MainWindow.g.cs
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\UserControl1.g.cs
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\App.g.cs
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\App.baml
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\MainWindow.baml
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\UserControl1.baml
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\Moon U.csproj.GenerateResource.cache
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\Moon U.csproj.CoreCompileInputs.cache
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\Moon U.csproj.CopyComplete
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\ScriptHub.g.cs
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\Settings.g.cs
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\ScriptHub.baml
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\Settings.baml
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\bin\Debug\BruhSploit.exe.config
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\bin\Debug\BruhSploit.exe
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\bin\Debug\BruhSploit.pdb
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\BruhSploit_MarkupCompile.cache
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\BruhSploit_MarkupCompile.lref
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\BruhSploit.g.resources
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\BruhSploit.Properties.Resources.resources
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\BruhSploit.exe
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\obj\Debug\BruhSploit.pdb
+C:\Users\grzegorz\Desktop\Moon U Source\Tazesploit\bin\Debug\EasyExploits.dll
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\bin\Debug\BruhSploit V.2.1.exe.config
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\bin\Debug\BruhSploit V.2.1.exe
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\bin\Debug\BruhSploit V.2.1.pdb
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\bin\Debug\ICSharpCode.AvalonEdit.dll
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\bin\Debug\ICSharpCode.AvalonEdit.xml
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\Moon U.csprojAssemblyReference.cache
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\MainWindow.g.cs
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\ScriptHub.g.cs
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\Settings.g.cs
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\UserControl1.g.cs
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\App.g.cs
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\BruhSploit V.2.1_MarkupCompile.cache
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\BruhSploit V.2.1_MarkupCompile.lref
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\App.baml
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\MainWindow.baml
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\ScriptHub.baml
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\Settings.baml
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\UserControl1.baml
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\BruhSploit V.2.1.g.resources
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\BruhSploit.Properties.Resources.resources
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\Moon U.csproj.GenerateResource.cache
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\Moon U.csproj.CoreCompileInputs.cache
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\Moon U.csproj.CopyComplete
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\BruhSploit V.2.1.exe
+C:\Users\GAMING\Desktop\BruhSploit  but in wpf\BruhSploit\obj\Debug\BruhSploit V.2.1.pdb

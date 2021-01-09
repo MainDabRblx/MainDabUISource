@@ -36,7 +36,17 @@ namespace MainDabUpdater
             {
                 webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/CheatSquadAPI.dll?raw=true", "CheatSquadAPI.dll");
             }
+            Console.WriteLine("UPDATER : Downloading EasyExploits API...");
+            if (File.Exists("EasyExploits.dll"))
+            {
+                File.Delete("EasyExploits.dll");
+                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/EasyExploits.dll?raw=true", "EasyExploits.dll");
+            }
 
+            if (!File.Exists("EasyExploits.dll"))
+            {
+                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/EasyExploits.dll?raw=true", "EasyExploits.dll");
+            }
             if (!File.Exists("MetroFramework.dll"))
             {
                 Console.WriteLine("Downloading MetroFramework...");
@@ -47,6 +57,7 @@ namespace MainDabUpdater
             {
                 Console.WriteLine("Downloading ICSharpCode.AvalonEdit.dll");
                 webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/ICSharpCode.AvalonEdit.dll?raw=true", "ICSharpCode.AvalonEdit.dll");
+            
             }
             if (!File.Exists("CheatSquadAPI.dll"))
             {

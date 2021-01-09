@@ -1,0 +1,13 @@
+C:\Users\leona\Desktop\BruhSploitSRC\MainDabUpdater\obj\Debug\MainDabUpdater.csproj.CoreCompileInputs.cache
+C:\Users\leona\Desktop\BruhSploitSRC\MainDabUpdater\obj\Debug\MainDabUpdater.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\BruhSploitSRC\MainDabUpdater\bin\Debug\MainDab Updater.exe.config
+C:\Users\leona\Desktop\BruhSploitSRC\MainDabUpdater\bin\Debug\MainDab Updater.exe
+C:\Users\leona\Desktop\BruhSploitSRC\MainDabUpdater\bin\Debug\MainDab Updater.pdb
+C:\Users\leona\Desktop\BruhSploitSRC\MainDabUpdater\obj\Debug\MainDab Updater.exe
+C:\Users\leona\Desktop\BruhSploitSRC\MainDabUpdater\obj\Debug\MainDab Updater.pdb
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\bin\Debug\MainDab Updater.exe.config
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\bin\Debug\MainDab Updater.exe
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\bin\Debug\MainDab Updater.pdb
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\obj\Debug\MainDabUpdater.csproj.CoreCompileInputs.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\obj\Debug\MainDab Updater.exe
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\obj\Debug\MainDab Updater.pdb

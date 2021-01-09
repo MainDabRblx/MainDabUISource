@@ -1,0 +1,50 @@
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\bin\Debug\ICSharpCode.AvalonEdit.dll
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\bin\Debug\ICSharpCode.AvalonEdit.xml
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\Bruhsploit.csprojAssemblyReference.cache
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\MainWindow.g.cs
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\ScriptHub.g.cs
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\Settings.g.cs
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\UserControl1.g.cs
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\App.g.cs
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\App.baml
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\MainWindow.baml
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\ScriptHub.baml
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\Settings.baml
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\UserControl1.baml
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\BruhSploit.Properties.Resources.resources
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\Bruhsploit.csproj.GenerateResource.cache
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\Bruhsploit.csproj.CoreCompileInputs.cache
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\Bruhsploit.csproj.CopyComplete
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\BruhSploit_MarkupCompile.cache
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\BruhSploit_MarkupCompile.lref
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\BruhSploit.exe
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\BruhSploit.pdb
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\bin\Debug\BruhSploit.exe.config
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\bin\Debug\BruhSploit.exe
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\bin\Debug\BruhSploit.pdb
+C:\Users\leona\Downloads\BruhSploit_but_in_wpf\BruhSploit  but in wpf\BruhSploit\obj\Debug\BruhSploit.g.resources
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\bin\Debug\BruhSploit.exe.config
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\bin\Debug\BruhSploit.exe
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\bin\Debug\BruhSploit.pdb
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\bin\Debug\ICSharpCode.AvalonEdit.dll
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\bin\Debug\ICSharpCode.AvalonEdit.xml
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\Bruhsploit.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\MainWindow.g.cs
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\ScriptHub.g.cs
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\Settings.g.cs
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\UserControl1.g.cs
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\App.g.cs
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\BruhSploit_MarkupCompile.cache
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\BruhSploit_MarkupCompile.lref
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\App.baml
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\MainWindow.baml
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\ScriptHub.baml
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\Settings.baml
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\UserControl1.baml
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\BruhSploit.g.resources
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\BruhSploit.Properties.Resources.resources
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\Bruhsploit.csproj.GenerateResource.cache
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\Bruhsploit.csproj.CoreCompileInputs.cache
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\Bruhsploit.csproj.CopyComplete
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\BruhSploit.exe
+C:\Users\leona\Desktop\BruhSploitSRC\BruhSploit\obj\Debug\BruhSploit.pdb

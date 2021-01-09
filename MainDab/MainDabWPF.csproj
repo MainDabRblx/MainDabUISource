@@ -58,15 +58,18 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CheatSquadAPI, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Downloads\CheatSquad_Executor_v2.3\CheatSquad Executor v2.3\CheatSquadAPI.dll</HintPath>
+    <Reference Include="CheatSquadAPI">
+      <HintPath>..\..\..\Downloads\MainDab\MainDab\CheatSquadAPI.dll</HintPath>
     </Reference>
     <Reference Include="DiscordRPC">
       <HintPath>..\..\MainDab\DiscordRPC.dll</HintPath>
     </Reference>
+    <Reference Include="EasyExploits, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MainDab\EasyExploits.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.AvalonEdit, Version=6.0.1.278, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
-      <HintPath>..\packages\AvalonEdit.6.0.1\lib\net45\ICSharpCode.AvalonEdit.dll</HintPath>
+      <HintPath>packages\AvalonEdit.6.0.1\lib\net45\ICSharpCode.AvalonEdit.dll</HintPath>
     </Reference>
     <Reference Include="SirHurtAPI">
       <HintPath>..\..\MainDab\SirHurtAPI.dll</HintPath>
