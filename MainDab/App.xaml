@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:MainDab"
              StartupUri="MainWindow.xaml">
+    
+    
     <Application.Resources>
         <ResourceDictionary>
             <SolidColorBrush
@@ -38,6 +40,26 @@
             <SolidColorBrush
 				Color="#80ffffff"
 				x:Key="ScrollBar.Pressed.Thumb" />
+            <ControlTemplate x:Key="NoMouseOverButtonTemplate" 
+                 TargetType="Button">
+                <Border Background="{TemplateBinding Background}"
+          BorderBrush="{TemplateBinding BorderBrush}"
+          BorderThickness="{TemplateBinding BorderThickness}">
+                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                </Border>
+
+                <!-- Add only required visual state triggers -->
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsEnabled"
+             Value="False">
+                        <Setter Property="Background"
+              Value="{x:Static SystemColors.ControlLightBrush}" />
+                        <Setter Property="Foreground"
+              Value="{x:Static SystemColors.GrayTextBrush}" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
             <Style
 				TargetType="{x:Type Button}"
 				x:Key="TitleButton">
@@ -101,5 +123,8 @@
                 </Setter>
             </Style>
         </ResourceDictionary>
+        
     </Application.Resources>
+    
+    
 </Application>

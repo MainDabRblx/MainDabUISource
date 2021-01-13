@@ -30,6 +30,8 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -70,6 +72,9 @@
     </Reference>
     <Reference Include="ICSharpCode.AvalonEdit, Version=6.0.1.278, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
       <HintPath>packages\AvalonEdit.6.0.1\lib\net45\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
+    <Reference Include="MoonSharp.Interpreter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=921e73ce94aa17f8, processorArchitecture=MSIL">
+      <HintPath>packages\MoonSharp.2.0.0.0\lib\net40-client\MoonSharp.Interpreter.dll</HintPath>
     </Reference>
     <Reference Include="SirHurtAPI">
       <HintPath>..\..\MainDab\SirHurtAPI.dll</HintPath>
@@ -116,6 +121,12 @@
     <Compile Include="Injection\Functions.cs" />
     <Compile Include="Injection\Injector.cs" />
     <Compile Include="Injection\NamedPipes.cs" />
+    <Compile Include="MainDabInternal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainDabInternal.Designer.cs">
+      <DependentUpon>MainDabInternal.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -135,6 +146,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="MainDabInternal.resx">
+      <DependentUpon>MainDabInternal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -188,5 +202,36 @@
   <ItemGroup>
     <SplashScreen Include="Untitled drawing %289%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Joshua.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nlank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="play-button-arrowhead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="nigge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ROBLXO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="NIGGGER.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\WinSCP.5.17.9\build\WinSCP.targets" Condition="Exists('packages\WinSCP.5.17.9\build\WinSCP.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\WinSCP.5.17.9\build\WinSCP.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\WinSCP.5.17.9\build\WinSCP.targets'))" />
+  </Target>
 </Project>

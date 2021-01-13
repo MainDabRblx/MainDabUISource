@@ -1,4 +1,27 @@
-﻿
+﻿/*
+  __  __       _       _____        _       _____       _     _             ______            _       _ _   
+ |  \/  |     (_)     |  __ \      | |     |  __ \     | |   | |           |  ____|          | |     (_) |  
+ | \  / | __ _ _ _ __ | |  | | __ _| |__   | |__) |___ | |__ | | _____  __ | |__  __  ___ __ | | ___  _| |_ 
+ | |\/| |/ _` | | '_ \| |  | |/ _` | '_ \  |  _  // _ \| '_ \| |/ _ \ \/ / |  __| \ \/ / '_ \| |/ _ \| | __|
+ | |  | | (_| | | | | | |__| | (_| | |_) | | | \ \ (_) | |_) | | (_) >  <  | |____ >  <| |_) | | (_) | | |_ 
+ |_|  |_|\__,_|_|_| |_|_____/ \__,_|_.__/  |_|  \_\___/|_.__/|_|\___/_/\_\ |______/_/\_\ .__/|_|\___/|_|\__|
+                                                                                       | |                  
+                                                                                       |_|                  
+ MainDab 2021, by Main_EX#3898 at discord.io/maindab
+ Contact via discord (Main_EX#3898, My Discord ID is 766314130880593932, if that doesn't work join discord.io/maindab)
+ Contact via email - maindabex@gmail.com or yohatipynoo@gmail.com
+ I don't use other communication platforms, other Main_EX's you see are not affliated with me.
+ My Discord ID is 766314130880593932
+
+ Feel free to look around and take some parts of the code.
+ Attribution 4.0 International (CC BY 4.0), feel free to take it but you must attribute MainDab in your code (doesn't have to be visible, just put it as a comment)
+ Details at creativecommons.org/licenses/by/4.0/
+
+ If I don't respond in 3 days, that means I'm dead (or it went straight to my spam)
+
+ oh and I'm also sorry for the profane words :3
+ */
+using MoonSharp.Interpreter;
 using Microsoft.Win32;
 using System;
 using System.IO;
@@ -19,20 +42,17 @@ using System.Threading;
 using ICSharpCode.AvalonEdit.Highlighting;
 using ICSharpCode.AvalonEdit.Highlighting.Xshd;
 using MainDabWPF.Injection;
-using System.Net.Http.Headers;
 using System.Linq;
-using System.Windows.Media.Imaging;
 using System.IO.Compression;
 using System.Reflection;
 using DiscordRPC.Logging;
-using System.Windows.Interop;
-using EasyExploits;
+using System.Runtime.InteropServices;
 
 namespace MainDab
 {
-
     public partial class MainWindow : Window
     {
+        string currentver = "MainDab V.10.5";
         WebClient HITLER = new WebClient(); // HEIL HITLER!
         private DiscordRpcClient client;
         private readonly CheatSquadAPI.Module shitsquad = new CheatSquadAPI.Module(); // CheatSquad API
@@ -42,7 +62,6 @@ namespace MainDab
          
         public MainWindow()
         { 
-            
                 if (File.Exists("lua.xshd"))
                 {
                     File.Delete("lua.xshd");
@@ -55,14 +74,11 @@ namespace MainDab
                     string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
                     File.WriteAllText("lua.xshd", penis);
                 }
-                // pp penis big!
-
-            
-           
+                // pp penis big 
         }
 
-
-        public static void PopulateListBox(ListBox lsb, string Folder, string FileType)
+        #region Functions
+        public static void Joshualikesexuwuwuwwowowowowowow(ListBox lsb, string Folder, string FileType)
         {
             DirectoryInfo directoryInfo = new DirectoryInfo(Folder);
             FileInfo[] files = directoryInfo.GetFiles(FileType);
@@ -75,7 +91,6 @@ namespace MainDab
         private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
-
         }
 
         private void Viewer_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -84,36 +99,6 @@ namespace MainDab
             textEditor.Text = script;
         }
 
-
-        public static T FindVisualChild<T>(DependencyObject parent) where T : DependencyObject // omg so complicated!1111111
-        {
-            int i = 0;
-            while (i < VisualTreeHelper.GetChildrenCount(parent))
-            {
-                DependencyObject child = VisualTreeHelper.GetChild(parent, i);
-                bool flag = child != null && child is T;
-                T result;
-                if (flag)
-                {
-                    result = (T)((object)child);
-                }
-                else
-                {
-                    T t = FindVisualChild<T>(child);
-                    bool flag2 = t != null;
-                    if (!flag2)
-                    {
-                        i++;
-                        continue;
-                    }
-                    result = t;
-                }
-                return result;
-            }
-            return default(T);
-        }
-
-
         public static OpenFileDialog openfiledialog = new OpenFileDialog 
         {
             Filter = "Text Files and Lua Files (*.txt *.lua)|*.txt;*.lua|All files (*.*)|*.*",
@@ -121,340 +106,9 @@ namespace MainDab
             RestoreDirectory = true,
             Title = "Open Document"
         };
-
-        private void textEditor_Loaded(object sender, RoutedEventArgs e)
-        {
-
-            WebClient webClient = new WebClient();
-            byte[] succ1 = webClient.DownloadData("https://pastebin.com/raw/QpwkAJS4");
-            string we = Encoding.UTF8.GetString(succ1);
-            string currentver = "MainDab V.10.3";
-            byte[] succ = webClient.DownloadData("https://pastebin.com/raw/TeKDGrbg");
-            string discord = Encoding.UTF8.GetString(succ);
-            Process.Start(discord);
-            if (we == currentver)
-            {
-
-                if (!Directory.Exists("autoexec"))
-                {
-                    Console.WriteLine("Creating autoexec folder...");
-                    Directory.CreateDirectory("autoexec");
-                }
-                if (!Directory.Exists("workspace"))
-                {
-                    Console.WriteLine("Creating workspace folder...");
-                    Directory.CreateDirectory("workspace");
-                }
-                if (!Directory.Exists("Applications"))
-                {
-                    Directory.CreateDirectory("Applications");
-                }
-                if (!Directory.Exists("autoexec"))
-                {
-                    Directory.CreateDirectory("autoexec");
-                }
-                if (!Directory.Exists("Scripts"))
-                {
-                    Directory.CreateDirectory("Scripts");
-                }
-                client = new DiscordRpcClient("714648958265327737")
-                {
-                    Logger = new ConsoleLogger
-                    {
-                        Level = LogLevel.Warning
-                    }
-                };
-                client.OnReady += delegate { };
-                client.OnPresenceUpdate += delegate { };
-
-                client.Initialize();
-                // this.panel6.Visible = false;
-                client.SetPresence(new RichPresence
-                {
-                    Details = "Using MainDab V10",
-                    State = "MainDab Roblox SEXploit | discord.io/maindab",
-
-                    Timestamps = new Timestamps
-                    {
-                        Start = DateTime.UtcNow,
-
-                    },
-
-                    Assets = new Assets
-                    {
-                        LargeImageKey = "image_large",
-                        LargeImageText = "MainDab Roblox Exploit",
-
-                        SmallImageKey = "image_small"
-                    }
-
-                });
-
-
-            }
-            else
-            {
-                webClient.DownloadFile("https://github.com/leonardssy/ProjectDab/blob/master/MainDab%20Updater.exe?raw=true", "update.exe");
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                Process.Start("update.exe");
-                Environment.Exit(0);
-            }
-            if (File.Exists("lua.xshd"))
-            {
-                File.Delete("lua.xshd");
-                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
-                File.WriteAllText("lua.xshd", penis); // just in case need new update
-            }
-
-            if (!File.Exists("lua.xshd")) // onv
-            {
-                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
-                File.WriteAllText("lua.xshd", penis);
-            }
-
-            Stream input = File.OpenRead("lua.xshd");
-            XmlTextReader xmlTextReader = new XmlTextReader(input);
-            textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
-            // Change directory to avoid useless directories :/
-
-            int num = 0;
-            foreach (string path in Directory.EnumerateFiles(Environment.GetEnvironmentVariable("LocalAppData") + "\\Roblox\\Logs\\archive", "*.ini"))
-            {
-                string text = File.ReadAllText(path);
-                bool flag = text.Contains("IsTainted=true");
-                if (flag)
-                {
-                    num++;
-                    bool flag2 = text.Contains("TaintingModuleDirectory=") && text.Contains("TaintingModule=");
-                    if (flag2)
-                    {
-                        string text2 = text.Substring(text.IndexOf("TaintingModule=") + "TaintingModule=".Length);
-                        text2 = text2.Substring(0, text2.IndexOf("\n"));
-                        string text3 = text.Substring(text.IndexOf("TaintingModuleDirectory=") + "TaintingModuleDirectory=".Length);
-                        text3 = text3.Substring(0, text3.IndexOf("\n")) + "\\" + text2;
-
-                    }
-                }
-            }
-            if (num > 0)
-            {
-                MessageBox.Show("You have been tainted by Roblox! This means that your roblox crash logs were uploaded to Roblox, and you are most likely up for a ban. Click on extensions and download the taint log checker to see more details.", "WARNING");
-            }
-
-        }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            if (currentdll == "Selected API : Sirhurt API")
-            {
-                SirHurtAPI.SirHurtAPI.Execute(textEditor.Text, true);
-            }
-            if (currentdll == "Selected API : CheatSquad")
-            {
-                shitsquad.Execute(textEditor.Text);
-            }
-            if (currentdll == "Selected API : EasyExploits API")
-            {
-                try
-                {
-                    ezclap.ExecuteScript(textEditor.Text);
-                }
-                catch (Exception sexual)
-                {
-                    MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
-                }
-            }
-            if (currentdll == "Selected API : Custom")
-            {
-                try
-                {
-                    NamedPipes.LuaPipe(textEditor.Text);
-                }
-                catch (Exception sexual)
-                {
-                    MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
-                }
-
-            }
-        }
-
-        private void Viewer_Loaded(object sender, RoutedEventArgs e)
-        {
-            
-            PopulateListBox(this.fuckbm2, "Scripts", "*.txt");
-            PopulateListBox(this.fuckbm2, "Scripts", "*.lua");
-            /*
-            new Thread(() =>
-            {
-                this.Dispatcher.Invoke(() =>
-                {
-                    Status.Content = "Updating MainDab.dll...";
-                });
-                if (File.Exists("MainDab.dll")) File.Delete("MainDab.dll");
-                var url1 = "https://github.com/leonardssy/ProjectDab/blob/master/MainDab.dll?raw=true";
-                var filename1 = "MainDab.dll";
-                using (var wc = new WebClient())
-                {
-                    wc.DownloadFile(url1, filename1);
-                }
-                this.Dispatcher.Invoke(() =>
-                {
-                    Status.Content = " ";
-                });
-            }).Start();*/
-        }
-
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void MenuItem_Click_5(object sender, RoutedEventArgs e)
-        {
-            if (File.Exists("Applications\\MainDabExtensions.exe"))
-            {
-                Process.Start("Applications\\MainDabExtensions.exe");
-            }
-            else
-            {
-                MessageBox.Show("Downloading Extensions. Click OK to continue.");
-                var sex = new WebClient();
-                sex.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/MainDabExtensions.exe?raw=true",
-                    "Applications\\MainDabExtensions.exe");
-                Process.Start("Applications\\MainDabExtensions.exe");
-
-
-                MessageBox.Show("Extensions downloaded and started!");
-
-            }
-        }
-
-        private void MenuItem_Click_6(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            base.Hide();
-            Environment.Exit(0);
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            WindowState = WindowState.Minimized;
-
-        }
-
-        private void Close_IsMouseDirectlyOverChanged(object sender, DependencyPropertyChangedEventArgs e)
-        {
-
-        }
-
-        private void Nigger_IsMouseDirectlyOverChanged(object sender, DependencyPropertyChangedEventArgs e)
-        {
-
-        }
-
-
-        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
-        {
-            if (currentdll == "Selected API : Sirhurt API")
-            {
-                SirHurtAPI.SirHurtAPI.Execute(textEditor.Text, true);
-            }
-            if (currentdll == "Selected API : CheatSquad")
-            {
-               
-                shitsquad.Execute(textEditor.Text);
-            }
-            if (currentdll == "Selected API : EasyExploits API")
-            {
-                try
-                {
-                    ezclap.ExecuteScript(textEditor.Text);
-                }
-                catch (Exception sexual)
-                {
-                    MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
-                }
-            }
-            if (currentdll == "Selected API : Custom")
-            {
-                try
-                {
-                    NamedPipes.LuaPipe(textEditor.Text);
-                }
-                catch (Exception sexual)
-                {
-                    MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
-                }
-
-            }
-        }
-
-        private void MenuItem_Click_7(object sender, RoutedEventArgs e)
-        {
-            currentdll = "Selected API : MainDabAPI";
-            label6.Content = "Selected API : MainDabAPI";
-            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
-            key.SetValue("DLL", "Selected API : MainDabAPI");
-            key.Close();
-        }
-
-        private void MenuItem_Click_8(object sender, RoutedEventArgs e)
-        {
-            currentdll = "Selected API : EasyExploits API";
-            label6.Content = "Selected API : EasyExploits API";
-            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
-            key.SetValue("DLL", "Selected API : EasyExploits API");
-            key.Close();
-
-        }
-
-        private void MenuItem_Click_9(object sender, RoutedEventArgs e)
-        {
-            custom.Visibility = Visibility.Visible;
-            // if you are reading this, sex is fun
-        }
-
-        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            textEditor.Text = "";
-        }
-
-        private void Image_MouseDown_2(object sender, MouseButtonEventArgs e)
-        {
-
-            System.Windows.Forms.OpenFileDialog hailhitler = new System.Windows.Forms.OpenFileDialog()
-            {
-                CheckFileExists = true,
-                Filter = "Lua Files (*.lua)|*.lua|Text Files (*.txt)|*.txt|All files (*.*)|*.*"
-            };
-
-            if (hailhitler.ShowDialog() == System.Windows.Forms.DialogResult.OK) // i hate wpf geez winforms 4 life - mainex
-            {
-                textEditor.Text = File.ReadAllText(hailhitler.FileName);
-            }
-        }
-
-        private void Image_MouseDown_3(object sender, MouseButtonEventArgs e)
+        #endregion
+        // New functions, making changing code slightly easier
+        private void Injection()
         {
             if (currentdll == "Selected API : Sirhurt API")
             {
@@ -558,6 +212,235 @@ namespace MainDab
                     });
                 }).Start();
             }
+        } // Inject
+        private void Execute()
+        {
+            if (currentdll == "Selected API : Sirhurt API")
+            {
+                SirHurtAPI.SirHurtAPI.Execute(textEditor.Text, true);
+            }
+            if (currentdll == "Selected API : CheatSquad")
+            {
+
+                shitsquad.Execute(textEditor.Text);
+            }
+            if (currentdll == "Selected API : EasyExploits API")
+            {
+                try
+                {
+                    ezclap.ExecuteScript(textEditor.Text);
+                }
+                catch (Exception sexual)
+                {
+                    MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
+                }
+            }
+            if (currentdll == "Selected API : Custom")
+            {
+                try
+                {
+                    NamedPipes.LuaPipe(textEditor.Text);
+                }
+                catch (Exception sexual)
+                {
+                    MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
+                }
+
+            }
+        } // Execute
+        private void textEditor_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            WebClient webClient = new WebClient();
+            byte[] succ1 = webClient.DownloadData("https://pastebin.com/raw/QpwkAJS4");
+            string we = Encoding.UTF8.GetString(succ1);
+
+            byte[] succ = webClient.DownloadData("https://pastebin.com/raw/TeKDGrbg");
+            string discord = Encoding.UTF8.GetString(succ);
+            Process.Start(discord);
+            if (we == currentver)
+            {
+
+                if (!Directory.Exists("autoexec"))
+                {
+                    Console.WriteLine("Creating autoexec folder...");
+                    Directory.CreateDirectory("autoexec");
+                }
+                if (!Directory.Exists("workspace"))
+                {
+                    Console.WriteLine("Creating workspace folder...");
+                    Directory.CreateDirectory("workspace");
+                }
+                if (!Directory.Exists("Applications"))
+                {
+                    Directory.CreateDirectory("Applications");
+                }
+                if (!Directory.Exists("autoexec"))
+                {
+                    Directory.CreateDirectory("autoexec");
+                }
+                if (!Directory.Exists("Scripts"))
+                {
+                    Directory.CreateDirectory("Scripts");
+                }
+                client = new DiscordRpcClient("714648958265327737")
+                {
+                    Logger = new ConsoleLogger
+                    {
+                        Level = LogLevel.Warning
+                    }
+                };
+                client.OnReady += delegate { };
+                client.OnPresenceUpdate += delegate { };
+
+                client.Initialize();
+                // this.panel6.Visible = false;
+                client.SetPresence(new RichPresence
+                {
+                    Details = "Using MainDab V10",
+                    State = "MainDab Roblox SEXploit | discord.io/maindab",
+
+                    Timestamps = new Timestamps
+                    {
+                        Start = DateTime.UtcNow,
+
+                    },
+
+                    Assets = new Assets
+                    {
+                        LargeImageKey = "image_large",
+                        LargeImageText = "MainDab Roblox Exploit",
+
+                        SmallImageKey = "image_small"
+                    }
+
+                });
+
+
+            }
+            else
+            {
+                webClient.DownloadFile("https://github.com/leonardssy/ProjectDab/blob/master/MainDab%20Updater.exe?raw=true", "update.exe");
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                Process.Start("update.exe");
+                Environment.Exit(0);
+            }
+            if (File.Exists("lua.xshd"))
+            {
+                File.Delete("lua.xshd");
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
+                File.WriteAllText("lua.xshd", penis); // just in case need new update
+            }
+
+            if (!File.Exists("lua.xshd")) // onv
+            {
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
+                File.WriteAllText("lua.xshd", penis);
+            }
+
+            Stream input = File.OpenRead("lua.xshd");
+            XmlTextReader xmlTextReader = new XmlTextReader(input);
+            textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
+            // Change directory to avoid useless directories :/
+
+
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Execute();
+        }
+
+        private void Viewer_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+           Joshualikesexuwuwuwwowowowowowow(this.fuckbm2, "Scripts", "*.txt");
+            Joshualikesexuwuwuwwowowowowowow(this.fuckbm2, "Scripts", "*.lua");
+            /*
+            new Thread(() =>
+            {
+                this.Dispatcher.Invoke(() =>
+                {
+                    Status.Content = "Updating MainDab.dll...";
+                });
+                if (File.Exists("MainDab.dll")) File.Delete("MainDab.dll");
+                var url1 = "https://github.com/leonardssy/ProjectDab/blob/master/MainDab.dll?raw=true";
+                var filename1 = "MainDab.dll";
+                using (var wc = new WebClient())
+                {
+                    wc.DownloadFile(url1, filename1);
+                }
+                this.Dispatcher.Invoke(() =>
+                {
+                    Status.Content = " ";
+                });
+            }).Start();*/
+        }
+     
+        private void MenuItem_Click_5(object sender, RoutedEventArgs e)
+        {
+            if (File.Exists("Applications\\MainDabExtensions.exe"))
+            {
+                Process.Start("Applications\\MainDabExtensions.exe");
+            }
+            else
+            {
+                MessageBox.Show("Downloading Extensions. Click OK to continue.");
+                var sex = new WebClient();
+                sex.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/MainDabExtensions.exe?raw=true",
+                    "Applications\\MainDabExtensions.exe");
+                Process.Start("Applications\\MainDabExtensions.exe");
+                MessageBox.Show("Extensions downloaded and started!");
+            }
+        }
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            base.Hide();
+            Environment.Exit(0);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            Execute();
+        }
+
+        private void MenuItem_Click_8(object sender, RoutedEventArgs e)
+        {
+            currentdll = "Selected API : EasyExploits API";
+            label6.Content = "Selected API : EasyExploits API";
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
+            key.SetValue("DLL", "Selected API : EasyExploits API");
+            key.Close();
+        }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            textEditor.Text = "";
+        }
+
+        private void Image_MouseDown_2(object sender, MouseButtonEventArgs e)
+        {
+            System.Windows.Forms.OpenFileDialog hailhitler = new System.Windows.Forms.OpenFileDialog()
+            {
+                CheckFileExists = true,
+                Filter = "Lua Files (*.lua)|*.lua|Text Files (*.txt)|*.txt|All files (*.*)|*.*"
+            };
+
+            if (hailhitler.ShowDialog() == System.Windows.Forms.DialogResult.OK) // i hate wpf geez winforms 4 life - mainex
+            {
+                textEditor.Text = File.ReadAllText(hailhitler.FileName);
+            }
+        }
+
+        private void Image_MouseDown_3(object sender, MouseButtonEventArgs e)
+        {
+            Injection();
         }
 
         private void MenuItem_Click_10(object sender, RoutedEventArgs e)
@@ -605,110 +488,7 @@ namespace MainDab
 
         private void MenuItem_Click_13(object sender, RoutedEventArgs e)
         {
-            if (currentdll == "Selected API : Sirhurt API")
-            {
-                SirHurtAPI.SirHurtAPI.LaunchExploit();
-                new Thread(() =>
-                {
-                    Thread.CurrentThread.IsBackground = true;
-                    while (!SirHurtAPI.SirHurtAPI.isInjected())
-                    {
-                        this.Dispatcher.Invoke(() =>
-                        {
-                            Status.Content = "Injecting Sirhurt API...";
-                        });
-                        Thread.Sleep(500);
-                    }
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        Status.Content = "Game loading...";
-                    });
-                    Thread.Sleep(3000);
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        Status.Content = "Sirhurt API Injected!";
-                    });
-                    Thread.Sleep(1000);
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        Status.Content = "";
-                    });
-                }).Start();
-
-            }
-            if (currentdll == "Selected API : CheatSquad")
-            {
-                shitsquad.Attach();
-                new Thread(() =>
-                {
-                    Thread.CurrentThread.IsBackground = true;
-
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        Status.Content = "Injecting Cheatsquad API...";
-
-                    });
-                    Thread.Sleep(7000);
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        Status.Content = "Cheatsquad API Injected!";
-                    });
-                    Thread.Sleep(1000);
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        Status.Content = "";
-                    });
-
-
-                }).Start();
-
-
-            }
-            if (currentdll == "Selected API : EasyExploits API")
-            {
-                // Functions.Inject();
-
-
-                new Thread(() =>
-                {
-                    Thread.CurrentThread.IsBackground = true;
-                    ezclap.LaunchExploit();
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        Status.Content = "Injecting EasyExploits API";
-
-                    });
-                    Thread.Sleep(6000);
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        Status.Content = "EasyExploits API Injected!";
-                    });
-                    Thread.Sleep(1000);
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        Status.Content = "";
-                    });
-                }).Start();
-            }
-            if (currentdll == "Selected API : Custom")
-            {
-                Functions.Inject();
-                new Thread(() =>
-                {
-                    Thread.CurrentThread.IsBackground = true;
-
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        Status.Content = "Injecting Custom API...";
-
-                    });
-                    Thread.Sleep(6000);
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        Status.Content = "";
-                    });
-                }).Start();
-            }
+            Injection();
         }
 
         private void NI(object sender, RoutedEventArgs e)
@@ -796,13 +576,28 @@ namespace MainDab
             Environment.Exit(0);
         }
 
-        private void sss(object sender, RoutedEventArgs e)
-        {
-            ScriptHub.Visibility = Visibility.Visible;
-        }
-
         private void ScriptHub_Loaded(object sender, RoutedEventArgs e)
         {
+            
+            try
+            {
+                string text3 = textEditor.Text;
+                global::MoonSharp.Interpreter.Script script = new global::MoonSharp.Interpreter.Script();
+                global::MoonSharp.Interpreter.DynValue dynValue = script.DoString(text3, null, null);
+                this.label6_Copy.Content =  "No errors found.";
+                this.label6_Copy.Foreground = Brushes.White;
+            }
+            catch (global::MoonSharp.Interpreter.SyntaxErrorException ex)
+            {
+                this.label6_Copy.Content = ex.DecoratedMessage.ToString();
+                this.label6_Copy.Foreground = Brushes.Red;
+            }
+            catch (global::MoonSharp.Interpreter.ScriptRuntimeException)
+            {
+                this.label6_Copy.Content = "No errors found.";
+                this.label6_Copy.Foreground = Brushes.White;
+            }
+
             ScriptHub.Visibility = Visibility.Hidden;
             var flag = File.Exists("bin.zip");
             if (flag) File.Delete("bin.zip");
@@ -829,7 +624,7 @@ namespace MainDab
             try
 
             {
-                PopulateListBox(listbox, "./bin/scripts", "*.txt");
+                Joshualikesexuwuwuwwowowowowowow(listbox, "./bin/scripts", "*.txt");
             }
             catch
             {
@@ -968,7 +763,6 @@ namespace MainDab
 
             try
             {
-                
                     var text = File.ReadAllText("bin\\scripts\\" + listbox.SelectedItem);
                     var flag = listbox.SelectedItem != null;
                     var flag2 = flag;
@@ -1072,30 +866,6 @@ namespace MainDab
             activeX.Silent = true;
         }
 
-        private void MenuItem_Click_18(object sender, RoutedEventArgs e)
-        {
-            var script = "loadstring(game:HttpGet(\"https://pastebin.com/raw/SsG8y3HA\", true))()";
-            if (label6.Content == "Selected API : CheatSquad")
-                new Thread(() => { shitsquad.Execute(script); }).Start();
-          
-            if (label6.Content == "Selected API : MainDabAPI")
-                new Thread(() => { NamedPipes.LuaPipe(script); }).Start();
-            if (label6.Content == "Selected API : Custom")
-                new Thread(() => { NamedPipes.LuaPipe(script); }).Start();
-            if (label6.Content == "Selected API : Sirhurt API")
-                new Thread(() => { SirHurtAPI.SirHurtAPI.Execute(script, true); }).Start();
-        }
-
-        private void MenuItem_Click_19(object sender, RoutedEventArgs e)
-        {
-            SirHurtAPI.Scripts.OpenScriptHub();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             Functions.exploitdllname = DLLNAME.Text;
@@ -1120,10 +890,7 @@ namespace MainDab
                 string apishouldbe = (key.GetValue("DLL").ToString());
                 key.Close();
                 label6.Content = apishouldbe;
-                 currentdll = apishouldbe;
-               
-               
-
+                currentdll = apishouldbe;
             }
         }
 
@@ -1164,11 +931,6 @@ namespace MainDab
             key.Close();
         }
 
-        private void MenuItem_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            
-        }
-
         private void MenuItem_Click_23(object sender, RoutedEventArgs e)
         {
             WebClient webClient2 = new WebClient();
@@ -1177,41 +939,63 @@ namespace MainDab
             MessageBox.Show(we, "MainDab Credits");
         }
 
-        private void Image_ContextMenuOpening(object sender, ContextMenuEventArgs e)
-        {
-
-        }
-
         private void Image_MouseDown_4(object sender, MouseButtonEventArgs e)
         {
             ScriptHub.Visibility = Visibility.Visible;
         }
-
-        private void SEX(object sender, RoutedEventArgs e)
-        {/*
-            MessageBox.Show("showing sex");
-            Process.Start("https://pornhub.com");
-            Process.Start("https://pornhub.com");
-            Process.Start("https://pornhub.com");
-            Process.Start("https://pornhub.com");
-            Process.Start("https://pornhub.com");
-            Process.Start("https://pornhub.com");
-
-            Process.Start("https://sex.com");
-            Process.Start("https://sex.com");
-            Process.Start("https://www.roblox.com/games/969669348/Black-Magic-II-RANKED"); // niggers only
-
-            Process.Start("https://joinis.is");
-            */ // winter prank xdddd
+      
+        private void Internal(object sender, RoutedEventArgs e)
+        {
+            MainDabInternal form = new MainDabInternal();
+            form.Show();
         }
 
-        private void Sexn(object sender, RoutedEventArgs e)
+        private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            WebClient webClient = new WebClient();
-            Console.WriteLine("Downloading MainDab Beta");
-            webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/MainDabBeta.exe?raw=true", "MainDabBeta.exe");
-            Process.Start("MainDabBeta.exe");
+            this.Hide();
             Environment.Exit(0);
+        }
+
+        private void die(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Process[] proc =  Process.GetProcessesByName("RobloxPlayerBeta");
+                proc[0].Kill();
+            }
+            catch { MessageBox.Show("Roblox isn't open."); }
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatcherTimer.Start();
+           
+        }
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+           
+            try
+            {
+                string text3 = textEditor.Text;
+                global::MoonSharp.Interpreter.Script script = new global::MoonSharp.Interpreter.Script();
+                global::MoonSharp.Interpreter.DynValue dynValue = script.DoString(text3, null, null);
+                this.label6_Copy.Content = "No errors found.";
+                this.label6_Copy.Foreground = Brushes.White;
+            }
+            catch (global::MoonSharp.Interpreter.SyntaxErrorException ex)
+            {
+                this.label6_Copy.Content = ex.DecoratedMessage.ToString();
+                this.label6_Copy.Foreground = Brushes.Red;
+            }
+            catch (global::MoonSharp.Interpreter.ScriptRuntimeException)
+            {
+                this.label6_Copy.Content = "No errors found.";
+                this.label6_Copy.Foreground = Brushes.White;
+            }
+            
         }
     }
 }

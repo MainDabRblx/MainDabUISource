@@ -12,3 +12,5 @@ C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\obj\Debug\MainDabUpdater.csproj
 C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\obj\Debug\MainDab Updater.exe
 C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\obj\Debug\MainDab Updater.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\obj\Debug\MainDabUpdater.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\obj\Debug\MainDabUpdater.Form1.resources
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\obj\Debug\MainDabUpdater.csproj.GenerateResource.cache

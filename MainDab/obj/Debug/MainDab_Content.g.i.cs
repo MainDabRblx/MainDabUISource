@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("maindablogo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("packages/winscp.5.17.9/tools/winscp.exe")]
 
 

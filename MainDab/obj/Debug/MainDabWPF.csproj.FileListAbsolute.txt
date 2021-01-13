@@ -68,3 +68,9 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.exe
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\EasyExploits.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.MainDabInternal.resources
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\WinSCP.exe
+C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab_Content.g.cs
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.dll
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.pdb
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.xml
