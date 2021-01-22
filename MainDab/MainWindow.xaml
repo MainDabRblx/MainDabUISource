@@ -314,10 +314,10 @@
                 <RowDefinition Height="0*"/>
             </Grid.RowDefinitions>
 
-            <Grid HorizontalAlignment="Left" Height="243" Margin="0,9,0,0" Grid.Row="2" VerticalAlignment="Top" Width="568" Background="#FF19191A" Grid.RowSpan="2" Grid.ColumnSpan="4" Loaded="Grid_Loaded"/>
+            <Grid x:Name="BottomBar" HorizontalAlignment="Left" Height="243" Margin="0,9,0,0" Grid.Row="2" VerticalAlignment="Top" Width="568" Background="#FF19191A" Grid.RowSpan="2" Grid.ColumnSpan="4" Loaded="Grid_Loaded"/>
 
             <!--Buttons-->
-            <Label Margin="0,-13,0,0" Grid.Row="2" MouseLeftButtonDown="Border_MouseLeftButtonDown" Content="MainDab" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Width="568" Background="#FF282828" Height="30" RenderTransformOrigin="0.5,0.5" FontSize="15" Grid.ColumnSpan="4">
+            <Label x:Name="TopBar" Margin="0,-13,0,0" Grid.Row="2" MouseLeftButtonDown="Border_MouseLeftButtonDown" Content="MainDab" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Width="568" Background="#FF282828" Height="30" RenderTransformOrigin="0.5,0.5" FontSize="15" Grid.ColumnSpan="4">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -342,39 +342,39 @@
                 VerticalScrollBarVisibility="Auto"
                 LineNumbersForeground="White"
                 ShowLineNumbers="True" Foreground="White" OpacityMask="Black" Height="198" Background="#FF151515" HorizontalAlignment="Center" Width="439" VerticalAlignment="Center" Margin="45,36,40,86" Grid.RowSpan="4" Loaded="textEditor_Loaded" Grid.ColumnSpan="2" Text="-- MainDab V10 Loaded! Join MainDab at discord.io/maindab"/>
-            <Menu Height="21" Margin="45,15,3.733,0" Grid.RowSpan="3" VerticalAlignment="Top" Background="#FF232323" Foreground="{x:Null}" Grid.ColumnSpan="4">
-                <MenuItem Header="File" Height="21" Width="33" Foreground="White" BorderThickness="0" Click="MenuItem_Click_11">
-                    <MenuItem Header="Kill Roblox" HorizontalAlignment="Left" Height="21" Width="140" Background="#FF2D2D2D" BorderThickness="0"/>
-                    <MenuItem Header="Open File" HorizontalAlignment="Left" Height="22" Width="140" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_10"/>
-                    <MenuItem Header="Save File" HorizontalAlignment="Left" Height="22" Width="140" Background="#FF2D2D2D" BorderThickness="0"/>
+            <Menu x:Name="Menu" Height="21" Margin="45,15,3.733,0" Grid.RowSpan="3" VerticalAlignment="Top" Background="#FF232323" Foreground="{x:Null}" Grid.ColumnSpan="4">
+                <MenuItem x:Name="FileMenu" Header="File" Height="21" Width="33" Foreground="White" BorderThickness="0" Click="MenuItem_Click_11">
+                    <MenuItem x:Name="MenuKillRblx" Header="Kill Roblox" HorizontalAlignment="Left" Height="21" Width="140" Background="#FF2D2D2D" BorderThickness="0"/>
+                    <MenuItem x:Name="MenuOpenFile" Header="Open File" HorizontalAlignment="Left" Height="22" Width="140" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_10"/>
+                    <MenuItem x:Name="MenuSaveFile" Header="Save File" HorizontalAlignment="Left" Height="22" Width="140" Background="#FF2D2D2D" BorderThickness="0"/>
                 </MenuItem>
-                <MenuItem Header="Execution" Height="21" Width="66" Foreground="White" BorderThickness="0">
-                    <MenuItem Header="Execute" HorizontalAlignment="Left" Height="21" Width="140" Click="MenuItem_Click" Background="#FF2D2D2D" BorderThickness="0"/>
-                    <MenuItem Header="Clear" HorizontalAlignment="Left" Height="22" Width="140" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_12"/>
-                    <MenuItem Header="Inject" HorizontalAlignment="Left" Height="22" Width="140" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_13"/>
+                <MenuItem x:Name="ExecutionMenu" Header="Execution" Height="21" Width="66" Foreground="White" BorderThickness="0">
+                    <MenuItem x:Name="MenuExec" Header="Execute" HorizontalAlignment="Left" Height="21" Width="140" Click="MenuItem_Click" Background="#FF2D2D2D" BorderThickness="0"/>
+                    <MenuItem x:Name="MenuClear" Header="Clear" HorizontalAlignment="Left" Height="22" Width="140" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_12"/>
+                    <MenuItem x:Name="MenuInject" Header="Inject" HorizontalAlignment="Left" Height="22" Width="140" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_13"/>
                 </MenuItem>
-                <MenuItem Header="Useful Tools" Height="21" Width="80" Foreground="White" BorderThickness="0">
-                    <MenuItem Header="FPS Unlocker" HorizontalAlignment="Left" Height="21" Width="162" Click="NI" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-22,0"/>
-                    <MenuItem Header="Multiple Roblox" HorizontalAlignment="Left" Height="22" Width="166" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-26,0" Click="MenuItem_Click_14"/>
-                    <MenuItem Header="Reinstall Roblox" HorizontalAlignment="Left" Height="22" Width="167" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-27,0" Click="MenuItem_Click_15"/>
-                    <MenuItem Header="Roblox Taint Logs" HorizontalAlignment="Left" Height="20" Width="183" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-43,0" Click="MenuItem_Click_20"/>
-                    <MenuItem Header="Redownload MainDab" HorizontalAlignment="Left" Height="22" Width="203" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-63,0" FontSize="10" Click="MenuItem_Click_16"/>
+                <MenuItem x:Name="UsefulMenu" Header="Useful Tools" Height="21" Width="80" Foreground="White" BorderThickness="0">
+                    <MenuItem x:Name="FPSUNLOCK" Header="FPS Unlocker" HorizontalAlignment="Left" Height="21" Width="162" Click="NI" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-22,0"/>
+                    <MenuItem x:Name="MultiRblx" Header="Multiple Roblox" HorizontalAlignment="Left" Height="22" Width="166" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-26,0" Click="MenuItem_Click_14"/>
+                    <MenuItem x:Name="ReinstallRblx" Header="Reinstall Roblox" HorizontalAlignment="Left" Height="22" Width="167" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-27,0" Click="MenuItem_Click_15"/>
+                    <MenuItem x:Name="RblxTaintLogs" Header="Roblox Taint Logs" HorizontalAlignment="Left" Height="20" Width="183" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-43,0" Click="MenuItem_Click_20"/>
+                    <MenuItem x:Name="RedownloadMainDab" Header="Redownload MainDab" HorizontalAlignment="Left" Height="22" Width="203" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-63,0" FontSize="10" Click="MenuItem_Click_16"/>
                 </MenuItem>
-                <MenuItem Header="Select DLL" Height="21" Width="72" Foreground="White" BorderThickness="0">
-                    <MenuItem Header="Cheatsquad" HorizontalAlignment="Left" Height="29" Width="148" Click="dddd" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-8,0"/>
-                    <MenuItem Header="EasyExploits API&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Height="21" Width="187" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_8" Margin="0,0,-47,0"/>
-                    <MenuItem Header="Sirhurt API" HorizontalAlignment="Left" Height="21" Width="156" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-16,0" Click="MenuItem_Click_22"/>
-                    <MenuItem Header="Custom DLL" HorizontalAlignment="Left" Height="21" Width="166" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_21" Margin="-1,0,-25,0"/>
+                <MenuItem x:Name="SelectMenu" Header="Select DLL" Height="21" Width="72" Foreground="White" BorderThickness="0">
+                    <MenuItem x:Name="DLL1" Header="Cheatsquad" HorizontalAlignment="Left" Height="29" Width="148" Click="dddd" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-8,0"/>
+                    <MenuItem x:Name="DLL2" Header="EasyExploits API&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Height="21" Width="187" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_8" Margin="0,0,-47,0"/>
+                    <MenuItem x:Name="DLL3" Header="Sirhurt API" HorizontalAlignment="Left" Height="21" Width="156" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-16,0" Click="MenuItem_Click_22"/>
+                    <MenuItem x:Name="DLL4" Header="Custom DLL" HorizontalAlignment="Left" Height="21" Width="166" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_21" Margin="-1,0,-25,0"/>
                 </MenuItem>
-                <MenuItem Header="Help" Height="21" Width="46" Foreground="White" BorderThickness="0" Click="MenuItem_Click_5">
-                    <MenuItem Header="Join our Discord" HorizontalAlignment="Left" Height="21" Width="171" Click="NEIn" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-31,0"/>
-                    <MenuItem Header="Documentation" HorizontalAlignment="Left" Height="22" Width="170" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-30,0" Click="MenuItem_Click_17"/>
-                    <MenuItem Header="Credits&#xD;&#xA;" HorizontalAlignment="Left" Height="22" Width="145" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-5,0"  Click="MenuItem_Click_23"/>
+                <MenuItem x:Name="HelpMenu" Header="Help" Height="21" Width="46" Foreground="White" BorderThickness="0" Click="MenuItem_Click_5">
+                    <MenuItem x:Name="JoinDiscord" Header="Join our Discord" HorizontalAlignment="Left" Height="21" Width="171" Click="NEIn" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-31,0"/>
+                    <MenuItem x:Name="Documentation" Header="Documentation" HorizontalAlignment="Left" Height="22" Width="170" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-30,0" Click="MenuItem_Click_17"/>
+                    <MenuItem x:Name="Credits" Header="Credits&#xD;&#xA;" HorizontalAlignment="Left" Height="22" Width="145" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-5,0"  Click="MenuItem_Click_23"/>
                 </MenuItem>
-                <MenuItem Header="Extensions" Height="21" Width="67" Foreground="White" BorderThickness="0" Click="MenuItem_Click_5" Background="#FF232323"/>
+                <MenuItem x:Name="ExtensionsMenu" Header="Extensions" Height="21" Width="67" Foreground="White" BorderThickness="0" Click="MenuItem_Click_5" Background="Transparent"/>
             </Menu>
-            <Frame Content="&#xA;" HorizontalAlignment="Left" Height="219" Margin="0,15,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="45" Background="#FF232323"/>
-            <Button x:Name="Nigger" BorderThickness="0" Background="#FFD9D7D7" Margin="6,-6,16,86.667" Style="{DynamicResource ButtonStyle2}" Grid.Row="2" Click="Button_Click_1" RenderTransformOrigin="-1.795,0.564" Grid.Column="2"  Height="14" VerticalAlignment="Bottom">
+            <Frame x:Name="LeftFrame" Content="&#xA;" HorizontalAlignment="Left" Height="219" Margin="0,15,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="45" Background="#FF232323"/>
+            <Button x:Name="MiniButton" BorderThickness="0" Background="#FFD9D7D7" Margin="6,-6,16,86.667" Style="{DynamicResource ButtonStyle2}" Grid.Row="2" Click="Button_Click_1" RenderTransformOrigin="-1.795,0.564" Grid.Column="2"  Height="14" VerticalAlignment="Bottom">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -393,9 +393,9 @@
                 </Button.RenderTransform>
             </Button>
             <Label Content="V10" HorizontalAlignment="Left" Margin="63,-7,0,0" VerticalAlignment="Top" Grid.RowSpan="3" FontSize="9" Foreground="#FF34C07C"/>
-            <Label x:Name="Status" Content="" HorizontalAlignment="Left" Margin="1,136.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Grid.ColumnSpan="2" Width="155" FontSize="10"/>
-            <Label x:Name="label6" Content="Selected API : EasyExploits API" HorizontalAlignment="Left" Margin="312.667,136.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Width="155" FontSize="10" Grid.Column="1" Grid.ColumnSpan="4" Loaded="label6_Loaded"/>
-            <Button x:Name="NOGG" Template="{StaticResource NoMouseOverButtonTemplate}" Focusable="False" Content="&#xD;&#xA;" HorizontalAlignment="Left" Margin="5,51,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.5,0.5" Height="31" Background="#FF323232" BorderBrush="Transparent">
+            <Label x:Name="Status" Content="" HorizontalAlignment="Left" Margin="108.667,136.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Width="155" FontSize="10" Grid.Column="1"/>
+            <Label x:Name="SelectedAPILabel" Content="Selected API : EasyExploits API" HorizontalAlignment="Left" Margin="320.667,136.333,-3,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Width="155" FontSize="10" Grid.Column="1" Grid.ColumnSpan="4" Loaded="label6_Loaded"/>
+            <Button x:Name="ClearButton" Template="{StaticResource NoMouseOverButtonTemplate}" Focusable="False" Content="&#xD;&#xA;" HorizontalAlignment="Left" Margin="5,51,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.5,0.5" Height="31" Background="#FF323232" BorderBrush="Transparent">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -425,7 +425,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Button x:Name="NOGG_Copy1" Template="{StaticResource NoMouseOverButtonTemplate}" Focusable="False" Content="&#xA;" HorizontalAlignment="Left" Margin="5,83,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.5,0.5" Height="31" Background="#FF323232" BorderBrush="Transparent">
+            <Button x:Name="OpenButton" Template="{StaticResource NoMouseOverButtonTemplate}" Focusable="False" Content="&#xA;" HorizontalAlignment="Left" Margin="5,83,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.5,0.5" Height="31" Background="#FF323232" BorderBrush="Transparent">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -440,7 +440,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Button x:Name="NOGG_Copy2" Template="{StaticResource NoMouseOverButtonTemplate}" Focusable="False" Content="&#xA;" HorizontalAlignment="Left" Margin="5,19.333,0,0" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.5,0.5" Height="31" Background="#FF323232" BorderBrush="Transparent" Grid.Row="3">
+            <Button x:Name="InjectButton" Template="{StaticResource NoMouseOverButtonTemplate}" Focusable="False" Content="&#xA;" HorizontalAlignment="Left" Margin="5,19.333,0,0" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.5,0.5" Height="31" Background="#FF323232" BorderBrush="Transparent" Grid.Row="3">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -455,7 +455,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Button x:Name="NOGG_Copy3" Template="{StaticResource NoMouseOverButtonTemplate}" Focusable="False"  Content="&#xA;" HorizontalAlignment="Left" Margin="5,51.333,0,0" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.5,0.5" Height="31" Background="#FF323232" BorderBrush="Transparent" Grid.Row="3">
+            <Button x:Name="ScriptHubButton" Template="{StaticResource NoMouseOverButtonTemplate}" Focusable="False"  Content="&#xA;" HorizontalAlignment="Left" Margin="5,51.333,0,0" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.5,0.5" Height="31" Background="#FF323232" BorderBrush="Transparent" Grid.Row="3">
 
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -474,7 +474,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Image HorizontalAlignment="Left" Height="38" Margin="3,15,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.13,0.354" Source="nigge.png" Stretch="Fill" MouseDown="Image_MouseDown_1">
+            <Image x:Name="ExecuteButton" HorizontalAlignment="Left" Height="38" Margin="3,15,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.13,0.354" Source="nigge.png" Stretch="Fill" MouseDown="Image_MouseDown_1">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -525,7 +525,7 @@
                 <Button Content="Apply" HorizontalAlignment="Left" Margin="68,71,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="Button_Click_3" Background="#FF2D2D2D" Foreground="White" BorderThickness="0"/>
             </Grid>
             <DockPanel HorizontalAlignment="Left" Height="100" LastChildFill="False" Grid.RowSpan="4" VerticalAlignment="Top" Width="100"/>
-            <Button x:Name="NOGG_Copy4" Template="{StaticResource NoMouseOverButtonTemplate}" Content="&#xA;" HorizontalAlignment="Left" Margin="6,83.333,0,0" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.5,0.5" Height="31" Background="#FF323232" BorderBrush="Transparent" Grid.Row="3">
+            <Button x:Name="KillRobloxButton" Template="{StaticResource NoMouseOverButtonTemplate}" Content="&#xA;" HorizontalAlignment="Left" Margin="6,83.333,0,0" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.5,0.5" Height="31" Background="#FF323232" BorderBrush="Transparent" Grid.Row="3">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -540,8 +540,8 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Image HorizontalAlignment="Left" Height="22" Margin="12,88.333,0,0" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.13,0.354" Source="NIGGGER.png" Stretch="Fill" Grid.Row="3" MouseDown="Image_MouseDown_4"/>
-            <Label x:Name="label6_Copy" Content="No errors found." HorizontalAlignment="Left" Margin="0,136.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Width="334" FontSize="10" Grid.ColumnSpan="2" Loaded="label6_Loaded" FontFamily="Consolas" FontStretch="UltraCondensed" FontWeight="Medium"/>
+            <Image HorizontalAlignment="Left" Height="22" Margin="12,88.333,0,0" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.13,0.354" Source="IconRoblox.png" Stretch="Fill" Grid.Row="3" MouseDown="Image_MouseDown_4"/>
+            <Label x:Name="SyntaxLabel" Content="No errors found." HorizontalAlignment="Left" Margin="0,136.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Width="231" FontSize="10" Loaded="label6_Loaded" FontFamily="Consolas" FontStretch="UltraCondensed" FontWeight="Medium" Grid.ColumnSpan="2"/>
 
         </Grid>
     </Border>

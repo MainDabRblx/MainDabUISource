@@ -46,6 +46,7 @@ using System.Linq;
 using System.IO.Compression;
 using System.Reflection;
 using DiscordRPC.Logging;
+
 using System.Runtime.InteropServices;
 
 namespace MainDab
@@ -62,6 +63,7 @@ namespace MainDab
          
         public MainWindow()
         { 
+                
                 if (File.Exists("lua.xshd"))
                 {
                     File.Delete("lua.xshd");
@@ -74,7 +76,14 @@ namespace MainDab
                     string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
                     File.WriteAllText("lua.xshd", penis);
                 }
-                // pp penis big 
+            // pp penis big 
+            const int specifiedLine = 6;
+            string line = GetSpecifiedLine("theme.txt", specifiedLine);
+            string newline = line.Remove(7);
+            MessageBox.Show(newline);
+            TopBar.Background = Color.FromRgb(newline,newline,newline);
+
+
         }
 
         #region Functions
@@ -413,7 +422,7 @@ namespace MainDab
         private void MenuItem_Click_8(object sender, RoutedEventArgs e)
         {
             currentdll = "Selected API : EasyExploits API";
-            label6.Content = "Selected API : EasyExploits API";
+            SelectedAPILabel.Content = "Selected API : EasyExploits API";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
             key.SetValue("DLL", "Selected API : EasyExploits API");
             key.Close();
@@ -423,7 +432,27 @@ namespace MainDab
         {
             textEditor.Text = "";
         }
+        private string GetSpecifiedLine(string fileName, int specifiedLine)
+        {
+            int lineCount = 0;
 
+            using (StreamReader sr = new StreamReader(fileName))
+            {
+                lineCount++;
+                var line = sr.ReadLine();
+
+                while (line != null)
+                {
+                    if (lineCount == specifiedLine)
+                    {
+                        return line;
+                    }
+                    line = sr.ReadLine();
+                }
+
+                return null;
+            }
+        }
         private void Image_MouseDown_2(object sender, MouseButtonEventArgs e)
         {
             System.Windows.Forms.OpenFileDialog hailhitler = new System.Windows.Forms.OpenFileDialog()
@@ -460,7 +489,7 @@ namespace MainDab
         private void dddd(object sender, RoutedEventArgs e)
         {
             currentdll = "Selected API : Cheatsquad";
-            label6.Content = "Selected API : Cheatsquad";
+            SelectedAPILabel.Content = "Selected API : Cheatsquad";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
             key.SetValue("DLL", "Selected API : CheatSquad");
             key.Close();
@@ -584,18 +613,18 @@ namespace MainDab
                 string text3 = textEditor.Text;
                 global::MoonSharp.Interpreter.Script script = new global::MoonSharp.Interpreter.Script();
                 global::MoonSharp.Interpreter.DynValue dynValue = script.DoString(text3, null, null);
-                this.label6_Copy.Content =  "No errors found.";
-                this.label6_Copy.Foreground = Brushes.White;
+                this.SyntaxLabel.Content =  "No errors found.";
+                this.SyntaxLabel.Foreground = Brushes.White;
             }
             catch (global::MoonSharp.Interpreter.SyntaxErrorException ex)
             {
-                this.label6_Copy.Content = ex.DecoratedMessage.ToString();
-                this.label6_Copy.Foreground = Brushes.Red;
+                this.SyntaxLabel.Content = ex.DecoratedMessage.ToString();
+                this.SyntaxLabel.Foreground = Brushes.Red;
             }
             catch (global::MoonSharp.Interpreter.ScriptRuntimeException)
             {
-                this.label6_Copy.Content = "No errors found.";
-                this.label6_Copy.Foreground = Brushes.White;
+                this.SyntaxLabel.Content = "No errors found.";
+                this.SyntaxLabel.Foreground = Brushes.White;
             }
 
             ScriptHub.Visibility = Visibility.Hidden;
@@ -871,7 +900,7 @@ namespace MainDab
             Functions.exploitdllname = DLLNAME.Text;
             NamedPipes.luapipename = Pipe.Text;
             custom.Visibility = Visibility.Hidden;
-            label6.Content = "Selected API : Custom";
+            SelectedAPILabel.Content = "Selected API : Custom";
             currentdll = "Selected API : Custom";
         }
 
@@ -889,7 +918,7 @@ namespace MainDab
             {
                 string apishouldbe = (key.GetValue("DLL").ToString());
                 key.Close();
-                label6.Content = apishouldbe;
+                SelectedAPILabel.Content = apishouldbe;
                 currentdll = apishouldbe;
             }
         }
@@ -925,7 +954,7 @@ namespace MainDab
         private void MenuItem_Click_22(object sender, RoutedEventArgs e)
         {
             currentdll = "Selected API : Sirhurt API";
-            label6.Content = "Selected API : Sirhurt API";
+            SelectedAPILabel.Content = "Selected API : Sirhurt API";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
             key.SetValue("DLL", "Selected API : Sirhurt API");
             key.Close();
@@ -982,18 +1011,18 @@ namespace MainDab
                 string text3 = textEditor.Text;
                 global::MoonSharp.Interpreter.Script script = new global::MoonSharp.Interpreter.Script();
                 global::MoonSharp.Interpreter.DynValue dynValue = script.DoString(text3, null, null);
-                this.label6_Copy.Content = "No errors found.";
-                this.label6_Copy.Foreground = Brushes.White;
+                this.SyntaxLabel.Content = "No errors found.";
+                this.SyntaxLabel.Foreground = Brushes.White;
             }
             catch (global::MoonSharp.Interpreter.SyntaxErrorException ex)
             {
-                this.label6_Copy.Content = ex.DecoratedMessage.ToString();
-                this.label6_Copy.Foreground = Brushes.Red;
+                this.SyntaxLabel.Content = ex.DecoratedMessage.ToString();
+                this.SyntaxLabel.Foreground = Brushes.Red;
             }
             catch (global::MoonSharp.Interpreter.ScriptRuntimeException)
             {
-                this.label6_Copy.Content = "No errors found.";
-                this.label6_Copy.Foreground = Brushes.White;
+                this.SyntaxLabel.Content = "No errors found.";
+                this.SyntaxLabel.Foreground = Brushes.White;
             }
             
         }
