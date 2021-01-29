@@ -13,6 +13,7 @@ namespace MainDabUpdater
 {
     public partial class Form1 : Form
     {
+        // Drag
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -40,6 +41,7 @@ namespace MainDabUpdater
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
+            // Update starting
             thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Starting Update");
             try
             {
@@ -61,19 +63,42 @@ namespace MainDabUpdater
             {
                 File.Delete(path);
             }
+           
+            // Deleting stuff no longer needed
+            if (File.Exists("MetroFramework.dll"))
+            {
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Deleting MetroFramework");
+                File.Delete("MetroFramework.dll");
+            }
+            if (File.Exists("SirHurtAPI.dll"))
+            {
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Deleting SirhurtAPI");
+                File.Delete("SirHurtAPI.dll");
+            }
+            if (File.Exists("Axon.dll"))
+            {
+                File.Delete("Axon.dll");
+            }
+            if (File.Exists("VisualStudioTabControl.dll"))
+            {
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Deleting VisualStudioTabControl.dll");
+                File.Delete("VisualStudioTabControl.dll");
+            }
+
+
+
+            // API Stuff
             thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading new CheatSquad API");
             if (File.Exists("CheatSquadAPI.dll"))
             {
                 File.Delete("CheatSquadAPI.dll");
                 webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/CheatSquadAPI.dll?raw=true", "CheatSquadAPI.dll");
             }
-
             if (!File.Exists("CheatSquadAPI.dll"))
             {
                 webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/CheatSquadAPI.dll?raw=true", "CheatSquadAPI.dll");
             }
             thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading new EasyExploits API");
-            Console.WriteLine("UPDATER : Downloading EasyExploits API...");
             if (File.Exists("EasyExploits.dll"))
             {
                 File.Delete("EasyExploits.dll");
@@ -84,45 +109,52 @@ namespace MainDabUpdater
             {
                 webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/EasyExploits.dll?raw=true", "EasyExploits.dll");
             }
-
-          
-            if (!File.Exists("MetroFramework.dll"))
+            if (File.Exists("ShadowCheats.dll"))
             {
-                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading MetroFramework");
-                webClient.DownloadFile("https://github.com/leonardssy/ProjectDab/blob/master/MetroFramework.dll?raw=true", "MetroFramework.dll");
+                File.Delete("ShadowCheats.dll");
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Updating ShadowCheats API");
+                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/ShadowCheats.dll?raw=true", "ShadowCheats.dll");
+            }
+            if (!File.Exists("ShadowCheats.dll"))
+            {
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading ShadowCheats API");
+                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/ShadowCheats.dll?raw=true", "ShadowCheats.dll");
+            }
+            if (File.Exists("WeAreDevs_API.cpp.dll"))
+            {
+                File.Delete("WeAreDevs_API.cpp.dll");
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Updating WeAreDevs_API.cpp.dll");
+                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/WeAreDevs_API.cpp.dll?raw=true", "WeAreDevs_API.cpp.dll");
+            }
+            if (!File.Exists("WeAreDevs_API.cpp.dll"))
+            {
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading WeAreDevs_API.cpp.dll");
+                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/WeAreDevs_API.cpp.dll?raw=true", "WeAreDevs_API.cpp.dll");
             }
 
+            // Downloading extra dependencies
+           
+            if (!File.Exists("MoonSharp.Interpreter.dll"))
+            {
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading MoonShaprer Interpreter");
+                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/MoonSharp.Interpreter.dll?raw=true", "MoonSharp.Interpreter.dll");
+            }
             if (!File.Exists("ICSharpCode.AvalonEdit.dll"))
             {
                 thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading AvalonEdit");
                 webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/ICSharpCode.AvalonEdit.dll?raw=true", "ICSharpCode.AvalonEdit.dll");
-            
-            }
-            if (!File.Exists("CheatSquadAPI.dll"))
-            {
-                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading CheatSquad API");
-                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/CheatSquadAPI.dll?raw=true", "CheatSquadAPI.dll");
             }
 
 
-            thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading MoonShaprer Interpreter");
-            if (!File.Exists("MoonSharp.Interpreter.dll"))
-            {
-                File.Delete("MoonSharp.Interpreter.dll");
-                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/MoonSharp.Interpreter.dll?raw=true", "MoonSharp.Interpreter.dll");
-            }
-
+            // Downloading new MainDab
             ServicePointManager.ServerCertificateValidationCallback = ((object a, X509Certificate b, X509Chain c, SslPolicyErrors d) => true);
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading new version of MainDab");
             webClient.DownloadFile("https://github.com/leonardssy/ProjectDab/blob/master/MainDab.exe?raw=true", "MainDab.exe");
             thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " MainDab Downloaded");
+
+            // Timer thingy
             thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Starting MainDab in 5s");
-            WebClient webClient4 = new WebClient();
-            byte[] bytes = webClient4.DownloadData("https://pastebin.com/raw/6pVUMAGi");
-            string @string = Encoding.UTF8.GetString(bytes);
-            Console.WriteLine("\n" + @string + "\n");
-            Console.WriteLine("\n oh fuck black magic 2");
             Thread.Sleep(1000);
             thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Starting MainDab in 4s");
             Thread.Sleep(1000);
@@ -134,27 +166,12 @@ namespace MainDabUpdater
             Thread.Sleep(1000);
             thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Starting MainDab in 0s");
             Thread.Sleep(500);
+
+            // Start MainDab
             Process.Start("MainDab.exe");
             Environment.Exit(0);
         }
-
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (thing == oi)
-            {
-
-            }
-            else
-            {
-                richTextBox1.AppendText("\n" + thing);
-                thing = oi;
-            }
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void timer1_Tick(object sender, EventArgs e) { if (thing == oi){}else{richTextBox1.AppendText("\n" + thing);thing = oi;}}
+        private void richTextBox1_TextChanged(object sender, EventArgs e){}
     }
 }

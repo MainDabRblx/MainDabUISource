@@ -1,9 +1,0 @@
-MainDab Theme File
-Modify values as you wish.
-Please leave the text where it is, otherwise MainDab will read the wrong line.
-DO NOT leave unessesary spaces. 
-
-TopBar=222,222,222
-LeftBar=69,69,69
-LeftButtons=100,100,100
-BottomBar=69,69,69

@@ -1,6 +1,0 @@
--- Typical Colors 2 hitbox extender. imma clap spark_vip loll
--- https://robloxscripts.com/wp-content/uploads/2020/08/911b812a2d431767984758aaa6b7f5f5.jpg
-
-warn("noob no such thing")
-warn("congats, you found an easter egg main_ex!")
-warn("Spark_VIP on roblox is gAy")

@@ -47,10 +47,8 @@ C:\Users\leona\Desktop\MainDabWPF\MainDab\obj\Debug\MainDab.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MainDab.exe.config
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MainDab.exe
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MainDab.pdb
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\CheatSquadAPI.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\DiscordRPC.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\ICSharpCode.AvalonEdit.dll
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\SirHurtAPI.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\Newtonsoft.Json.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\ICSharpCode.AvalonEdit.xml
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainWindow.g.cs
@@ -67,10 +65,9 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csproj.CopyComple
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.exe
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\EasyExploits.dll
-C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csprojAssemblyReference.cache
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.MainDabInternal.resources
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\WinSCP.exe
-C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab_Content.g.cs
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.xml
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\CheatSquadAPI.dll
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\ShadowCheats.dll

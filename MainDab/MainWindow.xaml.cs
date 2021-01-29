@@ -8,17 +8,11 @@
                                                                                        | |                  
                                                                                        |_|                  
  MainDab 2021, by Main_EX#3898 at discord.io/maindab
- Contact via discord (Main_EX#3898, My Discord ID is 766314130880593932, if that doesn't work join discord.io/maindab)
+ Contact via discord (Main_EX#7720, My Discord ID is 766314130880593932, if that doesn't work join discord.io/maindab)
  Contact via email - maindabex@gmail.com or yohatipynoo@gmail.com
  I don't use other communication platforms, other Main_EX's you see are not affliated with me.
  My Discord ID is 766314130880593932
-
  Feel free to look around and take some parts of the code.
- Attribution 4.0 International (CC BY 4.0), feel free to take it but you must attribute MainDab in your code (doesn't have to be visible, just put it as a comment)
- Details at creativecommons.org/licenses/by/4.0/
-
- If I don't respond in 3 days, that means I'm dead (or it went straight to my spam)
-
  oh and I'm also sorry for the profane words :3
  */
 using MoonSharp.Interpreter;
@@ -29,7 +23,6 @@ using System.Text;
 using System.Windows;
 using System.Web;
 using CheatSquadAPI;
-using SirHurtAPI;
 using System.Windows.Controls;
 using System.Windows.Input;
 using DiscordRPC;
@@ -46,21 +39,26 @@ using System.Linq;
 using System.IO.Compression;
 using System.Reflection;
 using DiscordRPC.Logging;
-
+using ShadowCheats;
 using System.Runtime.InteropServices;
 
 namespace MainDab
 {
     public partial class MainWindow : Window
     {
-        string currentver = "MainDab V.10.5";
+        string currentver = "MainDab V.10.9";
         WebClient HITLER = new WebClient(); // HEIL HITLER!
         private DiscordRpcClient client;
         private readonly CheatSquadAPI.Module shitsquad = new CheatSquadAPI.Module(); // CheatSquad API
-        private readonly EasyExploits.Module ezclap = new EasyExploits.Module();
-        string currentdll = "Selected API : CheatSquad";
+        private readonly EasyExploits.Module ezclap = new EasyExploits.Module(); // EasyExploits API
+        private readonly ShadowCheats.Module sexcheats = new ShadowCheats.Module();  // ShadowCheats API
+        string currentdll = "Selected API : EasyExploits";
         private readonly BackgroundWorker worker = new BackgroundWorker();
-         
+        [DllImport("WeAreDevs_API.cpp.dll", CallingConvention = CallingConvention.Cdecl)]
+        public static extern bool LaunchExploit(); // WRD Inject
+        [DllImport("WeAreDevs_API.cpp.dll", CallingConvention = CallingConvention.Cdecl)]
+        public static extern bool SendLimitedLuaScript(string script); // WRD Execute
+
         public MainWindow()
         { 
                 
@@ -77,11 +75,7 @@ namespace MainDab
                     File.WriteAllText("lua.xshd", penis);
                 }
             // pp penis big 
-            const int specifiedLine = 6;
-            string line = GetSpecifiedLine("theme.txt", specifiedLine);
-            string newline = line.Remove(7);
-            MessageBox.Show(newline);
-            TopBar.Background = Color.FromRgb(newline,newline,newline);
+       
 
 
         }
@@ -119,37 +113,7 @@ namespace MainDab
         // New functions, making changing code slightly easier
         private void Injection()
         {
-            if (currentdll == "Selected API : Sirhurt API")
-            {
-                SirHurtAPI.SirHurtAPI.LaunchExploit();
-                new Thread(() =>
-                {
-                    Thread.CurrentThread.IsBackground = true;
-                    while (!SirHurtAPI.SirHurtAPI.isInjected())
-                    {
-                        this.Dispatcher.Invoke(() =>
-                        {
-                            Status.Content = "Injecting Sirhurt API...";
-                        });
-                        Thread.Sleep(500);
-                    }
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        Status.Content = "Game loading...";
-                    });
-                    Thread.Sleep(3000);
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        Status.Content = "Sirhurt API Injected!";
-                    });
-                    Thread.Sleep(1000);
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        Status.Content = "";
-                    });
-                }).Start();
-
-            }
+           
             if (currentdll == "Selected API : CheatSquad")
             {
                 shitsquad.Attach();
@@ -159,18 +123,18 @@ namespace MainDab
 
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "Injecting Cheatsquad API...";
+                        TopBar.Content = "MainDab | Injecting Cheatsquad API...";
 
                     });
                     Thread.Sleep(7000);
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "Cheatsquad API Injected!";
+                        TopBar.Content = "MainDab | Cheatsquad API Injected!";
                     });
                     Thread.Sleep(1000);
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "";
+                        TopBar.Content = "MainDab";
                     });
 
 
@@ -187,21 +151,73 @@ namespace MainDab
 
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "Injecting EasyExploits API...";
+                        TopBar.Content = "MainDab | Injecting EasyExploits API...";
 
                     });
                     Thread.Sleep(6000);
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "EasyExploits API Injected!";
+                        TopBar.Content = "MainDab | EasyExploits API Injected!";
                     });
                     Thread.Sleep(1000);
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "";
+                        TopBar.Content = "MainDab";
                     });
                 }).Start();
             }
+
+            if (currentdll == "Selected API : ShadowCheats")
+            {
+                sexcheats.Attach();
+                new Thread(() =>
+                {
+                    Thread.CurrentThread.IsBackground = true;
+
+                    this.Dispatcher.Invoke(() =>
+                    {
+                        TopBar.Content = "MainDab | Injecting ShadowCheats API...";
+
+                    });
+                    Thread.Sleep(8000);
+                    this.Dispatcher.Invoke(() =>
+                    {
+                        TopBar.Content = "MainDab | ShadowCheats API Injected!";
+                    });
+                    Thread.Sleep(1000);
+                    this.Dispatcher.Invoke(() =>
+                    {
+                        TopBar.Content = "MainDab";
+                    });
+                }).Start();
+            }
+
+            if (currentdll == "Selected API : WeAreDevs")
+            {
+                
+                new Thread(() =>
+                {
+                    LaunchExploit();
+                    Thread.CurrentThread.IsBackground = true;
+
+                    this.Dispatcher.Invoke(() =>
+                    {
+                        TopBar.Content = "MainDab | Injecting WeAreDevs API...";
+
+                    });
+                    Thread.Sleep(3000);
+                    this.Dispatcher.Invoke(() =>
+                    {
+                        TopBar.Content = "MainDab | WeAreDevs API Injected!";
+                    });
+                    Thread.Sleep(1000);
+                    this.Dispatcher.Invoke(() =>
+                    {
+                        TopBar.Content = "MainDab";
+                    });
+                }).Start();
+            }
+
             if (currentdll == "Selected API : Custom")
             {
                 Functions.Inject();
@@ -211,28 +227,25 @@ namespace MainDab
 
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "Injecting Custom API...";
+                       // Status.Content = "Injecting Custom API...";
 
                     });
                     Thread.Sleep(6000);
                     this.Dispatcher.Invoke(() =>
                     {
-                        Status.Content = "";
+                        //Status.Content = "";
                     });
                 }).Start();
             }
         } // Inject
         private void Execute()
         {
-            if (currentdll == "Selected API : Sirhurt API")
-            {
-                SirHurtAPI.SirHurtAPI.Execute(textEditor.Text, true);
-            }
+            
             if (currentdll == "Selected API : CheatSquad")
             {
-
                 shitsquad.Execute(textEditor.Text);
             }
+
             if (currentdll == "Selected API : EasyExploits API")
             {
                 try
@@ -243,6 +256,14 @@ namespace MainDab
                 {
                     MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
                 }
+            }
+            if (currentdll == "Selected API : ShadowCheats")
+            {
+               sexcheats.ExecuteScript(textEditor.Text);
+            }
+            if (currentdll == "Selected API : WeAreDevs")
+            {
+                SendLimitedLuaScript(textEditor.Text);
             }
             if (currentdll == "Selected API : Custom")
             {
@@ -712,28 +733,7 @@ namespace MainDab
             }
         }
 
-        private void d(object sender, MouseButtonEventArgs e)
-        {
-            if (currentdll == "Selected API : Sirhurt API")
-            {
-                SirHurtAPI.SirHurtAPI.Execute(scriptseggx, true);
-            }
-            if (currentdll == "Selected API : CheatSquad")
-            {
-                shitsquad.Execute(scriptseggx);
-            }
-            if (currentdll == "Selected API : MainDabAPI")
-            {
-                NamedPipes.LuaPipe(scriptseggx);
-             }
-            if (currentdll == "Selected API : Custom")
-            {
-                NamedPipes.LuaPipe(scriptseggx);
-            }
-
-            // Main_EX#3898 @ MainDab RBLX
-
-        }
+      
 
         private void listbox_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -841,17 +841,22 @@ namespace MainDab
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            if (currentdll == "Selected API : Sirhurt API")
-            {
-                SirHurtAPI.SirHurtAPI.Execute(scriptseggx, true);
-            }
+            
             if (currentdll == "Selected API : CheatSquad")
             {
                 shitsquad.Execute(scriptseggx);
             }
-            if (currentdll == "Selected API : Lush API")
+            if (currentdll == "Selected API : EasyExploits API")
             {
-                NamedPipes.LuaPipe(scriptseggx);
+                ezclap.ExecuteScript(scriptseggx);
+            }
+            if (currentdll == "Selected API : ShadowCheats")
+            {
+               sexcheats.ExecuteScript(scriptseggx);
+            }
+            if (currentdll == "Selected API : WeAreDevs")
+            {
+               SendLimitedLuaScript(scriptseggx);
             }
             if (currentdll == "Selected API : Custom")
             {
@@ -953,11 +958,7 @@ namespace MainDab
 
         private void MenuItem_Click_22(object sender, RoutedEventArgs e)
         {
-            currentdll = "Selected API : Sirhurt API";
-            SelectedAPILabel.Content = "Selected API : Sirhurt API";
-            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
-            key.SetValue("DLL", "Selected API : Sirhurt API");
-            key.Close();
+            custom.Visibility = Visibility.Visible;
         }
 
         private void MenuItem_Click_23(object sender, RoutedEventArgs e)
@@ -1025,6 +1026,24 @@ namespace MainDab
                 this.SyntaxLabel.Foreground = Brushes.White;
             }
             
+        }
+
+        private void Shado(object sender, RoutedEventArgs e)
+        {
+            currentdll = "Selected API : ShadowCheats";
+            SelectedAPILabel.Content = "Selected API : ShadowCheats";
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
+            key.SetValue("DLL", "Selected API : ShadowCheats");
+            key.Close();
+        }
+
+        private void WeAreSkids(object sender, RoutedEventArgs e)
+        {
+            currentdll = "Selected API : WeAreDevs";
+            SelectedAPILabel.Content = "Selected API : WeAreDevs";
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
+            key.SetValue("DLL", "Selected API : WeAreDevs");
+            key.Close();
         }
     }
 }

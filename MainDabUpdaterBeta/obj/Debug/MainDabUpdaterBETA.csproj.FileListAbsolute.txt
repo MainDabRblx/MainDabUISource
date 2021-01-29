@@ -1,7 +1,0 @@
-C:\Users\leona\Desktop\MainDabSrc\MainDabUpdaterBeta\obj\Debug\MainDabUpdaterBETA.csprojAssemblyReference.cache
-C:\Users\leona\Desktop\MainDabSrc\MainDabUpdaterBeta\obj\Debug\MainDabUpdaterBETA.csproj.CoreCompileInputs.cache
-C:\Users\leona\Desktop\MainDabSrc\MainDabUpdaterBeta\bin\Debug\betaupdate.exe.config
-C:\Users\leona\Desktop\MainDabSrc\MainDabUpdaterBeta\bin\Debug\betaupdate.exe
-C:\Users\leona\Desktop\MainDabSrc\MainDabUpdaterBeta\bin\Debug\betaupdate.pdb
-C:\Users\leona\Desktop\MainDabSrc\MainDabUpdaterBeta\obj\Debug\betaupdate.exe
-C:\Users\leona\Desktop\MainDabSrc\MainDabUpdaterBeta\obj\Debug\betaupdate.pdb
