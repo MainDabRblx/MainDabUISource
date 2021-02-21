@@ -46,7 +46,7 @@ namespace MainDab
 {
     public partial class MainWindow : Window
     {
-        string currentver = "MainDab V.10.9";
+        string currentver = "MainDab V.11.0";
         WebClient HITLER = new WebClient(); // HEIL HITLER!
         private DiscordRpcClient client;
         private readonly CheatSquadAPI.Module shitsquad = new CheatSquadAPI.Module(); // CheatSquad API
@@ -327,8 +327,8 @@ namespace MainDab
                 // this.panel6.Visible = false;
                 client.SetPresence(new RichPresence
                 {
-                    Details = "Using MainDab V10",
-                    State = "MainDab Roblox SEXploit | discord.io/maindab",
+                    Details = "Using MainDab V11",
+                    State = "MainDab Roblox Exploit | discord.io/maindab",
 
                     Timestamps = new Timestamps
                     {
@@ -1044,6 +1044,21 @@ namespace MainDab
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
             key.SetValue("DLL", "Selected API : WeAreDevs");
             key.Close();
+        }
+
+        private void Load(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Unload(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TabablzControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

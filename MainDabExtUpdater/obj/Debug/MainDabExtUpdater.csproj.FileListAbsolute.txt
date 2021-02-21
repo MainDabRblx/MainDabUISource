@@ -4,3 +4,4 @@ C:\Users\leona\Desktop\MainDabSrc\MainDabExtUpdater\bin\Debug\MainDabExtUpdater.
 C:\Users\leona\Desktop\MainDabSrc\MainDabExtUpdater\obj\Debug\MainDabExtUpdater.csproj.CoreCompileInputs.cache
 C:\Users\leona\Desktop\MainDabSrc\MainDabExtUpdater\obj\Debug\MainDabExtUpdater.exe
 C:\Users\leona\Desktop\MainDabSrc\MainDabExtUpdater\obj\Debug\MainDabExtUpdater.pdb
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtUpdater\obj\Debug\MainDabExtUpdater.csprojAssemblyReference.cache

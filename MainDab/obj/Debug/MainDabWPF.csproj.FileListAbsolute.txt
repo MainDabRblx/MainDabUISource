@@ -71,3 +71,4 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.xml
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\CheatSquadAPI.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\ShadowCheats.dll
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\WPF.Bootstrap.dll
