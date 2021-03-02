@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("packages/winscp.5.17.9/tools/winscp.exe")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("properties/notify.wav")]
 
 

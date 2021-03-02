@@ -8,12 +8,7 @@
                                                                                        | |                  
                                                                                        |_|                  
  MainDab 2021, by Main_EX#3898 at discord.io/maindab
- Contact via discord (Main_EX#7720, My Discord ID is 766314130880593932, if that doesn't work join discord.io/maindab)
- Contact via email - maindabex@gmail.com or yohatipynoo@gmail.com
- I don't use other communication platforms, other Main_EX's you see are not affliated with me.
- My Discord ID is 766314130880593932
- Feel free to look around and take some parts of the code.
- oh and I'm also sorry for the profane words :3
+ Contact via discord (Main_EX#3898, My Discord ID is 766314130880593932, if that doesn't work join discord.io/maindab)
  */
 using MoonSharp.Interpreter;
 using Microsoft.Win32;
@@ -22,7 +17,6 @@ using System.IO;
 using System.Text;
 using System.Windows;
 using System.Web;
-using CheatSquadAPI;
 using System.Windows.Controls;
 using System.Windows.Input;
 using DiscordRPC;
@@ -44,12 +38,13 @@ using System.Runtime.InteropServices;
 
 namespace MainDab
 {
+
     public partial class MainWindow : Window
     {
-        string currentver = "MainDab V.11.0";
+        string currentver = "MainDab V.11.2";
         WebClient HITLER = new WebClient(); // HEIL HITLER!
         private DiscordRpcClient client;
-        private readonly CheatSquadAPI.Module shitsquad = new CheatSquadAPI.Module(); // CheatSquad API
+       // private readonly CheatSquadAPI.Module shitsquad = new CheatSquadAPI.Module(); // CheatSquad API
         private readonly EasyExploits.Module ezclap = new EasyExploits.Module(); // EasyExploits API
         private readonly ShadowCheats.Module sexcheats = new ShadowCheats.Module();  // ShadowCheats API
         string currentdll = "Selected API : EasyExploits";
@@ -58,11 +53,20 @@ namespace MainDab
         public static extern bool LaunchExploit(); // WRD Inject
         [DllImport("WeAreDevs_API.cpp.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern bool SendLimitedLuaScript(string script); // WRD Execute
+        [DllImport("kernel32.dll")]
+        static extern IntPtr GetConsoleWindow();
+
+        [DllImport("user32.dll")]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        const int SW_HIDE = 0;
+        const int SW_SHOW = 5;
 
         public MainWindow()
-        { 
-                
-                if (File.Exists("lua.xshd"))
+        {
+            Console.WriteLine("\r\n  __  __       _       _____        _     \r\n |  \\/  |     (_)     |  __ \\      | |    \r\n | \\  / | __ _ _ _ __ | |  | | __ _| |__  \r\n | |\\/| |/ _` | | '_ \\| |  | |/ _` | '_ \\ \r\n | |  | | (_| | | | | | |__| | (_| | |_) |\r\n |_|  |_|\\__,_|_|_| |_|_____/ \\__,_|_.__/ \r\n                                          \r\n                                          \r\n");
+            Console.WriteLine("Debugging console | Join MainDab at discord.io/maindab if you need help");
+            if (File.Exists("lua.xshd"))
                 {
                     File.Delete("lua.xshd");
                     string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
@@ -113,9 +117,11 @@ namespace MainDab
         // New functions, making changing code slightly easier
         private void Injection()
         {
-           
-            if (currentdll == "Selected API : CheatSquad")
+            Process[] pname = Process.GetProcessesByName("RobloxPlayerBeta");
+            if (pname.Length > 0)
             {
+               /* if (currentdll == "Selected API : CheatSquad")
+                {
                 shitsquad.Attach();
                 new Thread(() =>
                 {
@@ -141,7 +147,7 @@ namespace MainDab
                 }).Start();
 
 
-            }
+            } */
             if (currentdll == "Selected API : EasyExploits API")
             {
                 ezclap.LaunchExploit();
@@ -166,8 +172,7 @@ namespace MainDab
                     });
                 }).Start();
             }
-
-            if (currentdll == "Selected API : ShadowCheats")
+                if (currentdll == "Selected API : ShadowCheats")
             {
                 sexcheats.Attach();
                 new Thread(() =>
@@ -191,8 +196,7 @@ namespace MainDab
                     });
                 }).Start();
             }
-
-            if (currentdll == "Selected API : WeAreDevs")
+                if (currentdll == "Selected API : WeAreDevs")
             {
                 
                 new Thread(() =>
@@ -217,8 +221,7 @@ namespace MainDab
                     });
                 }).Start();
             }
-
-            if (currentdll == "Selected API : Custom")
+                if (currentdll == "Selected API : Custom")
             {
                 Functions.Inject();
                 new Thread(() =>
@@ -236,61 +239,75 @@ namespace MainDab
                         //Status.Content = "";
                     });
                 }).Start();
+                }
             }
-        } // Inject
+            else
+            {
+                MessageBox.Show("Roblox isn't opened, please open Roblox before injecting!");
+            }
+        }
         private void Execute()
         {
-            
-            if (currentdll == "Selected API : CheatSquad")
+            Process[] pname = Process.GetProcessesByName("RobloxPlayerBeta");
+            if (pname.Length > 0)
             {
-                shitsquad.Execute(textEditor.Text);
-            }
+               /* if (currentdll == "Selected API : CheatSquad")
+                {
+                    shitsquad.Execute(textEditor.Text);
+                }*/
+                if (currentdll == "Selected API : EasyExploits API")
+                {
+                    try
+                    {
+                        ezclap.ExecuteScript(textEditor.Text);
+                    }
+                    catch (Exception sexual)
+                    {
+                        MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
+                    }
+                }
+                if (currentdll == "Selected API : ShadowCheats")
+                {
+                    sexcheats.ExecuteScript(textEditor.Text);
+                }
+                if (currentdll == "Selected API : WeAreDevs")
+                {
+                    SendLimitedLuaScript(textEditor.Text);
+                }
+                if (currentdll == "Selected API : Custom")
+                {
+                    try
+                    {
+                        NamedPipes.LuaPipe(textEditor.Text);
+                    }
+                    catch (Exception sexual)
+                    {
+                        MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
+                    }
 
-            if (currentdll == "Selected API : EasyExploits API")
-            {
-                try
-                {
-                    ezclap.ExecuteScript(textEditor.Text);
-                }
-                catch (Exception sexual)
-                {
-                    MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
                 }
             }
-            if (currentdll == "Selected API : ShadowCheats")
+            else
             {
-               sexcheats.ExecuteScript(textEditor.Text);
-            }
-            if (currentdll == "Selected API : WeAreDevs")
-            {
-                SendLimitedLuaScript(textEditor.Text);
-            }
-            if (currentdll == "Selected API : Custom")
-            {
-                try
-                {
-                    NamedPipes.LuaPipe(textEditor.Text);
-                }
-                catch (Exception sexual)
-                {
-                    MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
-                }
-
+                MessageBox.Show("Roblox isn't opened, please open Roblox before injecting!");
             }
         } // Execute
         private void textEditor_Loaded(object sender, RoutedEventArgs e)
         {
-
+            var handle = GetConsoleWindow();
+            ShowWindow(handle, SW_SHOW);
+            Console.WriteLine("Checking for updates...\n");
             WebClient webClient = new WebClient();
             byte[] succ1 = webClient.DownloadData("https://pastebin.com/raw/QpwkAJS4");
             string we = Encoding.UTF8.GetString(succ1);
 
             byte[] succ = webClient.DownloadData("https://pastebin.com/raw/TeKDGrbg");
             string discord = Encoding.UTF8.GetString(succ);
-            Process.Start(discord);
+           // Process.Start(discord);
+           // remember to reenable!
             if (we == currentver)
             {
-
+                Console.WriteLine("Already using latest MainDab version\n");
                 if (!Directory.Exists("autoexec"))
                 {
                     Console.WriteLine("Creating autoexec folder...");
@@ -313,7 +330,8 @@ namespace MainDab
                 {
                     Directory.CreateDirectory("Scripts");
                 }
-                client = new DiscordRpcClient("714648958265327737")
+                Console.WriteLine("Starting Discord RPC status\n");
+                client = new DiscordRpcClient("795935176873213982")
                 {
                     Logger = new ConsoleLogger
                     {
@@ -341,15 +359,18 @@ namespace MainDab
                         LargeImageKey = "image_large",
                         LargeImageText = "MainDab Roblox Exploit",
 
-                        SmallImageKey = "image_small"
+                        SmallImageKey = "image_roblox"
                     }
 
                 });
 
-
+                System.IO.Stream str = Properties.Resources.Notify;
+                System.Media.SoundPlayer snd = new System.Media.SoundPlayer(str);
+                snd.Play();
             }
             else
             {
+                Console.WriteLine("Update found\n");
                 webClient.DownloadFile("https://github.com/leonardssy/ProjectDab/blob/master/MainDab%20Updater.exe?raw=true", "update.exe");
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 Process.Start("update.exe");
@@ -368,11 +389,13 @@ namespace MainDab
                 File.WriteAllText("lua.xshd", penis);
             }
 
+            Console.WriteLine("Downloading lua.xshd for avalonedit\n");
             Stream input = File.OpenRead("lua.xshd");
             XmlTextReader xmlTextReader = new XmlTextReader(input);
             textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
             // Change directory to avoid useless directories :/
-
+            Console.WriteLine("All done\n");
+            ShowWindow(handle, SW_HIDE);
 
         }
 
@@ -842,10 +865,7 @@ namespace MainDab
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             
-            if (currentdll == "Selected API : CheatSquad")
-            {
-                shitsquad.Execute(scriptseggx);
-            }
+         
             if (currentdll == "Selected API : EasyExploits API")
             {
                 ezclap.ExecuteScript(scriptseggx);
@@ -891,7 +911,7 @@ namespace MainDab
 
         private void sex_Loaded(object sender, RoutedEventArgs e)
         {
-            this.sex.Navigate("https://seasoned-charmed-cold.glitch.me/");
+            this.sex.Navigate("https://maindabusagecounter.netlify.app/");
 
             dynamic activeX = this.sex.GetType().InvokeMember("ActiveXInstance",
                 BindingFlags.GetProperty | BindingFlags.Instance | BindingFlags.NonPublic,
@@ -963,10 +983,8 @@ namespace MainDab
 
         private void MenuItem_Click_23(object sender, RoutedEventArgs e)
         {
-            WebClient webClient2 = new WebClient();
-            byte[] bytes = webClient2.DownloadData("https://pastebin.com/raw/TU1EWx3w");
-            string we = Encoding.UTF8.GetString(bytes);
-            MessageBox.Show(we, "MainDab Credits");
+            Credits creditui = new Credits();
+            creditui.Show();
         }
 
         private void Image_MouseDown_4(object sender, MouseButtonEventArgs e)
@@ -1002,7 +1020,13 @@ namespace MainDab
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
             dispatcherTimer.Start();
-           
+
+
+            System.Windows.Threading.DispatcherTimer reload = new System.Windows.Threading.DispatcherTimer();
+            reload.Tick += new EventHandler(reload_Tick);
+            reload.Interval = new TimeSpan(0, 0, 10);
+            reload.Start();
+
         }
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
@@ -1027,7 +1051,12 @@ namespace MainDab
             }
             
         }
+        private void reload_Tick(object sender, EventArgs e)
+        {
 
+            this.sex.Refresh();
+
+        }
         private void Shado(object sender, RoutedEventArgs e)
         {
             currentdll = "Selected API : ShadowCheats";
@@ -1059,6 +1088,16 @@ namespace MainDab
         private void TabablzControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void joinmein(object sender, MouseButtonEventArgs e)
+        {
+            Process.Start("Https://discord.io/maindab");
+        }
+
+        private void github(object sender, MouseButtonEventArgs e)
+        {
+            Process.Start("https://github.com/MainDabRblx/MainDabUISource");
         }
     }
 }

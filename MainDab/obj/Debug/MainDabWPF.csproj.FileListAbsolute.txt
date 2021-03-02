@@ -69,6 +69,7 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.MainDabInternal.reso
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.xml
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\CheatSquadAPI.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\ShadowCheats.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\WPF.Bootstrap.dll
+C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.Credits.resources

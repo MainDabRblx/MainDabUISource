@@ -70,14 +70,16 @@ namespace MainDabUpdater
                 thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Deleting MetroFramework");
                 File.Delete("MetroFramework.dll");
             }
+            // Deleting stuff no longer needed
+            if (File.Exists("CheatSquadAPI.dll"))
+            {
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Deleting CheatSquadAPI.dll");
+                File.Delete("CheatSquadAPI.dll");
+            }
             if (File.Exists("SirHurtAPI.dll"))
             {
                 thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Deleting SirhurtAPI");
                 File.Delete("SirHurtAPI.dll");
-            }
-            if (File.Exists("Axon.dll"))
-            {
-                File.Delete("Axon.dll");
             }
             if (File.Exists("VisualStudioTabControl.dll"))
             {
@@ -87,17 +89,6 @@ namespace MainDabUpdater
 
 
 
-            // API Stuff
-            thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading new CheatSquad API");
-            if (File.Exists("CheatSquadAPI.dll"))
-            {
-                File.Delete("CheatSquadAPI.dll");
-                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/CheatSquadAPI.dll?raw=true", "CheatSquadAPI.dll");
-            }
-            if (!File.Exists("CheatSquadAPI.dll"))
-            {
-                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/CheatSquadAPI.dll?raw=true", "CheatSquadAPI.dll");
-            }
             thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading new EasyExploits API");
             if (File.Exists("EasyExploits.dll"))
             {

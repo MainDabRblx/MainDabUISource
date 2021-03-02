@@ -60,10 +60,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CheatSquadAPI, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MainDab\CheatSquadAPI.dll</HintPath>
-    </Reference>
     <Reference Include="DiscordRPC, Version=1.0.150.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\MainDab\DiscordRPC.dll</HintPath>
@@ -79,7 +75,8 @@
       <HintPath>packages\MoonSharp.2.0.0.0\lib\net40-client\MoonSharp.Interpreter.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework.Aero" />
-    <Reference Include="ShadowCheats">
+    <Reference Include="ShadowCheats, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Downloads\ShadowCheats.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -123,6 +120,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Credits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Credits.Designer.cs">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </Compile>
     <Compile Include="Injection\DLLInjection.cs" />
     <Compile Include="Injection\Functions.cs" />
     <Compile Include="Injection\Injector.cs" />
@@ -152,6 +155,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Credits.resx">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainDabInternal.resx">
       <DependentUpon>MainDabInternal.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +240,27 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="IconRoblox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20200906_163659.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled drawing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Discord-Logo-White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GitHub-Mark-Light-64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Beep.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notify.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

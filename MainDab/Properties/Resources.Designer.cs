@@ -63,6 +63,26 @@ namespace MainDab.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20200906_163659 {
+            get {
+                object obj = ResourceManager.GetObject("20200906_163659", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Beep {
+            get {
+                object obj = ResourceManager.GetObject("Beep", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Joshua {
             get {
                 object obj = ResourceManager.GetObject("Joshua", resourceCulture);
@@ -76,6 +96,25 @@ namespace MainDab.Properties {
         internal static System.Drawing.Bitmap nlank {
             get {
                 object obj = ResourceManager.GetObject("nlank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Notify {
+            get {
+                return ResourceManager.GetStream("Notify", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_drawing {
+            get {
+                object obj = ResourceManager.GetObject("Untitled drawing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
