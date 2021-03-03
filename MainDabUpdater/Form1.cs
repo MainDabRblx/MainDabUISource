@@ -122,9 +122,19 @@ namespace MainDabUpdater
                 thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading WeAreDevs_API.cpp.dll");
                 webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/WeAreDevs_API.cpp.dll?raw=true", "WeAreDevs_API.cpp.dll");
             }
-
+            if (File.Exists("AcrylixAPI.dll"))
+            {
+                File.Delete("AcrylixAPI.dll");
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " UpdatingAcrylixAPI.dll");
+                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/AcrylixAPI.dll?raw=true", "AcrylixAPI.dll");
+            }
+            if (!File.Exists("AcrylixAPI.dll"))
+            {
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading AcrylixAPI.dll");
+                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/AcrylixAPI.dll?raw=true", "AcrylixAPI.dll");
+            }
             // Downloading extra dependencies
-           
+
             if (!File.Exists("MoonSharp.Interpreter.dll"))
             {
                 thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading MoonShaprer Interpreter");

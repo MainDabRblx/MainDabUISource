@@ -36,18 +36,21 @@ using DiscordRPC.Logging;
 using ShadowCheats;
 using System.Runtime.InteropServices;
 
+
 namespace MainDab
 {
 
     public partial class MainWindow : Window
     {
-        string currentver = "MainDab V.11.2";
-        WebClient HITLER = new WebClient(); // HEIL HITLER!
-        private DiscordRpcClient client;
-       // private readonly CheatSquadAPI.Module shitsquad = new CheatSquadAPI.Module(); // CheatSquad API
+        string currentver = "MainDab V.11.3"; // current version
+        string listboxopenornot = "false"; // listbox
+        WebClient HITLER = new WebClient(); // hitler moment :D
+        private DiscordRpcClient client; // discordsexual
+        AcrylixAPI DeepPainUwU= new AcrylixAPI(); // Acrylix API horny fuck moment
+        // private readonly CheatSquadAPI.Module shitsquad = new CheatSquadAPI.Module(); // CheatSquad API
         private readonly EasyExploits.Module ezclap = new EasyExploits.Module(); // EasyExploits API
         private readonly ShadowCheats.Module sexcheats = new ShadowCheats.Module();  // ShadowCheats API
-        string currentdll = "Selected API : EasyExploits";
+        string currentdll = "Selected API : EasyExploits"; // by default...
         private readonly BackgroundWorker worker = new BackgroundWorker();
         [DllImport("WeAreDevs_API.cpp.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern bool LaunchExploit(); // WRD Inject
@@ -66,21 +69,23 @@ namespace MainDab
         {
             Console.WriteLine("\r\n  __  __       _       _____        _     \r\n |  \\/  |     (_)     |  __ \\      | |    \r\n | \\  / | __ _ _ _ __ | |  | | __ _| |__  \r\n | |\\/| |/ _` | | '_ \\| |  | |/ _` | '_ \\ \r\n | |  | | (_| | | | | | |__| | (_| | |_) |\r\n |_|  |_|\\__,_|_|_| |_|_____/ \\__,_|_.__/ \r\n                                          \r\n                                          \r\n");
             Console.WriteLine("Debugging console | Join MainDab at discord.io/maindab if you need help");
+
+           
             if (File.Exists("lua.xshd"))
-                {
-                    File.Delete("lua.xshd");
-                    string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
-                    File.WriteAllText("lua.xshd", penis); // just in case need new update
-                }
+            {
+                File.Delete("lua.xshd");
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
+                File.WriteAllText("lua.xshd", penis); // just in case need new update
+            }
 
-                if (!File.Exists("lua.xshd")) // onv
-                {
-                    string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
-                    File.WriteAllText("lua.xshd", penis);
-                }
+            if (!File.Exists("lua.xshd")) // onv
+            {
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
+                File.WriteAllText("lua.xshd", penis);
+            }
             // pp penis big 
-       
 
+        
 
         }
 
@@ -172,6 +177,39 @@ namespace MainDab
                     });
                 }).Start();
             }
+                if (currentdll == "Selected API : Acrylix")
+                {
+                    
+                    
+                    new Thread(() =>
+                    {
+                        Thread.CurrentThread.IsBackground = true;
+
+                        this.Dispatcher.Invoke(() =>
+                        {
+                            TopBar.Content = "MainDab | Updating Acrylix API...";
+                            DeepPainUwU.Update();
+
+                        });
+
+                        this.Dispatcher.Invoke(() =>
+                        {
+                            TopBar.Content = "MainDab | Injecting Acrylix API...";
+
+                        });
+                        DeepPainUwU.Inject();
+                        Thread.Sleep(6000);
+                        this.Dispatcher.Invoke(() =>
+                        {
+                            TopBar.Content = "MainDab | Acrylix API Injected!";
+                        });
+                        Thread.Sleep(1000);
+                        this.Dispatcher.Invoke(() =>
+                        {
+                            TopBar.Content = "MainDab";
+                        });
+                    }).Start();
+                }
                 if (currentdll == "Selected API : ShadowCheats")
             {
                 sexcheats.Attach();
@@ -270,6 +308,10 @@ namespace MainDab
                 {
                     sexcheats.ExecuteScript(textEditor.Text);
                 }
+                if (currentdll == "Selected API : Acrylix")
+                {
+                    DeepPainUwU.Execute(textEditor.Text);
+                }
                 if (currentdll == "Selected API : WeAreDevs")
                 {
                     SendLimitedLuaScript(textEditor.Text);
@@ -303,7 +345,7 @@ namespace MainDab
 
             byte[] succ = webClient.DownloadData("https://pastebin.com/raw/TeKDGrbg");
             string discord = Encoding.UTF8.GetString(succ);
-           // Process.Start(discord);
+            Process.Start(discord);
            // remember to reenable!
             if (we == currentver)
             {
@@ -363,9 +405,12 @@ namespace MainDab
                     }
 
                 });
-
+                string whentheimpostorissus = ("--[[\r\nWelcome to MainDab!\r\nMake sure to join MainDab's discord at discord.io/maindab\r\nIf you need help, join our discord!\r\n--]]\r\n-- Paste in your text below this comment.\n\nprint(\"MainDab is poggers\")");
+                textEditor.Text = whentheimpostorissus;
                 System.IO.Stream str = Properties.Resources.Notify;
                 System.Media.SoundPlayer snd = new System.Media.SoundPlayer(str);
+                
+
                 snd.Play();
             }
             else
@@ -502,7 +547,7 @@ namespace MainDab
             System.Windows.Forms.OpenFileDialog hailhitler = new System.Windows.Forms.OpenFileDialog()
             {
                 CheckFileExists = true,
-                Filter = "Lua Files (*.lua)|*.lua|Text Files (*.txt)|*.txt|All files (*.*)|*.*"
+                Filter = "Text Files (*.txt)|*.txt|All files (*.*)|*.*"
             };
 
             if (hailhitler.ShowDialog() == System.Windows.Forms.DialogResult.OK) // i hate wpf geez winforms 4 life - mainex
@@ -1098,6 +1143,38 @@ namespace MainDab
         private void github(object sender, MouseButtonEventArgs e)
         {
             Process.Start("https://github.com/MainDabRblx/MainDabUISource");
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+        private void DeepPain(object sender, RoutedEventArgs e)
+        {
+
+            currentdll = "Selected API : Acrylix";
+            SelectedAPILabel.Content = "Selected API : Acrylix";
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
+            key.SetValue("DLL", "Selected API : Acrylix");
+            key.Close();
+        }
+
+        private void visiornot(object sender, MouseButtonEventArgs e)
+        {
+            if (listboxopenornot == "true")
+            {  
+                fuckbm2.Visibility = Visibility.Hidden;
+              //  textEditor.Width = 524;
+                listboxopenornot = "false";
+            }
+            else if (listboxopenornot == "false")
+            {
+                
+                fuckbm2.Visibility = Visibility.Visible;
+               // textEditor.Width = 403;
+                listboxopenornot = "true";
+            }
         }
     }
 }

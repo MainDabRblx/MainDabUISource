@@ -60,6 +60,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AcrylixAPI">
+      <HintPath>..\..\..\Downloads\AcrylixAPI.dll</HintPath>
+    </Reference>
     <Reference Include="DiscordRPC, Version=1.0.150.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\MainDab\DiscordRPC.dll</HintPath>
@@ -261,6 +264,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Notify.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="list.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

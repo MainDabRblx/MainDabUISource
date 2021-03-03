@@ -1,0 +1,4 @@
+-- Translator script. Main_EX 不喜欢 Proxo.
+-- https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/roblox.png
+
+loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/xxaim/ignore/master/translator.lua'))()

@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("properties/notify.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("list.png")]
 
 
