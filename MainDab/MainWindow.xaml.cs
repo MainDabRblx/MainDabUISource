@@ -35,14 +35,15 @@ using System.Reflection;
 using DiscordRPC.Logging;
 using ShadowCheats;
 using System.Runtime.InteropServices;
-
+using System.Net.Http;
+using System.Collections.Generic;
 
 namespace MainDab
 {
 
     public partial class MainWindow : Window
     {
-        string currentver = "MainDab V.11.3"; // current version
+        string currentver = "MainDab V.11.4"; // current version
         string listboxopenornot = "false"; // listbox
         WebClient HITLER = new WebClient(); // hitler moment :D
         private DiscordRpcClient client; // discordsexual
@@ -372,39 +373,8 @@ namespace MainDab
                 {
                     Directory.CreateDirectory("Scripts");
                 }
-                Console.WriteLine("Starting Discord RPC status\n");
-                client = new DiscordRpcClient("795935176873213982")
-                {
-                    Logger = new ConsoleLogger
-                    {
-                        Level = LogLevel.Warning
-                    }
-                };
-                client.OnReady += delegate { };
-                client.OnPresenceUpdate += delegate { };
-
-                client.Initialize();
-                // this.panel6.Visible = false;
-                client.SetPresence(new RichPresence
-                {
-                    Details = "Using MainDab V11",
-                    State = "MainDab Roblox Exploit | discord.io/maindab",
-
-                    Timestamps = new Timestamps
-                    {
-                        Start = DateTime.UtcNow,
-
-                    },
-
-                    Assets = new Assets
-                    {
-                        LargeImageKey = "image_large",
-                        LargeImageText = "MainDab Roblox Exploit",
-
-                        SmallImageKey = "image_roblox"
-                    }
-
-                });
+           
+                
                 string whentheimpostorissus = ("--[[\r\nWelcome to MainDab!\r\nMake sure to join MainDab's discord at discord.io/maindab\r\nIf you need help, join our discord!\r\n--]]\r\n-- Paste in your text below this comment.\n\nprint(\"MainDab is poggers\")");
                 textEditor.Text = whentheimpostorissus;
                 System.IO.Stream str = Properties.Resources.Notify;
@@ -987,10 +957,93 @@ namespace MainDab
             if (key != null)
             {
                 string apishouldbe = (key.GetValue("DLL").ToString());
-                key.Close();
+                
                 SelectedAPILabel.Content = apishouldbe;
                 currentdll = apishouldbe;
             }
+            if (key.GetValue("DiscordRPCEnabled") == null)
+            {
+                RegistryKey Create = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
+                Create.SetValue("DiscordRPCEnabled", "true");
+                Create.Close();
+                client = new DiscordRpcClient("795935176873213982")
+                {
+                    Logger = new ConsoleLogger
+                    {
+                        Level = LogLevel.Warning
+                    }
+                };
+                client.OnReady += delegate { };
+                client.OnPresenceUpdate += delegate { };
+
+                client.Initialize();
+                // this.panel6.Visible = false;
+                client.SetPresence(new RichPresence
+                {
+                    Details = "Using MainDab V11",
+                    State = "MainDab Roblox Exploit | discord.io/maindab",
+
+                    Timestamps = new Timestamps
+                    {
+                        Start = DateTime.UtcNow,
+
+                    },
+
+                    Assets = new Assets
+                    {
+                        LargeImageKey = "image_large",
+                        LargeImageText = "MainDab Roblox Exploit",
+
+                        SmallImageKey = "image_roblox"
+                    }
+
+                });
+            }
+            if (key.GetValue("DiscordRPCEnabled").ToString() != null)
+            {
+                string apishouldbe = (key.GetValue("DiscordRPCEnabled").ToString());
+                if (apishouldbe == "true")
+                {
+                    client = new DiscordRpcClient("795935176873213982")
+                    {
+                        Logger = new ConsoleLogger
+                        {
+                            Level = LogLevel.Warning
+                        }
+                    };
+                    client.OnReady += delegate { };
+                    client.OnPresenceUpdate += delegate { };
+
+                    client.Initialize();
+                    // this.panel6.Visible = false;
+                    client.SetPresence(new RichPresence
+                    {
+                        Details = "Using MainDab V11",
+                        State = "MainDab Roblox Exploit | discord.io/maindab",
+
+                        Timestamps = new Timestamps
+                        {
+                            Start = DateTime.UtcNow,
+
+                        },
+
+                        Assets = new Assets
+                        {
+                            LargeImageKey = "image_large",
+                            LargeImageText = "MainDab Roblox Exploit",
+
+                            SmallImageKey = "image_roblox"
+                        }
+
+                    });
+                }
+                if (apishouldbe == "false")
+                {
+
+                }
+                key.Close();
+            }
+
         }
 
         private void MenuItem_Click_20(object sender, RoutedEventArgs e)
@@ -1072,6 +1125,11 @@ namespace MainDab
             reload.Interval = new TimeSpan(0, 0, 10);
             reload.Start();
 
+            System.Windows.Threading.DispatcherTimer checkforupdateseveryminute = new System.Windows.Threading.DispatcherTimer();
+            reload.Tick += new EventHandler(reload_Tick);
+            reload.Interval = new TimeSpan(0, 0, 60);
+            reload.Start();
+
         }
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
@@ -1101,6 +1159,23 @@ namespace MainDab
 
             this.sex.Refresh();
 
+        }
+        private void checkforupdateseveryminute_Tick(object sender, EventArgs e)
+        {
+            WebClient webClient = new WebClient();
+            byte[] succ1 = webClient.DownloadData("https://pastebin.com/raw/QpwkAJS4");
+            string we = Encoding.UTF8.GetString(succ1);
+            if (we == currentver)
+            {
+            }
+            else
+            {
+                Console.WriteLine("Update found\n");
+                webClient.DownloadFile("https://github.com/leonardssy/ProjectDab/blob/master/MainDab%20Updater.exe?raw=true", "update.exe");
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                Process.Start("update.exe");
+                Environment.Exit(0);
+            }
         }
         private void Shado(object sender, RoutedEventArgs e)
         {
@@ -1175,6 +1250,64 @@ namespace MainDab
                // textEditor.Width = 403;
                 listboxopenornot = "true";
             }
+        }
+
+        private void EnableDisabledDiscordRPC(object sender, RoutedEventArgs e)
+        {
+
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\MainDabData");
+            if (key != null)
+            {
+                string enabledornotlol = (key.GetValue("DiscordRPCEnabled").ToString());
+                key.Close();
+                if (enabledornotlol == "true")
+                {
+                    RegistryKey Create = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
+                    Create.SetValue("DiscordRPCEnabled", "false");
+                    Create.Close();
+                    MessageBox.Show("Discord RPC (Rich Presence) is now turned off! Click OK to close MainDab. You will need to reopen MainDab manually.");
+                    this.Hide();
+                    Environment.Exit(0);
+
+                }
+                if (enabledornotlol == "false")
+                {
+                    RegistryKey Create = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
+                    Create.SetValue("DiscordRPCEnabled", "true");
+                    Create.Close();
+                    MessageBox.Show("Discord RPC (Rich Presence) is now turned on! Click OK to close MainDab. You will need to reopen MainDab manually.");
+                    this.Hide();
+                    Environment.Exit(0);
+
+                }
+            }
+
+
+
+            
+        }
+
+        private void MenuSaveFile_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+        private void UploadPastebin(object sender, RoutedEventArgs e)
+        {
+            string apiKey = "nottellingmf";
+            var client = new PasteBinClient(apiKey);
+            var entry = new PasteBinEntry
+            {
+                Title = "Uploaded from MainDab",
+                Text = textEditor.Text,
+                //Expiration = PasteBinExpiration.OneDay,
+              //  Private = true,
+                Format = "lua"
+            };
+
+            string pasteUrl = client.Paste(entry);
+            textEditor.Text = "Your paste is published at this URL: " + pasteUrl;
+
         }
     }
 }

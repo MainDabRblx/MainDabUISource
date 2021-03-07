@@ -74,3 +74,4 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\WPF.Bootstrap.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csprojAssemblyReference.cache
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.Credits.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\AcrylixAPI.dll
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\PastebinAPI.dll
