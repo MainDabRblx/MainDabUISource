@@ -145,7 +145,21 @@ namespace MainDabUpdater
                 thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading AvalonEdit");
                 webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/ICSharpCode.AvalonEdit.dll?raw=true", "ICSharpCode.AvalonEdit.dll");
             }
-
+            if (!File.Exists("PastebinAPIs.dll"))
+            {
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading PastebinAPIs.dll");
+                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/PastebinAPIs.dll?raw=true", "PastebinAPIs.dll");
+            }
+            if (!File.Exists("Giselle.Commons.dll"))
+            {
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading Giselle.Commons.dll");
+                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/Giselle.Commons.dll?raw=true", "Giselle.Commons.dll");
+            }
+            if (!File.Exists("HtmlAgilityPack.dll"))
+            {
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " HtmlAgilityPack.dll");
+                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/HtmlAgilityPack.dll?raw=true", "HtmlAgilityPack.dll");
+            }
 
             // Downloading new MainDab
             ServicePointManager.ServerCertificateValidationCallback = ((object a, X509Certificate b, X509Chain c, SslPolicyErrors d) => true);

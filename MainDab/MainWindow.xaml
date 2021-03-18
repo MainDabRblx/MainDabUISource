@@ -579,14 +579,10 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Border Background="Transparent" CornerRadius="4" Margin="10,10,54,15.333" x:Name="UIB" RenderTransformOrigin="0.755,0.806">
-        <Border.Effect>
-            <DropShadowEffect BlurRadius="6" ShadowDepth="3"/>
-        </Border.Effect>
+    <Border Background="Transparent" CornerRadius="4" Margin="0,0,54,15.333" x:Name="UIB" RenderTransformOrigin="0.755,0.806">
+
         <Grid HorizontalAlignment="Left" Width="578" Background="Transparent" Height="320" Margin="57,22,0,-32" VerticalAlignment="Top">
-            <Grid.Effect>
-                <DropShadowEffect BlurRadius="6" ShadowDepth="3"/>
-            </Grid.Effect>
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="105*"/>
                 <ColumnDefinition Width="419*"/>
@@ -602,10 +598,10 @@
                 <RowDefinition Height="0*"/>
             </Grid.RowDefinitions>
 
-            <Grid x:Name="BottomBar" HorizontalAlignment="Left" Height="249" Margin="0,9,0,0" Grid.Row="2" VerticalAlignment="Top" Width="568" Background="#FF19191A" Grid.RowSpan="2" Grid.ColumnSpan="4" Loaded="Grid_Loaded"/>
+            <Grid x:Name="BottomBar" HorizontalAlignment="Left" Height="249" Margin="0,9,0,0" Grid.Row="2" VerticalAlignment="Top" Width="568" Background="#FF19191A" Grid.RowSpan="2" Grid.ColumnSpan="4" Loaded="Grid_Loaded" UseLayoutRounding="False"/>
 
             <!--Buttons-->
-            <Label x:Name="TopBar" Margin="0,-13,0,0" Grid.Row="2" MouseLeftButtonDown="Border_MouseLeftButtonDown" Content="MainDab" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Width="569" Background="#FF282828" Height="30" RenderTransformOrigin="0.5,0.5" FontSize="16" Grid.ColumnSpan="4" FontFamily="Calibri">
+            <Label x:Name="TopBar" Margin="0,-13,0,0" Grid.Row="2" MouseLeftButtonDown="Border_MouseLeftButtonDown" Content="MainDab" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Width="569" Background="#FF282828" Height="30" RenderTransformOrigin="0.5,0.5" FontSize="16" Grid.ColumnSpan="4" FontFamily="Calibri" UseLayoutRounding="False">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -617,8 +613,8 @@
             </Label>
 
             <!--Buttons-->
-            <Button x:Name="Exit" BorderThickness="0" Background="#FFFF0505" HorizontalAlignment="Right" Margin="0,-7,7.667,86.667" Width="13" Style="{DynamicResource ButtonStyle2}" Grid.Row="2" Height="15" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Grid.Column="2" Click="Exit_Click" />
-            <Menu x:Name="Menu" Height="21" Margin="45,15,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Background="#FF232323" Foreground="{x:Null}" Grid.ColumnSpan="4" HorizontalAlignment="Left" Width="524">
+            <Button x:Name="Exit" BorderThickness="0" Background="#FFFF0505" HorizontalAlignment="Right" Margin="0,-7,7.667,86.667" Width="13" Style="{DynamicResource ButtonStyle2}" Grid.Row="2" Height="15" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Grid.Column="2" Click="Exit_Click" UseLayoutRounding="False" />
+            <Menu x:Name="Menu" Height="21" Margin="45,15,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Background="#FF232323" Foreground="{x:Null}" Grid.ColumnSpan="4" HorizontalAlignment="Left" Width="524" UseLayoutRounding="False">
 
                 <MenuItem x:Name="FileMenu" Header="File" Height="21" Width="33" Foreground="White" BorderThickness="0" Click="MenuItem_Click_11">
                     <MenuItem x:Name="MenuKillRblx" Header="Kill Roblox" HorizontalAlignment="Left" Height="21" Width="175" Background="#FF2D2D2D" BorderThickness="0" Margin="-24,0,-11,0"/>
@@ -649,9 +645,6 @@
                     <MenuItem x:Name="Credits" Header="Credits&#xA;" HorizontalAlignment="Left" Height="22" Width="145" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-5,0"  Click="MenuItem_Click_23"/>
                 </MenuItem>
                 <MenuItem x:Name="ExtensionsMenu" Header="Extensions" Height="21" Width="67" Foreground="White" BorderThickness="0" Click="MenuItem_Click_5" Background="Transparent"/>
-                <MenuItem x:Name="ExtensionsMenu_Copy" Header="Settings" Height="21" Width="55" Foreground="White" BorderThickness="0" Background="Transparent">
-                    <MenuItem x:Name="Credits_Copy" Header="Enable/Disable RPC&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Height="22" Width="200" Background="#FF2D2D2D" BorderThickness="0"  Click="EnableDisabledDiscordRPC" Margin="-25,0,-29.667,0"/>
-                </MenuItem>
                 <MenuItem x:Name="LoadTheme" Header="Load Theme" Height="21" Width="78" Foreground="White" BorderThickness="0" Click="MenuItem_Click_5" Background="Transparent" IsEnabled="False" Visibility="Hidden">
                     <MenuItem x:Name="LoadThemeButton" Header="Load Theme" HorizontalAlignment="Left" Height="21" Width="162" Click="Load" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-22,0"/>
                     <MenuItem x:Name="UnloadThemeButton" Header="Unload Theme" HorizontalAlignment="Left" Height="21" Width="162" Click="Unload" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-22,0"/>
@@ -667,10 +660,8 @@
                 HorizontalScrollBarVisibility="Auto" 
                 VerticalScrollBarVisibility="Auto"
                 LineNumbersForeground="White"
-                ShowLineNumbers="True" Foreground="White" OpacityMask="Black" Height="198" Background="#FF151515" HorizontalAlignment="Center" Width="524" VerticalAlignment="Center" Margin="45,36,2.667,86" Loaded="textEditor_Loaded" Text="-- MainDab V11 Loaded! Join MainDab at discord.io/maindab" Grid.Row="2" Grid.ColumnSpan="4" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
-                <avalonedit:TextEditor.ContextMenu>
-                    <ContextMenu/>
-                </avalonedit:TextEditor.ContextMenu>
+                ShowLineNumbers="True" Foreground="White" OpacityMask="Black" Height="198" Background="#FF151515" HorizontalAlignment="Center" Width="524" VerticalAlignment="Center" Margin="45,36,2.667,86" Loaded="textEditor_Loaded" Text="-- MainDab V11 Loaded! Join MainDab at discord.io/maindab" Grid.Row="2" Grid.ColumnSpan="4" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False">
+                
                 <avalonedit:TextEditor.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -680,8 +671,8 @@
                     </TransformGroup>
                 </avalonedit:TextEditor.RenderTransform>
             </avalonedit:TextEditor>
-            <Frame x:Name="LeftFrame" Content="&#xA;" HorizontalAlignment="Left" Height="219" Margin="0,15,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="45" Background="#FF232323"/>
-            <Button x:Name="MiniButton" BorderThickness="0" Background="#FFFFFBFB" Margin="8.667,-6,13.333,86.667" Style="{DynamicResource ButtonStyle2}" Grid.Row="2" Click="Button_Click_1" RenderTransformOrigin="-1.795,0.564" Grid.Column="2"  Height="14" VerticalAlignment="Bottom">
+            <Frame x:Name="LeftFrame" Content="&#xA;" HorizontalAlignment="Left" Height="219" Margin="0,15,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="45" Background="#FF232323" UseLayoutRounding="False"/>
+            <Button x:Name="MiniButton" BorderThickness="0" Background="#FFFFFBFB" Margin="8.667,-6,13.333,86.667" Style="{DynamicResource ButtonStyle2}" Grid.Row="2" Click="Button_Click_1" RenderTransformOrigin="-1.795,0.564" Grid.Column="2"  Height="14" VerticalAlignment="Bottom" UseLayoutRounding="False">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -699,8 +690,8 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Label x:Name="SelectedAPILabel" Content="Selected API : EasyExploits API" HorizontalAlignment="Left" Margin="249.667,139.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Width="213" FontSize="10" Grid.Column="1" Grid.ColumnSpan="3" Loaded="label6_Loaded" HorizontalContentAlignment="Right" FontFamily="Consolas"/>
-            <Image x:Name="ExecuteButton" HorizontalAlignment="Left" Height="39" Margin="1,12,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.13,0.354" Source="nigge.png" Stretch="Fill" MouseDown="Image_MouseDown_1">
+            <Label x:Name="SelectedAPILabel" Content="Selected API : EasyExploits API" HorizontalAlignment="Left" Margin="249.667,139.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Width="213" FontSize="10" Grid.Column="1" Grid.ColumnSpan="3" Loaded="label6_Loaded" HorizontalContentAlignment="Right" FontFamily="Consolas" UseLayoutRounding="False"/>
+            <Image x:Name="ExecuteButton" HorizontalAlignment="Left" Height="39" Margin="1,12,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.13,0.354" Source="nigge.png" Stretch="Fill" MouseDown="Image_MouseDown_1" UseLayoutRounding="False">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -710,14 +701,12 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image HorizontalAlignment="Left" Height="20" Margin="12,51,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.13,0.354" Source="delete.png" Stretch="Fill" MouseDown="Image_MouseDown"/>
-            <Image HorizontalAlignment="Left" Height="21" Margin="12,81,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.13,0.354" Source="folder.png" Stretch="Fill" Grid.Row="2" MouseDown="Image_MouseDown_2" Grid.RowSpan="2"/>
-            <Image HorizontalAlignment="Right" Height="22" Margin="0,17.333,73,0" VerticalAlignment="Top" Width="21" RenderTransformOrigin="0.13,0.354" Source="syringe.png" Stretch="Fill" Grid.Row="3" MouseDown="Image_MouseDown_3"/>
-            <Image HorizontalAlignment="Left" Height="22" Margin="11,47.333,0,0" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.13,0.354" Source="web-programming.png" Stretch="Fill" Grid.Row="3" MouseDown="Image_MouseDown_4"/>
-            <Grid x:Name="ScriptHub" Grid.Column="4" HorizontalAlignment="Left" Height="161" Margin="6.667,-13,-222,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="222" Background="#FF232323" Loaded="ScriptHub_Loaded" >
-                <Grid.Effect>
-                    <DropShadowEffect BlurRadius="6" ShadowDepth="3"/>
-                </Grid.Effect>
+            <Image HorizontalAlignment="Left" Height="20" Margin="12,51,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.13,0.354" Source="delete.png" Stretch="Fill" MouseDown="Image_MouseDown" UseLayoutRounding="False"/>
+            <Image HorizontalAlignment="Left" Height="21" Margin="12,81,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.13,0.354" Source="folder.png" Stretch="Fill" Grid.Row="2" MouseDown="Image_MouseDown_2" Grid.RowSpan="2" UseLayoutRounding="False"/>
+            <Image HorizontalAlignment="Right" Height="22" Margin="0,17.333,73,0" VerticalAlignment="Top" Width="21" RenderTransformOrigin="0.13,0.354" Source="syringe.png" Stretch="Fill" Grid.Row="3" MouseDown="Image_MouseDown_3" UseLayoutRounding="False"/>
+            <Image HorizontalAlignment="Left" Height="22" Margin="11,47.333,0,0" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.13,0.354" Source="web-programming.png" Stretch="Fill" Grid.Row="3" MouseDown="Image_MouseDown_4" UseLayoutRounding="False"/>
+            <Grid x:Name="ScriptHub" Grid.Column="4" HorizontalAlignment="Left" Height="161" Margin="6.667,-13,-222,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="222" Background="#FF232323" Loaded="ScriptHub_Loaded" UseLayoutRounding="False" >
+                
                 <Ellipse Fill="#FFC30000" HorizontalAlignment="Left" Height="14" Margin="206,3,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" StrokeThickness="0" MouseDown="Ellipse_MouseDown" KeyDown="Ellipse_KeyDown"/>
                 <Label Content="Script Hub" HorizontalAlignment="Left" Height="37" Margin="0,-1,0,0" VerticalAlignment="Top" Width="103" Foreground="White"/>
                 <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="130" Margin="8,24,0,0" VerticalAlignment="Top" Width="109" Background="#FF2D2D2D" BorderThickness="0" KeyDown="ListBox_KeyDown" MouseDown="listbox_MouseDown" SelectionChanged="listbox_SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Foreground="White"/>
@@ -733,7 +722,7 @@
                 </RichTextBox>
                 <Button Content="Execute" HorizontalAlignment="Left" Height="22" Margin="122,132,0,0" VerticalAlignment="Top" Width="90" Background="#FF2D2D2D" Foreground="White" BorderThickness="0" Click="Button_Click_2" ManipulationStarting="Button_ManipulationStarting"/>
             </Grid>
-            <WebBrowser x:Name="sex" Grid.Column="1" HorizontalAlignment="Left" Height="0" Margin="76.667,-14,0,0" VerticalAlignment="Top" Width="1" RenderTransformOrigin="0.5,0.5" Loaded="sex_Loaded">
+            <WebBrowser x:Name="sex" Grid.Column="1" HorizontalAlignment="Left" Height="0" Margin="76.667,-14,0,0" VerticalAlignment="Top" Width="1" RenderTransformOrigin="0.5,0.5" Loaded="sex_Loaded" UseLayoutRounding="False">
                 <WebBrowser.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="-1"/>
@@ -743,17 +732,17 @@
                     </TransformGroup>
                 </WebBrowser.RenderTransform>
             </WebBrowser>
-            <Grid x:Name="custom" Grid.Column="4" HorizontalAlignment="Left" Height="100" Margin="6.667,63.333,-222,0" Grid.Row="3" VerticalAlignment="Top" Width="222" Background="#FF232323" Loaded="custom_Loaded">
+            <Grid x:Name="custom" Grid.Column="4" HorizontalAlignment="Left" Height="100" Margin="6.667,63.333,-222,0" Grid.Row="3" VerticalAlignment="Top" Width="222" Background="#FF232323" Loaded="custom_Loaded" UseLayoutRounding="False">
                 <Label Content="Custom DLL Injection" VerticalAlignment="Top" RenderTransformOrigin="0.228,-0.103" Height="25" Margin="1,0,10,0" Foreground="White"/>
                 <Ellipse Fill="#FFC30000" HorizontalAlignment="Left" Height="15" Margin="205,3,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="15" MouseDown="Ellipse_MouseDown_1"/>
                 <TextBox x:Name="Pipe" HorizontalAlignment="Left" Height="19" Margin="6,49,0,0" TextWrapping="Wrap" Text="DLL Pipe (EX. MainDab)" VerticalAlignment="Top" Width="206" Foreground="White" Background="#FF2D2D2D" BorderThickness="0" />
                 <TextBox x:Name="DLLNAME" HorizontalAlignment="Left" Height="19" Margin="6,26,0,0" TextWrapping="Wrap" Text="DLL Name (EX. MainDab.dll)" VerticalAlignment="Top" Width="206" Foreground="White" Background="#FF2D2D2D" BorderThickness="0" />
                 <Button Content="Apply" HorizontalAlignment="Left" Margin="68,73,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="Button_Click_3" Background="#FF2D2D2D" Foreground="White" BorderThickness="0"/>
             </Grid>
-            <DockPanel HorizontalAlignment="Left" Height="100" LastChildFill="False" Grid.RowSpan="4" VerticalAlignment="Top" Width="100"/>
-            <Image HorizontalAlignment="Left" Height="22" Margin="11,78.333,0,0" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.13,0.354" Source="IconRoblox.png" Stretch="Fill" Grid.Row="3" MouseDown="Image_MouseDown_4"/>
-            <Label x:Name="SyntaxLabel" Content="No errors found." HorizontalAlignment="Left" Margin="0,139.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Width="313" FontSize="10" Loaded="label6_Loaded" FontFamily="Consolas" FontStretch="UltraCondensed" FontWeight="Medium" Grid.ColumnSpan="2"/>
-            <Image x:Name="ExecuteButton_Copy" HorizontalAlignment="Left" Height="19" Margin="3,112.333,0,0" VerticalAlignment="Top" Width="19" RenderTransformOrigin="0.13,0.354" Source="Discord-Logo-White.png" Stretch="Fill" MouseDown="joinmein" Grid.Row="3">
+            <DockPanel HorizontalAlignment="Left" Height="100" LastChildFill="False" Grid.RowSpan="4" VerticalAlignment="Top" Width="100" UseLayoutRounding="False"/>
+            <Image HorizontalAlignment="Left" Height="22" Margin="11,78.333,0,0" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.13,0.354" Source="IconRoblox.png" Stretch="Fill" Grid.Row="3" MouseDown="Image_MouseDown_4" UseLayoutRounding="False"/>
+            <Label x:Name="SyntaxLabel" Content="No errors found." HorizontalAlignment="Left" Margin="0,139.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Width="313" FontSize="10" Loaded="label6_Loaded" FontFamily="Consolas" FontStretch="UltraCondensed" FontWeight="Medium" Grid.ColumnSpan="2" UseLayoutRounding="False"/>
+            <Image x:Name="ExecuteButton_Copy" HorizontalAlignment="Left" Height="19" Margin="3,112.333,0,0" VerticalAlignment="Top" Width="19" RenderTransformOrigin="0.13,0.354" Source="Discord-Logo-White.png" Stretch="Fill" MouseDown="joinmein" Grid.Row="3" UseLayoutRounding="False">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -763,7 +752,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image x:Name="ExecuteButton_Copy1" HorizontalAlignment="Left" Height="15" Margin="24,113.333,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.13,0.354" Source="GitHub-Mark-Light-64px.png" Stretch="Fill" MouseDown="github" Grid.Row="3">
+            <Image x:Name="ExecuteButton_Copy1" HorizontalAlignment="Left" Height="15" Margin="24,113.333,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.13,0.354" Source="GitHub-Mark-Light-64px.png" Stretch="Fill" MouseDown="github" Grid.Row="3" UseLayoutRounding="False">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -773,9 +762,9 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Label x:Name="SelectedAPILabel_Copy" Content="Using MainDab V11 | MainDab by Main__EX#3898" HorizontalAlignment="Left" Margin="-14,153.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Width="119" FontSize="4" HorizontalContentAlignment="Right" FontFamily="Consolas"/>
-            <Label x:Name="SelectedAPILabel_Copy1" Content="" HorizontalAlignment="Left" Margin="343.667,153.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Width="119" FontSize="4" Loaded="label6_Loaded" HorizontalContentAlignment="Right" FontFamily="Consolas" Grid.ColumnSpan="3" Grid.Column="1"/>
-            <Image x:Name="ExecuteButton_Copy2" HorizontalAlignment="Left" Height="15" Margin="34.667,18,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="0.13,0.354" Source="list.png" Stretch="Fill" MouseDown="visiornot" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3">
+            <Label x:Name="SelectedAPILabel_Copy" Content="Using MainDab V11 | MainDab by Main__EX#3898" HorizontalAlignment="Left" Margin="-14,153.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Width="119" FontSize="4" HorizontalContentAlignment="Right" FontFamily="Consolas" UseLayoutRounding="False"/>
+            <Label x:Name="SelectedAPILabel_Copy1" Content="" HorizontalAlignment="Left" Margin="343.667,153.333,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Foreground="White" Width="119" FontSize="4" Loaded="label6_Loaded" HorizontalContentAlignment="Right" FontFamily="Consolas" Grid.ColumnSpan="3" Grid.Column="1" UseLayoutRounding="False"/>
+            <Image x:Name="ExecuteButton_Copy2" HorizontalAlignment="Left" Height="15" Margin="34.667,18,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="0.13,0.354" Source="list.png" Stretch="Fill" MouseDown="visiornot" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" UseLayoutRounding="False">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="-1"/>

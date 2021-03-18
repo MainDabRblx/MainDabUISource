@@ -69,7 +69,13 @@
     </Reference>
     <Reference Include="EasyExploits, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Downloads\EasyExploits.dll</HintPath>
+      <HintPath>..\..\MainDab\EasyExploits.dll</HintPath>
+    </Reference>
+    <Reference Include="Giselle.Commons">
+      <HintPath>..\..\..\Downloads\PastebinAPIs-master\PastebinAPIs-master\PastebinAPIs\bin\Debug\Giselle.Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\..\Downloads\PastebinAPIs-master\PastebinAPIs-master\PastebinAPIs\bin\Debug\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.AvalonEdit, Version=6.0.1.278, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
       <HintPath>packages\AvalonEdit.6.0.1\lib\net45\ICSharpCode.AvalonEdit.dll</HintPath>
@@ -77,13 +83,12 @@
     <Reference Include="MoonSharp.Interpreter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=921e73ce94aa17f8, processorArchitecture=MSIL">
       <HintPath>packages\MoonSharp.2.0.0.0\lib\net40-client\MoonSharp.Interpreter.dll</HintPath>
     </Reference>
-    <Reference Include="PastebinAPI, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Pastebin.API.CSharp.1.1.0\lib\netstandard2.0\PastebinAPI.dll</HintPath>
+    <Reference Include="PastebinAPIs">
+      <HintPath>..\..\..\Downloads\PastebinAPIs-master\PastebinAPIs-master\PastebinAPIs\bin\Debug\PastebinAPIs.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework.Aero" />
-    <Reference Include="ShadowCheats, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Downloads\ShadowCheats.dll</HintPath>
+    <Reference Include="ShadowCheats">
+      <HintPath>..\..\MainDab\ShadowCheats.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

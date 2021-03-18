@@ -37,13 +37,14 @@ using ShadowCheats;
 using System.Runtime.InteropServices;
 using System.Net.Http;
 using System.Collections.Generic;
+using PastebinAPIs;
 
 namespace MainDab
 {
 
     public partial class MainWindow : Window
     {
-        string currentver = "MainDab V.11.4"; // current version
+        string currentver = "MainDab V.11.6"; // current version
         string listboxopenornot = "false"; // listbox
         WebClient HITLER = new WebClient(); // hitler moment :D
         private DiscordRpcClient client; // discordsexual
@@ -911,7 +912,10 @@ namespace MainDab
 
         private void NEIn(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://discord.gg/e5kbU75");
+            var webClient= new WebClient();
+            byte[] succ = webClient.DownloadData("https://pastebin.com/raw/TeKDGrbg");
+            string discord = Encoding.UTF8.GetString(succ);
+            Process.Start(discord);
         }
 
         private void MenuItem_Click_17(object sender, RoutedEventArgs e)
@@ -952,97 +956,129 @@ namespace MainDab
 
         private void label6_Loaded(object sender, RoutedEventArgs e)
         {
-           
-            RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\MainDabData");
-            if (key != null)
+            /*
+             RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\MainDabData");
+             if (key != null)
+             {
+                 string apishouldbe = (key.GetValue("DLL").ToString());
+
+                 SelectedAPILabel.Content = apishouldbe;
+                 currentdll = apishouldbe;
+             }
+             if (key.GetValue("DiscordRPCEnabled") == null)
+             {
+                 RegistryKey Create = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
+                 Create.SetValue("DiscordRPCEnabled", "true");
+                 Create.Close();
+                 client = new DiscordRpcClient("795935176873213982")
+                 {
+                     Logger = new ConsoleLogger
+                     {
+                         Level = LogLevel.Warning
+                     }
+                 };
+                 client.OnReady += delegate { };
+                 client.OnPresenceUpdate += delegate { };
+
+                 client.Initialize();
+                 // this.panel6.Visible = false;
+                 client.SetPresence(new RichPresence
+                 {
+                     Details = "Using MainDab V11",
+                     State = "MainDab Roblox Exploit | discord.io/maindab",
+
+                     Timestamps = new Timestamps
+                     {
+                         Start = DateTime.UtcNow,
+
+                     },
+
+                     Assets = new Assets
+                     {
+                         LargeImageKey = "image_large",
+                         LargeImageText = "MainDab Roblox Exploit",
+
+                         SmallImageKey = "image_roblox"
+                     }
+
+                 });
+             }
+             if (key.GetValue("DiscordRPCEnabled").ToString() != null)
+             {
+                 string apishouldbe = (key.GetValue("DiscordRPCEnabled").ToString());
+                 if (apishouldbe == "true")
+                 {
+                     client = new DiscordRpcClient("795935176873213982")
+                     {
+                         Logger = new ConsoleLogger
+                         {
+                             Level = LogLevel.Warning
+                         }
+                     };
+                     client.OnReady += delegate { };
+                     client.OnPresenceUpdate += delegate { };
+
+                     client.Initialize();
+                     // this.panel6.Visible = false;
+                     client.SetPresence(new RichPresence
+                     {
+                         Details = "Using MainDab V11",
+                         State = "MainDab Roblox Exploit | discord.io/maindab",
+
+                         Timestamps = new Timestamps
+                         {
+                             Start = DateTime.UtcNow,
+
+                         },
+
+                         Assets = new Assets
+                         {
+                             LargeImageKey = "image_large",
+                             LargeImageText = "MainDab Roblox Exploit",
+
+                             SmallImageKey = "image_roblox"
+                         }
+
+                     });
+                 }
+                 if (apishouldbe == "false")
+                 {
+
+                 }
+                 key.Close();*/
+
+            client = new DiscordRpcClient("795935176873213982")
             {
-                string apishouldbe = (key.GetValue("DLL").ToString());
-                
-                SelectedAPILabel.Content = apishouldbe;
-                currentdll = apishouldbe;
-            }
-            if (key.GetValue("DiscordRPCEnabled") == null)
-            {
-                RegistryKey Create = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
-                Create.SetValue("DiscordRPCEnabled", "true");
-                Create.Close();
-                client = new DiscordRpcClient("795935176873213982")
+                Logger = new ConsoleLogger
                 {
-                    Logger = new ConsoleLogger
-                    {
-                        Level = LogLevel.Warning
-                    }
-                };
-                client.OnReady += delegate { };
-                client.OnPresenceUpdate += delegate { };
-
-                client.Initialize();
-                // this.panel6.Visible = false;
-                client.SetPresence(new RichPresence
-                {
-                    Details = "Using MainDab V11",
-                    State = "MainDab Roblox Exploit | discord.io/maindab",
-
-                    Timestamps = new Timestamps
-                    {
-                        Start = DateTime.UtcNow,
-
-                    },
-
-                    Assets = new Assets
-                    {
-                        LargeImageKey = "image_large",
-                        LargeImageText = "MainDab Roblox Exploit",
-
-                        SmallImageKey = "image_roblox"
-                    }
-
-                });
-            }
-            if (key.GetValue("DiscordRPCEnabled").ToString() != null)
-            {
-                string apishouldbe = (key.GetValue("DiscordRPCEnabled").ToString());
-                if (apishouldbe == "true")
-                {
-                    client = new DiscordRpcClient("795935176873213982")
-                    {
-                        Logger = new ConsoleLogger
-                        {
-                            Level = LogLevel.Warning
-                        }
-                    };
-                    client.OnReady += delegate { };
-                    client.OnPresenceUpdate += delegate { };
-
-                    client.Initialize();
-                    // this.panel6.Visible = false;
-                    client.SetPresence(new RichPresence
-                    {
-                        Details = "Using MainDab V11",
-                        State = "MainDab Roblox Exploit | discord.io/maindab",
-
-                        Timestamps = new Timestamps
-                        {
-                            Start = DateTime.UtcNow,
-
-                        },
-
-                        Assets = new Assets
-                        {
-                            LargeImageKey = "image_large",
-                            LargeImageText = "MainDab Roblox Exploit",
-
-                            SmallImageKey = "image_roblox"
-                        }
-
-                    });
+                    Level = LogLevel.Warning
                 }
-                if (apishouldbe == "false")
-                {
+            };
+            client.OnReady += delegate { };
+            client.OnPresenceUpdate += delegate { };
 
+            client.Initialize();
+            // this.panel6.Visible = false;
+            client.SetPresence(new RichPresence
+            {
+                Details = "Using MainDab V11",
+                State = "MainDab Roblox Exploit | discord.io/maindab",
+
+                Timestamps = new Timestamps
+                {
+                    Start = DateTime.UtcNow,
+
+                },
+
+                Assets = new Assets
+                {
+                    LargeImageKey = "image_large",
+                    LargeImageText = "MainDab Roblox Exploit",
+
+                    SmallImageKey = "image_roblox"
                 }
-                key.Close();
-            }
+
+            });
 
         }
 
@@ -1294,19 +1330,18 @@ namespace MainDab
 
         private void UploadPastebin(object sender, RoutedEventArgs e)
         {
-            string apiKey = "nottellingmf";
-            var client = new PasteBinClient(apiKey);
-            var entry = new PasteBinEntry
-            {
-                Title = "Uploaded from MainDab",
-                Text = textEditor.Text,
-                //Expiration = PasteBinExpiration.OneDay,
-              //  Private = true,
-                Format = "lua"
-            };
-
-            string pasteUrl = client.Paste(entry);
-            textEditor.Text = "Your paste is published at this URL: " + pasteUrl;
+            var api = new PastebinAPI();
+            api.APIKey = "91w9z9nHwR_DONb86nwDX5QbhUKP_TqX";
+            var createRequest = new PasteCreateRequest();
+            createRequest.Code = "-- Uploaded to Pastebin from MainDab | discord.io/maindab \n\n" + textEditor.Text;
+            createRequest.Name = "Script";
+            createRequest.ExpireDate = PasteExpireDate.Never;
+            createRequest.Private = PastePrivate.Public;
+            createRequest.Format = "lua";
+            createRequest.UserKey = string.Empty; 
+            var url = api.CreatePaste(createRequest);
+            textEditor.Text = ("--[[\nYour script has been uploaded to Pastebin.\nThe Pastebin link is " + url + "\n--]]");
+            Console.WriteLine(url);
 
         }
     }
