@@ -1,3 +1,0 @@
--- A script hub made by "CEO Of Africa". No longer endorsed but still pretty cool hub.
--- https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/roblox.png
-loadstring(game:HttpGet(('https://pastebin.com/raw/SsG8y3HA'),true))()

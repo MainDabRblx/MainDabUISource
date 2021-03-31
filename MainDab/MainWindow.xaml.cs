@@ -44,7 +44,7 @@ namespace MainDab
 
     public partial class MainWindow : Window
     {
-        string currentver = "MainDab V.11.6"; // current version
+        string currentver = "MainDab V.11.8"; // current version
         string listboxopenornot = "false"; // listbox
         WebClient HITLER = new WebClient(); // hitler moment :D
         private DiscordRpcClient client; // discordsexual
@@ -52,7 +52,7 @@ namespace MainDab
         // private readonly CheatSquadAPI.Module shitsquad = new CheatSquadAPI.Module(); // CheatSquad API
         private readonly EasyExploits.Module ezclap = new EasyExploits.Module(); // EasyExploits API
         private readonly ShadowCheats.Module sexcheats = new ShadowCheats.Module();  // ShadowCheats API
-        string currentdll = "Selected API : EasyExploits"; // by default...
+        string currentdll = "Selected API : Acrylix"; // by default...
         private readonly BackgroundWorker worker = new BackgroundWorker();
         [DllImport("WeAreDevs_API.cpp.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern bool LaunchExploit(); // WRD Inject
@@ -212,6 +212,35 @@ namespace MainDab
                         });
                     }).Start();
                 }
+
+                if (currentdll == "Selected API : MainDab LBI")
+                {
+                   WebClient webClient = new WebClient();
+                   Functions.exploitdllname = "MainDab.dll";
+                   NamedPipes.luapipename = "MainDab";
+                    new Thread(() =>
+                    {
+                        Thread.CurrentThread.IsBackground = true;
+
+                        this.Dispatcher.Invoke(() =>
+                        {
+                            TopBar.Content = "MainDab | Updating MainDab LBI";
+                        });
+                        if (File.Exists("MainDab.dll"))
+                        {
+                            File.Delete("MainDab.dll");
+                        }
+                        webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/MainDab.dll?raw=true", "MainDab.dll");
+                        this.Dispatcher.Invoke(() =>
+                        {
+                            TopBar.Content = "MainDab";
+                        });
+                        Functions.Inject();
+                  
+                    }).Start();
+
+                }
+
                 if (currentdll == "Selected API : ShadowCheats")
             {
                 sexcheats.Attach();
@@ -288,13 +317,39 @@ namespace MainDab
         }
         private void Execute()
         {
+            if (currentdll == "Selected API : Custom")
+            {
+                try
+                {
+                    NamedPipes.LuaPipe(textEditor.Text);
+                }
+                catch (Exception sexual)
+                {
+                    MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
+                }
+
+            }
             Process[] pname = Process.GetProcessesByName("RobloxPlayerBeta");
             if (pname.Length > 0)
             {
-               /* if (currentdll == "Selected API : CheatSquad")
+
+                if (currentdll == "Selected API : MainDab LBI")
                 {
-                    shitsquad.Execute(textEditor.Text);
-                }*/
+                    try
+                    {
+                        NamedPipes.LuaPipe(textEditor.Text);
+                    }
+                    catch (Exception sexual)
+                    {
+                        MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
+                    }
+
+                }
+
+                /* if (currentdll == "Selected API : CheatSquad")
+                 {
+                     shitsquad.Execute(textEditor.Text);
+                 }*/
                 if (currentdll == "Selected API : EasyExploits API")
                 {
                     try
@@ -956,97 +1011,16 @@ namespace MainDab
 
         private void label6_Loaded(object sender, RoutedEventArgs e)
         {
-            /*
+          
+            
              RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\MainDabData");
              if (key != null)
              {
                  string apishouldbe = (key.GetValue("DLL").ToString());
-
                  SelectedAPILabel.Content = apishouldbe;
                  currentdll = apishouldbe;
              }
-             if (key.GetValue("DiscordRPCEnabled") == null)
-             {
-                 RegistryKey Create = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
-                 Create.SetValue("DiscordRPCEnabled", "true");
-                 Create.Close();
-                 client = new DiscordRpcClient("795935176873213982")
-                 {
-                     Logger = new ConsoleLogger
-                     {
-                         Level = LogLevel.Warning
-                     }
-                 };
-                 client.OnReady += delegate { };
-                 client.OnPresenceUpdate += delegate { };
-
-                 client.Initialize();
-                 // this.panel6.Visible = false;
-                 client.SetPresence(new RichPresence
-                 {
-                     Details = "Using MainDab V11",
-                     State = "MainDab Roblox Exploit | discord.io/maindab",
-
-                     Timestamps = new Timestamps
-                     {
-                         Start = DateTime.UtcNow,
-
-                     },
-
-                     Assets = new Assets
-                     {
-                         LargeImageKey = "image_large",
-                         LargeImageText = "MainDab Roblox Exploit",
-
-                         SmallImageKey = "image_roblox"
-                     }
-
-                 });
-             }
-             if (key.GetValue("DiscordRPCEnabled").ToString() != null)
-             {
-                 string apishouldbe = (key.GetValue("DiscordRPCEnabled").ToString());
-                 if (apishouldbe == "true")
-                 {
-                     client = new DiscordRpcClient("795935176873213982")
-                     {
-                         Logger = new ConsoleLogger
-                         {
-                             Level = LogLevel.Warning
-                         }
-                     };
-                     client.OnReady += delegate { };
-                     client.OnPresenceUpdate += delegate { };
-
-                     client.Initialize();
-                     // this.panel6.Visible = false;
-                     client.SetPresence(new RichPresence
-                     {
-                         Details = "Using MainDab V11",
-                         State = "MainDab Roblox Exploit | discord.io/maindab",
-
-                         Timestamps = new Timestamps
-                         {
-                             Start = DateTime.UtcNow,
-
-                         },
-
-                         Assets = new Assets
-                         {
-                             LargeImageKey = "image_large",
-                             LargeImageText = "MainDab Roblox Exploit",
-
-                             SmallImageKey = "image_roblox"
-                         }
-
-                     });
-                 }
-                 if (apishouldbe == "false")
-                 {
-
-                 }
-                 key.Close();*/
-
+             
             client = new DiscordRpcClient("795935176873213982")
             {
                 Logger = new ConsoleLogger
@@ -1123,7 +1097,7 @@ namespace MainDab
 
         private void Image_MouseDown_4(object sender, MouseButtonEventArgs e)
         {
-            ScriptHub.Visibility = Visibility.Visible;
+            
         }
       
         private void Internal(object sender, RoutedEventArgs e)
@@ -1344,5 +1318,37 @@ namespace MainDab
             Console.WriteLine(url);
 
         }
+
+        private void BMLBI(object sender, RoutedEventArgs e)
+        {
+            currentdll = "Selected API : MainDab LBI";
+            SelectedAPILabel.Content = "Selected API : MainDab LBI";
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
+            key.SetValue("DLL", "Selected API : MainDab LBI");
+            key.Close();
+        }
+
+        private void killroblox(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                foreach (Process proc in Process.GetProcessesByName("RobloxPlayerBeta"))
+                {
+                    proc.Kill();
+                    MessageBox.Show("Roblox process killed / ended");
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Roblox process has already been killed, or Roblox isn't running.");
+            }
+        }
+
+        private void schub(object sender, MouseButtonEventArgs e)
+        {
+            ScriptHub.Visibility = Visibility.Visible;
+       }
     }
+
 }

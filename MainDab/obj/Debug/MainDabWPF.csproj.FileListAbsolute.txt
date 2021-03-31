@@ -81,3 +81,4 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\HtmlAgilityPack.xml
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\PastebinAPIs.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\PastebinAPIs.dll.config
+C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csprojAssemblyReference.cache

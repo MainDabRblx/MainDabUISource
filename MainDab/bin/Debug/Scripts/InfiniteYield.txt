@@ -1,3 +1,0 @@
--- Infinite Yield admin script
--- https://infyield.yolasite.com/resources/IY_LOGO_Transparent.png
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
