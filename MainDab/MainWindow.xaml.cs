@@ -44,7 +44,7 @@ namespace MainDab
 
     public partial class MainWindow : Window
     {
-        string currentver = "MainDab V.11.8"; // current version
+        string currentver = "MainDab V.11.9"; // current version
         string listboxopenornot = "false"; // listbox
         WebClient HITLER = new WebClient(); // hitler moment :D
         private DiscordRpcClient client; // discordsexual
@@ -855,6 +855,7 @@ namespace MainDab
                         var text6 = text5;
                         var text7 = text6.Remove(0, 2);
                         var requestUriString = text7;
+                        /*
                         try
                         {
                             var webRequest = WebRequest.Create(requestUriString);
@@ -871,7 +872,7 @@ namespace MainDab
                         catch
                         {
                             MessageBox.Show("Failed to get image.");
-                        }
+                        }*/
                     }
                 }).Start();
             }
@@ -907,7 +908,7 @@ namespace MainDab
                         var text6 = text5;
                         var text7 = text6.Remove(0, 2);
                         var requestUriString = text7;
-                        try
+                        /*try
                         {
                             var webRequest = WebRequest.Create(requestUriString);
                             using (var response = webRequest.GetResponse())
@@ -923,7 +924,7 @@ namespace MainDab
                         catch
                         {
                             MessageBox.Show("Failed to get image.");
-                        }
+                        }*/
                     }
                
             }
@@ -1305,7 +1306,7 @@ namespace MainDab
         private void UploadPastebin(object sender, RoutedEventArgs e)
         {
             var api = new PastebinAPI();
-            api.APIKey = "91w9z9nHwR_DONb86nwDX5QbhUKP_TqX";
+            api.APIKey = "91w9z9nHwR_DONb86nwDX5QbhUKP_TqX"; // I would imagine you're reading this at this very moment.
             var createRequest = new PasteCreateRequest();
             createRequest.Code = "-- Uploaded to Pastebin from MainDab | discord.io/maindab \n\n" + textEditor.Text;
             createRequest.Name = "Script";
@@ -1349,6 +1350,38 @@ namespace MainDab
         {
             ScriptHub.Visibility = Visibility.Visible;
        }
+
+        private void SniffHub(object sender, RoutedEventArgs e)
+        {
+            string sexhub = "loadstring(game:HttpGet('https://raw.githubusercontent.com/2dgeneralspam1/Sniff-Hub/main/sniff%20hub%20lite')()";
+            Process.Start("https://dsc.gg/sniffcommunity");
+            Process[] pname = Process.GetProcessesByName("RobloxPlayerBeta");
+            if (pname.Length > 0)
+            {
+                if (currentdll == "Selected API : EasyExploits API")
+                {
+                    ezclap.ExecuteScript(sexhub);
+                }
+                else
+                {
+                    MessageBox.Show("The current API you have selected does NOT support SniffHub.\n\nPlease use/switch to EasyExploits API if you wish to use SniffHub!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please start/open ROBLOX first!");
+            }
+        }
+
+        private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TabablzControl_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 
 }
