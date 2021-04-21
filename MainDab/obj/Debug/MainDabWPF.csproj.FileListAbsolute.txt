@@ -71,7 +71,6 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.xml
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\WPF.Bootstrap.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.Credits.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\EasyExploits.dll
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\ShadowCheats.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\AcrylixAPI.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\Giselle.Commons.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\HtmlAgilityPack.dll
@@ -82,3 +81,4 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\HtmlAgilityPack.xml
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\PastebinAPIs.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\PastebinAPIs.dll.config
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\ArchAPI.dll

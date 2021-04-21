@@ -638,7 +638,7 @@
                 <RowDefinition Height="0*"/>
             </Grid.RowDefinitions>
 
-            <Rectangle Fill="#FFAF36ED" HorizontalAlignment="Left" Height="274" Margin="-4,-13,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="578" Grid.ColumnSpan="7" Grid.RowSpan="8" RenderTransformOrigin="0.5,0.5">
+            <Rectangle x:Name="Border" Fill="Transparent" HorizontalAlignment="Left" Height="274" Margin="-4,-13,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="578" Grid.ColumnSpan="7" Grid.RowSpan="8" RenderTransformOrigin="0.5,0.5">
                 <Rectangle.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -672,33 +672,58 @@
                     <MenuItem x:Name="MenuOpenFile" Header="Open File" HorizontalAlignment="Left" Height="22" Width="213" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_10" Margin="-24,0,-49,0"/>
                     <MenuItem x:Name="MenuSaveFile" Header="Upload to Pastebin" HorizontalAlignment="Left" Height="22" Width="217" Background="#FF2D2D2D" BorderThickness="0" Click="UploadPastebin" Margin="-24,0,-53,0"/>
                 </MenuItem>
-                <MenuItem x:Name="ExecutionMenu" Header="Execution" Height="21" Width="66" Foreground="White" BorderThickness="0">
+                <MenuItem x:Name="ExecutionMenu" Header="Execution" Height="21" Width="60" Foreground="White" BorderThickness="0">
                     <MenuItem x:Name="MenuExec" Header="Execute" HorizontalAlignment="Left" Height="21" Width="169" Click="MenuItem_Click" Background="#FF2D2D2D" BorderThickness="0" Margin="-25,0,-4,0"/>
                     <MenuItem x:Name="MenuClear" Header="Clear" HorizontalAlignment="Left" Height="22" Width="179" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_12" Margin="-26,0,-13,0"/>
                     <MenuItem x:Name="MenuInject" Header="Inject" HorizontalAlignment="Left" Height="22" Width="179" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_13" Margin="-26,0,-13,0"/>
                 </MenuItem>
-                <MenuItem x:Name="UsefulMenu" Header="Useful Tools" Height="21" Width="80" Foreground="White" BorderThickness="0">
+                <MenuItem x:Name="UsefulMenu" Header="Useful Tools" Height="21" Width="77" Foreground="White" BorderThickness="0">
                     <MenuItem x:Name="FPSUNLOCK" Header="FPS Unlocker" HorizontalAlignment="Left" Height="21" Width="199" Click="NI" Background="#FF2D2D2D" BorderThickness="0" Margin="-26,0,-33,0"/>
                     <MenuItem x:Name="MultiRblx" Header="Multiple Roblox" HorizontalAlignment="Left" Height="22" Width="189" Background="#FF2D2D2D" BorderThickness="0" Margin="-27,0,-22,0" Click="MenuItem_Click_14"/>
                     <MenuItem x:Name="ReinstallRblx" Header="Reinstall Roblox" HorizontalAlignment="Left" Height="22" Width="178" Background="#FF2D2D2D" BorderThickness="0" Margin="-28,0,-10,0" Click="MenuItem_Click_15"/>
                     <MenuItem x:Name="RblxTaintLogs" Header="Roblox Taint Logs" HorizontalAlignment="Left" Height="20" Width="207" Background="#FF2D2D2D" BorderThickness="0" Margin="-28,0,-39,0" Click="MenuItem_Click_20"/>
                     <MenuItem x:Name="RedownloadMainDab" Header="Redownload MainDab" HorizontalAlignment="Left" Height="22" Width="218" Background="#FF2D2D2D" BorderThickness="0" Margin="-28,0,-50,0" FontSize="10" Click="MenuItem_Click_16"/>
                 </MenuItem>
-                <MenuItem x:Name="SelectMenu" Header="Select DLL" Height="21" Width="72" Foreground="White" BorderThickness="0">
+                <MenuItem x:Name="SelectMenu" Header="Select DLL" Height="21" Width="68" Foreground="White" BorderThickness="0">
                     <MenuItem x:Name="DLL2" Header="EasyExploits API" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_8" Margin="-25,0,-8,0"/>
-                    <MenuItem x:Name="DLL3" Header="ShadowCheats" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Margin="-25,0,-8,0" Click="Shado"/>
+                    <MenuItem x:Name="DLL3" Header="Arch API" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Margin="-25,0,-8,0" Click="Shado"/>
                     <MenuItem x:Name="DLL4" Header="WeAreDevs" HorizontalAlignment="Left" Height="21" Width="233" Background="#FF2D2D2D" BorderThickness="0" Click="WeAreSkids" Margin="-25,0,-68,0"/>
                     <MenuItem x:Name="DLL4_Copy" Header="Acrylix" HorizontalAlignment="Left" Height="20" Width="233" Background="#FF2D2D2D" BorderThickness="0" Click="DeepPain" Margin="-25,0,-68,0"/>
                     <MenuItem x:Name="DLL4_Copy1" Header="MainDab LBI" HorizontalAlignment="Left" Height="20" Width="233" Background="#FF2D2D2D" BorderThickness="0" Click="BMLBI" Margin="-25,0,-68,0"/>
                     <MenuItem x:Name="DLL3_Copy" Header="Custom DLL" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Margin="-25,0,-8,0" Click="MenuItem_Click_22"/>
 
                 </MenuItem>
-                <MenuItem x:Name="HelpMenu" Header="Help" Height="21" Width="46" Foreground="White" BorderThickness="0">
+                <MenuItem x:Name="HelpMenu" Header="Help" Height="21" Width="35" Foreground="White" BorderThickness="0">
                     <MenuItem x:Name="JoinDiscord" Header="Get support (Discord)" HorizontalAlignment="Left" Height="22" Width="239" Click="NEIn" Background="#FF2D2D2D" BorderThickness="0" Margin="-28,0,-71,0"/>
-                    <MenuItem x:Name="Credits" Header="Credits&#xA;" HorizontalAlignment="Left" Height="22" Width="178" Background="#FF2D2D2D" BorderThickness="0" Margin="-27,0,-11,0"  Click="MenuItem_Click_23"/>
+                    <MenuItem x:Name="Credits" Header="Credits&#xA;" HorizontalAlignment="Left" Height="21" Width="178" Background="#FF2D2D2D" BorderThickness="0" Margin="-27,0,-11,0"  Click="MenuItem_Click_23"/>
                 </MenuItem>
-                <MenuItem x:Name="ExtensionsMenu" Header="Extensions" Height="21" Width="67" Foreground="White" BorderThickness="0" Click="MenuItem_Click_5" Background="Transparent"/>
-                <MenuItem x:Name="ExtensionsMenu_Copy" Header="Sniff Hub" Height="21" Width="65" Foreground="White" BorderThickness="0" Click="SniffHub" Background="Transparent"/>
+                <MenuItem x:Name="ExtensionsMenu" Header="Extensions" Height="21" Width="65" Foreground="White" BorderThickness="0" Click="MenuItem_Click_5" Background="Transparent" RenderTransformOrigin="0.5,0.5">
+                    <MenuItem.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-0.528"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </MenuItem.RenderTransform>
+                </MenuItem>
+                <MenuItem x:Name="ExtensionsMenu_Copy1" Header="Sniff Hub" Height="21" Width="58" Foreground="White" BorderThickness="0" Click="SniffHub" Background="Transparent" RenderTransformOrigin="0.5,0.5">
+                    <MenuItem.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-0.122"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </MenuItem.RenderTransform>
+                </MenuItem>
+                <MenuItem x:Name="ExtensionsMenu_Copy" Header="Themes" Height="21" Width="63" Foreground="White" BorderThickness="0" Background="Transparent">
+                    <MenuItem x:Name="Credits_Copy" Header="Default&#xA;" HorizontalAlignment="Left" Height="21" Width="178" Background="#FF2D2D2D" BorderThickness="0" Margin="-27,0,-11,0" Click="DefaultThemeButton"/>
+                    <MenuItem x:Name="Credits_Copy1" Header="Royal Purple&#xA;" HorizontalAlignment="Left" Height="21" Width="178" Background="#FF2D2D2D" BorderThickness="0" Margin="-27,0,-11,0" Click="RoyalPurple"/>
+                    <MenuItem x:Name="Credits_Copy2" Header="Crimson Red&#xA;" HorizontalAlignment="Left" Height="18" Width="178" Background="#FF2D2D2D" BorderThickness="0" Margin="-27,0,-11,0" Click="CrimsonRed"/>
+                    <MenuItem x:Name="Credits_Copy3" Header="Purity Blue" HorizontalAlignment="Left" Height="23" Width="178" Background="#FF2D2D2D" BorderThickness="0" Margin="-27,0,-11,0" Click="Purity"/>
+                    <MenuItem x:Name="Credits_Copy5" Header="MainDab Green" HorizontalAlignment="Left" Height="23" Width="178" Background="#FF2D2D2D" BorderThickness="0" Margin="-26,0,-12,0" Click="green"/>
+                </MenuItem>
                 <MenuItem x:Name="LoadTheme" Header="Load Theme" Height="21" Width="78" Foreground="White" BorderThickness="0" Click="MenuItem_Click_5" Background="Transparent" IsEnabled="False" Visibility="Hidden">
                     <MenuItem x:Name="LoadThemeButton" Header="Load Theme" HorizontalAlignment="Left" Height="21" Width="162" Click="Load" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-22,0"/>
                     <MenuItem x:Name="UnloadThemeButton" Header="Unload Theme" HorizontalAlignment="Left" Height="21" Width="162" Click="Unload" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-22,0"/>
@@ -744,7 +769,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Label x:Name="SelectedAPILabel" Content="Selected API : EasyExploits API" HorizontalAlignment="Left" Margin="3.167,14.333,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="211.11" FontSize="10" Grid.Column="2" Grid.ColumnSpan="4" Loaded="label6_Loaded" HorizontalContentAlignment="Right" FontFamily="Consolas" UseLayoutRounding="False" Grid.RowSpan="3"/>
+            <Label x:Name="SelectedAPILabel" Content="Selected API : Arch API" HorizontalAlignment="Left" Margin="3.167,14.333,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="211.11" FontSize="10" Grid.Column="2" Grid.ColumnSpan="4" Loaded="label6_Loaded" HorizontalContentAlignment="Right" FontFamily="Consolas" UseLayoutRounding="False" Grid.RowSpan="3"/>
             <Image x:Name="ExecuteButton" HorizontalAlignment="Left" Height="39" Margin="1,12,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.13,0.354" Source="nigge.png" Stretch="Fill" MouseDown="Image_MouseDown_1" UseLayoutRounding="False">
                 <Image.RenderTransform>
                     <TransformGroup>
@@ -816,7 +841,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Label x:Name="SelectedAPILabel_Copy" Content="Using MainDab V11 | MainDab by Main__EX#3898" HorizontalAlignment="Left" Margin="-14,25.583,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="119" FontSize="4" HorizontalContentAlignment="Right" FontFamily="Consolas" UseLayoutRounding="False" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+            <Label x:Name="SelectedAPILabel_Copy" Content="Using MainDab V12 | MainDab by Main__EX#3898" HorizontalAlignment="Left" Margin="-14,25.583,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="119" FontSize="4" HorizontalContentAlignment="Right" FontFamily="Consolas" UseLayoutRounding="False" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
             <Label x:Name="SelectedAPILabel_Copy1" Content="" HorizontalAlignment="Left" Margin="0.333,28.333,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="119" FontSize="4" Loaded="label6_Loaded" HorizontalContentAlignment="Right" FontFamily="Consolas" Grid.ColumnSpan="3" Grid.Column="3" UseLayoutRounding="False" Grid.RowSpan="3"/>
             <Image x:Name="ExecuteButton_Copy2" HorizontalAlignment="Left" Height="15" Margin="35,18,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="0.13,0.354" Source="list.png" Stretch="Fill" MouseDown="visiornot" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="3" UseLayoutRounding="False">
                 <Image.RenderTransform>

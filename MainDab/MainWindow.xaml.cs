@@ -9,6 +9,7 @@
                                                                                        |_|                  
  MainDab 2021, by Main_EX#3898 at discord.io/maindab
  Contact via discord (Main_EX#3898, My Discord ID is 766314130880593932, if that doesn't work join discord.io/maindab)
+ I no longer bother annotating code, find out what it does yourself
  */
 using MoonSharp.Interpreter;
 using Microsoft.Win32;
@@ -33,26 +34,26 @@ using System.Linq;
 using System.IO.Compression;
 using System.Reflection;
 using DiscordRPC.Logging;
-using ShadowCheats;
 using System.Runtime.InteropServices;
 using System.Net.Http;
 using System.Collections.Generic;
 using PastebinAPIs;
+using ArchAPI;
 
 namespace MainDab
 {
 
     public partial class MainWindow : Window
     {
-        string currentver = "MainDab V.11.9"; // current version
+        string currentver = "MainDab V.12.1"; // current version
         string listboxopenornot = "false"; // listbox
         WebClient HITLER = new WebClient(); // hitler moment :D
         private DiscordRpcClient client; // discordsexual
         AcrylixAPI DeepPainUwU= new AcrylixAPI(); // Acrylix API horny fuck moment
         // private readonly CheatSquadAPI.Module shitsquad = new CheatSquadAPI.Module(); // CheatSquad API
         private readonly EasyExploits.Module ezclap = new EasyExploits.Module(); // EasyExploits API
-        private readonly ShadowCheats.Module sexcheats = new ShadowCheats.Module();  // ShadowCheats API
-        string currentdll = "Selected API : Acrylix"; // by default...
+        private readonly ArchAPI.Arch sexcheats = new ArchAPI.Arch();  // Converted to Arch from ShadowCheats
+        string currentdll = "Selected API : Arch API"; // by default...
         private readonly BackgroundWorker worker = new BackgroundWorker();
         [DllImport("WeAreDevs_API.cpp.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern bool LaunchExploit(); // WRD Inject
@@ -71,24 +72,6 @@ namespace MainDab
         {
             Console.WriteLine("\r\n  __  __       _       _____        _     \r\n |  \\/  |     (_)     |  __ \\      | |    \r\n | \\  / | __ _ _ _ __ | |  | | __ _| |__  \r\n | |\\/| |/ _` | | '_ \\| |  | |/ _` | '_ \\ \r\n | |  | | (_| | | | | | |__| | (_| | |_) |\r\n |_|  |_|\\__,_|_|_| |_|_____/ \\__,_|_.__/ \r\n                                          \r\n                                          \r\n");
             Console.WriteLine("Debugging console | Join MainDab at discord.io/maindab if you need help");
-
-           
-            if (File.Exists("lua.xshd"))
-            {
-                File.Delete("lua.xshd");
-                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
-                File.WriteAllText("lua.xshd", penis); // just in case need new update
-            }
-
-            if (!File.Exists("lua.xshd")) // onv
-            {
-                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
-                File.WriteAllText("lua.xshd", penis);
-            }
-            // pp penis big 
-
-        
-
         }
 
         #region Functions
@@ -127,34 +110,7 @@ namespace MainDab
             Process[] pname = Process.GetProcessesByName("RobloxPlayerBeta");
             if (pname.Length > 0)
             {
-               /* if (currentdll == "Selected API : CheatSquad")
-                {
-                shitsquad.Attach();
-                new Thread(() =>
-                {
-                    Thread.CurrentThread.IsBackground = true;
 
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        TopBar.Content = "MainDab | Injecting Cheatsquad API...";
-
-                    });
-                    Thread.Sleep(7000);
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        TopBar.Content = "MainDab | Cheatsquad API Injected!";
-                    });
-                    Thread.Sleep(1000);
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        TopBar.Content = "MainDab";
-                    });
-
-
-                }).Start();
-
-
-            } */
             if (currentdll == "Selected API : EasyExploits API")
             {
                 ezclap.LaunchExploit();
@@ -241,7 +197,7 @@ namespace MainDab
 
                 }
 
-                if (currentdll == "Selected API : ShadowCheats")
+                if (currentdll == "Selected API : Arch API")
             {
                 sexcheats.Attach();
                 new Thread(() =>
@@ -250,13 +206,13 @@ namespace MainDab
 
                     this.Dispatcher.Invoke(() =>
                     {
-                        TopBar.Content = "MainDab | Injecting ShadowCheats API...";
+                        TopBar.Content = "MainDab | Injecting Arch API...";
 
                     });
                     Thread.Sleep(8000);
                     this.Dispatcher.Invoke(() =>
                     {
-                        TopBar.Content = "MainDab | ShadowCheats API Injected!";
+                        TopBar.Content = "MainDab | Arch API Injected!";
                     });
                     Thread.Sleep(1000);
                     this.Dispatcher.Invoke(() =>
@@ -361,9 +317,9 @@ namespace MainDab
                         MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
                     }
                 }
-                if (currentdll == "Selected API : ShadowCheats")
+                if (currentdll == "Selected API : Arch API")
                 {
-                    sexcheats.ExecuteScript(textEditor.Text);
+                    sexcheats.Execute(textEditor.Text);
                 }
                 if (currentdll == "Selected API : Acrylix")
                 {
@@ -435,8 +391,22 @@ namespace MainDab
                 textEditor.Text = whentheimpostorissus;
                 System.IO.Stream str = Properties.Resources.Notify;
                 System.Media.SoundPlayer snd = new System.Media.SoundPlayer(str);
-                
+                if (File.Exists("lua.xshd"))
+                {
+                   File.Delete("lua.xshd");
+                   string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua.xshd");
+                    File.WriteAllText("lua.xshd", penis); // just in case need new update
+                }
 
+                if (!File.Exists("lua.xshd")) // onv
+                {
+                   string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua.xshd");
+                   File.WriteAllText("lua.xshd", penis);
+                }
+                // pp penis big 
+                Stream input = File.OpenRead("lua.xshd");
+                XmlTextReader xmlTextReader = new XmlTextReader(input);
+                textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
                 snd.Play();
             }
             else
@@ -447,23 +417,8 @@ namespace MainDab
                 Process.Start("update.exe");
                 Environment.Exit(0);
             }
-            if (File.Exists("lua.xshd"))
-            {
-                File.Delete("lua.xshd");
-                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
-                File.WriteAllText("lua.xshd", penis); // just in case need new update
-            }
-
-            if (!File.Exists("lua.xshd")) // onv
-            {
-                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/lua.xshd");
-                File.WriteAllText("lua.xshd", penis);
-            }
-
-            Console.WriteLine("Downloading lua.xshd for avalonedit\n");
-            Stream input = File.OpenRead("lua.xshd");
-            XmlTextReader xmlTextReader = new XmlTextReader(input);
-            textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
+         
+          
             // Change directory to avoid useless directories :/
             Console.WriteLine("All done\n");
             ShowWindow(handle, SW_HIDE);
@@ -942,9 +897,9 @@ namespace MainDab
             {
                 ezclap.ExecuteScript(scriptseggx);
             }
-            if (currentdll == "Selected API : ShadowCheats")
+            if (currentdll == "Selected API : Arch API")
             {
-               sexcheats.ExecuteScript(scriptseggx);
+               sexcheats.Execute(scriptseggx);
             }
             if (currentdll == "Selected API : WeAreDevs")
             {
@@ -1021,7 +976,114 @@ namespace MainDab
                  SelectedAPILabel.Content = apishouldbe;
                  currentdll = apishouldbe;
              }
-             
+            RegistryKey maindabtheme = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\MainDabTheme");
+            if (maindabtheme != null)
+            {
+                // honestly could be x1000 more efficient and save more space but idc
+                string theme = (maindabtheme.GetValue("THEME").ToString());
+                if (theme == "Default")
+                {
+                    Border.Visibility = Visibility.Hidden;
+
+                    if (!Directory.Exists("EditorThemes"))
+                    {
+                        Directory.CreateDirectory("EditorThemes");
+                    }
+                   
+                    if (!File.Exists("EditorThemes\\lua_md_default.xshd")) // onv
+                    {
+                        string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua_md_default.xshd");
+                        File.WriteAllText("EditorThemes\\lua_md_default.xshd", penis);
+                    }
+                    // pp penis big 
+                    Stream input = File.OpenRead("EditorThemes\\lua_md_default.xshd");
+                    XmlTextReader xmlTextReader = new XmlTextReader(input);
+                    textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
+                }
+                if (theme == "Purple")
+                {
+                    Border.Visibility = Visibility.Visible;
+                    Border.Fill = new SolidColorBrush(Color.FromRgb(200, 0, 255));
+                    if (!Directory.Exists("EditorThemes"))
+                    {
+                        Directory.CreateDirectory("EditorThemes");
+                    }
+                    
+                    if (!File.Exists("EditorThemes\\lua_md_royalpurple.xshd")) // onv
+                    {
+                        string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua_md_royalpurple.xshd");
+                        File.WriteAllText("EditorThemes\\lua_md_royalpurple.xshd", penis);
+                    }
+                    // pp penis big 
+                    Stream input = File.OpenRead("EditorThemes\\lua_md_royalpurple.xshd");
+                    XmlTextReader xmlTextReader = new XmlTextReader(input);
+                    textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
+
+                }
+                if (theme == "Red")
+                {
+                    Border.Visibility = Visibility.Visible;
+                    Border.Fill = new SolidColorBrush(Color.FromRgb(255, 0, 0));
+                    if (!Directory.Exists("EditorThemes"))
+                    {
+                        Directory.CreateDirectory("EditorThemes");
+                    }
+                  
+
+                    if (!File.Exists("EditorThemes\\lua_md_crimsonred.xshd")) // onv
+                    {
+                        string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua_md_crimsonred.xshd");
+                        File.WriteAllText("EditorThemes\\lua_md_crimsonred.xshd", penis);
+                    }
+                    // pp penis big 
+                    Stream input = File.OpenRead("EditorThemes\\lua_md_crimsonred.xshd");
+                    XmlTextReader xmlTextReader = new XmlTextReader(input);
+                    textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
+                   
+                }
+                if (theme == "Blue")
+                {
+                    Border.Visibility = Visibility.Visible;
+                    Border.Fill = new SolidColorBrush(Color.FromRgb(0, 238, 255));
+                    if (!Directory.Exists("EditorThemes"))
+                    {
+                        Directory.CreateDirectory("EditorThemes");
+                    }
+                   
+
+                    if (!File.Exists("EditorThemes\\lua_md_purityblue.xshd")) // onv
+                    {
+                        string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua_md_purityblue.xshd");
+                        File.WriteAllText("EditorThemes\\lua_md_purityblue.xshd", penis);
+                    }
+                    // pp penis big 
+                    Stream input = File.OpenRead("EditorThemes\\lua_md_purityblue.xshd");
+                    XmlTextReader xmlTextReader = new XmlTextReader(input);
+                    textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
+                }
+                if (theme == "Green")
+                {
+                    Border.Visibility = Visibility.Visible;
+                    Border.Fill = new SolidColorBrush(Color.FromRgb(9, 222, 118));
+                    if (!Directory.Exists("EditorThemes"))
+                    {
+                        Directory.CreateDirectory("EditorThemes");
+                    }
+                   
+
+                    if (!File.Exists("EditorThemes\\lua_md_maindabgreen.xshd")) // onv
+                    {
+                        string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua_md_maindabgreen.xshd");
+                        File.WriteAllText("EditorThemes\\lua_md_maindabgreen.xshd", penis);
+                    }
+                    // pp penis big 
+                    Stream input = File.OpenRead("EditorThemes\\lua_md_maindabgreen.xshd");
+                    XmlTextReader xmlTextReader = new XmlTextReader(input);
+                    textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
+                }
+              
+
+            }
             client = new DiscordRpcClient("795935176873213982")
             {
                 Logger = new ConsoleLogger
@@ -1036,7 +1098,7 @@ namespace MainDab
             // this.panel6.Visible = false;
             client.SetPresence(new RichPresence
             {
-                Details = "Using MainDab V11",
+                Details = "Using MainDab V12",
                 State = "MainDab Roblox Exploit | discord.io/maindab",
 
                 Timestamps = new Timestamps
@@ -1190,10 +1252,10 @@ namespace MainDab
         }
         private void Shado(object sender, RoutedEventArgs e)
         {
-            currentdll = "Selected API : ShadowCheats";
-            SelectedAPILabel.Content = "Selected API : ShadowCheats";
+            currentdll = "Selected API : Arch API";
+            SelectedAPILabel.Content = "Selected API : Arch API";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
-            key.SetValue("DLL", "Selected API : ShadowCheats");
+            key.SetValue("DLL", "Selected API : Arch API");
             key.Close();
         }
 
@@ -1353,7 +1415,7 @@ namespace MainDab
 
         private void SniffHub(object sender, RoutedEventArgs e)
         {
-            string sexhub = "loadstring(game:HttpGet('https://raw.githubusercontent.com/2dgeneralspam1/Sniff-Hub/main/sniff%20hub%20lite')()";
+            string sexhub = "loadstring(game:HttpGet('https://raw.githubusercontent.com/2dgeneralspam1/Sniff-Hub/main/sniff%20hub%20lite'))()";
             Process.Start("https://dsc.gg/sniffcommunity");
             Process[] pname = Process.GetProcessesByName("RobloxPlayerBeta");
             if (pname.Length > 0)
@@ -1362,9 +1424,13 @@ namespace MainDab
                 {
                     ezclap.ExecuteScript(sexhub);
                 }
+                if (currentdll == "Selected API : Arch API")
+                {
+                   sexcheats.Execute(sexhub);
+                }
                 else
                 {
-                    MessageBox.Show("The current API you have selected does NOT support SniffHub.\n\nPlease use/switch to EasyExploits API if you wish to use SniffHub!");
+                    MessageBox.Show("The current API you have selected does NOT support SniffHub.\n\nPlease use/switch to Arch API or EasyExploits API if you wish to use SniffHub!");
                 }
             }
             else
@@ -1381,6 +1447,156 @@ namespace MainDab
         private void TabablzControl_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void DefaultThemeButton(object sender, RoutedEventArgs e)
+        {
+            Border.Visibility = Visibility.Hidden;
+            
+            if (!Directory.Exists("EditorThemes"))
+            {
+                Directory.CreateDirectory("EditorThemes");
+            }
+            if (File.Exists("EditorThemes\\lua_md_default.xshd"))
+            {
+                File.Delete("EditorThemes\\lua_md_default.xshd");
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua_md_default.xshd");
+                File.WriteAllText("EditorThemes\\lua_md_default.xshd", penis); // just in case need new update
+            }
+
+            if (!File.Exists("EditorThemes\\lua_md_default.xshd")) // onv
+            {
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua_md_default.xshd");
+                File.WriteAllText("EditorThemes\\lua_md_default.xshd", penis);
+            }
+            // pp penis big 
+            Stream input = File.OpenRead("EditorThemes\\lua_md_default.xshd");
+            XmlTextReader xmlTextReader = new XmlTextReader(input);
+            textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabTheme");
+            key.SetValue("THEME", "Default");
+            key.Close();
+            MessageBox.Show("New theme applied");
+        }
+
+        private void RoyalPurple(object sender, RoutedEventArgs e)
+        {
+            Border.Visibility = Visibility.Visible;
+            Border.Fill = new SolidColorBrush(Color.FromRgb(200, 0, 255));
+            if (!Directory.Exists("EditorThemes"))
+            {
+                Directory.CreateDirectory("EditorThemes");
+            }
+            if (File.Exists("EditorThemes\\lua_md_royalpurple.xshd"))
+            {
+                File.Delete("EditorThemes\\lua_md_royalpurple.xshd");
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua_md_royalpurple.xshd");
+                File.WriteAllText("EditorThemes\\lua_md_royalpurple.xsdd", penis); // just in case need new update
+            }
+
+            if (!File.Exists("EditorThemes\\lua_md_royalpurple.xshd")) // onv
+            {
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua_md_royalpurple.xshd");
+                File.WriteAllText("EditorThemes\\lua_md_royalpurple.xshd", penis);
+            }
+            // pp penis big 
+            Stream input = File.OpenRead("EditorThemes\\lua_md_royalpurple.xshd");
+            XmlTextReader xmlTextReader = new XmlTextReader(input);
+            textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabTheme");
+            key.SetValue("THEME", "Purple");
+            key.Close();
+            MessageBox.Show("New theme applied");
+        }
+
+        private void CrimsonRed(object sender, RoutedEventArgs e)
+        {
+            Border.Visibility = Visibility.Visible;
+            Border.Fill = new SolidColorBrush(Color.FromRgb(255, 0, 0));
+            if (!Directory.Exists("EditorThemes"))
+            {
+                Directory.CreateDirectory("EditorThemes");
+            }
+            if (File.Exists("EditorThemes\\lua_md_crimsonred.xshd"))
+            {
+                File.Delete("EditorThemes\\lua_md_crimsonred.xshd");
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua_md_crimsonred.xshd");
+                File.WriteAllText("EditorThemes\\lua_md_crimsonred.xshd", penis); // just in case need new update
+            }
+
+            if (!File.Exists("EditorThemes\\lua_md_crimsonred.xshd")) // onv
+            {
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua_md_crimsonred.xshd");
+                File.WriteAllText("EditorThemes\\lua_md_crimsonred.xshd", penis);
+            }
+            // pp penis big 
+            Stream input = File.OpenRead("EditorThemes\\lua_md_crimsonred.xshd");
+            XmlTextReader xmlTextReader = new XmlTextReader(input);
+            textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabTheme");
+            key.SetValue("THEME", "Red");
+            key.Close();
+            MessageBox.Show("New theme applied");
+        }
+
+        private void Purity(object sender, RoutedEventArgs e)
+        {
+            Border.Visibility = Visibility.Visible;
+            Border.Fill = new SolidColorBrush(Color.FromRgb(0, 238, 255));
+            if (!Directory.Exists("EditorThemes"))
+            {
+                Directory.CreateDirectory("EditorThemes");
+            }
+            if (File.Exists("EditorThemes\\lua_md_purityblue.xshd"))
+            {
+                File.Delete("EditorThemes\\lua_md_purityblue.xshd");
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua_md_purityblue.xshd");
+                File.WriteAllText("EditorThemes\\lua_md_purityblue.xshd", penis); // just in case need new update
+            }
+
+            if (!File.Exists("EditorThemes\\lua_md_purityblue.xshd")) // onv
+            {
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua_md_purityblue.xshd");
+                File.WriteAllText("EditorThemes\\lua_md_purityblue.xshd", penis);
+            }
+            // pp penis big 
+            Stream input = File.OpenRead("EditorThemes\\lua_md_purityblue.xshd");
+            XmlTextReader xmlTextReader = new XmlTextReader(input);
+            textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabTheme");
+            key.SetValue("THEME", "Blue");
+            key.Close();
+            MessageBox.Show("New theme applied");
+        }
+
+        private void green(object sender, RoutedEventArgs e)
+        {
+            Border.Visibility = Visibility.Visible;
+            Border.Fill = new SolidColorBrush(Color.FromRgb(9, 222, 118));
+            if (!Directory.Exists("EditorThemes"))
+            {
+                Directory.CreateDirectory("EditorThemes");
+            }
+            if (File.Exists("EditorThemes\\lua_md_maindabgreen.xshd"))
+            {
+                File.Delete("EditorThemes\\lua_md_maindabgreen.xshd");
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua_md_maindabgreen.xshd");
+                File.WriteAllText("EditorThemes\\lua_mdlua_md_maindabgreen.xshd", penis); // just in case need new update
+            }
+
+            if (!File.Exists("EditorThemes\\lua_md_maindabgreen.xshd")) // onv
+            {
+                string penis = HITLER.DownloadString("https://raw.githubusercontent.com/MainDabRblx/ProjectDab/master/Themes/lua_md_maindabgreen.xshd");
+                File.WriteAllText("EditorThemes\\lua_md_maindabgreen.xshd", penis);
+            }
+            // pp penis big 
+            Stream input = File.OpenRead("EditorThemes\\lua_md_maindabgreen.xshd");
+            XmlTextReader xmlTextReader = new XmlTextReader(input);
+            textEditor.SyntaxHighlighting = HighlightingLoader.Load(xmlTextReader, HighlightingManager.Instance);
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabTheme");
+            key.SetValue("THEME", "Green");
+            key.Close();
+            MessageBox.Show("New theme applied");
         }
     }
 

@@ -7,3 +7,4 @@ C:\Users\leona\Desktop\MainDabSrc\TaintLogs\obj\Debug\TaintLogs.csproj.GenerateR
 C:\Users\leona\Desktop\MainDabSrc\TaintLogs\obj\Debug\TaintLogs.csproj.CoreCompileInputs.cache
 C:\Users\leona\Desktop\MainDabSrc\TaintLogs\obj\Debug\TaintLogs.exe
 C:\Users\leona\Desktop\MainDabSrc\TaintLogs\obj\Debug\TaintLogs.pdb
+C:\Users\leona\Desktop\MainDabSrc\TaintLogs\obj\Debug\TaintLogs.csprojAssemblyReference.cache

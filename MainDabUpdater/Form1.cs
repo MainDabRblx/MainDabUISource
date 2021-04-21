@@ -102,14 +102,8 @@ namespace MainDabUpdater
             }
             if (File.Exists("ShadowCheats.dll"))
             {
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Deleting ShadowCheats.dll");
                 File.Delete("ShadowCheats.dll");
-                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Updating ShadowCheats API");
-                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/ShadowCheats.dll?raw=true", "ShadowCheats.dll");
-            }
-            if (!File.Exists("ShadowCheats.dll"))
-            {
-                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading ShadowCheats API");
-                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/ShadowCheats.dll?raw=true", "ShadowCheats.dll");
             }
             if (File.Exists("WeAreDevs_API.cpp.dll"))
             {
@@ -122,10 +116,21 @@ namespace MainDabUpdater
                 thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading WeAreDevs_API.cpp.dll");
                 webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/WeAreDevs_API.cpp.dll?raw=true", "WeAreDevs_API.cpp.dll");
             }
+            if (File.Exists("ArchAPI.dll"))
+            {
+                File.Delete("ArchAPI.dll");
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Updating ArchAPI.dll");
+                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/ArchAPI.dll?raw=true", "ArchAPI.dll");
+            }
+            if (!File.Exists("ArchAPI.dll"))
+            {
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading ArchAPI.dll");
+                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/ArchAPI.dll?raw=true", "ArchAPI.dll");
+            }
             if (File.Exists("AcrylixAPI.dll"))
             {
                 File.Delete("AcrylixAPI.dll");
-                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " UpdatingAcrylixAPI.dll");
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Updating AcrylixAPI.dll");
                 webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/AcrylixAPI.dll?raw=true", "AcrylixAPI.dll");
             }
             if (!File.Exists("AcrylixAPI.dll"))
