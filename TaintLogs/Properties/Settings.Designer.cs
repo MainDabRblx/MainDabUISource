@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TaintLogs.Properties
+namespace MainDab.Properties
 {
 
 

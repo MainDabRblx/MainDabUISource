@@ -86,20 +86,12 @@ namespace MainDabUpdater
                 thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Deleting VisualStudioTabControl.dll");
                 File.Delete("VisualStudioTabControl.dll");
             }
-
-
-
-            thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading new EasyExploits API");
             if (File.Exists("EasyExploits.dll"))
             {
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Deleting EasyExploits.dll");
                 File.Delete("EasyExploits.dll");
-                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/EasyExploits.dll?raw=true", "EasyExploits.dll");
             }
 
-            if (!File.Exists("EasyExploits.dll"))
-            {
-                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/EasyExploits.dll?raw=true", "EasyExploits.dll");
-            }
             if (File.Exists("ShadowCheats.dll"))
             {
                 thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Deleting ShadowCheats.dll");
@@ -107,15 +99,16 @@ namespace MainDabUpdater
             }
             if (File.Exists("WeAreDevs_API.cpp.dll"))
             {
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Deleting WeAreDevs_API.cpp.dll");
                 File.Delete("WeAreDevs_API.cpp.dll");
-                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Updating WeAreDevs_API.cpp.dll");
-                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/WeAreDevs_API.cpp.dll?raw=true", "WeAreDevs_API.cpp.dll");
             }
-            if (!File.Exists("WeAreDevs_API.cpp.dll"))
+            if (File.Exists("AcrylixAPI.dll"))
             {
-                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading WeAreDevs_API.cpp.dll");
-                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/WeAreDevs_API.cpp.dll?raw=true", "WeAreDevs_API.cpp.dll");
+                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Deleting AcrylixAPI.dll");
+                File.Delete("AcrylixAPI.dll");
             }
+
+            // Update APIS
             if (File.Exists("ArchAPI.dll"))
             {
                 File.Delete("ArchAPI.dll");
@@ -127,17 +120,8 @@ namespace MainDabUpdater
                 thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading ArchAPI.dll");
                 webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/ArchAPI.dll?raw=true", "ArchAPI.dll");
             }
-            if (File.Exists("AcrylixAPI.dll"))
-            {
-                File.Delete("AcrylixAPI.dll");
-                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Updating AcrylixAPI.dll");
-                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/AcrylixAPI.dll?raw=true", "AcrylixAPI.dll");
-            }
-            if (!File.Exists("AcrylixAPI.dll"))
-            {
-                thing = ("[" + DateTime.Now.ToString("h:mm:ss tt") + "]" + " Downloading AcrylixAPI.dll");
-                webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/AcrylixAPI.dll?raw=true", "AcrylixAPI.dll");
-            }
+
+          
             // Downloading extra dependencies
 
             if (!File.Exists("MoonSharp.Interpreter.dll"))

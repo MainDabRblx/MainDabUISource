@@ -650,7 +650,7 @@
             </Rectangle>
 
             <Grid x:Name="BottomBar" HorizontalAlignment="Left" Height="249" Margin="0,9,0,0" Grid.Row="2" VerticalAlignment="Top" Width="571.333" Background="#FF19191A" Grid.RowSpan="6" Grid.ColumnSpan="6" Loaded="Grid_Loaded" UseLayoutRounding="False"/>
-            <Label x:Name="TopBar" Margin="0.003,-10.669,0,0" Grid.Row="2" MouseLeftButtonDown="Border_MouseLeftButtonDown" Content="MainDab" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Width="571.223" Background="#FF282828" Height="27.666" RenderTransformOrigin="0.5,0.5" FontSize="16" Grid.ColumnSpan="6" FontFamily="Calibri" UseLayoutRounding="False">
+            <Label x:Name="TopBar" Margin="0.003,-10.669,0,0" Grid.Row="2" MouseLeftButtonDown="Border_MouseLeftButtonDown" Content="MainDab" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Width="571.223" Background="#FF282828" Height="27.666" RenderTransformOrigin="0.5,0.5" FontSize="16" Grid.ColumnSpan="6" FontFamily="Calibri" UseLayoutRounding="False" Loaded="UwU">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -688,24 +688,13 @@
                     <MenuItem x:Name="DLL2" Header="EasyExploits API" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_8" Margin="-25,0,-8,0"/>
                     <MenuItem x:Name="DLL3" Header="Arch API" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Margin="-25,0,-8,0" Click="Shado"/>
                     <MenuItem x:Name="DLL4" Header="WeAreDevs" HorizontalAlignment="Left" Height="21" Width="233" Background="#FF2D2D2D" BorderThickness="0" Click="WeAreSkids" Margin="-25,0,-68,0"/>
-                    <MenuItem x:Name="DLL4_Copy" Header="Acrylix" HorizontalAlignment="Left" Height="20" Width="233" Background="#FF2D2D2D" BorderThickness="0" Click="DeepPain" Margin="-25,0,-68,0"/>
                     <MenuItem x:Name="DLL4_Copy1" Header="MainDab LBI" HorizontalAlignment="Left" Height="20" Width="233" Background="#FF2D2D2D" BorderThickness="0" Click="BMLBI" Margin="-25,0,-68,0"/>
                     <MenuItem x:Name="DLL3_Copy" Header="Custom DLL" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Margin="-25,0,-8,0" Click="MenuItem_Click_22"/>
 
                 </MenuItem>
-                <MenuItem x:Name="HelpMenu" Header="Help" Height="21" Width="35" Foreground="White" BorderThickness="0">
+                <MenuItem x:Name="HelpMenu" Header="Help" Height="21" Width="37" Foreground="White" BorderThickness="0">
                     <MenuItem x:Name="JoinDiscord" Header="Get support (Discord)" HorizontalAlignment="Left" Height="22" Width="239" Click="NEIn" Background="#FF2D2D2D" BorderThickness="0" Margin="-28,0,-71,0"/>
-                    <MenuItem x:Name="Credits" Header="Credits&#xA;" HorizontalAlignment="Left" Height="21" Width="178" Background="#FF2D2D2D" BorderThickness="0" Margin="-27,0,-11,0"  Click="MenuItem_Click_23"/>
-                </MenuItem>
-                <MenuItem x:Name="ExtensionsMenu" Header="Extensions" Height="21" Width="65" Foreground="White" BorderThickness="0" Click="MenuItem_Click_5" Background="Transparent" RenderTransformOrigin="0.5,0.5">
-                    <MenuItem.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.528"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </MenuItem.RenderTransform>
+                    <MenuItem x:Name="Credits" Header="Credits&#xA;" HorizontalAlignment="Left" Height="18" Width="178" Background="#FF2D2D2D" BorderThickness="0" Margin="-27,0,-11,0"  Click="MenuItem_Click_23"/>
                 </MenuItem>
                 <MenuItem x:Name="ExtensionsMenu_Copy1" Header="Sniff Hub" Height="21" Width="58" Foreground="White" BorderThickness="0" Click="SniffHub" Background="Transparent" RenderTransformOrigin="0.5,0.5">
                     <MenuItem.RenderTransform>
@@ -739,7 +728,7 @@
                 HorizontalScrollBarVisibility="Auto" 
                 VerticalScrollBarVisibility="Auto"
                 LineNumbersForeground="White"
-                ShowLineNumbers="True" Foreground="White" OpacityMask="Black" Height="199.303" Background="#FF151515" HorizontalAlignment="Center" Width="524.445" VerticalAlignment="Center" Margin="45.665,34.575,1.223,14.122" Loaded="textEditor_Loaded" Text="-- MainDab V11 Loaded! Join MainDab at discord.io/maindab" Grid.Row="2" Grid.ColumnSpan="6" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Grid.RowSpan="4">
+                ShowLineNumbers="True" Foreground="White" OpacityMask="Black" Height="199.303" Background="#FF151515" HorizontalAlignment="Center" Width="524.445" VerticalAlignment="Center" Margin="45.665,34.575,1.223,14.122" Loaded="textEditor_Loaded" Text="-- MainDab V12 Loaded! Join MainDab at discord.io/maindab" Grid.Row="2" Grid.ColumnSpan="6" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Grid.RowSpan="4">
 
                 <avalonedit:TextEditor.RenderTransform>
                     <TransformGroup>

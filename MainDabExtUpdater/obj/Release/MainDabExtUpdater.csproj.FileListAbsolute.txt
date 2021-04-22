@@ -1,0 +1,7 @@
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtUpdater\bin\Release\MainDabExtUpdater.exe.config
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtUpdater\bin\Release\MainDabExtUpdater.exe
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtUpdater\bin\Release\MainDabExtUpdater.pdb
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtUpdater\obj\Release\MainDabExtUpdater.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtUpdater\obj\Release\MainDabExtUpdater.csproj.CoreCompileInputs.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtUpdater\obj\Release\MainDabExtUpdater.exe
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtUpdater\obj\Release\MainDabExtUpdater.pdb

@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("list.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("easyexploits.dll")]
 
 

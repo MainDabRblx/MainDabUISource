@@ -1,0 +1,9 @@
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\bin\Release\MainDab Updater.exe.config
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\bin\Release\MainDab Updater.exe
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\bin\Release\MainDab Updater.pdb
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\obj\Release\MainDabUpdater.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\obj\Release\MainDabUpdater.Form1.resources
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\obj\Release\MainDabUpdater.csproj.GenerateResource.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\obj\Release\MainDabUpdater.csproj.CoreCompileInputs.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\obj\Release\MainDab Updater.exe
+C:\Users\leona\Desktop\MainDabSrc\MainDabUpdater\obj\Release\MainDab Updater.pdb

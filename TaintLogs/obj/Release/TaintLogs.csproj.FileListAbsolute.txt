@@ -1,0 +1,10 @@
+C:\Users\leona\Desktop\MainDabSrc\TaintLogs\bin\Release\TaintLogs.exe.config
+C:\Users\leona\Desktop\MainDabSrc\TaintLogs\bin\Release\TaintLogs.exe
+C:\Users\leona\Desktop\MainDabSrc\TaintLogs\bin\Release\TaintLogs.pdb
+C:\Users\leona\Desktop\MainDabSrc\TaintLogs\obj\Release\TaintLogs.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\MainDabSrc\TaintLogs\obj\Release\TaintLogs.Form1.resources
+C:\Users\leona\Desktop\MainDabSrc\TaintLogs\obj\Release\TaintLogs.Properties.Resources.resources
+C:\Users\leona\Desktop\MainDabSrc\TaintLogs\obj\Release\TaintLogs.csproj.GenerateResource.cache
+C:\Users\leona\Desktop\MainDabSrc\TaintLogs\obj\Release\TaintLogs.csproj.CoreCompileInputs.cache
+C:\Users\leona\Desktop\MainDabSrc\TaintLogs\obj\Release\TaintLogs.exe
+C:\Users\leona\Desktop\MainDabSrc\TaintLogs\obj\Release\TaintLogs.pdb

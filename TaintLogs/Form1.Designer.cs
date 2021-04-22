@@ -1,4 +1,4 @@
-﻿namespace TaintLogs
+﻿namespace MainDab
 {
     partial class Form1
     {

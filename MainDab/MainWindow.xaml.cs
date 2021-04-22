@@ -45,20 +45,15 @@ namespace MainDab
 
     public partial class MainWindow : Window
     {
-        string currentver = "MainDab V.12.1"; // current version
+        string currentver = "MainDab V.12.2"; // current version
         string listboxopenornot = "false"; // listbox
         WebClient HITLER = new WebClient(); // hitler moment :D
-        private DiscordRpcClient client; // discordsexual
-        AcrylixAPI DeepPainUwU= new AcrylixAPI(); // Acrylix API horny fuck moment
-        // private readonly CheatSquadAPI.Module shitsquad = new CheatSquadAPI.Module(); // CheatSquad API
-        private readonly EasyExploits.Module ezclap = new EasyExploits.Module(); // EasyExploits API
+        private DiscordRpcClient client; // discordsexual 
+        private readonly Classes.EasyExploitsAPI.Module ezclap = new Classes.EasyExploitsAPI.Module(); // EasyExploits API
+        private readonly Classes.WeAreDevsAPI.ExploitAPI wrd = new Classes.WeAreDevsAPI.ExploitAPI(); // WeAreDevs API
         private readonly ArchAPI.Arch sexcheats = new ArchAPI.Arch();  // Converted to Arch from ShadowCheats
         string currentdll = "Selected API : Arch API"; // by default...
         private readonly BackgroundWorker worker = new BackgroundWorker();
-        [DllImport("WeAreDevs_API.cpp.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern bool LaunchExploit(); // WRD Inject
-        [DllImport("WeAreDevs_API.cpp.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern bool SendLimitedLuaScript(string script); // WRD Execute
         [DllImport("kernel32.dll")]
         static extern IntPtr GetConsoleWindow();
 
@@ -113,7 +108,8 @@ namespace MainDab
 
             if (currentdll == "Selected API : EasyExploits API")
             {
-                ezclap.LaunchExploit();
+             
+               ezclap.LaunchExploit();
                 new Thread(() =>
                 {
                     Thread.CurrentThread.IsBackground = true;
@@ -135,39 +131,6 @@ namespace MainDab
                     });
                 }).Start();
             }
-                if (currentdll == "Selected API : Acrylix")
-                {
-                    
-                    
-                    new Thread(() =>
-                    {
-                        Thread.CurrentThread.IsBackground = true;
-
-                        this.Dispatcher.Invoke(() =>
-                        {
-                            TopBar.Content = "MainDab | Updating Acrylix API...";
-                            DeepPainUwU.Update();
-
-                        });
-
-                        this.Dispatcher.Invoke(() =>
-                        {
-                            TopBar.Content = "MainDab | Injecting Acrylix API...";
-
-                        });
-                        DeepPainUwU.Inject();
-                        Thread.Sleep(6000);
-                        this.Dispatcher.Invoke(() =>
-                        {
-                            TopBar.Content = "MainDab | Acrylix API Injected!";
-                        });
-                        Thread.Sleep(1000);
-                        this.Dispatcher.Invoke(() =>
-                        {
-                            TopBar.Content = "MainDab";
-                        });
-                    }).Start();
-                }
 
                 if (currentdll == "Selected API : MainDab LBI")
                 {
@@ -226,7 +189,7 @@ namespace MainDab
                 
                 new Thread(() =>
                 {
-                    LaunchExploit();
+                    wrd.LaunchExploit();
                     Thread.CurrentThread.IsBackground = true;
 
                     this.Dispatcher.Invoke(() =>
@@ -321,13 +284,10 @@ namespace MainDab
                 {
                     sexcheats.Execute(textEditor.Text);
                 }
-                if (currentdll == "Selected API : Acrylix")
-                {
-                    DeepPainUwU.Execute(textEditor.Text);
-                }
+                
                 if (currentdll == "Selected API : WeAreDevs")
                 {
-                    SendLimitedLuaScript(textEditor.Text);
+                    wrd.SendLuaScript(textEditor.Text);
                 }
                 if (currentdll == "Selected API : Custom")
                 {
@@ -368,6 +328,7 @@ namespace MainDab
                     Console.WriteLine("Creating autoexec folder...");
                     Directory.CreateDirectory("autoexec");
                 }
+               
                 if (!Directory.Exists("workspace"))
                 {
                     Console.WriteLine("Creating workspace folder...");
@@ -903,7 +864,7 @@ namespace MainDab
             }
             if (currentdll == "Selected API : WeAreDevs")
             {
-               SendLimitedLuaScript(scriptseggx);
+               wrd.SendLuaScript(scriptseggx);
             }
             if (currentdll == "Selected API : Custom")
             {
@@ -1122,19 +1083,8 @@ namespace MainDab
         private void MenuItem_Click_20(object sender, RoutedEventArgs e)
         {
 
-            if (File.Exists("Applications\\MainDabExtensions.exe"))
-            {
-                Process.Start("Applications\\MainDabExtensions.exe");
-            }
-            else
-            {
-                MessageBox.Show("Downloading Extensions in order to open the taint logs. Click OK to continue.");
-                var sex = new WebClient();
-                sex.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/MainDabExtensions.exe?raw=true",
-                    "Applications\\MainDabExtensions.exe");
-                Process.Start("Applications\\MainDabExtensions.exe");
-                MessageBox.Show("Extensions downloaded and started!");
-            }
+            Form1 creditui = new Form1();
+            creditui.Show();
         }
 
         private void custom_Loaded(object sender, RoutedEventArgs e)
@@ -1597,6 +1547,32 @@ namespace MainDab
             key.SetValue("THEME", "Green");
             key.Close();
             MessageBox.Show("New theme applied");
+        }
+
+        private void UwU(object sender, RoutedEventArgs e)
+        {
+            /*
+            new Thread(() =>
+            {
+                Thread.CurrentThread.IsBackground = true;
+
+                this.Dispatcher.Invoke(() =>
+                {
+                    TopBar.Content = "MainDab | Updating PuppyMilk...";
+
+                });
+                var sex = new WebClient();
+                sex.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/ExtraApplications/PuppyMilkV3.exe?raw=true", "PuppyMilkV3.exe");
+                this.Dispatcher.Invoke(() =>
+                {
+                    TopBar.Content = "MainDab | PuppyMilk Updated!";
+                });
+                Thread.Sleep(1000);
+                this.Dispatcher.Invoke(() =>
+                {
+                    TopBar.Content = "MainDab";
+                });
+            }).Start();*/
         }
     }
 

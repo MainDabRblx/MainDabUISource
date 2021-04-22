@@ -35,8 +35,8 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -60,19 +60,12 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AcrylixAPI">
-      <HintPath>..\..\..\Downloads\AcrylixAPI.dll</HintPath>
-    </Reference>
     <Reference Include="ArchAPI">
       <HintPath>..\..\..\Downloads\ArchAPI.dll</HintPath>
     </Reference>
     <Reference Include="DiscordRPC, Version=1.0.150.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\MainDab\DiscordRPC.dll</HintPath>
-    </Reference>
-    <Reference Include="EasyExploits, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MainDab\EasyExploits.dll</HintPath>
     </Reference>
     <Reference Include="Giselle.Commons">
       <HintPath>..\..\..\Downloads\PastebinAPIs-master\PastebinAPIs-master\PastebinAPIs\bin\Debug\Giselle.Commons.dll</HintPath>
@@ -132,11 +125,21 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\EasyExploitsAPI\DLLInjection.cs" />
+    <Compile Include="Classes\EasyExploitsAPI\Module.cs" />
+    <Compile Include="Classes\RevenantAPI\RevenantAPI.cs" />
+    <Compile Include="Classes\WeAreDevsAPI\ExploitAPI.cs" />
     <Compile Include="Credits.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Credits.Designer.cs">
       <DependentUpon>Credits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Injection\DLLInjection.cs" />
     <Compile Include="Injection\Functions.cs" />
@@ -170,6 +173,9 @@
     </Compile>
     <EmbeddedResource Include="Credits.resx">
       <DependentUpon>Credits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainDabInternal.resx">
       <DependentUpon>MainDabInternal.cs</DependentUpon>
