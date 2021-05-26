@@ -11,6 +11,7 @@
  Contact via discord (Main_EX#3898, My Discord ID is 766314130880593932, if that doesn't work join discord.io/maindab)
  I no longer bother annotating code, find out what it does yourself
  */
+
 using MoonSharp.Interpreter;
 using Microsoft.Win32;
 using System;
@@ -45,14 +46,14 @@ namespace MainDab
 
     public partial class MainWindow : Window
     {
-        string currentver = "MainDab V.12.2"; // current version
+        string currentver = "MainDab V.12.4"; // current version
         string listboxopenornot = "false"; // listbox
         WebClient HITLER = new WebClient(); // hitler moment :D
         private DiscordRpcClient client; // discordsexual 
         private readonly Classes.EasyExploitsAPI.Module ezclap = new Classes.EasyExploitsAPI.Module(); // EasyExploits API
         private readonly Classes.WeAreDevsAPI.ExploitAPI wrd = new Classes.WeAreDevsAPI.ExploitAPI(); // WeAreDevs API
-        private readonly ArchAPI.Arch sexcheats = new ArchAPI.Arch();  // Converted to Arch from ShadowCheats
-        string currentdll = "Selected API : Arch API"; // by default...
+      //  private readonly AnemoAPI.Anemo sexcheats = new AnemoAPI.Anemo();  // Converted to Arch from ShadowCheats
+        string currentdll = "Selected API : EasyExploits API"; // by default...
         private readonly BackgroundWorker worker = new BackgroundWorker();
         [DllImport("kernel32.dll")]
         static extern IntPtr GetConsoleWindow();
@@ -65,6 +66,7 @@ namespace MainDab
 
         public MainWindow()
         {
+            
             Console.WriteLine("\r\n  __  __       _       _____        _     \r\n |  \\/  |     (_)     |  __ \\      | |    \r\n | \\  / | __ _ _ _ __ | |  | | __ _| |__  \r\n | |\\/| |/ _` | | '_ \\| |  | |/ _` | '_ \\ \r\n | |  | | (_| | | | | | |__| | (_| | |_) |\r\n |_|  |_|\\__,_|_|_| |_|_____/ \\__,_|_.__/ \r\n                                          \r\n                                          \r\n");
             Console.WriteLine("Debugging console | Join MainDab at discord.io/maindab if you need help");
         }
@@ -160,22 +162,22 @@ namespace MainDab
 
                 }
 
-                if (currentdll == "Selected API : Arch API")
+                if (currentdll == "Selected API : Anemo API")
             {
-                sexcheats.Attach();
+                    //sexcheats.InjectAnemo();
                 new Thread(() =>
                 {
                     Thread.CurrentThread.IsBackground = true;
 
                     this.Dispatcher.Invoke(() =>
                     {
-                        TopBar.Content = "MainDab | Injecting Arch API...";
+                        TopBar.Content = "MainDab | Injecting Anemo API...";
 
                     });
                     Thread.Sleep(8000);
                     this.Dispatcher.Invoke(() =>
                     {
-                        TopBar.Content = "MainDab | Arch API Injected!";
+                        TopBar.Content = "MainDab | Anemo API Injected!";
                     });
                     Thread.Sleep(1000);
                     this.Dispatcher.Invoke(() =>
@@ -208,8 +210,9 @@ namespace MainDab
                         TopBar.Content = "MainDab";
                     });
                 }).Start();
+               
             }
-                if (currentdll == "Selected API : Custom")
+            if (currentdll == "Selected API : Custom")
             {
                 Functions.Inject();
                 new Thread(() =>
@@ -231,8 +234,10 @@ namespace MainDab
             }
             else
             {
-                MessageBox.Show("Roblox isn't opened, please open Roblox before injecting!");
+                MessageBox.Show("Please reselect your DLL by clicking 'Select DLL', as your current choice is invalid.");
             }
+
+
         }
         private void Execute()
         {
@@ -247,6 +252,10 @@ namespace MainDab
                     MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
                 }
 
+            }
+            else if (currentdll == "Selected API : Anemo API")
+            {
+               // sexcheats.ExecuteScript(textEditor.Text);
             }
             Process[] pname = Process.GetProcessesByName("RobloxPlayerBeta");
             if (pname.Length > 0)
@@ -269,7 +278,7 @@ namespace MainDab
                  {
                      shitsquad.Execute(textEditor.Text);
                  }*/
-                if (currentdll == "Selected API : EasyExploits API")
+                else if (currentdll == "Selected API : EasyExploits API")
                 {
                     try
                     {
@@ -280,16 +289,16 @@ namespace MainDab
                         MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
                     }
                 }
-                if (currentdll == "Selected API : Arch API")
+                else if (currentdll == "Selected API : Anemo API")
                 {
-                    sexcheats.Execute(textEditor.Text);
+                    //sexcheats.ExecuteScript(textEditor.Text);
                 }
-                
-                if (currentdll == "Selected API : WeAreDevs")
+
+                else if (currentdll == "Selected API : WeAreDevs")
                 {
                     wrd.SendLuaScript(textEditor.Text);
                 }
-                if (currentdll == "Selected API : Custom")
+                else if (currentdll == "Selected API : Custom")
                 {
                     try
                     {
@@ -301,10 +310,14 @@ namespace MainDab
                     }
 
                 }
+                else
+                {
+                    MessageBox.Show("You must inject (click the syringe icon) before executing a script!");
+                }
             }
             else
             {
-                MessageBox.Show("Roblox isn't opened, please open Roblox before injecting!");
+                MessageBox.Show("You must open Roblox and inject before attempting to run the script!");
             }
         } // Execute
         private void textEditor_Loaded(object sender, RoutedEventArgs e)
@@ -860,7 +873,7 @@ namespace MainDab
             }
             if (currentdll == "Selected API : Arch API")
             {
-               sexcheats.Execute(scriptseggx);
+               //sexcheats.ExecuteScript(scriptseggx);
             }
             if (currentdll == "Selected API : WeAreDevs")
             {
@@ -927,16 +940,22 @@ namespace MainDab
         }
 
         private void label6_Loaded(object sender, RoutedEventArgs e)
-        {
-          
-            
+        {  
              RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\MainDabData");
              if (key != null)
              {
                  string apishouldbe = (key.GetValue("DLL").ToString());
                  SelectedAPILabel.Content = apishouldbe;
                  currentdll = apishouldbe;
-             }
+                if (currentdll != "Selected API : EasyExploits API" || currentdll != "Selected API : WeAreDevs")
+                {
+                    currentdll = "Selected API : EasyExploits API";
+                    SelectedAPILabel.Content = "Selected API : EasyExploits API";
+                    RegistryKey pussy = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
+                    pussy.SetValue("DLL", "Selected API : EasyExploits API");
+                    pussy.Close();
+                }
+            }
             RegistryKey maindabtheme = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\MainDabTheme");
             if (maindabtheme != null)
             {
@@ -1202,10 +1221,10 @@ namespace MainDab
         }
         private void Shado(object sender, RoutedEventArgs e)
         {
-            currentdll = "Selected API : Arch API";
-            SelectedAPILabel.Content = "Selected API : Arch API";
+            currentdll = "Selected API : Anemo API";
+            SelectedAPILabel.Content = "Selected API : Anemo API";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
-            key.SetValue("DLL", "Selected API : Arch API");
+            key.SetValue("DLL", "Selected API : Anemo API");
             key.Close();
         }
 
@@ -1374,14 +1393,15 @@ namespace MainDab
                 {
                     ezclap.ExecuteScript(sexhub);
                 }
-                if (currentdll == "Selected API : Arch API")
+                if (currentdll == "Selected API : Anemo API")
                 {
-                   sexcheats.Execute(sexhub);
+                  // sexcheats.ExecuteScript(sexhub);
                 }
                 else
                 {
-                    MessageBox.Show("The current API you have selected does NOT support SniffHub.\n\nPlease use/switch to Arch API or EasyExploits API if you wish to use SniffHub!");
+                    MessageBox.Show("Please use either EasyExploits API or Arch API. You can change the DLL by clicking 'Select DLL'.");
                 }
+               
             }
             else
             {

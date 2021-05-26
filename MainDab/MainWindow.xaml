@@ -686,15 +686,13 @@
                 </MenuItem>
                 <MenuItem x:Name="SelectMenu" Header="Select DLL" Height="21" Width="68" Foreground="White" BorderThickness="0">
                     <MenuItem x:Name="DLL2" Header="EasyExploits API" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_8" Margin="-25,0,-8,0"/>
-                    <MenuItem x:Name="DLL3" Header="Arch API" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Margin="-25,0,-8,0" Click="Shado"/>
                     <MenuItem x:Name="DLL4" Header="WeAreDevs" HorizontalAlignment="Left" Height="21" Width="233" Background="#FF2D2D2D" BorderThickness="0" Click="WeAreSkids" Margin="-25,0,-68,0"/>
-                    <MenuItem x:Name="DLL4_Copy1" Header="MainDab LBI" HorizontalAlignment="Left" Height="20" Width="233" Background="#FF2D2D2D" BorderThickness="0" Click="BMLBI" Margin="-25,0,-68,0"/>
                     <MenuItem x:Name="DLL3_Copy" Header="Custom DLL" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Margin="-25,0,-8,0" Click="MenuItem_Click_22"/>
 
                 </MenuItem>
                 <MenuItem x:Name="HelpMenu" Header="Help" Height="21" Width="37" Foreground="White" BorderThickness="0">
                     <MenuItem x:Name="JoinDiscord" Header="Get support (Discord)" HorizontalAlignment="Left" Height="22" Width="239" Click="NEIn" Background="#FF2D2D2D" BorderThickness="0" Margin="-28,0,-71,0"/>
-                    <MenuItem x:Name="Credits" Header="Credits&#xA;" HorizontalAlignment="Left" Height="18" Width="178" Background="#FF2D2D2D" BorderThickness="0" Margin="-27,0,-11,0"  Click="MenuItem_Click_23"/>
+                    <MenuItem x:Name="Credits" Header="Credits&#xA;" HorizontalAlignment="Left" Height="21" Width="178" Background="#FF2D2D2D" BorderThickness="0" Margin="-27,0,-11,0"  Click="MenuItem_Click_23"/>
                 </MenuItem>
                 <MenuItem x:Name="ExtensionsMenu_Copy1" Header="Sniff Hub" Height="21" Width="58" Foreground="White" BorderThickness="0" Click="SniffHub" Background="Transparent" RenderTransformOrigin="0.5,0.5">
                     <MenuItem.RenderTransform>
@@ -758,7 +756,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Label x:Name="SelectedAPILabel" Content="Selected API : Arch API" HorizontalAlignment="Left" Margin="3.167,14.333,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="211.11" FontSize="10" Grid.Column="2" Grid.ColumnSpan="4" Loaded="label6_Loaded" HorizontalContentAlignment="Right" FontFamily="Consolas" UseLayoutRounding="False" Grid.RowSpan="3"/>
+            <Label x:Name="SelectedAPILabel" Content="Selected API : EasyExploits API" HorizontalAlignment="Left" Margin="3.167,14.333,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="211.11" FontSize="10" Grid.Column="2" Grid.ColumnSpan="4" Loaded="label6_Loaded" HorizontalContentAlignment="Right" FontFamily="Consolas" UseLayoutRounding="False" Grid.RowSpan="3"/>
             <Image x:Name="ExecuteButton" HorizontalAlignment="Left" Height="39" Margin="1,12,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.13,0.354" Source="nigge.png" Stretch="Fill" MouseDown="Image_MouseDown_1" UseLayoutRounding="False">
                 <Image.RenderTransform>
                     <TransformGroup>

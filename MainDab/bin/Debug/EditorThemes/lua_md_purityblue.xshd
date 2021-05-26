@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<SyntaxDefinition name="Lua" extensions=".lua" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+	<!-- Comments left, leave alone -->
+	<Color name="Comment" foreground="#69676c" />
+	
+	<!-- String text colour, text colour for thsi should be lighter than keywords -->
+	<Color name="String" foreground="#00f2ff" />
+	
+	<!-- Foreground and stuff, should be kept same for punct as well -->
+	<Color name="Foreground" foreground="#00c3ff" />
+	<Color name="Punctuation" foreground="#00c3ff" />
+
+	<!-- Function call, colour should be main colour theme -->
+	<Color name="MethodCall" foreground="#00eeff" fontWeight="bold"/>
+	
+	<!-- No fucking idea what this is but eh, should be same as main -->
+	<Color name="Literals" foreground="#00eeff"/>
+
+	<!-- No fucking idea what this is, colour should be same as main colour -->
+	<Color name="Keywords" fontWeight="bold" foreground="#00eeff" />
+	
+	<!-- No fucking idea what this, leave this alone -->
+	<Color name="Escapes" foreground="#948ae3" />
+
+	<RuleSet>
+		<!-- Mark previous rule-->
+		<Rule color="MethodCall">
+			\b
+			[\d\w_]+	# an identifier
+			(?=\s*\() # followed by (
+		</Rule>
+		<Rule color="MethodCall">
+			\b
+			[\d\w_]+	# an identifier
+			(?=\s*\{) # followed by {
+		</Rule>
+
+		<Rule color="Punctuation">
+			[\)\(*\&amp;\^\%\$\#@!\\\]\[;':",./&lt;&gt;?\{\}\|\-\=\+]+
+		</Rule>
+
+		<Span color="Comment" multiline="true">
+			<Begin>--\[[=]*\[</Begin>
+			<End>\][=]*\]</End>
+		</Span>
+
+		<Span color="Comment">
+			<Begin>--</Begin>
+		</Span>
+
+		<Span color="String">
+			<Begin color="Foreground">"</Begin>
+			<End color="Foreground">"</End>
+			<RuleSet>
+				<Rule color="Escapes">\\\d{1,3}|\\.</Rule>
+			</RuleSet>
+		</Span>
+
+		<Span color="String">
+			<Begin color="Foreground">'</Begin>
+			<End color="Foreground">'</End>
+			<RuleSet>
+				<Rule color="Escapes">\\\d\d?\d?|\\.</Rule>
+			</RuleSet>
+		</Span>
+
+		<Span color="String" multiline="true">
+			<Begin color="Foreground">\[[=]*\[</Begin>
+			<End color="Foreground">\][=]*]</End>
+		</Span>
+
+		<Keywords color="Literals">
+			<Word>true</Word>
+			<Word>false</Word>
+		</Keywords>
+
+		<Keywords color="Keywords">
+			<Word>and</Word>
+			<Word>break</Word>
+			<Word>do</Word>
+			<Word>else</Word>
+			<Word>elseif</Word>
+			<Word>end</Word>
+			<Word>false</Word>
+			<Word>for</Word>
+			<Word>function</Word>
+			<Word>if</Word>
+			<Word>in</Word>
+			<Word>local</Word>
+			<Word>not</Word>
+			<Word>or</Word>
+			<Word>repeat</Word>
+			<Word>return</Word>
+			<Word>then</Word>
+			<Word>true</Word>
+			<Word>until</Word>
+			<Word>while</Word>
+			<Word>sex</Word>
+		</Keywords>
+
+		<Keywords color="Literals">
+			<Word>nil</Word>
+      <Word>Pussy</Word>
+      <Word>pussy</Word>
+		</Keywords>
+
+		<!-- Digits -->
+		<Rule color="Literals">
+			\b0[xX][0-9a-fA-F]+	# hex number
+			|
+			(	\b\d+(\.[0-9]+)?	 #number with optional floating point
+			|	\.[0-9]+			 #or just starting with floating point
+			)
+			([eE][+-]?[0-9]+)? # optional exponent
+		</Rule>
+	</RuleSet>
+</SyntaxDefinition>

@@ -78,3 +78,4 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\PastebinAPIs.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\PastebinAPIs.dll.config
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\ArchAPI.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.Form1.resources
+C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csprojAssemblyReference.cache
