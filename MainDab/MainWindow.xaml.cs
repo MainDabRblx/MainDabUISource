@@ -46,7 +46,7 @@ namespace MainDab
 
     public partial class MainWindow : Window
     {
-        string currentver = "MainDab V.12.4"; // current version
+        string currentver = "MainDab V.12.5"; // current version
         string listboxopenornot = "false"; // listbox
         WebClient HITLER = new WebClient(); // hitler moment :D
         private DiscordRpcClient client; // discordsexual 
@@ -138,25 +138,32 @@ namespace MainDab
                 {
                    WebClient webClient = new WebClient();
                    Functions.exploitdllname = "MainDab.dll";
-                   NamedPipes.luapipename = "MainDab";
+                   NamedPipes.luapipename = "uwuLBIPipe";
                     new Thread(() =>
                     {
-                        Thread.CurrentThread.IsBackground = true;
-
-                        this.Dispatcher.Invoke(() =>
+                        if (NamedPipes.NamedPipeExist("uwuLBIPipe"))
                         {
-                            TopBar.Content = "MainDab | Updating MainDab LBI";
-                        });
-                        if (File.Exists("MainDab.dll"))
-                        {
-                            File.Delete("MainDab.dll");
+                            MessageBox.Show("MainDab LBI already injected!", "MainDab");
                         }
-                        webClient.DownloadFile("https://github.com/MainDabRblx/ProjectDab/blob/master/MainDab.dll?raw=true", "MainDab.dll");
-                        this.Dispatcher.Invoke(() =>
+                        else
                         {
-                            TopBar.Content = "MainDab";
-                        });
-                        Functions.Inject();
+                            Thread.CurrentThread.IsBackground = true;
+
+                            this.Dispatcher.Invoke(() =>
+                            {
+                                TopBar.Content = "MainDab | Updating MainDab LBI";
+                            });
+                            if (File.Exists("MainDab.dll"))
+                            {
+                                File.Delete("MainDab.dll");
+                            }
+                            webClient.DownloadFile("https://github.com/deaddlocust/Cyrup-Files/raw/main/MainDab.dll", "MainDab.dll");
+                            this.Dispatcher.Invoke(() =>
+                            {
+                                TopBar.Content = "MainDab";
+                            });
+                            Functions.Inject();
+                        }
                   
                     }).Start();
 
@@ -234,29 +241,13 @@ namespace MainDab
             }
             else
             {
-                MessageBox.Show("Please reselect your DLL by clicking 'Select DLL', as your current choice is invalid.");
+                MessageBox.Show("Please open ROBLOX before injecting!", "MainDab");
             }
 
 
         }
         private void Execute()
         {
-            if (currentdll == "Selected API : Custom")
-            {
-                try
-                {
-                    NamedPipes.LuaPipe(textEditor.Text);
-                }
-                catch (Exception sexual)
-                {
-                    MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
-                }
-
-            }
-            else if (currentdll == "Selected API : Anemo API")
-            {
-               // sexcheats.ExecuteScript(textEditor.Text);
-            }
             Process[] pname = Process.GetProcessesByName("RobloxPlayerBeta");
             if (pname.Length > 0)
             {
@@ -871,9 +862,9 @@ namespace MainDab
             {
                 ezclap.ExecuteScript(scriptseggx);
             }
-            if (currentdll == "Selected API : Arch API")
+            if (currentdll == "Selected API : MainDab LBI")
             {
-               //sexcheats.ExecuteScript(scriptseggx);
+                NamedPipes.LuaPipe(scriptseggx);
             }
             if (currentdll == "Selected API : WeAreDevs")
             {
@@ -947,14 +938,7 @@ namespace MainDab
                  string apishouldbe = (key.GetValue("DLL").ToString());
                  SelectedAPILabel.Content = apishouldbe;
                  currentdll = apishouldbe;
-                if (currentdll != "Selected API : EasyExploits API" || currentdll != "Selected API : WeAreDevs")
-                {
-                    currentdll = "Selected API : EasyExploits API";
-                    SelectedAPILabel.Content = "Selected API : EasyExploits API";
-                    RegistryKey pussy = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
-                    pussy.SetValue("DLL", "Selected API : EasyExploits API");
-                    pussy.Close();
-                }
+               
             }
             RegistryKey maindabtheme = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\MainDabTheme");
             if (maindabtheme != null)
@@ -1593,6 +1577,15 @@ namespace MainDab
                     TopBar.Content = "MainDab";
                 });
             }).Start();*/
+        }
+
+        private void MDLBI(object sender, RoutedEventArgs e)
+        {
+            currentdll = "Selected API : MainDab LBI";
+            SelectedAPILabel.Content = "Selected API : MainDab LBI";
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
+            key.SetValue("DLL", "Selected API : MainDab LBI");
+            key.Close();
         }
     }
 

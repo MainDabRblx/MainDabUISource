@@ -686,6 +686,7 @@
                 </MenuItem>
                 <MenuItem x:Name="SelectMenu" Header="Select DLL" Height="21" Width="68" Foreground="White" BorderThickness="0">
                     <MenuItem x:Name="DLL2" Header="EasyExploits API" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_8" Margin="-25,0,-8,0"/>
+                    <MenuItem x:Name="DLL2_Copy" Header="MainDab LBI" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Click="MDLBI" Margin="-25,0,-8,0"/>
                     <MenuItem x:Name="DLL4" Header="WeAreDevs" HorizontalAlignment="Left" Height="21" Width="233" Background="#FF2D2D2D" BorderThickness="0" Click="WeAreSkids" Margin="-25,0,-68,0"/>
                     <MenuItem x:Name="DLL3_Copy" Header="Custom DLL" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Margin="-25,0,-8,0" Click="MenuItem_Click_22"/>
 
@@ -772,11 +773,15 @@
             <Image HorizontalAlignment="Right" Height="22" Margin="0,17.333,72.667,0" VerticalAlignment="Top" Width="21" RenderTransformOrigin="0.13,0.354" Source="syringe.png" Stretch="Fill" Grid.Row="3" MouseDown="Image_MouseDown_3" UseLayoutRounding="False"/>
             <Image HorizontalAlignment="Left" Height="22" Margin="11,47.333,0,0" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.13,0.354" Source="web-programming.png" Stretch="Fill" Grid.Row="3" MouseDown="schub" UseLayoutRounding="False"/>
             <Grid x:Name="ScriptHub" Grid.Column="6" HorizontalAlignment="Left" Height="161" Margin="7,-13,-222.333,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="222" Background="#FF232323" Loaded="ScriptHub_Loaded" UseLayoutRounding="False" >
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="22*"/>
+                </Grid.RowDefinitions>
 
-                <Ellipse Fill="#FFC30000" HorizontalAlignment="Left" Height="14" Margin="206,3,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" StrokeThickness="0" MouseDown="Ellipse_MouseDown" KeyDown="Ellipse_KeyDown"/>
-                <Label Content="Script Hub" HorizontalAlignment="Left" Height="37" Margin="0,-1,0,0" VerticalAlignment="Top" Width="103" Foreground="White"/>
-                <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="130" Margin="8,24,0,0" VerticalAlignment="Top" Width="109" Background="#FF2D2D2D" BorderThickness="0" KeyDown="ListBox_KeyDown" MouseDown="listbox_MouseDown" SelectionChanged="listbox_SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Foreground="White"/>
-                <RichTextBox x:Name="richfuckbox" HorizontalAlignment="Left" Height="103" Margin="122,24,0,0" VerticalAlignment="Top" Width="90" BorderThickness="0" Foreground="White" Background="#FF2D2D2D" IsReadOnly="True">
+                <Ellipse Fill="#FFFF0505" HorizontalAlignment="Left" Height="14" Margin="206,3,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" StrokeThickness="0" MouseDown="Ellipse_MouseDown" KeyDown="Ellipse_KeyDown" Grid.RowSpan="2"/>
+                <Label Content="Script Hub" HorizontalAlignment="Left" Height="37" Margin="0,-1,0,0" VerticalAlignment="Top" Width="103" Foreground="White" Grid.RowSpan="2"/>
+                <ListBox x:Name="listbox" HorizontalAlignment="Left" Height="130" Margin="8,17.333,0,0" VerticalAlignment="Top" Width="109" Background="#FF2D2D2D" BorderThickness="0" KeyDown="ListBox_KeyDown" MouseDown="listbox_MouseDown" SelectionChanged="listbox_SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Foreground="White" Grid.Row="1"/>
+                <RichTextBox x:Name="richfuckbox" HorizontalAlignment="Left" Height="103" Margin="122,17.333,0,0" VerticalAlignment="Top" Width="90" BorderThickness="0" Foreground="White" Background="#FF2D2D2D" IsReadOnly="True" Grid.Row="1">
                     <FlowDocument>
                         <Paragraph>
                             <Run Text="Script Description goes here."/>
@@ -786,7 +791,7 @@
                         </Paragraph>
                     </FlowDocument>
                 </RichTextBox>
-                <Button Content="Execute" HorizontalAlignment="Left" Height="22" Margin="122,132,0,0" VerticalAlignment="Top" Width="90" Background="#FF2D2D2D" Foreground="White" BorderThickness="0" Click="Button_Click_2" ManipulationStarting="Button_ManipulationStarting"/>
+                <Button Content="Execute" HorizontalAlignment="Left" Height="22" Margin="122,125.333,0,0" VerticalAlignment="Top" Width="90" Background="#FF2D2D2D" Foreground="White" BorderThickness="0" Click="Button_Click_2" ManipulationStarting="Button_ManipulationStarting" Grid.Row="1"/>
             </Grid>
             <WebBrowser x:Name="sex" Grid.Column="1" HorizontalAlignment="Left" Height="0" Margin="77,-14,0,0" VerticalAlignment="Top" Width="1" RenderTransformOrigin="0.5,0.5" Loaded="sex_Loaded" UseLayoutRounding="False">
                 <WebBrowser.RenderTransform>
@@ -800,7 +805,7 @@
             </WebBrowser>
             <Grid x:Name="custom" Grid.Column="6" HorizontalAlignment="Left" Height="100" Margin="7,63.333,-222.333,0" Grid.Row="3" VerticalAlignment="Top" Width="222" Background="#FF232323" Loaded="custom_Loaded" UseLayoutRounding="False" Grid.RowSpan="5">
                 <Label Content="Custom DLL Injection" VerticalAlignment="Top" RenderTransformOrigin="0.228,-0.103" Height="25" Margin="1,0,10,0" Foreground="White"/>
-                <Ellipse Fill="#FFC30000" HorizontalAlignment="Left" Height="15" Margin="205,3,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="15" MouseDown="Ellipse_MouseDown_1"/>
+                <Ellipse Fill="#FFFF0505" HorizontalAlignment="Left" Height="15" Margin="205,3,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="15" MouseDown="Ellipse_MouseDown_1"/>
                 <TextBox x:Name="Pipe" HorizontalAlignment="Left" Height="19" Margin="6,49,0,0" TextWrapping="Wrap" Text="DLL Pipe (EX. MainDab)" VerticalAlignment="Top" Width="206" Foreground="White" Background="#FF2D2D2D" BorderThickness="0" />
                 <TextBox x:Name="DLLNAME" HorizontalAlignment="Left" Height="19" Margin="6,26,0,0" TextWrapping="Wrap" Text="DLL Name (EX. MainDab.dll)" VerticalAlignment="Top" Width="206" Foreground="White" Background="#FF2D2D2D" BorderThickness="0" />
                 <Button Content="Apply" HorizontalAlignment="Left" Margin="68,73,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="Button_Click_3" Background="#FF2D2D2D" Foreground="White" BorderThickness="0"/>
