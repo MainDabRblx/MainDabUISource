@@ -128,6 +128,9 @@
     <Compile Include="Classes\EasyExploitsAPI\DLLInjection.cs" />
     <Compile Include="Classes\EasyExploitsAPI\Module.cs" />
     <Compile Include="Classes\RevenantAPI\RevenantAPI.cs" />
+    <Compile Include="Classes\ShadowCheatsAPI\Globals.cs" />
+    <Compile Include="Classes\ShadowCheatsAPI\Module.cs" />
+    <Compile Include="Classes\ShadowCheatsAPI\Pipes.cs" />
     <Compile Include="Classes\WeAreDevsAPI\ExploitAPI.cs" />
     <Compile Include="Credits.cs">
       <SubType>Form</SubType>
@@ -283,6 +286,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-play-button-circled-96.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

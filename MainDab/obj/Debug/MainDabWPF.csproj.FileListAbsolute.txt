@@ -68,14 +68,10 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.xml
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\WPF.Bootstrap.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.Credits.resources
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\Giselle.Commons.dll
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\HtmlAgilityPack.dll
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\PastebinAPIs.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\Giselle.Commons.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\HtmlAgilityPack.xml
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\PastebinAPIs.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\PastebinAPIs.dll.config
-C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\ArchAPI.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.Form1.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csprojAssemblyReference.cache

@@ -39,23 +39,24 @@ using System.Runtime.InteropServices;
 using System.Net.Http;
 using System.Collections.Generic;
 using PastebinAPIs;
-using ArchAPI;
+
 
 namespace MainDab
 {
 
     public partial class MainWindow : Window
     {
-        string currentver = "MainDab V.12.5"; // current version
+        string currentver = "MainDab V.12.7"; // current version
         string listboxopenornot = "false"; // listbox
         WebClient HITLER = new WebClient(); // hitler moment :D
         private DiscordRpcClient client; // discordsexual 
         private readonly Classes.EasyExploitsAPI.Module ezclap = new Classes.EasyExploitsAPI.Module(); // EasyExploits API
         private readonly Classes.WeAreDevsAPI.ExploitAPI wrd = new Classes.WeAreDevsAPI.ExploitAPI(); // WeAreDevs API
-      //  private readonly AnemoAPI.Anemo sexcheats = new AnemoAPI.Anemo();  // Converted to Arch from ShadowCheats
+        private readonly Classes.ShadowCheatsAPI.Module shadowcheats = new Classes.ShadowCheatsAPI.Module();
+        //  private readonly AnemoAPI.Anemo sexcheats = new AnemoAPI.Anemo();  // Converted to Arch from ShadowCheats
         string currentdll = "Selected API : EasyExploits API"; // by default...
         private readonly BackgroundWorker worker = new BackgroundWorker();
-        [DllImport("kernel32.dll")]
+        [DllImport("kernel32.dll")] // just grabbed this off uhhhhhhhhhhhhhhhhh
         static extern IntPtr GetConsoleWindow();
 
         [DllImport("user32.dll")]
@@ -133,9 +134,34 @@ namespace MainDab
                     });
                 }).Start();
             }
+                if (currentdll == "Selected API : ShadowCheats API")
+                {
 
+                    shadowcheats.Attach();
+                    new Thread(() =>
+                    {
+                        Thread.CurrentThread.IsBackground = true;
+
+                        this.Dispatcher.Invoke(() =>
+                        {
+                            TopBar.Content = "MainDab | Injecting ShadowCheats API...";
+
+                        });
+                        Thread.Sleep(6000);
+                        this.Dispatcher.Invoke(() =>
+                        {
+                            TopBar.Content = "MainDab | ShadowCheats API Injected!";
+                        });
+                        Thread.Sleep(1000);
+                        this.Dispatcher.Invoke(() =>
+                        {
+                            TopBar.Content = "MainDab";
+                        });
+                    }).Start();
+                }
                 if (currentdll == "Selected API : MainDab LBI")
                 {
+               
                    WebClient webClient = new WebClient();
                    Functions.exploitdllname = "MainDab.dll";
                    NamedPipes.luapipename = "uwuLBIPipe";
@@ -166,6 +192,7 @@ namespace MainDab
                         }
                   
                     }).Start();
+
 
                 }
 
@@ -288,6 +315,10 @@ namespace MainDab
                 else if (currentdll == "Selected API : WeAreDevs")
                 {
                     wrd.SendLuaScript(textEditor.Text);
+                }
+                else if (currentdll == "Selected API : ShadowCheats API")
+                {
+                    shadowcheats.ExecuteScript(textEditor.Text);
                 }
                 else if (currentdll == "Selected API : Custom")
                 {
@@ -932,6 +963,10 @@ namespace MainDab
 
         private void label6_Loaded(object sender, RoutedEventArgs e)
         {  
+              if (File.Exists("ArchAPI.dll"))
+             {
+                File.Delete("ArchAPI.dll");
+             }
              RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\MainDabData");
              if (key != null)
              {
@@ -1585,6 +1620,21 @@ namespace MainDab
             SelectedAPILabel.Content = "Selected API : MainDab LBI";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
             key.SetValue("DLL", "Selected API : MainDab LBI");
+            key.Close();
+        }
+
+        private void GetVersionOwO(object sender, RoutedEventArgs e)
+        {
+      
+            
+        }
+
+        private void ShadowCheats(object sender, RoutedEventArgs e)
+        {
+            currentdll = "Selected API : ShadowCheats API";
+            SelectedAPILabel.Content = "Selected API : ShadowCheats API";
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
+            key.SetValue("DLL", "Selected API : ShadowCheats API");
             key.Close();
         }
     }

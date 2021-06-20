@@ -687,6 +687,7 @@
                 <MenuItem x:Name="SelectMenu" Header="Select DLL" Height="21" Width="68" Foreground="White" BorderThickness="0">
                     <MenuItem x:Name="DLL2" Header="EasyExploits API" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_8" Margin="-25,0,-8,0"/>
                     <MenuItem x:Name="DLL2_Copy" Header="MainDab LBI" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Click="MDLBI" Margin="-25,0,-8,0"/>
+                    <MenuItem x:Name="DLL2_Copy1" Header="ShadowCheats API" HorizontalAlignment="Left" Height="20" Width="243" Background="#FF2D2D2D" BorderThickness="0" Click="ShadowCheats" Margin="-25,0,-78,0"/>
                     <MenuItem x:Name="DLL4" Header="WeAreDevs" HorizontalAlignment="Left" Height="21" Width="233" Background="#FF2D2D2D" BorderThickness="0" Click="WeAreSkids" Margin="-25,0,-68,0"/>
                     <MenuItem x:Name="DLL3_Copy" Header="Custom DLL" HorizontalAlignment="Left" Height="20" Width="173" Background="#FF2D2D2D" BorderThickness="0" Margin="-25,0,-8,0" Click="MenuItem_Click_22"/>
 
@@ -758,7 +759,7 @@
                 </Button.RenderTransform>
             </Button>
             <Label x:Name="SelectedAPILabel" Content="Selected API : EasyExploits API" HorizontalAlignment="Left" Margin="3.167,14.333,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="211.11" FontSize="10" Grid.Column="2" Grid.ColumnSpan="4" Loaded="label6_Loaded" HorizontalContentAlignment="Right" FontFamily="Consolas" UseLayoutRounding="False" Grid.RowSpan="3"/>
-            <Image x:Name="ExecuteButton" HorizontalAlignment="Left" Height="39" Margin="1,12,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.13,0.354" Source="nigge.png" Stretch="Fill" MouseDown="Image_MouseDown_1" UseLayoutRounding="False">
+            <Image x:Name="ExecuteButton" HorizontalAlignment="Left" Height="39" Margin="0,12,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.13,0.354" Source="nigge.png" Stretch="Fill" MouseDown="Image_MouseDown_1" UseLayoutRounding="False">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -769,9 +770,9 @@
                 </Image.RenderTransform>
             </Image>
             <Image HorizontalAlignment="Left" Height="20" Margin="12,51,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.13,0.354" Source="delete.png" Stretch="Fill" MouseDown="Image_MouseDown" UseLayoutRounding="False"/>
-            <Image HorizontalAlignment="Left" Height="21" Margin="12,81,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.13,0.354" Source="folder.png" Stretch="Fill" Grid.Row="2" MouseDown="Image_MouseDown_2" Grid.RowSpan="2" UseLayoutRounding="False"/>
-            <Image HorizontalAlignment="Right" Height="22" Margin="0,17.333,72.667,0" VerticalAlignment="Top" Width="21" RenderTransformOrigin="0.13,0.354" Source="syringe.png" Stretch="Fill" Grid.Row="3" MouseDown="Image_MouseDown_3" UseLayoutRounding="False"/>
-            <Image HorizontalAlignment="Left" Height="22" Margin="11,47.333,0,0" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.13,0.354" Source="web-programming.png" Stretch="Fill" Grid.Row="3" MouseDown="schub" UseLayoutRounding="False"/>
+            <Image HorizontalAlignment="Left" Height="21" Margin="12,83,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.13,0.354" Source="folder.png" Stretch="Fill" Grid.Row="2" MouseDown="Image_MouseDown_2" Grid.RowSpan="2" UseLayoutRounding="False"/>
+            <Image HorizontalAlignment="Right" Height="22" Margin="0,18.333,72.667,0" VerticalAlignment="Top" Width="21" RenderTransformOrigin="0.13,0.354" Source="syringe.png" Stretch="Fill" Grid.Row="3" MouseDown="Image_MouseDown_3" UseLayoutRounding="False"/>
+            <Image HorizontalAlignment="Left" Height="22" Margin="10,50.333,0,0" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.13,0.354" Source="web-programming.png" Stretch="Fill" Grid.Row="3" MouseDown="schub" UseLayoutRounding="False"/>
             <Grid x:Name="ScriptHub" Grid.Column="6" HorizontalAlignment="Left" Height="161" Margin="7,-13,-222.333,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="222" Background="#FF232323" Loaded="ScriptHub_Loaded" UseLayoutRounding="False" >
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -811,7 +812,7 @@
                 <Button Content="Apply" HorizontalAlignment="Left" Margin="68,73,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="Button_Click_3" Background="#FF2D2D2D" Foreground="White" BorderThickness="0"/>
             </Grid>
             <DockPanel HorizontalAlignment="Left" Height="100" LastChildFill="False" Grid.RowSpan="4" VerticalAlignment="Top" Width="100" UseLayoutRounding="False"/>
-            <Image HorizontalAlignment="Left" Height="22" Margin="11,78.333,0,0" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.13,0.354" Source="IconRoblox.png" Stretch="Fill" Grid.Row="3" MouseDown="killroblox" UseLayoutRounding="False"/>
+            <Image HorizontalAlignment="Left" Height="22" Margin="11,82.333,0,0" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.13,0.354" Source="IconRoblox.png" Stretch="Fill" Grid.Row="3" MouseDown="killroblox" UseLayoutRounding="False"/>
             <Label x:Name="SyntaxLabel" Content="No errors found." HorizontalAlignment="Left" Margin="0,13.583,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="313" FontSize="10" Loaded="label6_Loaded" FontFamily="Consolas" FontStretch="UltraCondensed" FontWeight="Medium" Grid.ColumnSpan="2" UseLayoutRounding="False" Grid.RowSpan="3"/>
             <Image x:Name="ExecuteButton_Copy" HorizontalAlignment="Left" Height="19" Margin="3,112.333,0,0" VerticalAlignment="Top" Width="19" RenderTransformOrigin="0.13,0.354" Source="Discord-Logo-White.png" Stretch="Fill" MouseDown="joinmein" Grid.Row="3" UseLayoutRounding="False" Grid.RowSpan="3">
                 <Image.RenderTransform>
@@ -833,7 +834,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Label x:Name="SelectedAPILabel_Copy" Content="Using MainDab V12 | MainDab by Main__EX#3898" HorizontalAlignment="Left" Margin="-14,25.583,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="119" FontSize="4" HorizontalContentAlignment="Right" FontFamily="Consolas" UseLayoutRounding="False" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+            <Label x:Name="SelectedAPILabel_Copy" Content="Using MainDab V12 | MainDab by Main__EX#3898" HorizontalAlignment="Left" Margin="-14,25.583,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="119" FontSize="4" HorizontalContentAlignment="Right" FontFamily="Consolas" UseLayoutRounding="False" Grid.ColumnSpan="2" Grid.RowSpan="3" Loaded="GetVersionOwO"/>
             <Label x:Name="SelectedAPILabel_Copy1" Content="" HorizontalAlignment="Left" Margin="0.333,28.333,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="119" FontSize="4" Loaded="label6_Loaded" HorizontalContentAlignment="Right" FontFamily="Consolas" Grid.ColumnSpan="3" Grid.Column="3" UseLayoutRounding="False" Grid.RowSpan="3"/>
             <Image x:Name="ExecuteButton_Copy2" HorizontalAlignment="Left" Height="15" Margin="35,18,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="0.13,0.354" Source="list.png" Stretch="Fill" MouseDown="visiornot" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="3" UseLayoutRounding="False">
                 <Image.RenderTransform>
