@@ -7,4 +7,4 @@ C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\obj\Debug\MainDabExtensions.
 C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\obj\Debug\MainDabExtensions.csproj.CoreCompileInputs.cache
 C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\obj\Debug\MainDabExtensions.exe
 C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\obj\Debug\MainDabExtensions.pdb
-C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\obj\Debug\MainDabExtensions.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDabExtensions\obj\Debug\MainDabExtensions.csproj.AssemblyReference.cache

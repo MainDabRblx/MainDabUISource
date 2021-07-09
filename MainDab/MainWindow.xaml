@@ -458,11 +458,11 @@
                                     VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
                                 <Button
                                     x:Name="CloseButton"
-                                    Margin="-3 3 3 3"
+                                    Margin="-3 4 3 3"
                                     Padding="0"
                                     Height="13"
                                     Width="13"
-                                    Style="{DynamicResource SystemButton}">
+                                    Style="{DynamicResource ButtonStyle2}" Background="Transparent" BorderBrush="Transparent">
                                     <Grid>
                                         <Path
                                             Stroke="#FFFFFFFF"
@@ -573,19 +573,341 @@
                                         Margin="0 2 0 0" />
                                     <Button
                                         x:Name="AddTabButton"
-                                        Width="15"
-                                        Height="15"
-                                        Margin="4"
+                                        Width="12"
+                                        Height="12"
+                                        Margin="3 3 4 .67"
                                         Padding="0"
-                                        Style="{DynamicResource SystemButton}">
+                                        Style="{DynamicResource ButtonStyle2}" Background="Transparent" BorderBrush="Transparent" FontSize="9" FontStretch="Condensed">
                                         <Grid>
                                             <Path
                                                 Stroke="#FFFFFFFF"
-                                                StrokeThickness="1"
+                                                StrokeThickness=".7"
                                                 Data="M0,4.5 L9,4.5" />
                                             <Path
                                                 Stroke="#FFFFFFFF"
-                                                StrokeThickness="1"
+                                                StrokeThickness=".7"
+                                                Data="M4.5,0 L4.5,9" />
+                                        </Grid>
+                                    </Button>
+                                </StackPanel>
+                            </ScrollViewer>
+                            <Border
+                                x:Name="contentPanel"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}"
+                                Grid.Column="0"
+                                KeyboardNavigation.DirectionalNavigation="Contained"
+                                Grid.Row="1"
+                                KeyboardNavigation.TabIndex="2"
+                                KeyboardNavigation.TabNavigation="Local">
+                                <ContentPresenter
+                                    x:Name="PART_SelectedContentHost"
+                                    ContentSource="SelectedContent"
+                                    Margin="{TemplateBinding Padding}"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style
+            TargetType="{x:Type Button}"
+            x:Key="SystemButton2">
+            <Setter
+                Property="FocusVisualStyle"
+                Value="{x:Null}" />
+            <Setter
+                Property="Background"
+                Value="#111111" />
+            <Setter
+                Property="Foreground"
+                Value="#FFFFFFFF" />
+            <Setter
+                Property="BorderThickness"
+                Value="1" />
+            <Setter
+                Property="HorizontalContentAlignment"
+                Value="Center" />
+            <Setter
+                Property="VerticalContentAlignment"
+                Value="Center" />
+            <Setter
+                Property="Padding"
+                Value="6 1" />
+            <Setter
+                Property="Template">
+                <Setter.Value>
+                    <ControlTemplate
+                        TargetType="{x:Type Button}">
+                        <Border
+                            x:Name="border"
+                            Background="#111111"
+                            SnapsToDevicePixels="True"
+                            CornerRadius="6">
+                            <ContentPresenter
+                                x:Name="ContentPres"
+                                Focusable="False"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                Margin="{TemplateBinding Padding}"
+                                RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger
+                                Property="IsMouseOver"
+                                Value="True">
+                                <Setter
+                                    TargetName="border"
+                                    Property="Background"
+                                    Value="#181818" />
+                            </Trigger>
+                            <Trigger
+                                Property="IsPressed"
+                                Value="True">
+                                <Setter
+                                    TargetName="border"
+                                    Property="Background"
+                                    Value="#101010" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style
+            TargetType="{x:Type TabControl}"
+            x:Key="Tabs3">
+            <Setter
+                Property="Padding"
+                Value="2" />
+            <Setter
+                Property="HorizontalContentAlignment"
+                Value="Center" />
+            <Setter
+                Property="VerticalContentAlignment"
+                Value="Center" />
+            <Setter
+                Property="BorderThickness"
+                Value="0" />
+            <Setter
+                Property="Template">
+                <Setter.Value>
+                    <ControlTemplate
+                        TargetType="{x:Type TabControl}">
+                        <Grid
+                            x:Name="templateRoot"
+                            ClipToBounds="True"
+                            SnapsToDevicePixels="True"
+                            KeyboardNavigation.TabNavigation="Local">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    x:Name="ColumnDefinition0" />
+                                <ColumnDefinition
+                                    x:Name="ColumnDefinition1"
+                                    Width="0" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    x:Name="RowDefinition0"
+                                    Height="Auto" />
+                                <RowDefinition
+                                    x:Name="RowDefinition1"
+                                    Height="*" />
+                            </Grid.RowDefinitions>
+                            <ScrollViewer
+                                x:Name="TabScrollViewer"
+                                VerticalScrollBarVisibility="Disabled"
+                                Background="#00FFFFFF"
+                                HorizontalScrollBarVisibility="Hidden"
+                                ClipToBounds="True">
+                                <StackPanel
+                                    Orientation="Horizontal">
+                                    <TabPanel
+                                        x:Name="headerPanel"
+                                        Background="#00FFFFFF"
+                                        IsItemsHost="True"
+                                        KeyboardNavigation.TabIndex="1"
+                                        Panel.ZIndex="1"
+                                        Margin="0 2 0 0" />
+                                    <Button
+                                        x:Name="AddTabButton"
+                                        Width="12"
+                                        Height="12"
+                                        Margin="3 3 4 .67"
+                                        Padding="0"
+                                        Style="{DynamicResource ButtonStyle2}" Background="Transparent" BorderBrush="Transparent" FontSize="9" FontStretch="Condensed">
+                                        <Grid>
+                                            <Path
+                                                Stroke="#FFFFFFFF"
+                                                StrokeThickness=".7"
+                                                Data="M0,4.5 L9,4.5" />
+                                            <Path
+                                                Stroke="#FFFFFFFF"
+                                                StrokeThickness=".7"
+                                                Data="M4.5,0 L4.5,9" />
+                                        </Grid>
+                                    </Button>
+                                </StackPanel>
+                            </ScrollViewer>
+                            <Border
+                                x:Name="contentPanel"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}"
+                                Grid.Column="0"
+                                KeyboardNavigation.DirectionalNavigation="Contained"
+                                Grid.Row="1"
+                                KeyboardNavigation.TabIndex="2"
+                                KeyboardNavigation.TabNavigation="Local">
+                                <ContentPresenter
+                                    x:Name="PART_SelectedContentHost"
+                                    ContentSource="SelectedContent"
+                                    Margin="{TemplateBinding Padding}"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style
+            TargetType="{x:Type Button}"
+            x:Key="SystemButton3">
+            <Setter
+                Property="FocusVisualStyle"
+                Value="{x:Null}" />
+            <Setter
+                Property="Background"
+                Value="#111111" />
+            <Setter
+                Property="Foreground"
+                Value="#FFFFFFFF" />
+            <Setter
+                Property="BorderThickness"
+                Value="1" />
+            <Setter
+                Property="HorizontalContentAlignment"
+                Value="Center" />
+            <Setter
+                Property="VerticalContentAlignment"
+                Value="Center" />
+            <Setter
+                Property="Padding"
+                Value="6 1" />
+            <Setter
+                Property="Template">
+                <Setter.Value>
+                    <ControlTemplate
+                        TargetType="{x:Type Button}">
+                        <Border
+                            x:Name="border"
+                            Background="#111111"
+                            SnapsToDevicePixels="True"
+                            CornerRadius="6">
+                            <ContentPresenter
+                                x:Name="ContentPres"
+                                Focusable="False"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                Margin="{TemplateBinding Padding}"
+                                RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger
+                                Property="IsMouseOver"
+                                Value="True">
+                                <Setter
+                                    TargetName="border"
+                                    Property="Background"
+                                    Value="#181818" />
+                            </Trigger>
+                            <Trigger
+                                Property="IsPressed"
+                                Value="True">
+                                <Setter
+                                    TargetName="border"
+                                    Property="Background"
+                                    Value="#101010" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style
+            TargetType="{x:Type TabControl}"
+            x:Key="Tabs4">
+            <Setter
+                Property="Padding"
+                Value="2" />
+            <Setter
+                Property="HorizontalContentAlignment"
+                Value="Center" />
+            <Setter
+                Property="VerticalContentAlignment"
+                Value="Center" />
+            <Setter
+                Property="BorderThickness"
+                Value="0" />
+            <Setter
+                Property="Template">
+                <Setter.Value>
+                    <ControlTemplate
+                        TargetType="{x:Type TabControl}">
+                        <Grid
+                            x:Name="templateRoot"
+                            ClipToBounds="True"
+                            SnapsToDevicePixels="True"
+                            KeyboardNavigation.TabNavigation="Local">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    x:Name="ColumnDefinition0" />
+                                <ColumnDefinition
+                                    x:Name="ColumnDefinition1"
+                                    Width="0" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    x:Name="RowDefinition0"
+                                    Height="Auto" />
+                                <RowDefinition
+                                    x:Name="RowDefinition1"
+                                    Height="*" />
+                            </Grid.RowDefinitions>
+                            <ScrollViewer
+                                x:Name="TabScrollViewer"
+                                VerticalScrollBarVisibility="Disabled"
+                                Background="#00FFFFFF"
+                                HorizontalScrollBarVisibility="Hidden"
+                                ClipToBounds="True">
+                                <StackPanel
+                                    Orientation="Horizontal">
+                                    <TabPanel
+                                        x:Name="headerPanel"
+                                        Background="#00FFFFFF"
+                                        IsItemsHost="True"
+                                        KeyboardNavigation.TabIndex="1"
+                                        Panel.ZIndex="1"
+                                        Margin="0 2 0 0" />
+                                    <Button
+                                        x:Name="AddTabButton"
+                                        Width="12"
+                                        Height="12"
+                                        Margin="3 3 4 .67"
+                                        Padding="0"
+                                        Style="{DynamicResource ButtonStyle2}" Background="Transparent" BorderBrush="Transparent" FontSize="9" FontStretch="Condensed">
+                                        <Grid>
+                                            <Path
+                                                Stroke="#FFFFFFFF"
+                                                StrokeThickness=".7"
+                                                Data="M0,4.5 L9,4.5" />
+                                            <Path
+                                                Stroke="#FFFFFFFF"
+                                                StrokeThickness=".7"
                                                 Data="M4.5,0 L4.5,9" />
                                         </Grid>
                                     </Button>
@@ -620,7 +942,8 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="105*"/>
                 <ColumnDefinition Width="246.833"/>
-                <ColumnDefinition Width="96.5"/>
+                <ColumnDefinition Width="57.556"/>
+                <ColumnDefinition Width="39.111"/>
                 <ColumnDefinition Width="76*"/>
                 <ColumnDefinition Width="36"/>
                 <ColumnDefinition Width="11.333"/>
@@ -629,8 +952,10 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="0*"/>
                 <RowDefinition Height="0*"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="115*"/>
+                <RowDefinition Height="34.667"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="45*"/>
                 <RowDefinition Height="10*"/>
                 <RowDefinition Height="29*"/>
                 <RowDefinition Height="6*"/>
@@ -638,7 +963,7 @@
                 <RowDefinition Height="0*"/>
             </Grid.RowDefinitions>
 
-            <Rectangle x:Name="Border" Fill="Transparent" HorizontalAlignment="Left" Height="274" Margin="-4,-13,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="578" Grid.ColumnSpan="7" Grid.RowSpan="8" RenderTransformOrigin="0.5,0.5">
+            <Rectangle x:Name="Border" Fill="Transparent" HorizontalAlignment="Left" Height="274" Margin="-4,-13,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="578" Grid.ColumnSpan="8" Grid.RowSpan="10" RenderTransformOrigin="0.5,0.5">
                 <Rectangle.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -649,8 +974,8 @@
                 </Rectangle.RenderTransform>
             </Rectangle>
 
-            <Grid x:Name="BottomBar" HorizontalAlignment="Left" Height="249" Margin="0,9,0,0" Grid.Row="2" VerticalAlignment="Top" Width="571.333" Background="#FF19191A" Grid.RowSpan="6" Grid.ColumnSpan="6" Loaded="Grid_Loaded" UseLayoutRounding="False"/>
-            <Label x:Name="TopBar" Margin="0.003,-10.669,0,0" Grid.Row="2" MouseLeftButtonDown="Border_MouseLeftButtonDown" Content="MainDab" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Width="571.223" Background="#FF282828" Height="27.666" RenderTransformOrigin="0.5,0.5" FontSize="16" Grid.ColumnSpan="6" FontFamily="Calibri" UseLayoutRounding="False" Loaded="UwU">
+            <Grid x:Name="BottomBar" HorizontalAlignment="Left" Height="249" Margin="0,9,0,0" Grid.Row="2" VerticalAlignment="Top" Width="571.333" Background="#FF19191A" Grid.RowSpan="8" Grid.ColumnSpan="7" Loaded="Grid_Loaded" UseLayoutRounding="False"/>
+            <Label x:Name="TopBar" Margin="0.003,-10.669,0,0" Grid.Row="2" MouseLeftButtonDown="Border_MouseLeftButtonDown" Content="MainDab" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Width="571.223" Background="#FF282828" Height="27.666" RenderTransformOrigin="0.5,0.5" FontSize="16" Grid.ColumnSpan="7" FontFamily="Calibri" UseLayoutRounding="False" Loaded="UwU">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -664,8 +989,8 @@
             <!--Buttons-->
 
             <!--Buttons-->
-            <Button x:Name="Exit" BorderThickness="0" Background="#FFFF0505" HorizontalAlignment="Right" Margin="0,-7,7.334,86.667" Width="13" Style="{DynamicResource ButtonStyle2}" Grid.Row="2" Height="15" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Grid.Column="4" Click="Exit_Click" UseLayoutRounding="False" />
-            <Menu x:Name="Menu" Height="21" Margin="45,15,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Background="#FF232323" Foreground="{x:Null}" Grid.ColumnSpan="6" HorizontalAlignment="Left" Width="526.333" UseLayoutRounding="False">
+            <Button x:Name="Exit" BorderThickness="0" Background="#FFFF0505" HorizontalAlignment="Right" Margin="0,-7,7.335,26.667" Width="13" Style="{DynamicResource ButtonStyle2}" Grid.Row="2" Height="15" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Grid.Column="5" Click="Exit_Click" UseLayoutRounding="False" />
+            <Menu x:Name="Menu" Height="21" Margin="45,15,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Background="#FF232323" Foreground="{x:Null}" Grid.ColumnSpan="7" HorizontalAlignment="Left" Width="526.333" UseLayoutRounding="False">
 
                 <MenuItem x:Name="FileMenu" Header="File" Height="21" Width="33" Foreground="White" BorderThickness="0" Click="MenuItem_Click_11">
                     <MenuItem x:Name="MenuKillRblx" Header="Kill Roblox" HorizontalAlignment="Left" Height="21" Width="175" Background="#FF2D2D2D" BorderThickness="0" Margin="-24,0,-11,0"/>
@@ -677,7 +1002,7 @@
                     <MenuItem x:Name="MenuClear" Header="Clear" HorizontalAlignment="Left" Height="22" Width="179" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_12" Margin="-26,0,-13,0"/>
                     <MenuItem x:Name="MenuInject" Header="Inject" HorizontalAlignment="Left" Height="22" Width="179" Background="#FF2D2D2D" BorderThickness="0" Click="MenuItem_Click_13" Margin="-26,0,-13,0"/>
                 </MenuItem>
-                <MenuItem x:Name="UsefulMenu" Header="Useful Tools" Height="21" Width="77" Foreground="White" BorderThickness="0">
+                <MenuItem x:Name="UsefulMenu" Header="Useful Tools" Height="21" Width="76" Foreground="White" BorderThickness="0">
                     <MenuItem x:Name="FPSUNLOCK" Header="FPS Unlocker" HorizontalAlignment="Left" Height="21" Width="199" Click="NI" Background="#FF2D2D2D" BorderThickness="0" Margin="-26,0,-33,0"/>
                     <MenuItem x:Name="MultiRblx" Header="Multiple Roblox" HorizontalAlignment="Left" Height="22" Width="189" Background="#FF2D2D2D" BorderThickness="0" Margin="-27,0,-22,0" Click="MenuItem_Click_14"/>
                     <MenuItem x:Name="ReinstallRblx" Header="Reinstall Roblox" HorizontalAlignment="Left" Height="22" Width="178" Background="#FF2D2D2D" BorderThickness="0" Margin="-28,0,-10,0" Click="MenuItem_Click_15"/>
@@ -718,29 +1043,8 @@
                     <MenuItem x:Name="UnloadThemeButton" Header="Unload Theme" HorizontalAlignment="Left" Height="21" Width="162" Click="Unload" Background="#FF2D2D2D" BorderThickness="0" Margin="0,0,-22,0"/>
                 </MenuItem>
             </Menu>
-            <avalonedit:TextEditor 
-                x:Name="textEditor"  
-                FontFamily="Consolas" 
-                FontSize="13"
-                IsEnabled="True" 
-                IsReadOnly="False" 
-                WordWrap="True" 
-                HorizontalScrollBarVisibility="Auto" 
-                VerticalScrollBarVisibility="Auto"
-                LineNumbersForeground="White"
-                ShowLineNumbers="True" Foreground="White" OpacityMask="Black" Height="199.303" Background="#FF151515" HorizontalAlignment="Center" Width="524.445" VerticalAlignment="Center" Margin="45.665,34.575,1.223,14.122" Loaded="textEditor_Loaded" Text="-- MainDab V12 Loaded! Join MainDab at discord.io/maindab" Grid.Row="2" Grid.ColumnSpan="6" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Grid.RowSpan="4">
-
-                <avalonedit:TextEditor.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleY="0.098"/>
-                        <RotateTransform/>
-                        <TranslateTransform Y="0.332"/>
-                    </TransformGroup>
-                </avalonedit:TextEditor.RenderTransform>
-            </avalonedit:TextEditor>
-            <Frame x:Name="LeftFrame" Content="&#xA;" HorizontalAlignment="Left" Height="219" Margin="0,15,0,0" Grid.RowSpan="6" VerticalAlignment="Top" Width="45" Background="#FF232323" UseLayoutRounding="False"/>
-            <Button x:Name="MiniButton" BorderThickness="0" Background="#FFFFFBFB" Margin="9,-6,13,86.667" Style="{DynamicResource ButtonStyle2}" Grid.Row="2" Click="Button_Click_1" RenderTransformOrigin="-1.795,0.564" Grid.Column="4"  Height="14" VerticalAlignment="Bottom" UseLayoutRounding="False">
+            <Frame x:Name="LeftFrame" Content="&#xA;" HorizontalAlignment="Left" Height="219" Margin="0,15,0,0" Grid.RowSpan="8" VerticalAlignment="Top" Width="45" Background="#FF232323" UseLayoutRounding="False"/>
+            <Button x:Name="MiniButton" BorderThickness="0" Background="#FFFFFBFB" Margin="9,-6,13,26.667" Style="{DynamicResource ButtonStyle2}" Grid.Row="2" Click="Button_Click_1" RenderTransformOrigin="-1.795,0.564" Grid.Column="5"  Height="14" VerticalAlignment="Bottom" UseLayoutRounding="False">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -758,8 +1062,8 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Label x:Name="SelectedAPILabel" Content="Selected API : EasyExploits API" HorizontalAlignment="Left" Margin="3.167,14.333,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="211.11" FontSize="10" Grid.Column="2" Grid.ColumnSpan="4" Loaded="label6_Loaded" HorizontalContentAlignment="Right" FontFamily="Consolas" UseLayoutRounding="False" Grid.RowSpan="3"/>
-            <Image x:Name="ExecuteButton" HorizontalAlignment="Left" Height="39" Margin="0,12,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.13,0.354" Source="nigge.png" Stretch="Fill" MouseDown="Image_MouseDown_1" UseLayoutRounding="False">
+            <Label x:Name="SelectedAPILabel" Content="Selected API : EasyExploits API" HorizontalAlignment="Left" Margin="3.167,14.331,0,0" Grid.Row="7" VerticalAlignment="Top" Height="24" Foreground="White" Width="211.11" FontSize="10" Grid.Column="2" Grid.ColumnSpan="5" Loaded="label6_Loaded" HorizontalContentAlignment="Right" FontFamily="Consolas" UseLayoutRounding="False" Grid.RowSpan="3"/>
+            <Image x:Name="ExecuteButton" HorizontalAlignment="Left" Height="39" Margin="0,12,0,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.13,0.354" Source="nigge.png" Stretch="Fill" MouseDown="Image_MouseDown_1" UseLayoutRounding="False">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -769,11 +1073,11 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image HorizontalAlignment="Left" Height="20" Margin="12,51,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.13,0.354" Source="delete.png" Stretch="Fill" MouseDown="Image_MouseDown" UseLayoutRounding="False"/>
-            <Image HorizontalAlignment="Left" Height="21" Margin="12,83,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.13,0.354" Source="folder.png" Stretch="Fill" Grid.Row="2" MouseDown="Image_MouseDown_2" Grid.RowSpan="2" UseLayoutRounding="False"/>
-            <Image HorizontalAlignment="Right" Height="22" Margin="0,18.333,72.667,0" VerticalAlignment="Top" Width="21" RenderTransformOrigin="0.13,0.354" Source="syringe.png" Stretch="Fill" Grid.Row="3" MouseDown="Image_MouseDown_3" UseLayoutRounding="False"/>
-            <Image HorizontalAlignment="Left" Height="22" Margin="10,50.333,0,0" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.13,0.354" Source="web-programming.png" Stretch="Fill" Grid.Row="3" MouseDown="schub" UseLayoutRounding="False"/>
-            <Grid x:Name="ScriptHub" Grid.Column="6" HorizontalAlignment="Left" Height="161" Margin="7,-13,-222.333,0" Grid.RowSpan="4" VerticalAlignment="Top" Width="222" Background="#FF232323" Loaded="ScriptHub_Loaded" UseLayoutRounding="False" >
+            <Image HorizontalAlignment="Left" Height="20" Margin="12,16.333,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.13,0.354" Source="delete.png" Stretch="Fill" MouseDown="Image_MouseDown" UseLayoutRounding="False" Grid.Row="3"/>
+            <Image HorizontalAlignment="Left" Height="21" Margin="12,48.333,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.13,0.354" Source="folder.png" Stretch="Fill" Grid.Row="3" MouseDown="Image_MouseDown_2" Grid.RowSpan="2" UseLayoutRounding="False"/>
+            <Image HorizontalAlignment="Right" Height="22" Margin="0,18.333,72.667,0" VerticalAlignment="Top" Width="21" RenderTransformOrigin="0.13,0.354" Source="syringe.png" Stretch="Fill" Grid.Row="4" MouseDown="Image_MouseDown_3" UseLayoutRounding="False"/>
+            <Image HorizontalAlignment="Left" Height="22" Margin="10,50.333,0,0" VerticalAlignment="Top" Width="23" RenderTransformOrigin="0.13,0.354" Source="web-programming.png" Stretch="Fill" Grid.Row="4" MouseDown="schub" UseLayoutRounding="False" Grid.RowSpan="2"/>
+            <Grid x:Name="ScriptHub" Grid.Column="7" HorizontalAlignment="Left" Height="161" Margin="6.999,-13,-222.333,0" Grid.RowSpan="5" VerticalAlignment="Top" Width="222" Background="#FF232323" Loaded="ScriptHub_Loaded" UseLayoutRounding="False" >
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="22*"/>
@@ -804,17 +1108,17 @@
                     </TransformGroup>
                 </WebBrowser.RenderTransform>
             </WebBrowser>
-            <Grid x:Name="custom" Grid.Column="6" HorizontalAlignment="Left" Height="100" Margin="7,63.333,-222.333,0" Grid.Row="3" VerticalAlignment="Top" Width="222" Background="#FF232323" Loaded="custom_Loaded" UseLayoutRounding="False" Grid.RowSpan="5">
+            <Grid x:Name="custom" Grid.Column="7" HorizontalAlignment="Left" Height="100" Margin="6.999,63.333,-222.333,0" Grid.Row="4" VerticalAlignment="Top" Width="222" Background="#FF232323" Loaded="custom_Loaded" UseLayoutRounding="False" Grid.RowSpan="6">
                 <Label Content="Custom DLL Injection" VerticalAlignment="Top" RenderTransformOrigin="0.228,-0.103" Height="25" Margin="1,0,10,0" Foreground="White"/>
                 <Ellipse Fill="#FFFF0505" HorizontalAlignment="Left" Height="15" Margin="205,3,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="15" MouseDown="Ellipse_MouseDown_1"/>
                 <TextBox x:Name="Pipe" HorizontalAlignment="Left" Height="19" Margin="6,49,0,0" TextWrapping="Wrap" Text="DLL Pipe (EX. MainDab)" VerticalAlignment="Top" Width="206" Foreground="White" Background="#FF2D2D2D" BorderThickness="0" />
                 <TextBox x:Name="DLLNAME" HorizontalAlignment="Left" Height="19" Margin="6,26,0,0" TextWrapping="Wrap" Text="DLL Name (EX. MainDab.dll)" VerticalAlignment="Top" Width="206" Foreground="White" Background="#FF2D2D2D" BorderThickness="0" />
                 <Button Content="Apply" HorizontalAlignment="Left" Margin="68,73,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="Button_Click_3" Background="#FF2D2D2D" Foreground="White" BorderThickness="0"/>
             </Grid>
-            <DockPanel HorizontalAlignment="Left" Height="100" LastChildFill="False" Grid.RowSpan="4" VerticalAlignment="Top" Width="100" UseLayoutRounding="False"/>
-            <Image HorizontalAlignment="Left" Height="22" Margin="11,82.333,0,0" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.13,0.354" Source="IconRoblox.png" Stretch="Fill" Grid.Row="3" MouseDown="killroblox" UseLayoutRounding="False"/>
-            <Label x:Name="SyntaxLabel" Content="No errors found." HorizontalAlignment="Left" Margin="0,13.583,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="313" FontSize="10" Loaded="label6_Loaded" FontFamily="Consolas" FontStretch="UltraCondensed" FontWeight="Medium" Grid.ColumnSpan="2" UseLayoutRounding="False" Grid.RowSpan="3"/>
-            <Image x:Name="ExecuteButton_Copy" HorizontalAlignment="Left" Height="19" Margin="3,112.333,0,0" VerticalAlignment="Top" Width="19" RenderTransformOrigin="0.13,0.354" Source="Discord-Logo-White.png" Stretch="Fill" MouseDown="joinmein" Grid.Row="3" UseLayoutRounding="False" Grid.RowSpan="3">
+            <DockPanel HorizontalAlignment="Left" Height="100" LastChildFill="False" Grid.RowSpan="5" VerticalAlignment="Top" Width="100" UseLayoutRounding="False"/>
+            <Image HorizontalAlignment="Left" Height="22" Margin="11,12.666,0,0" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.13,0.354" Source="IconRoblox.png" Stretch="Fill" Grid.Row="5" MouseDown="killroblox" UseLayoutRounding="False"/>
+            <Label x:Name="SyntaxLabel" Content="No errors found." HorizontalAlignment="Left" Margin="0,12.915,0,0" Grid.Row="7" VerticalAlignment="Top" Height="24" Foreground="White" Width="313" FontSize="10" Loaded="label6_Loaded" FontFamily="Consolas" FontStretch="UltraCondensed" FontWeight="Medium" Grid.ColumnSpan="2" UseLayoutRounding="False" Grid.RowSpan="3"/>
+            <Image x:Name="ExecuteButton_Copy" HorizontalAlignment="Left" Height="19" Margin="3,42.666,0,0" VerticalAlignment="Top" Width="19" RenderTransformOrigin="0.13,0.354" Source="Discord-Logo-White.png" Stretch="Fill" MouseDown="joinmein" Grid.Row="5" UseLayoutRounding="False" Grid.RowSpan="3">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -824,7 +1128,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image x:Name="ExecuteButton_Copy1" HorizontalAlignment="Left" Height="15" Margin="24,113.333,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.13,0.354" Source="GitHub-Mark-Light-64px.png" Stretch="Fill" MouseDown="github" Grid.Row="3" UseLayoutRounding="False" Grid.RowSpan="3">
+            <Image x:Name="ExecuteButton_Copy1" HorizontalAlignment="Left" Height="15" Margin="24,43.666,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.13,0.354" Source="GitHub-Mark-Light-64px.png" Stretch="Fill" MouseDown="github" Grid.Row="5" UseLayoutRounding="False" Grid.RowSpan="3">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -834,9 +1138,9 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Label x:Name="SelectedAPILabel_Copy" Content="Using MainDab V12 | MainDab by Main__EX#3898" HorizontalAlignment="Left" Margin="-14,25.583,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="119" FontSize="4" HorizontalContentAlignment="Right" FontFamily="Consolas" UseLayoutRounding="False" Grid.ColumnSpan="2" Grid.RowSpan="3" Loaded="GetVersionOwO"/>
-            <Label x:Name="SelectedAPILabel_Copy1" Content="" HorizontalAlignment="Left" Margin="0.333,28.333,0,0" Grid.Row="5" VerticalAlignment="Top" Height="24" Foreground="White" Width="119" FontSize="4" Loaded="label6_Loaded" HorizontalContentAlignment="Right" FontFamily="Consolas" Grid.ColumnSpan="3" Grid.Column="3" UseLayoutRounding="False" Grid.RowSpan="3"/>
-            <Image x:Name="ExecuteButton_Copy2" HorizontalAlignment="Left" Height="15" Margin="35,18,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="0.13,0.354" Source="list.png" Stretch="Fill" MouseDown="visiornot" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="3" UseLayoutRounding="False">
+            <Label x:Name="SelectedAPILabel_Copy" Content="Using MainDab V12 | MainDab by Main__EX#3898" HorizontalAlignment="Left" Margin="-14,25.581,0,0" Grid.Row="7" VerticalAlignment="Top" Height="24" Foreground="White" Width="119" FontSize="4" HorizontalContentAlignment="Right" FontFamily="Consolas" UseLayoutRounding="False" Grid.ColumnSpan="2" Grid.RowSpan="3" Loaded="GetVersionOwO"/>
+            <Label x:Name="SelectedAPILabel_Copy1" Content="" HorizontalAlignment="Left" Margin="0.333,28.331,0,0" Grid.Row="7" VerticalAlignment="Top" Height="24" Foreground="White" Width="119" FontSize="4" Loaded="label6_Loaded" HorizontalContentAlignment="Right" FontFamily="Consolas" Grid.ColumnSpan="3" Grid.Column="4" UseLayoutRounding="False" Grid.RowSpan="3"/>
+            <Image x:Name="ExecuteButton_Copy2" HorizontalAlignment="Left" Height="15" Margin="35,18,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="0.13,0.354" Source="list.png" Stretch="Fill" MouseDown="visiornot" Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="3" UseLayoutRounding="False">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="-1"/>
@@ -846,7 +1150,24 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <ListBox VerticalAlignment="Top" Grid.Row="2" Grid.RowSpan="4" x:Name="fuckbm2" Background="#FF232323" BorderBrush="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Hidden" Foreground="White" SelectionChanged="Viewer_SelectionChanged" RenderTransformOrigin="0.5,0.5" Margin="0,36,2.333,0" Height="198" BorderThickness="0" Loaded="Viewer_Loaded" Grid.ColumnSpan="3" Grid.Column="3" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Opacity="0.8" Visibility="Hidden" ScrollViewer.CanContentScroll="False"/>
+            <ListBox VerticalAlignment="Top" Grid.Row="3" Grid.RowSpan="5" x:Name="fuckbm2" Background="#FF232323" BorderBrush="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Hidden" Foreground="White" SelectionChanged="Viewer_SelectionChanged" RenderTransformOrigin="0.5,0.5" Margin="0,1.333,2.334,0" Height="198" BorderThickness="0" Loaded="Viewer_Loaded" Grid.ColumnSpan="3" Grid.Column="4" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Opacity="0.8" Visibility="Hidden" ScrollViewer.CanContentScroll="False"/>
+            <TabControl
+                x:Name="TabControl"
+                Background="#181818"
+                BorderThickness="0"
+                Opacity="1"
+                MouseMove="TabControl_MouseMove"
+                Style="{StaticResource Tabs4}" Margin="50,1.333,10.334,19" Grid.Row="3" Grid.RowSpan="5" Grid.ColumnSpan="7" Loaded="TabControl_Loaded">
+                <TabItem
+                    x:Name="MainTab"
+                    Header="Main Tab"
+                    Background="#2A2A2A"
+                    Style="{StaticResource Tab}">
+
+                    <avalonEdit:TextEditor xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit" x:Name="textEditor" Margin="0,0,-0.667,-1.667" Grid.Row="1" Style="{DynamicResource TextEditorStyle1}" Background="#FF191919" ShowLineNumbers="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Foreground="White" FontFamily="Consolas" Text="-- MainDab by Main_EX#3898 | Using MainDab V12" Grid.RowSpan="3" LineNumbersForeground="White"/>
+
+                </TabItem>
+            </TabControl>
 
         </Grid>
     </Border>

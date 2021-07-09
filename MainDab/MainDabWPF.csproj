@@ -60,9 +60,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ArchAPI">
-      <HintPath>..\..\..\Downloads\ArchAPI.dll</HintPath>
-    </Reference>
     <Reference Include="DiscordRPC, Version=1.0.150.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\MainDab\DiscordRPC.dll</HintPath>
@@ -82,7 +79,6 @@
     <Reference Include="PastebinAPIs">
       <HintPath>..\..\..\Downloads\PastebinAPIs-master\PastebinAPIs-master\PastebinAPIs\bin\Debug\PastebinAPIs.dll</HintPath>
     </Reference>
-    <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -117,6 +113,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Tabbie.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -148,12 +145,6 @@
     <Compile Include="Injection\Functions.cs" />
     <Compile Include="Injection\Injector.cs" />
     <Compile Include="Injection\NamedPipes.cs" />
-    <Compile Include="MainDabInternal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainDabInternal.Designer.cs">
-      <DependentUpon>MainDabInternal.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -179,9 +170,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainDabInternal.resx">
-      <DependentUpon>MainDabInternal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

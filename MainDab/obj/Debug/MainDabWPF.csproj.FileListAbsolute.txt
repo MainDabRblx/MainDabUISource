@@ -62,7 +62,6 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csproj.GenerateRe
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csproj.CoreCompileInputs.cache
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csproj.CopyComplete
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.exe
-C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.MainDabInternal.resources
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.dll
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\MoonSharp.Interpreter.xml
@@ -74,4 +73,4 @@ C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\HtmlAgilityPack.xml
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\PastebinAPIs.pdb
 C:\Users\leona\Desktop\MainDabSrc\MainDab\bin\Debug\PastebinAPIs.dll.config
 C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDab.Form1.resources
-C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csprojAssemblyReference.cache
+C:\Users\leona\Desktop\MainDabSrc\MainDab\obj\Debug\MainDabWPF.csproj.AssemblyReference.cache
