@@ -117,4 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>List of libaries used
+
+Discord RPC (Rich Presence) by Lachee [https://github.com/Lachee/discord-rpc-csharp]
+AvalonEdit by icsharpcode [https://github.com/icsharpcode/AvalonEdit]
+Moonsharp Interpreter by moonsharp-devs [https://github.com/moonsharp-devs/moonsharp]
+Newtonsoft.JSON by JamesNK [https://github.com/JamesNK/Newtonsoft.Json]</value>
+  </data>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>List of tools used
+
+-&gt; Microsoft Visual Studio by Microsoft
+-&gt; FPS Unlocker for Roblox by axstin [https://github.com/axstin/rbxfpsunlocker]
+-&gt; Multiple Roblox by (most likely) WRD
+-&gt; You, for using MainDab</value>
+  </data>
 </root>

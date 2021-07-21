@@ -113,7 +113,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\MainExecution.cs" />
+    <Compile Include="Classes\SelectedDLL.cs" />
+    <Compile Include="CustomDLLSelection.xaml.cs">
+      <DependentUpon>CustomDLLSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptHub.xaml.cs">
+      <DependentUpon>ScriptHub.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tabbie.cs" />
+    <Page Include="CustomDLLSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -149,6 +161,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ScriptHub.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PasteBinClient.cs" />
@@ -277,6 +293,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icons8-play-button-circled-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48c72afa6d866fceab56db88585aea58.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\521a8800fe45cd63c4c0488c943b0b7c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d5dc19eac9805ec4f08312adf5b761c2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e725a5fa0cad2f00df3505be633c0e3a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OLD.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

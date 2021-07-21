@@ -1,0 +1,16 @@
+﻿<Window x:Class="MainDab.CustomDLLSelection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MainDab"
+        mc:Ignorable="d"
+        Title="CustomDLLSelection" Height="99.445" Width="223" Background="Transparent" WindowStyle="None" Foreground="Transparent" ResizeMode="NoResize" ShowInTaskbar="False">
+    <Grid x:Name="custom" HorizontalAlignment="Left" Height="99" VerticalAlignment="Top" Width="223" Background="#FF232323" UseLayoutRounding="False" Margin="0,0,-0.333,0">
+        <Label Content="Custom DLL Injection" VerticalAlignment="Top" RenderTransformOrigin="0.228,-0.103" Height="25" Margin="1,0,-0.335,0" Foreground="White" MouseDown="Label_MouseDown"/>
+        <Ellipse Fill="#FFFF0505" HorizontalAlignment="Left" Height="15" Margin="205,3,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="15" MouseDown="Ellipse_MouseDown_1"/>
+        <TextBox x:Name="Pipe" HorizontalAlignment="Left" Height="19" Margin="6,49,0,0" TextWrapping="Wrap" Text="DLL Pipe (EX. MainDab)" VerticalAlignment="Top" Width="206" Foreground="White" Background="#FF2D2D2D" BorderThickness="0" />
+        <TextBox x:Name="DLLNAME" HorizontalAlignment="Left" Height="19" Margin="6,26,0,0" TextWrapping="Wrap" Text="DLL Name (EX. MainDab.dll)" VerticalAlignment="Top" Width="206" Foreground="White" Background="#FF2D2D2D" BorderThickness="0" />
+        <Button Content="Apply" HorizontalAlignment="Left" Margin="68,73,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="Button_Click_3" Background="#FF2D2D2D" Foreground="White" BorderThickness="0"/>
+    </Grid>
+</Window>

@@ -118,22 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="nlank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nlank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="20200906_163659" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\20200906_163659.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="48c72afa6d866fceab56db88585aea58" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\48c72afa6d866fceab56db88585aea58.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Joshua" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Joshua.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled drawing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled drawing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="521a8800fe45cd63c4c0488c943b0b7c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\521a8800fe45cd63c4c0488c943b0b7c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nlank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nlank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="d5dc19eac9805ec4f08312adf5b761c2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d5dc19eac9805ec4f08312adf5b761c2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Beep" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Beep.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="e725a5fa0cad2f00df3505be633c0e3a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e725a5fa0cad2f00df3505be633c0e3a.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20200906_163659" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20200906_163659.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Notify" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Notify.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Untitled drawing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled drawing.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OLD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OLD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

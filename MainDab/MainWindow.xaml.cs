@@ -34,8 +34,8 @@ using System.Linq;
 using System.IO.Compression;
 using System.Reflection;
 using DiscordRPC.Logging;
-using System.Runtime.InteropServices;
 using PastebinAPIs;
+
 
 
 namespace MainDab
@@ -43,19 +43,20 @@ namespace MainDab
 
     public partial class MainWindow : Window
     {
-        string currentver = "MainDab V.12.8"; // current version
-        string listboxopenornot = "false"; // listbox
+        // variables
+        string currentver = "MainDab V.12.9"; // current version
+        string listboxopenornot = "false"; // not bothered to make it boo
         string currentluaxshdlocation = ""; // for tabcontrol shit
-        WebClient HITLER = new WebClient(); // hitler moment :D
-        private DiscordRpcClient client; // discordsexual 
+        WebClient HITLER = new WebClient(); // define only one webclient for efficiency
+        private DiscordRpcClient client; // new
+        private ScrollViewer tabScroller; // future scroll for tab
+        private readonly BackgroundWorker worker = new BackgroundWorker(); // define just one 
+
+        // define dlls
         private readonly Classes.EasyExploitsAPI.Module ezclap = new Classes.EasyExploitsAPI.Module(); // EasyExploits API
         private readonly Classes.WeAreDevsAPI.ExploitAPI wrd = new Classes.WeAreDevsAPI.ExploitAPI(); // WeAreDevs API
-        private readonly Classes.ShadowCheatsAPI.Module shadowcheats = new Classes.ShadowCheatsAPI.Module();
-        private ScrollViewer tabScroller;
-
-        //  private readonly AnemoAPI.Anemo sexcheats = new AnemoAPI.Anemo();  // Converted to Arch from ShadowCheats
-        string currentdll = "Selected API : EasyExploits API"; // by default...
-        private readonly BackgroundWorker worker = new BackgroundWorker();
+        private readonly Classes.ShadowCheatsAPI.Module shadowcheats = new Classes.ShadowCheatsAPI.Module(); // ShadowSex API   
+       
      
 
         public MainWindow()
@@ -222,7 +223,7 @@ namespace MainDab
             if (pname.Length > 0)
             {
 
-            if (currentdll == "Selected API : EasyExploits API")
+            if (Classes.SelectedDLL.SelectedAPI == "Selected API : EasyExploits API")
             {
              
                ezclap.LaunchExploit();
@@ -247,7 +248,7 @@ namespace MainDab
                     });
                 }).Start();
             }
-                if (currentdll == "Selected API : ShadowCheats API")
+                if (Classes.SelectedDLL.SelectedAPI == "Selected API : ShadowCheats API")
                 {
 
                     shadowcheats.Attach();
@@ -272,7 +273,7 @@ namespace MainDab
                         });
                     }).Start();
                 }
-                if (currentdll == "Selected API : MainDab LBI")
+                if (Classes.SelectedDLL.SelectedAPI == "Selected API : MainDab LBI")
                 {
                
                   
@@ -310,7 +311,7 @@ namespace MainDab
 
                 }
 
-                if (currentdll == "Selected API : Anemo API")
+                if (Classes.SelectedDLL.SelectedAPI == "Selected API : Anemo API")
             {
                     //sexcheats.InjectAnemo();
                 new Thread(() =>
@@ -334,7 +335,7 @@ namespace MainDab
                     });
                 }).Start();
             }
-                if (currentdll == "Selected API : WeAreDevs")
+                if (Classes.SelectedDLL.SelectedAPI == "Selected API : WeAreDevs")
             {
                 
                 new Thread(() =>
@@ -360,7 +361,7 @@ namespace MainDab
                 }).Start();
                
             }
-            if (currentdll == "Selected API : Custom")
+            if (Classes.SelectedDLL.SelectedAPI == "Selected API : Custom")
             {
                 Functions.Inject();
                 new Thread(() =>
@@ -387,75 +388,7 @@ namespace MainDab
 
 
         }
-        private void Execute()
-        {
-            Process[] pname = Process.GetProcessesByName("RobloxPlayerBeta");
-            if (pname.Length > 0)
-            {
-
-                if (currentdll == "Selected API : MainDab LBI")
-                {
-                    try
-                    {
-                        NamedPipes.LuaPipe(CurrentTabWithShit().Text);
-                    }
-                    catch (Exception sexual)
-                    {
-                        MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
-                    }
-
-                }
-
-                /* if (currentdll == "Selected API : CheatSquad")
-                 {
-                     shitsquad.Execute(textEditor.Text);
-                 }*/
-                else if (currentdll == "Selected API : EasyExploits API")
-                {
-                    try
-                    {
-                        ezclap.ExecuteScript(CurrentTabWithShit().Text);
-                    }
-                    catch (Exception sexual)
-                    {
-                        MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
-                    }
-                }
-                else if (currentdll == "Selected API : Anemo API")
-                {
-                    //sexcheats.ExecuteScript(GetCurrent().Text);
-                }
-
-                else if (currentdll == "Selected API : WeAreDevs")
-                {
-                    wrd.SendLuaScript(CurrentTabWithShit().Text);
-                }
-                else if (currentdll == "Selected API : ShadowCheats API")
-                {
-                    shadowcheats.ExecuteScript(CurrentTabWithShit().Text);
-                }
-                else if (currentdll == "Selected API : Custom")
-                {
-                    try
-                    {
-                        NamedPipes.LuaPipe(CurrentTabWithShit().Text);
-                    }
-                    catch (Exception sexual)
-                    {
-                        MessageBox.Show("An error has occured, here is the error :\n\n" + sexual + "\n\nMake sure you are on a tab, and not on the script hub tab!", "Report this to Main_EX in Discord!");
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("You must inject (click the syringe icon) before executing a script!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("You must open Roblox and inject before attempting to run the script!");
-            }
-        } // Execute
+      
         private void textEditor_Loaded(object sender, RoutedEventArgs e)
         {
           
@@ -511,7 +444,7 @@ namespace MainDab
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Execute();
+            Classes.MainExecution.Execute(CurrentTabWithShit().Text);
         }
 
         private void Viewer_Loaded(object sender, RoutedEventArgs e)
@@ -570,12 +503,13 @@ namespace MainDab
 
         private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
-            Execute();
+            Classes.MainExecution.Execute(CurrentTabWithShit().Text);
         }
 
         private void MenuItem_Click_8(object sender, RoutedEventArgs e)
         {
-            currentdll = "Selected API : EasyExploits API";
+            Classes.SelectedDLL.SelectedAPI = "Selected API : EasyExploits API";
+
             SelectedAPILabel.Content = "Selected API : EasyExploits API";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
             key.SetValue("DLL", "Selected API : EasyExploits API");
@@ -642,7 +576,7 @@ namespace MainDab
 
         private void dddd(object sender, RoutedEventArgs e)
         {
-            currentdll = "Selected API : Cheatsquad";
+            Classes.SelectedDLL.SelectedAPI = "Selected API : Cheatsquad";
             SelectedAPILabel.Content = "Selected API : Cheatsquad";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
             key.SetValue("DLL", "Selected API : CheatSquad");
@@ -971,24 +905,8 @@ namespace MainDab
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            
+            Classes.MainExecution.Execute(scriptseggx);
          
-            if (currentdll == "Selected API : EasyExploits API")
-            {
-                ezclap.ExecuteScript(scriptseggx);
-            }
-            if (currentdll == "Selected API : MainDab LBI")
-            {
-                NamedPipes.LuaPipe(scriptseggx);
-            }
-            if (currentdll == "Selected API : WeAreDevs")
-            {
-               wrd.SendLuaScript(scriptseggx);
-            }
-            if (currentdll == "Selected API : Custom")
-            {
-                NamedPipes.LuaPipe(scriptseggx);
-            }
         }
 
         private void Button_ManipulationStarting(object sender, ManipulationStartingEventArgs e)
@@ -1031,21 +949,6 @@ namespace MainDab
             activeX.Silent = true;
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            Functions.exploitdllname = DLLNAME.Text;
-            NamedPipes.luapipename = Pipe.Text;
-            custom.Visibility = Visibility.Hidden;
-            SelectedAPILabel.Content = "Selected API : Custom";
-            currentdll = "Selected API : Custom";
-        }
-
-        private void Ellipse_MouseDown_1(object sender, MouseButtonEventArgs e)
-        {
-            custom.Visibility = Visibility.Hidden;
-
-        }
-
         private void label6_Loaded(object sender, RoutedEventArgs e)
         {  
               if (File.Exists("ArchAPI.dll"))
@@ -1057,7 +960,7 @@ namespace MainDab
              {
                  string apishouldbe = (key.GetValue("DLL").ToString());
                  SelectedAPILabel.Content = apishouldbe;
-                 currentdll = apishouldbe;
+                 Classes.SelectedDLL.SelectedAPI = apishouldbe;
                
             }
            
@@ -1103,19 +1006,13 @@ namespace MainDab
             creditui.Show();
         }
 
-        private void custom_Loaded(object sender, RoutedEventArgs e)
-        {
-            custom.Visibility = Visibility.Hidden;
-        }
-
-        private void MenuItem_Click_21(object sender, RoutedEventArgs e)
-        {
-            custom.Visibility = Visibility.Visible;
-        }
+      
 
         private void MenuItem_Click_22(object sender, RoutedEventArgs e)
         {
-            custom.Visibility = Visibility.Visible;
+            CustomDLLSelection Selection = new CustomDLLSelection();
+            Selection.Show();
+            Selection.Owner = this;
         }
 
         private void MenuItem_Click_23(object sender, RoutedEventArgs e)
@@ -1207,7 +1104,7 @@ namespace MainDab
         }
         private void Shado(object sender, RoutedEventArgs e)
         {
-            currentdll = "Selected API : Anemo API";
+            Classes.SelectedDLL.SelectedAPI = "Selected API : Anemo API";
             SelectedAPILabel.Content = "Selected API : Anemo API";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
             key.SetValue("DLL", "Selected API : Anemo API");
@@ -1216,7 +1113,7 @@ namespace MainDab
 
         private void WeAreSkids(object sender, RoutedEventArgs e)
         {
-            currentdll = "Selected API : WeAreDevs";
+            Classes.SelectedDLL.SelectedAPI = "Selected API : WeAreDevs";
             SelectedAPILabel.Content = "Selected API : WeAreDevs";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
             key.SetValue("DLL", "Selected API : WeAreDevs");
@@ -1256,7 +1153,7 @@ namespace MainDab
         private void DeepPain(object sender, RoutedEventArgs e)
         {
 
-            currentdll = "Selected API : Acrylix";
+            Classes.SelectedDLL.SelectedAPI = "Selected API : Acrylix";
             SelectedAPILabel.Content = "Selected API : Acrylix";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
             key.SetValue("DLL", "Selected API : Acrylix");
@@ -1339,7 +1236,7 @@ namespace MainDab
 
         private void BMLBI(object sender, RoutedEventArgs e)
         {
-            currentdll = "Selected API : MainDab LBI";
+            Classes.SelectedDLL.SelectedAPI = "Selected API : MainDab LBI";
             SelectedAPILabel.Content = "Selected API : MainDab LBI";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
             key.SetValue("DLL", "Selected API : MainDab LBI");
@@ -1375,11 +1272,11 @@ namespace MainDab
             Process[] pname = Process.GetProcessesByName("RobloxPlayerBeta");
             if (pname.Length > 0)
             {
-                if (currentdll == "Selected API : EasyExploits API")
+                if (Classes.SelectedDLL.SelectedAPI == "Selected API : EasyExploits API")
                 {
-                    ezclap.ExecuteScript(sexhub);
+                   Classes.MainExecution.Execute(sexhub);
                 }
-                if (currentdll == "Selected API : Anemo API")
+                if (Classes.SelectedDLL.SelectedAPI == "Selected API : Anemo API")
                 {
                   // sexcheats.ExecuteScript(sexhub);
                 }
@@ -1589,7 +1486,7 @@ namespace MainDab
 
         private void MDLBI(object sender, RoutedEventArgs e)
         {
-            currentdll = "Selected API : MainDab LBI";
+            Classes.SelectedDLL.SelectedAPI = "Selected API : MainDab LBI";
             SelectedAPILabel.Content = "Selected API : MainDab LBI";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
             key.SetValue("DLL", "Selected API : MainDab LBI");
@@ -1604,7 +1501,7 @@ namespace MainDab
 
         private void ShadowCheats(object sender, RoutedEventArgs e)
         {
-            currentdll = "Selected API : ShadowCheats API";
+            Classes.SelectedDLL.SelectedAPI = "Selected API : ShadowCheats API";
             SelectedAPILabel.Content = "Selected API : ShadowCheats API";
             RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\MainDabData");
             key.SetValue("DLL", "Selected API : ShadowCheats API");
@@ -1743,6 +1640,11 @@ namespace MainDab
             XmlTextReader xml = new XmlTextReader(nya);
             textEditor.SyntaxHighlighting = HighlightingLoader.Load(xml, HighlightingManager.Instance);
             CurrentTabWithShit().Text = "--[[\r\nWelcome to MainDab!\r\nMake sure to join MainDab's discord at discord.io/maindab\r\nIf you need help, join our discord!\r\n--]]\r\n-- Paste in your text below this comment.\r\n\r\nprint(\"MainDab is poggers\")";
+        }
+        public void ChangeDLLContentsToCustom()
+        {
+            SelectedAPILabel.Content = "Selected API : Custom";
+            Classes.SelectedDLL.SelectedAPI = "Selected API : Custom";
         }
     }
 

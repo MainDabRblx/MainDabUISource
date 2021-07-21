@@ -22,6 +22,12 @@ namespace MainDab
         public Credits()
         {
             InitializeComponent();
+            DevelopmentView.Visible = true;
+            ModPanel.Visible = false;
+            LibariesUsed.Visible = false;
+            ToolsUsed.Visible = false;
+            Other.Visible = false;
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -57,6 +63,66 @@ namespace MainDab
         private void button1_Click(object sender, EventArgs e)
         {
             base.Hide();
+        }
+
+        private void Credits_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Other_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DevelopmentView.Visible = true;
+            ModPanel.Visible = false;
+            LibariesUsed.Visible = false;
+            ToolsUsed.Visible = false;
+            Other.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DevelopmentView.Visible = false;
+            ModPanel.Visible = true;
+            LibariesUsed.Visible = false;
+            ToolsUsed.Visible = false;
+            Other.Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DevelopmentView.Visible = false;
+            ModPanel.Visible = false;
+            LibariesUsed.Visible = true;
+            ToolsUsed.Visible = false;
+            Other.Visible = false;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DevelopmentView.Visible = false;
+            ModPanel.Visible = false;
+            LibariesUsed.Visible = false;
+            ToolsUsed.Visible = true;
+            Other.Visible = false;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DevelopmentView.Visible = false;
+            ModPanel.Visible = false;
+            LibariesUsed.Visible = false;
+            ToolsUsed.Visible = false;
+            Other.Visible = true;
         }
     }
 }
